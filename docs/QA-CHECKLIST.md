@@ -21,8 +21,9 @@ Checks, in order:
       `tools/openmw` (no installer window may ever appear; `$PLUGINSDIR`/uninstaller cleaned up;
       `openmw.exe` + `openmw-iniimporter.exe` + `openmw-navmeshtool.exe` present),
       `umo --version` prints. Re-test specifically with an install path containing a space.
-- [ ] `umo-conf/config.json` accepted by umo — **verify key names** by diffing against a real
-      `umo setup` output; fix `UmoConfigWriter` if they drifted
+- [ ] `umo-conf/config.json` accepted by umo (uppercase schema, empty `NEXUS_API_KEY` on disk;
+      the real key must ride the `UMO_NEXUS_API_KEY` env var and appear masked in the log's
+      spawn lines)
 - [ ] `umo list add` accepts our emitted ModDesc JSON (adjust `ModlistCompiler` on validation errors)
 - [ ] `umo install` downloads all 5 mods; **capture full stdout into
       `tests/Mri.Core.Tests/Fixtures/umo/`** and tighten `UmoProgressParser` against it

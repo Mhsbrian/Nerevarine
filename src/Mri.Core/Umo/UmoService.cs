@@ -13,10 +13,14 @@ public sealed record UmoInstallResult(
 /// UMO_CONF_DIR=&lt;our conf dir&gt; so umo reads the config we pre-wrote and
 /// never the user's own.
 /// </summary>
-public sealed class UmoService(IProcessRunner runner, Func<string?> umoExeResolver, string confDir)
+public sealed class UmoService(
+    IProcessRunner runner,
+    Func<string?> umoExeResolver,
+    string confDir,
+    string? nexusApiKey = null)
 {
-    public UmoService(IProcessRunner runner, string umoExe, string confDir)
-        : this(runner, () => umoExe, confDir)
+    public UmoService(IProcessRunner runner, string umoExe, string confDir, string? nexusApiKey = null)
+        : this(runner, () => umoExe, confDir, nexusApiKey)
     {
     }
 
@@ -25,10 +29,21 @@ public sealed class UmoService(IProcessRunner runner, Func<string?> umoExeResolv
         ?? throw new InvalidOperationException(
             "umo.exe not found — tool acquisition has not run or an antivirus removed it.");
 
-    private Dictionary<string, string> BaseEnv => new()
+    private Dictionary<string, string> BaseEnv
     {
-        ["UMO_CONF_DIR"] = confDir,
-    };
+        get
+        {
+            var env = new Dictionary<string, string>
+            {
+                ["UMO_CONF_DIR"] = confDir,
+            };
+            // The key rides the environment (umo's documented override), never
+            // the on-disk config.json.
+            if (!string.IsNullOrEmpty(nexusApiKey))
+                env["UMO_NEXUS_API_KEY"] = nexusApiKey;
+            return env;
+        }
+    }
 
     public async Task AddListAsync(
         string listJsonPath,

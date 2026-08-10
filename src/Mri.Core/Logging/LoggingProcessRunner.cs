@@ -18,7 +18,7 @@ public sealed class LoggingProcessRunner(IProcessRunner inner, InstallLog log) :
         var name = Path.GetFileName(spec.Exe);
         var commandLine = spec.RawArguments ?? string.Join(" ", spec.Args);
         var env = spec.Env.Count > 0
-            ? " env{" + string.Join(", ", spec.Env.Select(kv => $"{kv.Key}={kv.Value}")) + "}"
+            ? " env{" + string.Join(", ", spec.Env.Select(kv => $"{kv.Key}={MaskSensitive(kv.Key, kv.Value)}")) + "}"
             : "";
         log.Info("proc", $"spawn: \"{spec.Exe}\" {commandLine}{env}" +
                          (spec.WorkingDir is { Length: > 0 } cwd ? $" cwd={cwd}" : ""));
@@ -46,6 +46,17 @@ public sealed class LoggingProcessRunner(IProcessRunner inner, InstallLog log) :
             throw;
         }
     }
+
+    /// <summary>
+    /// Secret-bearing env vars are masked outright — defense in depth on top
+    /// of the log's redaction list.
+    /// </summary>
+    private static string MaskSensitive(string key, string value) =>
+        key.Contains("KEY", StringComparison.OrdinalIgnoreCase) ||
+        key.Contains("TOKEN", StringComparison.OrdinalIgnoreCase) ||
+        key.Contains("SECRET", StringComparison.OrdinalIgnoreCase)
+            ? Redactor.Mask
+            : value;
 
     /// <summary>Synchronous forwarder — keeps log ordering faithful to output order.</summary>
     private sealed class TeeProgress(Action<OutputLine> handler) : IProgress<OutputLine>

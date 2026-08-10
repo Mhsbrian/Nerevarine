@@ -42,7 +42,9 @@ public sealed class WriteUmoConfigStep(UmoConfigWriter writer, Func<InstallConte
     public string Id => "write-umo-config";
     public string Label => "Configure the mod downloader";
 
-    public bool Verify(InstallContext ctx) => writer.Exists();
+    // Content comparison: an existing config written by an older build (or
+    // edited by hand) must be regenerated, not trusted for merely existing.
+    public bool Verify(InstallContext ctx) => writer.IsCurrent(settings(ctx));
 
     public Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {

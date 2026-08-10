@@ -65,7 +65,11 @@ for free users is the designed v2 feature. Per the API AUP we send
 These external contracts were researched but must be confirmed against real binaries during the
 M1 Windows smoke run (all isolated in one place each):
 
-1. `umo` config.json key names (`UmoConfigWriter`) and `list add` / `install` flag behavior.
+1. ~~`umo` config.json key names~~ Resolved by the third M1 run: umo's `load_config()` requires
+   UPPERCASE `NEXUS_API_KEY` / `TES3CMD` / `BASEPATH` (KeyError otherwise; `CACHE_DIR` optional) —
+   confirmed against umo 0.11.1 source. The key itself is passed per-process via the
+   `UMO_NEXUS_API_KEY` env override and is never written to disk. Still open: `list add` JSON
+   acceptance and `install` stdout format.
 2. ~~OpenMW NSIS installer silent switches~~ Resolved by the first M1 run: quoted `/D=` paths
    (any path with a space) are silently ignored by NSIS. OpenMW is now 7z-extracted from the
    installer instead (`ToolAcquisitionService.ExtractNsisAsync`); the silent install survives

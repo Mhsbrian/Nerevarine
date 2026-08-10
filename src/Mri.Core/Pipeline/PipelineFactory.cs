@@ -22,17 +22,16 @@ public static class PipelineFactory
         var tools = new ToolAcquisitionService(http, runner, ctx.ToolsDir);
         var locator = new ToolLocator(tools, ctx.ToolManifest);
         var umoConfig = new UmoConfigWriter(ctx.UmoConfDir);
-        var umo = new UmoService(runner, () => locator.UmoExe, ctx.UmoConfDir);
+        var umo = new UmoService(runner, () => locator.UmoExe, ctx.UmoConfDir, ctx.NexusApiKey);
 
         var steps = new List<IInstallStep>
         {
             new AcquireToolsStep(tools),
             new WriteUmoConfigStep(umoConfig, c => new UmoSettings
             {
-                NexusApiKey = c.NexusApiKey,
                 ModBaseDir = c.ModsRootDir,
                 CacheDir = c.DownloadCacheDir,
-                Tes3cmdPath = locator.Tes3cmdExe,
+                Tes3cmdPath = locator.Tes3cmdExe ?? "",
             }),
             new RegisterModlistStep(umo),
             new InstallModsStep(umo),

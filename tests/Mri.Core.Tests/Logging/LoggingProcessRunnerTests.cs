@@ -37,7 +37,11 @@ public class LoggingProcessRunnerTests : IDisposable
             {
                 Exe = "/tools/umo.exe",
                 Args = ["install", "--sync", "my list"],
-                Env = new Dictionary<string, string> { ["UMO_CONF_DIR"] = "/conf" },
+                Env = new Dictionary<string, string>
+                {
+                    ["UMO_CONF_DIR"] = "/conf",
+                    ["UMO_NEXUS_API_KEY"] = "hunter2-not-registered-as-redaction",
+                },
             }, new SyncProgress(forwarded));
 
             Assert.Equal(3, result.ExitCode);
@@ -46,6 +50,7 @@ public class LoggingProcessRunnerTests : IDisposable
         var text = File.ReadAllText(path);
         Assert.Contains("spawn: \"/tools/umo.exe\" install --sync my list", text);
         Assert.Contains("UMO_CONF_DIR=/conf", text);
+        Assert.DoesNotContain("hunter2", text); // *_KEY env values are masked outright
         Assert.Contains("[proc:umo.exe] downloading mod 1/5", text);
         Assert.Contains("[proc:umo.exe] [stderr] warning: slow mirror", text);
         Assert.Contains("exit: umo.exe → code 3 after 2.0s", text);
