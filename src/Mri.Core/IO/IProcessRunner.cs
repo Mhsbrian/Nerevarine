@@ -4,6 +4,13 @@ public sealed record ProcessSpec
 {
     public required string Exe { get; init; }
     public IReadOnlyList<string> Args { get; init; } = Array.Empty<string>();
+
+    /// <summary>
+    /// Verbatim command-line string used INSTEAD of <see cref="Args"/> when
+    /// set. Needed for switches that must never be quoted — NSIS's /D= ignores
+    /// a quoted path, and ArgumentList auto-quotes anything with a space.
+    /// </summary>
+    public string? RawArguments { get; init; }
     public string? WorkingDir { get; init; }
     public IReadOnlyDictionary<string, string> Env { get; init; } =
         new Dictionary<string, string>();

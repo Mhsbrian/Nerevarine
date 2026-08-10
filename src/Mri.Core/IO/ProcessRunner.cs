@@ -18,8 +18,11 @@ public sealed class ProcessRunner : IProcessRunner
             UseShellExecute = false,
             CreateNoWindow = true,
         };
-        foreach (var arg in spec.Args)
-            psi.ArgumentList.Add(arg);
+        if (spec.RawArguments is not null)
+            psi.Arguments = spec.RawArguments;
+        else
+            foreach (var arg in spec.Args)
+                psi.ArgumentList.Add(arg);
         foreach (var (key, value) in spec.Env)
             psi.Environment[key] = value;
 

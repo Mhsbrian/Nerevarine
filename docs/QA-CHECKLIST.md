@@ -15,9 +15,10 @@ Setup:
 Checks, in order:
 - [ ] Steam auto-detection lists the right folder with a "Steam" badge (test: also a GOG install,
       also "Browse" to a fake folder → clear failure text)
-- [ ] Tool acquisition: OpenMW lands in `tools/openmw` (verify `/S /D=` actually worked — if the
-      NSIS switches are ignored, an interactive installer window appearing = FAIL, fall back to
-      7z-extraction of the installer), pack lands in `tools/momw-tools`, `umo --version` prints
+- [ ] Tool acquisition: pack lands in `tools/momw-tools` FIRST, then OpenMW is 7z-extracted into
+      `tools/openmw` (no installer window may ever appear; `$PLUGINSDIR`/uninstaller cleaned up;
+      `openmw.exe` + `openmw-iniimporter.exe` + `openmw-navmeshtool.exe` present),
+      `umo --version` prints. Re-test specifically with an install path containing a space.
 - [ ] `umo-conf/config.json` accepted by umo — **verify key names** by diffing against a real
       `umo setup` output; fix `UmoConfigWriter` if they drifted
 - [ ] `umo list add` accepts our emitted ModDesc JSON (adjust `ModlistCompiler` on validation errors)

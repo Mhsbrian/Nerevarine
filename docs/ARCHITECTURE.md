@@ -66,7 +66,10 @@ These external contracts were researched but must be confirmed against real bina
 M1 Windows smoke run (all isolated in one place each):
 
 1. `umo` config.json key names (`UmoConfigWriter`) and `list add` / `install` flag behavior.
-2. OpenMW NSIS installer silent switches `/S /D=` (`ToolAcquisitionService.ExtractAsync`).
+2. ~~OpenMW NSIS installer silent switches~~ Resolved by the first M1 run: quoted `/D=` paths
+   (any path with a space) are silently ignored by NSIS. OpenMW is now 7z-extracted from the
+   installer instead (`ToolAcquisitionService.ExtractNsisAsync`); the silent install survives
+   only as a fallback using an unquoted raw argument string.
 3. delta-plugin's `OPENMW_CONFIG` env resolution (`DeltaPluginService`).
 4. umo stdout format → refine `UmoProgressParser` with captured fixtures.
 5. `shaders.yaml` expected location next to `settings.cfg` (`OpenMwUserPaths`).

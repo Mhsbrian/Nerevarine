@@ -120,4 +120,87 @@ public class ToolAcquisitionServiceTests : IDisposable
         await Assert.ThrowsAsync<InvalidDataException>(() => service.EnsureToolAsync(poisoned));
         Assert.False(service.IsInstalled(poisoned));
     }
+
+    private ToolSpec NsisSpec() => new()
+    {
+        Id = "openmw",
+        Version = "0.51.0",
+        Url = "https://example.com/OpenMW-Setup.exe",
+        Sha256 = null,
+        ArchiveType = ToolArchiveType.NsisExe,
+        InstallSubdir = "openmw",
+        ExeProbe = "openmw.exe",
+    };
+
+    /// <summary>Records specs and simulates 7z by dropping files into the -o&lt;dir&gt; target.</summary>
+    private sealed class Recording7zRunner : Mri.Core.IO.IProcessRunner
+    {
+        public readonly List<Mri.Core.IO.ProcessSpec> Specs = [];
+
+        public Task<Mri.Core.IO.ProcessResult> RunAsync(
+            Mri.Core.IO.ProcessSpec spec,
+            IProgress<Mri.Core.IO.OutputLine>? onLine = null,
+            CancellationToken ct = default)
+        {
+            Specs.Add(spec);
+            var outDir = spec.Args.FirstOrDefault(a => a.StartsWith("-o"))?[2..];
+            if (outDir is not null)
+            {
+                // What 7z-extracting a real NSIS installer leaves behind:
+                // payload plus $PLUGINSDIR runtime junk and an uninstaller.
+                Directory.CreateDirectory(Path.Combine(outDir, "$PLUGINSDIR"));
+                File.WriteAllText(Path.Combine(outDir, "$PLUGINSDIR", "nsis-junk.dll"), "x");
+                Directory.CreateDirectory(Path.Combine(outDir, "resources"));
+                File.WriteAllText(Path.Combine(outDir, "openmw.exe"), "MZ");
+                File.WriteAllText(Path.Combine(outDir, "Uninstall.exe"), "MZ");
+            }
+            return Task.FromResult(new Mri.Core.IO.ProcessResult(0, TimeSpan.Zero));
+        }
+    }
+
+    [Fact]
+    public async Task NsisInstallerIsExtractedWith7zNotExecuted()
+    {
+        var runner = new Recording7zRunner();
+        var toolsRoot = Path.Combine(_root, "tools");
+        var service = new ToolAcquisitionService(
+            new HttpClient(new StubHandler(_ => new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new ByteArrayContent("fake nsis installer"u8.ToArray()),
+            })),
+            runner,
+            toolsRoot);
+
+        // Plant the pack's 7z as tool acquisition would have left it.
+        var sevenZipName = OperatingSystem.IsWindows() ? "7zmo.exe" : "7zmo";
+        var sevenZipPath = Path.Combine(toolsRoot, "momw-tools", sevenZipName);
+        Directory.CreateDirectory(Path.GetDirectoryName(sevenZipPath)!);
+        File.WriteAllText(sevenZipPath, "MZ");
+
+        await service.EnsureToolAsync(NsisSpec());
+
+        // The one process call must be 7z extraction — never the installer itself
+        // (whose /D= switch silently ignores quoted space-containing paths).
+        var spec = Assert.Single(runner.Specs);
+        Assert.Equal(sevenZipPath, spec.Exe);
+        Assert.Contains("x", spec.Args);
+        Assert.True(service.IsInstalled(NsisSpec()));
+
+        // NSIS leftovers are cleaned; payload survives.
+        var toolDir = service.GetToolDir(NsisSpec());
+        Assert.False(Directory.Exists(Path.Combine(toolDir, "$PLUGINSDIR")));
+        Assert.False(File.Exists(Path.Combine(toolDir, "Uninstall.exe")));
+        Assert.True(Directory.Exists(Path.Combine(toolDir, "resources")));
+    }
+
+    [Fact]
+    public async Task NsisWithoutAny7zOnNonWindowsThrows()
+    {
+        if (OperatingSystem.IsWindows())
+            return; // Windows falls back to the silent installer instead.
+
+        var service = MakeService();
+        await Assert.ThrowsAsync<PlatformNotSupportedException>(
+            () => service.EnsureToolAsync(NsisSpec()));
+    }
 }

@@ -76,8 +76,9 @@ public sealed class ToolAcquisitionService(
 
         if (FindExe(tool) is null)
             throw new InvalidOperationException(
-                $"{tool.Id} was extracted but '{tool.ExeProbe}' is missing — " +
-                "an antivirus may have quarantined it.");
+                $"{tool.Id} was extracted but '{tool.ExeProbe}' was not found anywhere under " +
+                $"'{GetToolDir(tool)}' — either the archive layout changed or an antivirus " +
+                "quarantined the binary.");
 
         WriteMarker(tool);
         progress?.Report(new ToolProgress(tool.Id, "done", 0, null));
@@ -121,20 +122,7 @@ public sealed class ToolAcquisitionService(
                 break;
 
             case ToolArchiveType.NsisExe:
-                if (!OperatingSystem.IsWindows())
-                    throw new PlatformNotSupportedException(
-                        $"{tool.Id} is an NSIS installer and can only be installed on Windows.");
-                // NSIS silent switches: /S must be uppercase, /D= must be last
-                // and unquoted (no trailing backslash).
-                var result = await runner.RunAsync(new ProcessSpec
-                {
-                    Exe = archivePath,
-                    Args = ["/S", $"/D={toolDir}"],
-                    Timeout = TimeSpan.FromMinutes(10),
-                }, null, ct).ConfigureAwait(false);
-                if (!result.Success)
-                    throw new InvalidOperationException(
-                        $"Silent install of {tool.Id} failed with exit code {result.ExitCode}.");
+                await ExtractNsisAsync(tool, archivePath, toolDir, extractor, ct).ConfigureAwait(false);
                 break;
 
             case ToolArchiveType.SevenZip:
@@ -146,6 +134,64 @@ public sealed class ToolAcquisitionService(
 
             default:
                 throw new ArgumentOutOfRangeException(nameof(tool), tool.ArchiveType, null);
+        }
+    }
+
+    /// <summary>
+    /// NSIS installers are 7z-readable archives, and extracting beats running
+    /// them: no elevation, no registry writes, and immunity to the /D= switch's
+    /// no-quoting rule — a quoted /D= path (which is what argument quoting
+    /// produces for any path with a space, e.g. "C:\Morrowind Renewed\...") is
+    /// silently IGNORED by NSIS, sending the install to its default location
+    /// while we probe an empty folder. The silent installer remains only as a
+    /// fallback when no 7z is available, with the path passed unquoted.
+    /// </summary>
+    private async Task ExtractNsisAsync(
+        ToolSpec tool, string archivePath, string toolDir, ArchiveExtractor extractor, CancellationToken ct)
+    {
+        if (Find7zAnywhere() is { } sevenZip)
+        {
+            try
+            {
+                await extractor.Extract7zAsync(sevenZip, archivePath, toolDir, null, ct).ConfigureAwait(false);
+                CleanupNsisArtifacts(toolDir);
+                return;
+            }
+            catch (IOException)
+            {
+                // 7z couldn't read this particular installer — fall through.
+            }
+        }
+
+        if (!OperatingSystem.IsWindows())
+            throw new PlatformNotSupportedException(
+                $"{tool.Id} is an NSIS installer; extracting it requires the bundled 7z " +
+                "(is the tools pack listed before it in tools.json?).");
+
+        // NSIS silent switches: /S must be uppercase; /D= must be the LAST
+        // argument and UNQUOTED even when the path contains spaces — hence
+        // RawArguments instead of Args.
+        var result = await runner.RunAsync(new ProcessSpec
+        {
+            Exe = archivePath,
+            RawArguments = $"/S /D={toolDir}",
+            Timeout = TimeSpan.FromMinutes(10),
+        }, null, ct).ConfigureAwait(false);
+        if (!result.Success)
+            throw new InvalidOperationException(
+                $"Silent install of {tool.Id} failed with exit code {result.ExitCode}.");
+    }
+
+    /// <summary>Drops NSIS runtime leftovers ($PLUGINSDIR etc.) and uninstaller stubs.</summary>
+    private static void CleanupNsisArtifacts(string toolDir)
+    {
+        foreach (var dir in Directory.EnumerateDirectories(toolDir, "$*").ToList())
+            Directory.Delete(dir, recursive: true);
+        foreach (var name in new[] { "Uninstall.exe", "uninst.exe", "uninstall.exe" })
+        {
+            var stub = Path.Combine(toolDir, name);
+            if (File.Exists(stub))
+                File.Delete(stub);
         }
     }
 

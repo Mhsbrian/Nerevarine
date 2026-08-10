@@ -67,6 +67,22 @@ public class ProcessRunnerTests
     }
 
     [Fact]
+    public async Task RawArgumentsBypassAutoQuoting()
+    {
+        var progress = new SyncProgress<OutputLine>();
+        var runner = new ProcessRunner();
+        var spec = OperatingSystem.IsWindows()
+            ? new ProcessSpec { Exe = "cmd.exe", RawArguments = "/c echo one two" }
+            : new ProcessSpec { Exe = "/bin/echo", RawArguments = "one two" };
+
+        var result = await runner.RunAsync(spec, progress);
+
+        Assert.True(result.Success);
+        // The raw string is parsed as separate args, not one quoted blob.
+        Assert.Contains(progress.Items, l => l.Text.Trim() == "one two");
+    }
+
+    [Fact]
     public async Task TimeoutKillsProcess()
     {
         var runner = new ProcessRunner();
