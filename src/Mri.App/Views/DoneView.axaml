@@ -10,6 +10,9 @@
       <Button Content="Launch OpenMW" Classes="accent" Command="{Binding LaunchOpenMwCommand}"
               IsEnabled="{Binding CanLaunch}"/>
       <Button Content="Open install folder" Command="{Binding OpenInstallFolderCommand}"/>
+      <Button Content="Save diagnostics zip" Command="{Binding SaveDiagnosticsCommand}"/>
     </StackPanel>
+    <TextBlock Text="{Binding DiagnosticsMessage}" FontSize="12" Foreground="#9ed49e" TextWrapping="Wrap"
+               IsVisible="{Binding DiagnosticsMessage, Converter={x:Static ObjectConverters.IsNotNull}}"/>
   </StackPanel>
 </UserControl>

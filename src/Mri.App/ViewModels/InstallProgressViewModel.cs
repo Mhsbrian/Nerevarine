@@ -3,6 +3,7 @@ using Avalonia.Threading;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Mri.App.Services;
+using Mri.Core.Logging;
 using Mri.Core.Pipeline;
 
 namespace Mri.App.ViewModels;
@@ -29,6 +30,12 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
     private string? _failureMessage;
 
     [ObservableProperty]
+    private string? _logFilePath;
+
+    [ObservableProperty]
+    private string? _diagnosticsMessage;
+
+    [ObservableProperty]
     private IReadOnlyList<string> _failedMods = [];
 
     public bool HasFailedMods => FailedMods.Count > 0;
@@ -39,21 +46,27 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
     public override void OnActivated()
     {
         if (!IsRunning)
-            _ = RunAsync(retryFailed: false);
+            _ = RunAsync();
     }
 
-    private async Task RunAsync(bool retryFailed)
+    private async Task RunAsync()
     {
         IsRunning = true;
         FailureMessage = null;
+        DiagnosticsMessage = null;
         FailedMods = [];
         OnPropertyChanged(nameof(HasFailedMods));
         Headline = "Preparing…";
         _cts = new CancellationTokenSource();
 
+        var runner = new InstallRunner(state);
+        InstallLog? log = null;
         try
         {
-            var engine = new InstallRunner(state).BuildEngine(out var ctx);
+            log = runner.CreateLog();
+            LogFilePath = log.FilePath;
+
+            var engine = runner.BuildEngine(log, out var ctx);
             _lastContext = ctx;
 
             if (Steps.Count == 0)
@@ -89,11 +102,13 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
         }
         catch (Exception e)
         {
+            log?.Error("app", "installer crashed outside the engine", e);
             Headline = "Installation stopped.";
             FailureMessage = e.Message;
         }
         finally
         {
+            log?.Dispose();
             IsRunning = false;
             RaiseNavigationChanged();
         }
@@ -128,7 +143,21 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
     private void Cancel() => _cts?.Cancel();
 
     [RelayCommand]
-    private Task Retry() => RunAsync(retryFailed: true);
+    private Task Retry() => RunAsync();
+
+    [RelayCommand]
+    private void SaveDiagnostics()
+    {
+        try
+        {
+            var zip = new InstallRunner(state).SaveDiagnostics();
+            DiagnosticsMessage = $"Diagnostics saved: {zip} — send this file to get help.";
+        }
+        catch (Exception e)
+        {
+            DiagnosticsMessage = $"Could not create diagnostics bundle: {e.Message}";
+        }
+    }
 
     [RelayCommand]
     private Task SkipFailedAndContinue()
@@ -144,7 +173,7 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
             ctx.State.SkippedMods = ctx.State.SkippedMods.Distinct().ToList();
             ctx.SaveState();
         }
-        return RunAsync(retryFailed: false);
+        return RunAsync();
     }
 }
 

@@ -23,7 +23,14 @@
           <Button Content="Retry" Command="{Binding RetryCommand}"/>
           <Button Content="Skip failed mods and continue" Command="{Binding SkipFailedAndContinueCommand}"
                   IsVisible="{Binding HasFailedMods}"/>
+          <Button Content="Save diagnostics zip" Command="{Binding SaveDiagnosticsCommand}"/>
         </StackPanel>
+        <TextBlock Text="{Binding LogFilePath, StringFormat='Full log: {0}'}" FontSize="11"
+                   Foreground="#8b90a0" TextWrapping="Wrap"
+                   IsVisible="{Binding LogFilePath, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+        <TextBlock Text="{Binding DiagnosticsMessage}" FontSize="12" Foreground="#9ed49e"
+                   TextWrapping="Wrap"
+                   IsVisible="{Binding DiagnosticsMessage, Converter={x:Static ObjectConverters.IsNotNull}}"/>
       </StackPanel>
     </Border>
 

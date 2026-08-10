@@ -16,7 +16,8 @@ public static class PipelineFactory
         HttpClient http,
         IProcessRunner runner,
         string settingsTemplate,
-        string shadersTemplate)
+        string shadersTemplate,
+        Logging.InstallLog? log = null)
     {
         var tools = new ToolAcquisitionService(http, runner, ctx.ToolsDir);
         var locator = new ToolLocator(tools, ctx.ToolManifest);
@@ -43,6 +44,6 @@ public static class PipelineFactory
             new ValidateStep(runner, _ => locator.ValidatorExe),
         };
 
-        return new InstallEngine(steps);
+        return new InstallEngine(steps, log);
     }
 }

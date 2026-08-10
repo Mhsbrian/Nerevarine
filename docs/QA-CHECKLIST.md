@@ -30,6 +30,9 @@ Checks, in order:
 - [ ] delta-merge produced `mods/delta-merged/delta-merged.omwaddon`; phase-2 cfg references it last
 - [ ] **OpenMW boots to the main menu and a new game starts with the 5 mods visibly active**
 - [ ] Kill the app mid-download → relaunch → resumes at the right step, no duplicate work
+- [ ] `logs\installer-*.log` captures the whole run (spawn/exit lines, child output verbatim);
+      the Nexus API key appears NOWHERE in it (search the file). "Save diagnostics zip" produces
+      a bundle whose umo config.json shows `«redacted»` for the key
 - [ ] Delete `umo.exe` (simulate AV) → relaunch → clear "antivirus" guidance, re-extract works
 
 ## M4 — full-list hardening (after M2 curation)

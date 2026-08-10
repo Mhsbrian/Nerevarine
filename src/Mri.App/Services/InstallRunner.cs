@@ -1,5 +1,7 @@
+using System.Reflection;
 using Mri.App.ViewModels;
 using Mri.Core.IO;
+using Mri.Core.Logging;
 using Mri.Core.OpenMw;
 using Mri.Core.Pipeline;
 
@@ -8,7 +10,20 @@ namespace Mri.App.Services;
 /// <summary>Builds the InstallContext + engine from wizard choices and runs it.</summary>
 public sealed class InstallRunner(WizardState state)
 {
-    public InstallEngine BuildEngine(out InstallContext ctx)
+    public static string AppVersion =>
+        Assembly.GetEntryAssembly()?.GetName().Version?.ToString(3) ?? "0.0.0";
+
+    /// <summary>
+    /// Creates the per-run install log. Caller owns (and must dispose) it.
+    /// </summary>
+    public InstallLog CreateLog()
+    {
+        var log = InstallLog.CreateInDirectory(Path.Combine(state.InstallDir, "logs"), AppVersion);
+        log.AddRedaction(state.NexusApiKey);
+        return log;
+    }
+
+    public InstallEngine BuildEngine(InstallLog log, out InstallContext ctx)
     {
         var game = state.Game
             ?? throw new InvalidOperationException("No game selected.");
@@ -25,13 +40,32 @@ public sealed class InstallRunner(WizardState state)
             OpenMwPaths = OpenMwUserPaths.Detect(),
             State = stateStore.Load(),
             StateStore = stateStore,
+            AppVersion = AppVersion,
         };
+
+        log.Info("app", $"game: '{game.Path}' (source {game.Source}, " +
+                        $"tribunal={game.Validation.HasTribunal}, bloodmoon={game.Validation.HasBloodmoon})");
+        log.Info("app", $"install dir: '{state.InstallDir}'");
+        log.Info("app", $"modlist: {state.Data.Modlist.Name} {state.Data.Modlist.ListVersion} " +
+                        $"({state.Data.Modlist.Mods.Count} mods)");
+        log.Info("app", $"nexus premium: {state.NexusUser?.IsPremium ?? false}");
+        log.Info("app", $"openmw config dir: '{ctx.OpenMwPaths.ConfigDir}'");
+        if (ctx.State.CompletedSteps.Count > 0)
+            log.Info("app", $"resuming — steps previously recorded done: " +
+                            string.Join(", ", ctx.State.CompletedSteps.Keys));
 
         return PipelineFactory.Create(
             ctx,
             new HttpClient(),
-            new ProcessRunner(),
+            new LoggingProcessRunner(new ProcessRunner(), log),
             state.Data.SettingsTemplate,
-            state.Data.ShadersTemplate);
+            state.Data.ShadersTemplate,
+            log);
     }
+
+    public string SaveDiagnostics() =>
+        DiagnosticsBundler.CreateZip(
+            state.InstallDir,
+            OpenMwUserPaths.Detect().ConfigDir,
+            [state.NexusApiKey]);
 }

@@ -1,11 +1,29 @@
 using System.Diagnostics;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Mri.Core.Tools;
+using Mri.App.Services;
 
 namespace Mri.App.ViewModels;
 
 public sealed partial class DoneViewModel(WizardState state) : PageViewModel
 {
+    [ObservableProperty]
+    private string? _diagnosticsMessage;
+
+    [RelayCommand]
+    private void SaveDiagnostics()
+    {
+        try
+        {
+            var zip = new InstallRunner(state).SaveDiagnostics();
+            DiagnosticsMessage = $"Diagnostics saved: {zip}";
+        }
+        catch (Exception e)
+        {
+            DiagnosticsMessage = $"Could not create diagnostics bundle: {e.Message}";
+        }
+    }
+
     public override string Title => "Done";
     public override bool CanGoNext => false;
     public override bool CanGoBack => false;
