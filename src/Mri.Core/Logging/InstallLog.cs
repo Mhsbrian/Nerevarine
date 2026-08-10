@@ -49,7 +49,7 @@ public sealed class InstallLog : IDisposable
         if (string.IsNullOrWhiteSpace(secret) || secret.Length < 4)
             return;
         lock (_lock)
-            _redactions.Add(secret);
+            _redactions.AddRange(Redactor.VariantsOf(secret));
     }
 
     public void Info(string category, string message) => Write("INFO ", category, message);
@@ -66,11 +66,7 @@ public sealed class InstallLog : IDisposable
     public string Redact(string text)
     {
         lock (_lock)
-        {
-            foreach (var secret in _redactions)
-                text = text.Replace(secret, "«redacted»");
-        }
-        return text;
+            return Redactor.Apply(text, _redactions);
     }
 
     private void Write(string level, string category, string message)
@@ -81,8 +77,7 @@ public sealed class InstallLog : IDisposable
             {
                 if (_disposed)
                     return;
-                foreach (var secret in _redactions)
-                    message = message.Replace(secret, "«redacted»");
+                message = Redactor.Apply(message, _redactions);
                 foreach (var line in message.Split('\n'))
                     _writer.WriteLine($"{DateTime.Now:HH:mm:ss.fff} [{level}] [{category}] {line.TrimEnd('\r')}");
             }

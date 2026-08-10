@@ -8,7 +8,9 @@ public class DiagnosticsBundlerTests : IDisposable
     private readonly string _root;
     private readonly string _installDir;
     private readonly string _openMwDir;
-    private const string Secret = "nexus-key-abcdef123456";
+    // Includes '+' so the JSON on disk stores it +-escaped — the exact
+    // variant that once leaked a real key through the bundle.
+    private const string Secret = "nexus-key-abc+def/123456==--tail==";
 
     public DiagnosticsBundlerTests()
     {
@@ -21,8 +23,14 @@ public class DiagnosticsBundlerTests : IDisposable
         File.WriteAllText(Path.Combine(_installDir, "logs", "installer-2.log"), "log two");
         File.WriteAllText(Path.Combine(_installDir, "state.json"), """{"schemaVersion":1}""");
         Directory.CreateDirectory(Path.Combine(_installDir, "umo-conf"));
+        // Written exactly like UmoConfigWriter does — System.Text.Json escapes
+        // '+' to +, so the raw secret string does NOT appear in the file.
         File.WriteAllText(Path.Combine(_installDir, "umo-conf", "config.json"),
-            $$"""{"apikey": "{{Secret}}", "base_path": "C:\\mods"}""");
+            System.Text.Json.JsonSerializer.Serialize(new Dictionary<string, string>
+            {
+                ["apikey"] = Secret,
+                ["base_path"] = @"C:\mods",
+            }));
         Directory.CreateDirectory(Path.Combine(_installDir, "modlist"));
         File.WriteAllText(Path.Combine(_installDir, "modlist", "morrowind-remake.json"), "[]");
         Directory.CreateDirectory(Path.Combine(_installDir, "tools", "openmw"));
@@ -54,12 +62,15 @@ public class DiagnosticsBundlerTests : IDisposable
         Assert.Contains("tool-markers/openmw/.mri-tool.json", names);
         Assert.Contains("environment.txt", names);
 
-        // The API key must not exist anywhere in the bundle.
+        // The API key must not exist anywhere in the bundle — in raw OR
+        // escaped form ("nexus-key-abc" is the escape-proof marker: JSON
+        // escaping only rewrites the '+' and beyond).
         foreach (var entry in zip.Entries)
         {
             using var reader = new StreamReader(entry.Open());
             var content = reader.ReadToEnd();
             Assert.DoesNotContain(Secret, content);
+            Assert.DoesNotContain("nexus-key-abc", content);
         }
 
         // But the redacted umo config still shows its structure.

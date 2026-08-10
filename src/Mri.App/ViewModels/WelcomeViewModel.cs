@@ -1,8 +1,26 @@
+using Mri.Core;
+
 namespace Mri.App.ViewModels;
 
 public sealed class WelcomeViewModel(WizardState state) : PageViewModel
 {
     public override string Title => "Welcome";
+
+    /// <summary>
+    /// umo hard-refuses elevated runs, so an elevated installer can never
+    /// finish — block at the door with instructions instead of failing four
+    /// steps in.
+    /// </summary>
+    public bool IsElevated { get; } = Elevation.IsElevated();
+
+    public override bool CanGoNext => !IsElevated;
+
+    public string ElevationWarning =>
+        "⚠ This installer is running as administrator.\n\n" +
+        "The mod downloader (umo) refuses to run with admin rights — files it created would be " +
+        "admin-owned and break the game later. No part of this setup needs elevation.\n\n" +
+        "Please close this window and start the installer normally (a plain double-click, " +
+        "no “Run as administrator”).";
 
     public int ModCount => state.Data.Modlist.Mods.Count;
 

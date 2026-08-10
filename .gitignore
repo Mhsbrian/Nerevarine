@@ -1,5 +1,7 @@
 bin/
 obj/
+# User-provided diagnostics bundles for review — may contain sensitive data.
+logs/
 *.user
 .vs/
 .idea/

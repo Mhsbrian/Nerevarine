@@ -25,6 +25,15 @@ public sealed class InstallRunner(WizardState state)
 
     public InstallEngine BuildEngine(InstallLog log, out InstallContext ctx)
     {
+        log.Info("app", $"elevated: {Mri.Core.Elevation.IsElevated()}");
+        if (Mri.Core.Elevation.IsElevated())
+        {
+            log.Error("app", "refusing to run elevated — umo exits with code 3 under admin rights");
+            throw new InvalidOperationException(
+                "The installer is running as administrator, which the mod downloader refuses. " +
+                "Close it and start it normally (no “Run as administrator”).");
+        }
+
         var game = state.Game
             ?? throw new InvalidOperationException("No game selected.");
         Directory.CreateDirectory(state.InstallDir);

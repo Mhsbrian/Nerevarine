@@ -18,9 +18,18 @@ public sealed class AcquireToolsStep(ToolAcquisitionService tools) : IInstallSte
 
     public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {
+        // Downloads report every buffer chunk; forward only whole-percent
+        // changes so the install log stays readable (a 60 MB download once
+        // produced 8,000 identical "0%" lines).
+        var lastReported = new Dictionary<string, int>();
         var toolProgress = new Progress<ToolProgress>(p =>
         {
             var fraction = p.BytesTotal is > 0 ? (double?)p.BytesDone / p.BytesTotal : null;
+            var percent = fraction is { } f ? (int)(f * 100) : -1;
+            var key = $"{p.ToolId}:{p.Phase}";
+            if (lastReported.TryGetValue(key, out var previous) && previous == percent)
+                return;
+            lastReported[key] = percent;
             progress.Report(new StepProgress($"{p.ToolId}: {p.Phase}", fraction));
         });
         await tools.EnsureAllAsync(ctx.ToolManifest, toolProgress, ct).ConfigureAwait(false);

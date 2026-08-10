@@ -20,7 +20,7 @@ public static class DiagnosticsBundler
     {
         var redactions = secrets
             .Where(s => !string.IsNullOrWhiteSpace(s) && s!.Length >= 4)
-            .Cast<string>()
+            .SelectMany(s => Redactor.VariantsOf(s!))
             .ToList();
 
         var zipPath = Path.Combine(installDir, $"diagnostics-{DateTime.Now:yyyyMMdd-HHmmss}.zip");
@@ -43,8 +43,7 @@ public static class DiagnosticsBundler
                     return;
                 }
 
-                foreach (var secret in redactions)
-                    text = text.Replace(secret, "«redacted»");
+                text = Redactor.Apply(text, redactions);
 
                 var entry = zip.CreateEntry(entryName, CompressionLevel.Optimal);
                 using var writer = new StreamWriter(entry.Open());

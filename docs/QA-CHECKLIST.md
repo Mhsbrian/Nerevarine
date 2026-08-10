@@ -13,6 +13,8 @@ Setup:
       action; e.g. Patch for Purists, Expansion Delay, a Dropbox-hosted mod, a GitLab artifact)
 
 Checks, in order:
+- [ ] Launch via "Run as administrator" → Welcome page shows the elevation warning and blocks
+      Next (umo hard-refuses elevated runs); plain launch proceeds normally
 - [ ] Steam auto-detection lists the right folder with a "Steam" badge (test: also a GOG install,
       also "Browse" to a fake folder → clear failure text)
 - [ ] Tool acquisition: pack lands in `tools/momw-tools` FIRST, then OpenMW is 7z-extracted into

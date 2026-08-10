@@ -5,6 +5,11 @@
              x:DataType="vm:WelcomeViewModel">
   <StackPanel Spacing="16" MaxWidth="620" HorizontalAlignment="Left">
     <TextBlock Text="Welcome" FontSize="26" FontWeight="Bold"/>
+    <Border Background="#3a2a25" BorderBrush="#e0b585" BorderThickness="1" CornerRadius="6"
+            Padding="16,12" IsVisible="{Binding IsElevated}">
+      <TextBlock Text="{Binding ElevationWarning}" TextWrapping="Wrap" FontSize="13"
+                 LineHeight="20" Foreground="#e0b585"/>
+    </Border>
     <TextBlock Text="{Binding Blurb}" TextWrapping="Wrap" FontSize="14" LineHeight="22"
                Foreground="#c9ccd4"/>
   </StackPanel>
