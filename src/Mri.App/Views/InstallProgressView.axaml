@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Mri.App.ViewModels"
+             x:Class="Mri.App.Views.InstallProgressView"
+             x:DataType="vm:InstallProgressViewModel">
+  <DockPanel>
+    <TextBlock DockPanel.Dock="Top" Text="{Binding Headline}" FontSize="22" FontWeight="Bold"
+               Margin="0,0,0,14" TextWrapping="Wrap"/>
+
+    <!-- Failure / retry panel -->
+    <Border DockPanel.Dock="Bottom" Background="#332525" CornerRadius="6" Padding="14,10" Margin="0,10,0,0"
+            IsVisible="{Binding FailureMessage, Converter={x:Static ObjectConverters.IsNotNull}}">
+      <StackPanel Spacing="8">
+        <TextBlock Text="{Binding FailureMessage}" TextWrapping="Wrap" FontSize="13"/>
+        <ItemsControl ItemsSource="{Binding FailedMods}" MaxHeight="90">
+          <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="x:String">
+              <TextBlock Text="{Binding}" FontSize="12" Foreground="#e0a5a5"/>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <StackPanel Orientation="Horizontal" Spacing="10">
+          <Button Content="Retry" Command="{Binding RetryCommand}"/>
+          <Button Content="Skip failed mods and continue" Command="{Binding SkipFailedAndContinueCommand}"
+                  IsVisible="{Binding HasFailedMods}"/>
+        </StackPanel>
+      </StackPanel>
+    </Border>
+
+    <!-- Log tail -->
+    <Border DockPanel.Dock="Bottom" Background="#15171c" CornerRadius="6" Padding="8" Height="130"
+            Margin="0,10,0,0">
+      <ScrollViewer>
+        <ItemsControl ItemsSource="{Binding LogLines}">
+          <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="x:String">
+              <TextBlock Text="{Binding}" FontFamily="monospace" FontSize="11" Foreground="#7d8494"/>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+      </ScrollViewer>
+    </Border>
+
+    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,10,0,0">
+      <Button Content="Pause" Command="{Binding CancelCommand}"/>
+    </StackPanel>
+
+    <!-- Step checklist -->
+    <ScrollViewer>
+      <ItemsControl ItemsSource="{Binding Steps}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate x:DataType="vm:StepViewModel">
+            <Border Padding="4,7">
+              <Grid ColumnDefinitions="28,*" RowDefinitions="Auto,Auto,Auto">
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding StatusIcon}" FontSize="14"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Label}" FontSize="14"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Detail}" FontSize="12"
+                           Foreground="#8b90a0" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"
+                           MaxLines="1" IsVisible="{Binding IsActive}"/>
+                <ProgressBar Grid.Row="2" Grid.Column="1" Margin="0,5,0,0" Height="4"
+                             Minimum="0" Maximum="1" Value="{Binding Fraction}"
+                             IsVisible="{Binding HasFraction}"/>
+              </Grid>
+            </Border>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+  </DockPanel>
+</UserControl>

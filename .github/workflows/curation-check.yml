@@ -1,0 +1,38 @@
+name: Curation check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "src/Mri.Curation/**"
+  pull_request:
+    paths:
+      - "data/**"
+      - "src/Mri.Curation/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Constraint check (no live API — committed cache only)
+        run: >
+          dotnet run --project src/Mri.Curation -- check
+          --csv data/modlist.source.csv
+          --cache data/resolve-cache.json
+          --overrides data/overrides/overrides.yaml
+      - name: Verify committed modlist.json is current
+        run: |
+          dotnet run --project src/Mri.Curation -- emit \
+            --csv data/modlist.source.csv \
+            --cache data/resolve-cache.json \
+            --overrides data/overrides/overrides.yaml \
+            --out /tmp/fresh-modlist.json \
+            --report /tmp/report.md \
+            --list-version "$(python3 -c "import json;print(json.load(open('data/modlist.json'))['listVersion'])")"
+          diff <(python3 -m json.tool data/modlist.json) <(python3 -m json.tool /tmp/fresh-modlist.json) \
+            || { echo "::error::data/modlist.json is stale — re-run 'mri-curation emit' and commit."; exit 1; }

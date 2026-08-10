@@ -1,0 +1,9 @@
+# Morrowind Remake Installer — post-processing shader state.
+#
+# Copied to the OpenMW user config dir as shaders.yaml. The shader chain is
+# intentionally left empty at install time: chain entries must reference
+# shaders shipped by mods in the list, and enabling a missing shader breaks
+# the whole chain. The M2 curation pass fills this in once the SHADERS
+# category's actual shader names are pinned; players can also toggle shaders
+# in-game with F2.
+config: {}

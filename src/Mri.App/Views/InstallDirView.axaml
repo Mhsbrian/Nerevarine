@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Mri.App.ViewModels"
+             x:Class="Mri.App.Views.InstallDirView"
+             x:DataType="vm:InstallDirViewModel">
+  <StackPanel Spacing="14" MaxWidth="620" HorizontalAlignment="Left">
+    <TextBlock Text="Install location" FontSize="26" FontWeight="Bold"/>
+    <TextBlock TextWrapping="Wrap" Foreground="#c9ccd4"
+               Text="Everything — mods, tools, OpenMW, download cache — lives inside this single folder. Avoid Program Files and cloud-synced folders."/>
+    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+      <TextBox Grid.Column="0" Text="{Binding InstallDir}" FontSize="13"/>
+      <Button Grid.Column="1" Content="Browse…" Command="{Binding BrowseCommand}"/>
+    </Grid>
+    <TextBlock Text="{Binding SpaceMessage}" FontSize="13"/>
+    <TextBlock Text="{Binding Warning}" Foreground="#e0b585" TextWrapping="Wrap" FontSize="13"
+               IsVisible="{Binding Warning, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+  </StackPanel>
+</UserControl>

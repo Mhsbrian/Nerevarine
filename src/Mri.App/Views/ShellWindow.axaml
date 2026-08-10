@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Mri.App.ViewModels"
+        x:Class="Mri.App.Views.ShellWindow"
+        x:DataType="vm:WizardViewModel"
+        Title="Morrowind Remake Installer"
+        Width="960" Height="640"
+        MinWidth="820" MinHeight="560"
+        WindowStartupLocation="CenterScreen">
+
+  <Grid ColumnDefinitions="230,*">
+
+    <!-- Sidebar: step list -->
+    <Border Grid.Column="0" Background="#1a1c22">
+      <DockPanel Margin="0,24">
+        <TextBlock DockPanel.Dock="Top" Margin="20,0,20,24"
+                   Text="MORROWIND&#x0a;REMAKE" FontSize="20" FontWeight="Bold"
+                   Foreground="#d9c58c" LineHeight="26"/>
+        <ItemsControl ItemsSource="{Binding Pages}">
+          <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="vm:PageViewModel">
+              <Border Padding="20,9" Background="Transparent">
+                <TextBlock Text="{Binding Title}" FontSize="14"
+                           Foreground="{Binding IsCurrent, Converter={x:Static vm:Converters.StepForeground}}"
+                           FontWeight="{Binding IsCurrent, Converter={x:Static vm:Converters.StepWeight}}"/>
+              </Border>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+      </DockPanel>
+    </Border>
+
+    <!-- Content + nav -->
+    <Grid Grid.Column="1" RowDefinitions="*,Auto">
+      <ContentControl Grid.Row="0" Content="{Binding CurrentPage}" Margin="32,28,32,8"/>
+
+      <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="#2a2d35" Padding="32,14">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="12">
+          <Button Content="Back" MinWidth="90" Command="{Binding GoBackCommand}"/>
+          <Button Content="{Binding NextButtonText}" MinWidth="110" Classes="accent"
+                  Command="{Binding GoNextCommand}"/>
+        </StackPanel>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

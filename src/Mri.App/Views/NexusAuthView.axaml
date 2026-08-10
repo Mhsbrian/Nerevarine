@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Mri.App.ViewModels"
+             x:Class="Mri.App.Views.NexusAuthView"
+             x:DataType="vm:NexusAuthViewModel">
+  <StackPanel Spacing="14" MaxWidth="620" HorizontalAlignment="Left">
+    <TextBlock Text="Nexus Mods account" FontSize="26" FontWeight="Bold"/>
+    <TextBlock Text="{Binding Explanation}" TextWrapping="Wrap" Foreground="#c9ccd4" FontSize="13"
+               LineHeight="20"/>
+    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+      <TextBox Grid.Column="0" Text="{Binding ApiKey}" PasswordChar="•" FontSize="13"
+               Watermark="Paste your Nexus API key"/>
+      <Button Grid.Column="1" Content="Validate" Command="{Binding ValidateCommand}"/>
+    </Grid>
+    <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsValidating}"/>
+    <TextBlock Text="{Binding StatusMessage}" TextWrapping="Wrap" FontSize="13"
+               IsVisible="{Binding StatusMessage, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+    <Border Background="#232733" CornerRadius="6" Padding="14,10"
+            IsVisible="{Binding UserSummary, Converter={x:Static ObjectConverters.IsNotNull}}">
+      <TextBlock Text="{Binding UserSummary}" FontSize="13"/>
+    </Border>
+    <TextBlock IsVisible="{Binding IsPremiumBlocked}" TextWrapping="Wrap" Foreground="#e0b585" FontSize="13"
+               Text="Without Premium the Nexus API refuses automated downloads entirely. A future version will add a guided click-through mode for free accounts; for now Premium is required."/>
+  </StackPanel>
+</UserControl>

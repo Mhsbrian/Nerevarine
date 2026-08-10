@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "tools": [
+    {
+      "id": "openmw",
+      "version": "0.51.0",
+      "url": "https://github.com/OpenMW/openmw/releases/download/openmw-0.51.0/OpenMW-0.51.0-Windows-x64.exe",
+      "sha256": "56f6ccda630860a3197fb10c802e047740ea92230474dc442a39674e227f9ce7",
+      "archiveType": "nsisExe",
+      "installSubdir": "openmw",
+      "exeProbe": "openmw.exe"
+    },
+    {
+      "id": "momw-tools-pack",
+      "version": "1.49",
+      "url": "https://gitlab.com/api/v4/projects/modding-openmw%2Fmomw-tools-pack/jobs/artifacts/1.49/raw/momw-tools-pack-windows.zip?job=make",
+      "sha256": "f9a63985041176b151539c368ea9fc219406d0f2a3b6940217001b75e09c9074",
+      "archiveType": "zip",
+      "installSubdir": "momw-tools",
+      "exeProbe": "umo.exe"
+    }
+  ]
+}

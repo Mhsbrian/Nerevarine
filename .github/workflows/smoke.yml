@@ -1,0 +1,21 @@
+name: Windows smoke (manual)
+
+# M1 smoke scaffold: exercises real tool acquisition and umo against a
+# fabricated game directory (dummy esm/bsa — no copyrighted content) with a
+# tiny direct-URL modlist. Run manually from the Actions tab.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build
+        run: dotnet build --configuration Release
+      - name: Placeholder
+        run: echo "M1 smoke harness lands here — see docs/QA-CHECKLIST.md"

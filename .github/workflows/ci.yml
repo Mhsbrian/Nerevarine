@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build
+        run: dotnet build --configuration Release
+      - name: Test
+        run: dotnet test --configuration Release --no-build --verbosity normal
+
+  publish:
+    needs: build-test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish single-file win-x64
+        run: >
+          dotnet publish src/Mri.App -c Release -r win-x64
+          -p:PublishSingleFile=true -p:SelfContained=true
+          -p:EnableCompressionInSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -o artifacts/win-x64
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MorrowindRemakeInstaller-win-x64
+          path: artifacts/win-x64/MorrowindRemakeInstaller.exe

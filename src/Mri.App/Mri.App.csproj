@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mri.App</RootNamespace>
+    <AssemblyName>MorrowindRemakeInstaller</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.3.20" Condition="'$(Configuration)' == 'Debug'" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mri.Core\Mri.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\data\modlist.json" Link="Data\modlist.json" Condition="Exists('..\..\data\modlist.json')" />
+    <EmbeddedResource Include="..\..\data\tools.json" Link="Data\tools.json" />
+    <EmbeddedResource Include="..\..\data\templates\settings.template.cfg" Link="Data\settings.template.cfg" />
+    <EmbeddedResource Include="..\..\data\templates\shaders.template.yaml" Link="Data\shaders.template.yaml" />
+  </ItemGroup>
+
+</Project>

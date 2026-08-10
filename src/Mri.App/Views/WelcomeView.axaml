@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Mri.App.ViewModels"
+             x:Class="Mri.App.Views.WelcomeView"
+             x:DataType="vm:WelcomeViewModel">
+  <StackPanel Spacing="16" MaxWidth="620" HorizontalAlignment="Left">
+    <TextBlock Text="Welcome" FontSize="26" FontWeight="Bold"/>
+    <TextBlock Text="{Binding Blurb}" TextWrapping="Wrap" FontSize="14" LineHeight="22"
+               Foreground="#c9ccd4"/>
+  </StackPanel>
+</UserControl>

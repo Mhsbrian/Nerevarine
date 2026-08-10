@@ -1,0 +1,63 @@
+# Hand-curated rules that encode the spreadsheet's prose instructions as
+# machine-readable operations. Matched rules clear the "comment not encoded"
+# problem for their row; `mri-curation emit` re-reports whatever remains.
+#
+# Rule vocabulary:
+#   match:      { slug | nexusId | csvRow | name }   (AND-combined)
+#   skip:       true + skipReason
+#   set:        { id,name,extractTo,directUrl,nexusFileId,dataPaths,content,groundcover,bsaArchives,tags }
+#   actions:    [{ type: remove|rename|copy|clean, path|paths|src|dst|force|arguments }]
+#   moveAfter / moveBefore:  <anchor slug>
+#   splitInto:  [ set-specs ]      (replaces one row with several entries)
+#   constraints: [{ contentBefore | contentAfter: <plugin name> }]
+#   pickFile:   { nameContains | category }   (documents a file choice; silences low-confidence flag)
+
+version: 1
+rules:
+  # ── Rows that describe the *workflow*, not mods. Our installer replaces all of them. ──
+  - match: { slug: use-mod-organizer-2 }
+    skip: true
+    skipReason: "MO2 is not used — umo + generated openmw.cfg replace the whole MO2/OpenMW-Player workflow."
+
+  - match: { slug: openmw-0-49-dev-build }
+    skip: true
+    skipReason: "OpenMW itself is installed by the tooling step (0.51 stable ≥ the 0.49-dev this list targeted)."
+
+  - match: { slug: integrate-openmw-with-steam }
+    skip: true
+    skipReason: "Optional Steam-overlay cosmetics; out of scope for v1."
+
+  - match: { slug: kezyma-s-openmw-player-for-mod-organizer-2 }
+    skip: true
+    skipReason: "MO2 plugin — no MO2 in this pipeline."
+
+  - match: { slug: delta-plugin }
+    skip: true
+    skipReason: "Shipped and run automatically as tooling (delta-merge step)."
+
+  - match: { slug: plox-load-order-sorter }
+    skip: true
+    skipReason: "Load order is baked into the curated list; no runtime sorting."
+
+  # ── Example prose-rule encodings (patterns for the M2 curation pass). ──
+
+  # "Individual. Delete bcsounds.esp, maser_inex.esp" — the sheet's typo means
+  # master_index.esp; exact archive paths get confirmed by M2 archive inspection.
+  - match: { slug: official-plugins-unofficial-patch }
+    actions:
+      - type: remove
+        path: "OfficialPluginsUnofficialPatch/bcsounds.esp"
+      - type: remove
+        path: "OfficialPluginsUnofficialPatch/master_index.esp"
+
+  # "Load before Patch for Purist, Version 1.3" — the spreadsheet row order
+  # already satisfies this; the constraint makes it an enforced invariant.
+  - match: { slug: expansion-delay }
+    constraints:
+      - contentBefore: "Patch for Purists.esm"
+
+  # "Remove Vivec.esp" (Voiced Vivec and Yakety Yagrum)
+  - match: { slug: voiced-vivec-and-yakety-yagrum }
+    actions:
+      - type: remove
+        path: "VoicedVivecAndYaketyYagrum/Vivec.esp"

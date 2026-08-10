@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Mri.App.ViewModels"
+             x:Class="Mri.App.Views.ReviewView"
+             x:DataType="vm:ReviewViewModel">
+  <StackPanel Spacing="14" MaxWidth="640" HorizontalAlignment="Left">
+    <TextBlock Text="Review" FontSize="26" FontWeight="Bold"/>
+    <Border Background="#232733" CornerRadius="6" Padding="18,14">
+      <Grid ColumnDefinitions="170,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="10">
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Morrowind" Foreground="#8b90a0"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding GamePath}" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Install folder" Foreground="#8b90a0"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding InstallDir}" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Nexus account" Foreground="#8b90a0"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Account}"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Mods" Foreground="#8b90a0"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding ModCount}"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Disk / time" Foreground="#8b90a0"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Estimate}" TextWrapping="Wrap"/>
+      </Grid>
+    </Border>
+    <TextBlock Text="{Binding NextStepNote}" TextWrapping="Wrap" Foreground="#c9ccd4" FontSize="13"/>
+  </StackPanel>
+</UserControl>

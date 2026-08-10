@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Mri.App.ViewModels"
+             x:Class="Mri.App.Views.GameDetectView"
+             x:DataType="vm:GameDetectViewModel">
+  <DockPanel MaxWidth="680" HorizontalAlignment="Left">
+    <TextBlock DockPanel.Dock="Top" Text="Find Morrowind" FontSize="26" FontWeight="Bold" Margin="0,0,0,8"/>
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Foreground="#c9ccd4" Margin="0,0,0,16"
+               Text="The installer looked for your Morrowind (GOTY) installation in Steam libraries, GOG and the registry. Pick the right one, or browse to it manually."/>
+
+    <StackPanel DockPanel.Dock="Bottom" Spacing="10" Margin="0,14,0,0">
+      <TextBlock Text="{Binding ValidationMessage}" TextWrapping="Wrap" FontSize="13"/>
+      <TextBlock Text="{Binding BrowseError}" Foreground="#e08585" TextWrapping="Wrap"
+                 IsVisible="{Binding BrowseError, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+      <StackPanel Orientation="Horizontal" Spacing="10">
+        <Button Content="Scan again" Command="{Binding RefreshCommand}"/>
+        <Button Content="Browse…" Command="{Binding BrowseCommand}"/>
+      </StackPanel>
+    </StackPanel>
+
+    <ListBox ItemsSource="{Binding Candidates}" SelectedItem="{Binding Selected}">
+      <ListBox.ItemTemplate>
+        <DataTemplate x:DataType="vm:GameCandidateViewModel">
+          <Grid ColumnDefinitions="30,*,Auto" Margin="4,6">
+            <TextBlock Grid.Column="0" Text="{Binding StatusIcon}" FontSize="15"/>
+            <TextBlock Grid.Column="1" Text="{Binding Path}" TextWrapping="Wrap" FontSize="13"/>
+            <Border Grid.Column="2" Background="#2a2d35" CornerRadius="4" Padding="8,2" Margin="8,0,0,0">
+              <TextBlock Text="{Binding SourceBadge}" FontSize="11" Foreground="#a9aeba"/>
+            </Border>
+          </Grid>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,28 @@
+namespace Mri.Core.Modlist;
+
+/// <summary>
+/// The flattened, ordered inputs the openmw.cfg composer consumes. Paths are
+/// relative to the mods root; the composer makes them absolute.
+/// </summary>
+public sealed record LoadOrderPlan
+{
+    public required IReadOnlyList<string> DataDirs { get; init; }
+    public required IReadOnlyList<string> ContentFiles { get; init; }
+    public required IReadOnlyList<string> GroundcoverFiles { get; init; }
+    public required IReadOnlyList<string> FallbackArchives { get; init; }
+}
+
+public sealed record LoadOrderOptions
+{
+    /// <summary>
+    /// Phase 2: the delta-plugin merge has run, so delta-merged output is
+    /// appended last and deltaOnly plugins drop their content= lines.
+    /// </summary>
+    public bool IncludeDelta { get; init; }
+
+    public string DeltaDataDir { get; init; } = "delta-merged";
+    public string DeltaContentFile { get; init; } = "delta-merged.omwaddon";
+
+    /// <summary>Mods the user chose to skip after failed downloads.</summary>
+    public IReadOnlySet<string> SkippedModIds { get; init; } = new HashSet<string>();
+}
