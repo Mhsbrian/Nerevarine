@@ -108,7 +108,10 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
         ctx.Modlist.Mods
             .Where(m => !ctx.State.SkippedMods.Contains(m.Id))
             .Where(m => m.DataPaths.Count > 0)
-            .Where(m => !Directory.Exists(Path.Combine(ctx.ModsRootDir, m.DataPaths[0])));
+            // umo's layout is BASEPATH/<category>/<extract_to> — the verifier
+            // must look exactly where umo extracts.
+            .Where(m => !Directory.Exists(Path.Combine(
+                ctx.ModsRootDir, ModlistCompiler.CategoryDir(m.Category), m.DataPaths[0])));
 
     public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {

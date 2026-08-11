@@ -17,6 +17,26 @@ public static class ModlistCompiler
     /// </summary>
     private const string EpochDate = "2026-01-01T00:00:00+00:00";
 
+    /// <summary>
+    /// umo extracts every mod to BASEPATH/&lt;category&gt;/&lt;extract_to&gt; with the
+    /// category string used VERBATIM as a directory (helper.where in umo
+    /// source). Display categories like "Bug Fixes / Patches" would become
+    /// mangled nested folders on Windows, so every path consumer — the umo
+    /// projection, the openmw.cfg data plan, and the install verifier — goes
+    /// through this one sanitizer and can never disagree.
+    /// </summary>
+    public static string CategoryDir(string category)
+    {
+        var token = string.Concat(category
+            .Split(' ', '/', '\\', '-', '_', '(', ')', '\'', '.', ':', '&')
+            .Where(w => w.Length > 0)
+            .Select(w => char.ToUpperInvariant(w[0]) + w[1..]));
+        if (token.Length == 0)
+            token = "Uncategorized";
+        // umo silently filters these category names out of custom lists.
+        return token is "Settings" or "Tools" or "FirstSteps" ? token + "Mods" : token;
+    }
+
     public static string ToUmoModDescJson(Modlist modlist)
     {
         var array = new JsonArray();
@@ -53,7 +73,7 @@ public static class ModlistCompiler
             ["author"] = mod.Author ?? "",
             ["description"] = mod.Notes ?? mod.Name,
             ["url"] = mod.Source.Url,
-            ["category"] = mod.Category,
+            ["category"] = CategoryDir(mod.Category),
             ["dl_url"] = mod.Source.Handler == ModHandler.Nexus ? "" : mod.Downloads.FirstOrDefault()?.DirectUrl ?? "",
             ["usage_notes"] = "",
             ["compat"] = 4,
@@ -151,7 +171,8 @@ public static class ModlistCompiler
             if (options.SkippedModIds.Contains(mod.Id))
                 continue;
 
-            dataDirs.AddRange(mod.DataPaths);
+            // Mirror umo's on-disk layout: BASEPATH/<category>/<data path>.
+            dataDirs.AddRange(mod.DataPaths.Select(p => $"{CategoryDir(mod.Category)}/{p}"));
             archives.AddRange(mod.BsaArchives);
             groundcover.AddRange(mod.Groundcover);
 

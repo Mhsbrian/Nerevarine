@@ -87,6 +87,8 @@ public class ModlistCompilerTests
 
         var pfp = mods[0];
         Assert.Equal("Patch for Purists", pfp.GetProperty("name").GetString());
+        // Path-safe token — umo uses the category verbatim as a directory.
+        Assert.Equal("BugFixesPatches", pfp.GetProperty("category").GetString());
         Assert.Equal("patch-for-purists", pfp.GetProperty("slug").GetString());
         Assert.Equal("nexus", pfp.GetProperty("handler").GetString());
         // String, not int — umo's Pydantic model requires Optional[str].
@@ -117,11 +119,13 @@ public class ModlistCompilerTests
     }
 
     [Fact]
-    public void LoadOrderPlanPhase1IncludesDeltaOnlyPlugins()
+    public void LoadOrderPlanPrefixesDataDirsWithSanitizedCategory()
     {
         var plan = ModlistCompiler.BuildLoadOrderPlan(SampleList(), new LoadOrderOptions());
 
-        Assert.Equal(["PatchForPurists", "Aesthesia/00 Core"], plan.DataDirs);
+        // umo extracts to BASEPATH/<category>/<extract_to>; data= lines must
+        // point at exactly that.
+        Assert.Equal(["BugFixesPatches/PatchForPurists", "Groundcover/Aesthesia/00 Core"], plan.DataDirs);
         Assert.Equal(["Patch for Purists.esm", "PfP - Merge Input.esp"], plan.ContentFiles);
         Assert.Equal(["Grass_AC.esp"], plan.GroundcoverFiles);
     }
@@ -132,7 +136,9 @@ public class ModlistCompilerTests
         var plan = ModlistCompiler.BuildLoadOrderPlan(
             SampleList(), new LoadOrderOptions { IncludeDelta = true });
 
-        Assert.Equal(["PatchForPurists", "Aesthesia/00 Core", "delta-merged"], plan.DataDirs);
+        Assert.Equal(
+            ["BugFixesPatches/PatchForPurists", "Groundcover/Aesthesia/00 Core", "delta-merged"],
+            plan.DataDirs);
         Assert.Equal(["Patch for Purists.esm", "delta-merged.omwaddon"], plan.ContentFiles);
     }
 
@@ -144,9 +150,19 @@ public class ModlistCompilerTests
             SkippedModIds = new HashSet<string> { "aesthesia-groundcover" },
         });
 
-        Assert.Equal(["PatchForPurists"], plan.DataDirs);
+        Assert.Equal(["BugFixesPatches/PatchForPurists"], plan.DataDirs);
         Assert.Empty(plan.GroundcoverFiles);
     }
+
+    [Theory]
+    [InlineData("Bug Fixes / Patches", "BugFixesPatches")]
+    [InlineData("Quality Of Life / Immersive", "QualityOfLifeImmersive")]
+    [InlineData("New Mods", "NewMods")]
+    [InlineData("Meshes & Textures", "MeshesTextures")]
+    [InlineData("Tools", "ToolsMods")] // umo silently filters "Tools"
+    [InlineData("", "Uncategorized")]
+    public void CategoryDirIsPathSafeAndNeverFiltered(string category, string expected) =>
+        Assert.Equal(expected, ModlistCompiler.CategoryDir(category));
 
     [Fact]
     public void CanonicalModlistRoundTripsThroughJson()
