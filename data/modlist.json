@@ -61,7 +61,8 @@
         }
       ],
       "dataPaths": [
-        "OfficialPluginsUnofficialPatch"
+        "OfficialPluginsUnofficialPatch/00 adamantium armor",
+        "OfficialPluginsUnofficialPatch/00 adamantium armor compatibility"
       ],
       "content": [],
       "groundcover": [],
@@ -165,7 +166,7 @@
         }
       ],
       "dataPaths": [
-        "BuoyantLordVivec"
+        "BuoyantLordVivec/00Vanilla"
       ],
       "content": [],
       "groundcover": [],
@@ -372,7 +373,7 @@
         }
       ],
       "dataPaths": [
-        "OAABData"
+        "OAABData/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -406,7 +407,7 @@
         }
       ],
       "dataPaths": [
-        "OAABDataHD"
+        "OAABDataHD/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -440,7 +441,7 @@
         }
       ],
       "dataPaths": [
-        "OAABDataNormalMapped"
+        "OAABDataNormalMapped/OAAB Data Textures Normal Mapped Ordenadored by Me"
       ],
       "content": [],
       "groundcover": [],
@@ -474,7 +475,7 @@
         }
       ],
       "dataPaths": [
-        "AnAddendumToTamrielicLoreData"
+        "AnAddendumToTamrielicLoreData/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -542,7 +543,7 @@
         }
       ],
       "dataPaths": [
-        "TamrielDataHD"
+        "TamrielDataHD/00 Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -576,7 +577,7 @@
         }
       ],
       "dataPaths": [
-        "TamrielDataNormalMapped"
+        "TamrielDataNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me"
       ],
       "content": [],
       "groundcover": [],
@@ -610,7 +611,7 @@
         }
       ],
       "dataPaths": [
-        "TamrielDataGraveyeard"
+        "TamrielDataGraveyeard/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -848,7 +849,7 @@
         }
       ],
       "dataPaths": [
-        "GreatService"
+        "GreatService/Great Service"
       ],
       "content": [],
       "groundcover": [],
@@ -916,7 +917,7 @@
         }
       ],
       "dataPaths": [
-        "TunnelCough"
+        "TunnelCough/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -1018,7 +1019,7 @@
         }
       ],
       "dataPaths": [
-        "RaymsVampireRumors"
+        "RaymsVampireRumors/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -1052,7 +1053,7 @@
         }
       ],
       "dataPaths": [
-        "DjangosDialogue"
+        "DjangosDialogue/Djangos Dialogue"
       ],
       "content": [],
       "groundcover": [],
@@ -1294,7 +1295,7 @@
         }
       ],
       "dataPaths": [
-        "KezymasVoicesOfVvardenfell"
+        "KezymasVoicesOfVvardenfell/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -1465,7 +1466,7 @@
         }
       ],
       "dataPaths": [
-        "QuestVoiceGreetings"
+        "QuestVoiceGreetings/Quest Voice Greetings 3.82"
       ],
       "content": [],
       "groundcover": [],
@@ -1500,7 +1501,7 @@
         }
       ],
       "dataPaths": [
-        "GaresLastGaspNewIlunibiVersion"
+        "GaresLastGaspNewIlunibiVersion/Gares Last Gasp"
       ],
       "content": [],
       "groundcover": [],
@@ -1535,7 +1536,7 @@
         }
       ],
       "dataPaths": [
-        "IdleTalk"
+        "IdleTalk/Idle Talk"
       ],
       "content": [],
       "groundcover": [],
@@ -1569,7 +1570,7 @@
         }
       ],
       "dataPaths": [
-        "UltimateCreeperPartyHouse"
+        "UltimateCreeperPartyHouse/Ultimate Creeper Party House"
       ],
       "content": [],
       "groundcover": [],
@@ -1603,7 +1604,7 @@
         }
       ],
       "dataPaths": [
-        "NordicBanter"
+        "NordicBanter/Nordic Banter"
       ],
       "content": [],
       "groundcover": [],
@@ -1637,7 +1638,7 @@
         }
       ],
       "dataPaths": [
-        "SermonsAndPreachersVanillaEdit"
+        "SermonsAndPreachersVanillaEdit/Sermons and Preachers (Vanilla edit)/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -1671,7 +1672,7 @@
         }
       ],
       "dataPaths": [
-        "ImmersiveMorrowind"
+        "ImmersiveMorrowind/Immersive Morrowind 0.4"
       ],
       "content": [],
       "groundcover": [],
@@ -1705,7 +1706,7 @@
         }
       ],
       "dataPaths": [
-        "FriendsReunited"
+        "FriendsReunited/Friends Reunited"
       ],
       "content": [],
       "groundcover": [],
@@ -1739,7 +1740,7 @@
         }
       ],
       "dataPaths": [
-        "WaresUltimate"
+        "WaresUltimate/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -1774,7 +1775,7 @@
         }
       ],
       "dataPaths": [
-        "FriendsAndFoes"
+        "FriendsAndFoes/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -1843,7 +1844,7 @@
         }
       ],
       "dataPaths": [
-        "ProtectiveGuardsOpenMW"
+        "ProtectiveGuardsOpenMW/Protective Guards for OpenMW - Lua Edition"
       ],
       "content": [],
       "groundcover": [],
@@ -1944,7 +1945,7 @@
         }
       ],
       "dataPaths": [
-        "NCGDMWLuaEdition"
+        "NCGDMWLuaEdition/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -2046,7 +2047,7 @@
         }
       ],
       "dataPaths": [
-        "RapportOpenMWCompanions"
+        "RapportOpenMWCompanions/RapportCompanions 1.1.2"
       ],
       "content": [],
       "groundcover": [],
@@ -2182,7 +2183,7 @@
         }
       ],
       "dataPaths": [
-        "VanillaFriendlyCreaturesAndUndeadsExpansion"
+        "VanillaFriendlyCreaturesAndUndeadsExpansion/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -2216,7 +2217,7 @@
         }
       ],
       "dataPaths": [
-        "VanillaFriendlyCreaturesAndUndeadsExpansionNorma"
+        "VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Creatures_RP Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -2662,7 +2663,7 @@
         }
       ],
       "dataPaths": [
-        "HircinesArtifacts"
+        "HircinesArtifacts/Hircine\u0027s Artifacts"
       ],
       "content": [],
       "groundcover": [],
@@ -2730,7 +2731,7 @@
         }
       ],
       "dataPaths": [
-        "DevilishVampireOverhaulTotalOverhaulEdition"
+        "DevilishVampireOverhaulTotalOverhaulEdition/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -2900,7 +2901,7 @@
         }
       ],
       "dataPaths": [
-        "SolthasSneakAttackBuffOpenMW"
+        "SolthasSneakAttackBuffOpenMW/SolSneakAttackBuff"
       ],
       "content": [],
       "groundcover": [],
@@ -2934,7 +2935,7 @@
         }
       ],
       "dataPaths": [
-        "TakeCoverOpenMW"
+        "TakeCoverOpenMW/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -3131,7 +3132,7 @@
         }
       ],
       "dataPaths": [
-        "RedoranPatrolsGnisis"
+        "RedoranPatrolsGnisis/Redoran Patrols - Gnisis/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -3537,7 +3538,7 @@
         }
       ],
       "dataPaths": [
-        "QuickLootOpenMW"
+        "QuickLootOpenMW/QuickLoot"
       ],
       "content": [],
       "groundcover": [],
@@ -3674,7 +3675,7 @@
         }
       ],
       "dataPaths": [
-        "DotCrosshairRecolored"
+        "DotCrosshairRecolored/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -3915,7 +3916,7 @@
         }
       ],
       "dataPaths": [
-        "ComradeRavensBookArtsReplacer"
+        "ComradeRavensBookArtsReplacer/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -4018,7 +4019,7 @@
         }
       ],
       "dataPaths": [
-        "OfferingsAndBlessingsDaedricStatues"
+        "OfferingsAndBlessingsDaedricStatues/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -4087,7 +4088,8 @@
         }
       ],
       "dataPaths": [
-        "DwemerLightingRods"
+        "DwemerLightingRods/00 MWSE",
+        "DwemerLightingRods/00 OpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -4121,7 +4123,7 @@
         }
       ],
       "dataPaths": [
-        "SapriusDisguised"
+        "SapriusDisguised/Saprius Disguised"
       ],
       "content": [],
       "groundcover": [],
@@ -4155,7 +4157,7 @@
         }
       ],
       "dataPaths": [
-        "BetterBarsOpenMW"
+        "BetterBarsOpenMW/BetterBars"
       ],
       "content": [],
       "groundcover": [],
@@ -4190,7 +4192,7 @@
         }
       ],
       "dataPaths": [
-        "AshlanderTradersRemasteredBCOMAndWaresVersion"
+        "AshlanderTradersRemasteredBCOMAndWaresVersion/Ashlander Traders Remastered - BCOM and Wares"
       ],
       "content": [],
       "groundcover": [],
@@ -4224,7 +4226,7 @@
         }
       ],
       "dataPaths": [
-        "AbotBoats"
+        "AbotBoats/00 Base"
       ],
       "content": [],
       "groundcover": [],
@@ -4258,7 +4260,7 @@
         }
       ],
       "dataPaths": [
-        "AbotBoatsFirewatchPatchTR2310"
+        "AbotBoatsFirewatchPatchTR2310/00 Base"
       ],
       "content": [],
       "groundcover": [],
@@ -4630,7 +4632,7 @@
         }
       ],
       "dataPaths": [
-        "SeptimGoldAndDwemerDumacs"
+        "SeptimGoldAndDwemerDumacs/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -4664,7 +4666,7 @@
         }
       ],
       "dataPaths": [
-        "LovleyLoadingScreens"
+        "LovleyLoadingScreens/Lovely Loading Screens"
       ],
       "content": [],
       "groundcover": [],
@@ -4765,7 +4767,7 @@
         }
       ],
       "dataPaths": [
-        "SkoomaPipe"
+        "SkoomaPipe/Skooma Pipe 1.2a"
       ],
       "content": [],
       "groundcover": [],
@@ -4798,7 +4800,7 @@
         }
       ],
       "dataPaths": [
-        "SlofsBoethiasPillowBook"
+        "SlofsBoethiasPillowBook/slofs_mw_pillow_book"
       ],
       "content": [],
       "groundcover": [],
@@ -4833,7 +4835,7 @@
         }
       ],
       "dataPaths": [
-        "TheSittingMod"
+        "TheSittingMod/Sit Down in Morrowind"
       ],
       "content": [],
       "groundcover": [],
@@ -4902,7 +4904,7 @@
         }
       ],
       "dataPaths": [
-        "ImprovedThrownWeaponProjectiles"
+        "ImprovedThrownWeaponProjectiles/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -4936,7 +4938,7 @@
         }
       ],
       "dataPaths": [
-        "CaveDrips"
+        "CaveDrips/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -5004,7 +5006,7 @@
         }
       ],
       "dataPaths": [
-        "TravelingMerchantsOpenMWBCOM"
+        "TravelingMerchantsOpenMWBCOM/TM\u0026OMW\u0026BCOM"
       ],
       "content": [],
       "groundcover": [],
@@ -5038,7 +5040,7 @@
         }
       ],
       "dataPaths": [
-        "SheatheYourWeapon"
+        "SheatheYourWeapon/Sheathe your weapon"
       ],
       "content": [],
       "groundcover": [],
@@ -5072,7 +5074,7 @@
         }
       ],
       "dataPaths": [
-        "HouseShrinesAndStatues"
+        "HouseShrinesAndStatues/House Shrines and Statues/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -5506,7 +5508,7 @@
         }
       ],
       "dataPaths": [
-        "BuffTimersForOpenMW"
+        "BuffTimersForOpenMW/BuffTimers"
       ],
       "content": [],
       "groundcover": [],
@@ -5540,7 +5542,7 @@
         }
       ],
       "dataPaths": [
-        "SMEUsefulWidgetsActorInfoHealthBarHitChanceOpenM"
+        "SMEUsefulWidgetsActorInfoHealthBarHitChanceOpenM/SMEUsefulWidgetsActorInfoHealthBarHitChanceEdited"
       ],
       "content": [],
       "groundcover": [],
@@ -5707,7 +5709,7 @@
         }
       ],
       "dataPaths": [
-        "MostWantedNerevarine"
+        "MostWantedNerevarine/MostWantedNerevarine_1.2"
       ],
       "content": [],
       "groundcover": [],
@@ -5810,7 +5812,7 @@
         }
       ],
       "dataPaths": [
-        "Daggerlad"
+        "Daggerlad/Daggerlad/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -5878,7 +5880,7 @@
         }
       ],
       "dataPaths": [
-        "RobeOfTheDrakesPride"
+        "RobeOfTheDrakesPride/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -5912,7 +5914,7 @@
         }
       ],
       "dataPaths": [
-        "RobeOfTheDrakesPrideRecolored"
+        "RobeOfTheDrakesPrideRecolored/Robe of the Drake\u0027s Pride"
       ],
       "content": [],
       "groundcover": [],
@@ -5946,7 +5948,7 @@
         }
       ],
       "dataPaths": [
-        "TelvanniMagisterRobes"
+        "TelvanniMagisterRobes/Telvanni Magister Robes-52278-1-25-1683240241/Telvanni Magister robes/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6014,7 +6016,7 @@
         }
       ],
       "dataPaths": [
-        "RedoranWarArmorAndSathilMercenaryEquipment"
+        "RedoranWarArmorAndSathilMercenaryEquipment/Redoran War and Sathil Mercenary Armor 1.2/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6048,7 +6050,7 @@
         }
       ],
       "dataPaths": [
-        "SathilMercenaryAndRedoranWarArmorV3"
+        "SathilMercenaryAndRedoranWarArmorV3/Sathil Mercenary and Redoran War Armor V3.01-53812-3-01-1702273003/RV Sathil and Redoran War Armour V3"
       ],
       "content": [],
       "groundcover": [],
@@ -6116,7 +6118,7 @@
         }
       ],
       "dataPaths": [
-        "IndorilRonin"
+        "IndorilRonin/indoril_ronin_LA/data files"
       ],
       "content": [],
       "groundcover": [],
@@ -6150,7 +6152,7 @@
         }
       ],
       "dataPaths": [
-        "NetchScoutHelm"
+        "NetchScoutHelm/netch_scout_helm/data files"
       ],
       "content": [],
       "groundcover": [],
@@ -6184,7 +6186,7 @@
         }
       ],
       "dataPaths": [
-        "MoragTongEquipmentDiversity"
+        "MoragTongEquipmentDiversity/Morag Tong Helmets"
       ],
       "content": [],
       "groundcover": [],
@@ -6252,7 +6254,7 @@
         }
       ],
       "dataPaths": [
-        "MageRobes"
+        "MageRobes/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -6316,7 +6318,7 @@
         }
       ],
       "dataPaths": [
-        "ConceptArtDunmerHelmets"
+        "ConceptArtDunmerHelmets/Concept Art Dunmer Helms"
       ],
       "content": [],
       "groundcover": [],
@@ -6350,7 +6352,7 @@
         }
       ],
       "dataPaths": [
-        "DwemerScrapArmor"
+        "DwemerScrapArmor/Dwemer Scrap Armor V2"
       ],
       "content": [],
       "groundcover": [],
@@ -6384,7 +6386,7 @@
         }
       ],
       "dataPaths": [
-        "HeavyChitinArmor"
+        "HeavyChitinArmor/Heavy Chitin Armor 1.5/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -6419,7 +6421,7 @@
         }
       ],
       "dataPaths": [
-        "CompleteAndRevisedDreughArmor"
+        "CompleteAndRevisedDreughArmor/Complete and revised dreugh armor/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6453,7 +6455,7 @@
         }
       ],
       "dataPaths": [
-        "CaRImperialStuddedLeatherArmor"
+        "CaRImperialStuddedLeatherArmor/Complete and Revised Imperial Studded Leather Armor/data files"
       ],
       "content": [],
       "groundcover": [],
@@ -6487,7 +6489,7 @@
         }
       ],
       "dataPaths": [
-        "ConceptArtDaedricHelmets"
+        "ConceptArtDaedricHelmets/Concept art daedric helms"
       ],
       "content": [],
       "groundcover": [],
@@ -6521,7 +6523,7 @@
         }
       ],
       "dataPaths": [
-        "CompleteDukesGuardSilver"
+        "CompleteDukesGuardSilver/Dukes Guard"
       ],
       "content": [],
       "groundcover": [],
@@ -6555,7 +6557,7 @@
         }
       ],
       "dataPaths": [
-        "CaRNordicIronArmor"
+        "CaRNordicIronArmor/complete Nordic Iron/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -6589,7 +6591,7 @@
         }
       ],
       "dataPaths": [
-        "NecromancerRobes"
+        "NecromancerRobes/Necromancer robes/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6657,7 +6659,7 @@
         }
       ],
       "dataPaths": [
-        "BetterRobes"
+        "BetterRobes/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6828,7 +6830,7 @@
         }
       ],
       "dataPaths": [
-        "DaedricLordArmorOpenMWPatch"
+        "DaedricLordArmorOpenMWPatch/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -6931,7 +6933,7 @@
         }
       ],
       "dataPaths": [
-        "BetterClothesdRetextured"
+        "BetterClothesdRetextured/Better Clothes Retexture"
       ],
       "content": [],
       "groundcover": [],
@@ -6965,7 +6967,7 @@
         }
       ],
       "dataPaths": [
-        "CommonShoePack"
+        "CommonShoePack/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6999,7 +7001,7 @@
         }
       ],
       "dataPaths": [
-        "NewBloodwormHelm"
+        "NewBloodwormHelm/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7033,7 +7035,7 @@
         }
       ],
       "dataPaths": [
-        "NewFistsOfRandagulf"
+        "NewFistsOfRandagulf/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7067,7 +7069,7 @@
         }
       ],
       "dataPaths": [
-        "NewBootsOfBlindingSpeed"
+        "NewBootsOfBlindingSpeed/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7101,7 +7103,7 @@
         }
       ],
       "dataPaths": [
-        "NewLordsMail"
+        "NewLordsMail/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7204,7 +7206,7 @@
         }
       ],
       "dataPaths": [
-        "NewGondoilerHelm"
+        "NewGondoilerHelm/NewGondolierHelm"
       ],
       "content": [],
       "groundcover": [],
@@ -7238,7 +7240,7 @@
         }
       ],
       "dataPaths": [
-        "SMTravellersClothing"
+        "SMTravellersClothing/SM_Travellers_Clothing/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7272,7 +7274,7 @@
         }
       ],
       "dataPaths": [
-        "SMAshkhansArmourSetBBRBBodies"
+        "SMAshkhansArmourSetBBRBBodies/sm_asher_arm_bb_rb"
       ],
       "content": [],
       "groundcover": [],
@@ -7306,7 +7308,7 @@
         }
       ],
       "dataPaths": [
-        "SMDagothMask"
+        "SMDagothMask/sm_mask_eng"
       ],
       "content": [],
       "groundcover": [],
@@ -7340,7 +7342,7 @@
         }
       ],
       "dataPaths": [
-        "SMMoragTongArmor"
+        "SMMoragTongArmor/SM MT Armor Main/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7374,7 +7376,7 @@
         }
       ],
       "dataPaths": [
-        "SMTelvanniCeremonialRobe"
+        "SMTelvanniCeremonialRobe/Telvanni_Robe/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7408,7 +7410,7 @@
         }
       ],
       "dataPaths": [
-        "SMBoiledNetchLeatherArmorSetCustomStyle"
+        "SMBoiledNetchLeatherArmorSetCustomStyle/SM_Boiled_Armor_Set_with_Knee and elbow protection/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7511,7 +7513,7 @@
         }
       ],
       "dataPaths": [
-        "RedoranMasterArmorGlovedBracers"
+        "RedoranMasterArmorGlovedBracers/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7545,7 +7547,7 @@
         }
       ],
       "dataPaths": [
-        "RRBetterTelvanniCephalopodArmor"
+        "RRBetterTelvanniCephalopodArmor/00 - Main Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7613,7 +7615,7 @@
         }
       ],
       "dataPaths": [
-        "TheEbonyBlade"
+        "TheEbonyBlade/The Ebony Blade"
       ],
       "content": [],
       "groundcover": [],
@@ -7647,7 +7649,7 @@
         }
       ],
       "dataPaths": [
-        "CrossbowsEnhanced"
+        "CrossbowsEnhanced/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -7682,7 +7684,7 @@
         }
       ],
       "dataPaths": [
-        "NewBlackHandsDagger"
+        "NewBlackHandsDagger/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7716,7 +7718,7 @@
         }
       ],
       "dataPaths": [
-        "NewUmbra"
+        "NewUmbra/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7784,7 +7786,7 @@
         }
       ],
       "dataPaths": [
-        "NewBowOfShadows"
+        "NewBowOfShadows/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7818,7 +7820,7 @@
         }
       ],
       "dataPaths": [
-        "NewWidowmaker"
+        "NewWidowmaker/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7955,7 +7957,7 @@
         }
       ],
       "dataPaths": [
-        "SMMaceOfAevarStoneSingerReplacerOpenMW"
+        "SMMaceOfAevarStoneSingerReplacerOpenMW/sm_aevar_mace/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -7989,7 +7991,7 @@
         }
       ],
       "dataPaths": [
-        "SMToolsOfKagrenak"
+        "SMToolsOfKagrenak/sm_kagrenak_tools/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -8023,7 +8025,7 @@
         }
       ],
       "dataPaths": [
-        "BetterSounds"
+        "BetterSounds/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8126,7 +8128,7 @@
         }
       ],
       "dataPaths": [
-        "ThievesStepBetterSounds"
+        "ThievesStepBetterSounds/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8333,7 +8335,7 @@
         }
       ],
       "dataPaths": [
-        "WestlysPluginlessHeadReplacer"
+        "WestlysPluginlessHeadReplacer/Westly\u0027s Pluginless Head snd Hair Replacer_Complete/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8401,7 +8403,7 @@
         }
       ],
       "dataPaths": [
-        "WeaponSheathing"
+        "WeaponSheathing/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8505,7 +8507,7 @@
         }
       ],
       "dataPaths": [
-        "SimplyWalkingRemastered"
+        "SimplyWalkingRemastered/Simply Walking"
       ],
       "content": [],
       "groundcover": [],
@@ -8540,7 +8542,7 @@
         }
       ],
       "dataPaths": [
-        "MCAR"
+        "MCAR/00 - MCAR"
       ],
       "content": [],
       "groundcover": [],
@@ -8609,7 +8611,7 @@
         }
       ],
       "dataPaths": [
-        "MudcrabMerchant"
+        "MudcrabMerchant/RR_Melchiors_Mudcrab_Merchant/English"
       ],
       "content": [],
       "groundcover": [],
@@ -8644,7 +8646,7 @@
         }
       ],
       "dataPaths": [
-        "DivineDagoths"
+        "DivineDagoths/00 - Core Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8678,7 +8680,7 @@
         }
       ],
       "dataPaths": [
-        "ByAzura"
+        "ByAzura/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -8713,7 +8715,7 @@
         }
       ],
       "dataPaths": [
-        "MagicVFXRetexture"
+        "MagicVFXRetexture/Magic VFX Retexture by Articus/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8850,7 +8852,7 @@
         }
       ],
       "dataPaths": [
-        "PreservingFargoth"
+        "PreservingFargoth/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8884,7 +8886,7 @@
         }
       ],
       "dataPaths": [
-        "BetterDwarvenSpectresMerAndMaidens"
+        "BetterDwarvenSpectresMerAndMaidens/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -8952,7 +8954,7 @@
         }
       ],
       "dataPaths": [
-        "PlayableAlmalexiaOutfit"
+        "PlayableAlmalexiaOutfit/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -8986,7 +8988,7 @@
         }
       ],
       "dataPaths": [
-        "SaucyOldSelvil"
+        "SaucyOldSelvil/Saucy old Selvil/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -9020,7 +9022,7 @@
         }
       ],
       "dataPaths": [
-        "TamrielRebuilt"
+        "TamrielRebuilt/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -9055,7 +9057,7 @@
         }
       ],
       "dataPaths": [
-        "ProjectCyrodiil"
+        "ProjectCyrodiil/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -9123,7 +9125,7 @@
         }
       ],
       "dataPaths": [
-        "SkyrimHomeOfTheNords"
+        "SkyrimHomeOfTheNords/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -9191,7 +9193,7 @@
         }
       ],
       "dataPaths": [
-        "WyrmhavenNormalMapped"
+        "WyrmhavenNormalMapped/Wyrmhaven Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -9294,7 +9296,7 @@
         }
       ],
       "dataPaths": [
-        "UvirithsLegacy"
+        "UvirithsLegacy/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -9363,7 +9365,7 @@
         }
       ],
       "dataPaths": [
-        "BuildingUpUvirithsLegacy"
+        "BuildingUpUvirithsLegacy/Building Up Uvirith\u0027s Legacy"
       ],
       "content": [],
       "groundcover": [],
@@ -9397,7 +9399,7 @@
         }
       ],
       "dataPaths": [
-        "TheArchmagistersAbode"
+        "TheArchmagistersAbode/data files"
       ],
       "content": [],
       "groundcover": [],
@@ -9465,7 +9467,7 @@
         }
       ],
       "dataPaths": [
-        "AStrangePlantNormalMapped"
+        "AStrangePlantNormalMapped/A Strange Plant Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -9499,7 +9501,7 @@
         }
       ],
       "dataPaths": [
-        "MagicalMissionsRecharged"
+        "MagicalMissionsRecharged/Magical Missions Recharged 2.43"
       ],
       "content": [],
       "groundcover": [],
@@ -9533,7 +9535,7 @@
         }
       ],
       "dataPaths": [
-        "MagicalMissionsNormalMapped"
+        "MagicalMissionsNormalMapped/MagicalMissions Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -9567,7 +9569,7 @@
         }
       ],
       "dataPaths": [
-        "BalmoraUnderworld"
+        "BalmoraUnderworld/Balmora Underworld V1.1"
       ],
       "content": [],
       "groundcover": [],
@@ -9602,7 +9604,7 @@
         }
       ],
       "dataPaths": [
-        "SothaSilExpanded"
+        "SothaSilExpanded/SothaSilExpanded2_0"
       ],
       "content": [],
       "groundcover": [],
@@ -9671,7 +9673,7 @@
         }
       ],
       "dataPaths": [
-        "SothaSilExpandedNormalMapped"
+        "SothaSilExpandedNormalMapped/Sotha Sil Expanded Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -9808,7 +9810,7 @@
         }
       ],
       "dataPaths": [
-        "SecretsOfTheCrystalCity"
+        "SecretsOfTheCrystalCity/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -9876,7 +9878,7 @@
         }
       ],
       "dataPaths": [
-        "InvestigationAtTelEurus"
+        "InvestigationAtTelEurus/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10012,7 +10014,7 @@
         }
       ],
       "dataPaths": [
-        "QuestsForClansAndVampireLegends"
+        "QuestsForClansAndVampireLegends/Quests for Clans and Vampire Legends/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10114,7 +10116,7 @@
         }
       ],
       "dataPaths": [
-        "TheCorprusariumExperience"
+        "TheCorprusariumExperience/00 - Core"
       ],
       "content": [],
       "groundcover": [],
@@ -10216,7 +10218,7 @@
         }
       ],
       "dataPaths": [
-        "DawnbreakerTheLadyOfLight"
+        "DawnbreakerTheLadyOfLight/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10250,7 +10252,8 @@
         }
       ],
       "dataPaths": [
-        "RoaringArena"
+        "RoaringArena/00 Core",
+        "RoaringArena/03 Vivec GtC/00 Default"
       ],
       "content": [],
       "groundcover": [],
@@ -10488,7 +10491,7 @@
         }
       ],
       "dataPaths": [
-        "DeathOfATaxmanExpanded"
+        "DeathOfATaxmanExpanded/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10590,7 +10593,7 @@
         }
       ],
       "dataPaths": [
-        "CorrectMeshes"
+        "CorrectMeshes/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10624,7 +10627,7 @@
         }
       ],
       "dataPaths": [
-        "DirnaesBeastAnimations"
+        "DirnaesBeastAnimations/Standard_Version"
       ],
       "content": [],
       "groundcover": [],
@@ -10692,7 +10695,7 @@
         }
       ],
       "dataPaths": [
-        "CorrectUVRocks"
+        "CorrectUVRocks/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10726,7 +10729,7 @@
         }
       ],
       "dataPaths": [
-        "MorrowindOptimizationPatch"
+        "MorrowindOptimizationPatch/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -10761,7 +10764,7 @@
         }
       ],
       "dataPaths": [
-        "AnimatedSpriggansHeartwood"
+        "AnimatedSpriggansHeartwood/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -10829,7 +10832,7 @@
         }
       ],
       "dataPaths": [
-        "ProperlySmoothedMeshes"
+        "ProperlySmoothedMeshes/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -10863,7 +10866,8 @@
         }
       ],
       "dataPaths": [
-        "ProjectAtlas"
+        "ProjectAtlas/00 BATs",
+        "ProjectAtlas/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -10931,7 +10935,7 @@
         }
       ],
       "dataPaths": [
-        "GraphicalHerbalismOpenMW"
+        "GraphicalHerbalismOpenMW/00 Core \u002B Vanilla Meshes"
       ],
       "content": [],
       "groundcover": [],
@@ -10966,7 +10970,7 @@
         }
       ],
       "dataPaths": [
-        "GraphicHerbalismPatchesAndReplacers"
+        "GraphicHerbalismPatchesAndReplacers/00 Core \u002B Vanilla Meshes"
       ],
       "content": [],
       "groundcover": [],
@@ -11034,7 +11038,7 @@
         }
       ],
       "dataPaths": [
-        "DunmerLanternsReplacer"
+        "DunmerLanternsReplacer/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -11102,7 +11106,7 @@
         }
       ],
       "dataPaths": [
-        "RRBetterMeshes"
+        "RRBetterMeshes/00 - Main Files"
       ],
       "content": [],
       "groundcover": [],
@@ -11239,7 +11243,7 @@
         }
       ],
       "dataPaths": [
-        "DunmerAshpits"
+        "DunmerAshpits/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -11273,7 +11277,7 @@
         }
       ],
       "dataPaths": [
-        "BetterWaterfalls"
+        "BetterWaterfalls/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -11341,7 +11345,7 @@
         }
       ],
       "dataPaths": [
-        "Mistify"
+        "Mistify/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -11409,7 +11413,7 @@
         }
       ],
       "dataPaths": [
-        "ScummyScum"
+        "ScummyScum/Scummy Scum/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -11477,7 +11481,7 @@
         }
       ],
       "dataPaths": [
-        "LavaMoldMudCavernsRevampPBRForOpenMW"
+        "LavaMoldMudCavernsRevampPBRForOpenMW/Lava Mold Mud Caverns Revamp PBR"
       ],
       "content": [],
       "groundcover": [],
@@ -11511,7 +11515,7 @@
         }
       ],
       "dataPaths": [
-        "CorrectIronWarhammer"
+        "CorrectIronWarhammer/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -11678,7 +11682,7 @@
         }
       ],
       "dataPaths": [
-        "HiRezArmorsNativeStylesV2OpenMW"
+        "HiRezArmorsNativeStylesV2OpenMW/HiRez Armors - Native Styles V2 Fixed and Optimized and OpenMW Compatible-49595-1-0-1619613084/HiRezArmorsNativeStylesV2FixedandOptimized"
       ],
       "content": [],
       "groundcover": [],
@@ -11748,7 +11752,7 @@
         }
       ],
       "dataPaths": [
-        "MorrowindEnhancedTexturesNormalMapped"
+        "MorrowindEnhancedTexturesNormalMapped/Morrowind Enhanced Textures Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -11987,7 +11991,7 @@
         }
       ],
       "dataPaths": [
-        "NewStarfields"
+        "NewStarfields/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -12090,7 +12094,7 @@
         }
       ],
       "dataPaths": [
-        "MushroomTreeReplacer"
+        "MushroomTreeReplacer/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12124,7 +12128,14 @@
         }
       ],
       "dataPaths": [
-        "ParasolParticles"
+        "ParasolParticles/00 Core",
+        "ParasolParticles/00 Core - Ashfall",
+        "ParasolParticles/00 PeterBitt\u0027s Replacer",
+        "ParasolParticles/00 PeterBitt\u0027s Replacer - Ashfall",
+        "ParasolParticles/00 SWG\u0027s Replacer",
+        "ParasolParticles/00 SWG\u0027s Replacer - Ashfall",
+        "ParasolParticles/00 Telvanni Bump Maps",
+        "ParasolParticles/00 Telvanni Bump Maps - Ashfall"
       ],
       "content": [],
       "groundcover": [],
@@ -12158,7 +12169,7 @@
         }
       ],
       "dataPaths": [
-        "DiverseBlood"
+        "DiverseBlood/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12192,7 +12203,7 @@
         }
       ],
       "dataPaths": [
-        "LongLiveTheLimewareRetexture"
+        "LongLiveTheLimewareRetexture/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12226,7 +12237,7 @@
         }
       ],
       "dataPaths": [
-        "LongLiveTheGlasswareRetexture"
+        "LongLiveTheGlasswareRetexture/Long Live The Glassware - Retexture/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12260,7 +12271,7 @@
         }
       ],
       "dataPaths": [
-        "LongLiveThePlatesRetexture"
+        "LongLiveThePlatesRetexture/Long Live The Plates/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12294,7 +12305,7 @@
         }
       ],
       "dataPaths": [
-        "MorrowindSwampTrees"
+        "MorrowindSwampTrees/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -12328,7 +12339,7 @@
         }
       ],
       "dataPaths": [
-        "GrahtMorrowindSwampTreesNormalMapped"
+        "GrahtMorrowindSwampTreesNormalMapped/Graht Morrowind Swamp Trees Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -12362,7 +12373,7 @@
         }
       ],
       "dataPaths": [
-        "KetsSwirlwoodFurnitureRetextrue"
+        "KetsSwirlwoodFurnitureRetextrue/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12430,7 +12441,7 @@
         }
       ],
       "dataPaths": [
-        "BowledIngredients"
+        "BowledIngredients/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -12464,7 +12475,7 @@
         }
       ],
       "dataPaths": [
-        "AshmireReplacer"
+        "AshmireReplacer/00 Flowing Mire"
       ],
       "content": [],
       "groundcover": [],
@@ -12498,7 +12509,7 @@
         }
       ],
       "dataPaths": [
-        "SiltStrider"
+        "SiltStrider/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -12532,7 +12543,7 @@
         }
       ],
       "dataPaths": [
-        "SMBoneLordReplacerOverhaul"
+        "SMBoneLordReplacerOverhaul/Custom_Animations_ver/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12566,7 +12577,7 @@
         }
       ],
       "dataPaths": [
-        "SMBonewalkerReplacerOpenMW"
+        "SMBonewalkerReplacerOpenMW/SM Bonewalker OpenMW/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -12600,7 +12611,7 @@
         }
       ],
       "dataPaths": [
-        "DaedricRuinsHalfRevamped"
+        "DaedricRuinsHalfRevamped/00 - Core"
       ],
       "content": [],
       "groundcover": [],
@@ -12634,7 +12645,7 @@
         }
       ],
       "dataPaths": [
-        "LogsOnFire"
+        "LogsOnFire/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -12703,7 +12714,7 @@
         }
       ],
       "dataPaths": [
-        "GlowInTheDahrk"
+        "GlowInTheDahrk/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -12737,7 +12748,7 @@
         }
       ],
       "dataPaths": [
-        "CrystalSoulGems"
+        "CrystalSoulGems/00 - Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12771,7 +12782,7 @@
         }
       ],
       "dataPaths": [
-        "VisuallyFilledSoulGemsForOpenMWLuaScriptingENGAn"
+        "VisuallyFilledSoulGemsForOpenMWLuaScriptingENGAn/ChangeSoulGemOpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -12805,7 +12816,7 @@
         }
       ],
       "dataPaths": [
-        "SaltsHighresGlowmaps"
+        "SaltsHighresGlowmaps/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -12873,7 +12884,7 @@
         }
       ],
       "dataPaths": [
-        "6thHouseGlowingThings"
+        "6thHouseGlowingThings/6th House GT 1.2/00 - Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12907,7 +12918,7 @@
         }
       ],
       "dataPaths": [
-        "LightedDwemerTowers"
+        "LightedDwemerTowers/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -12941,7 +12952,7 @@
         }
       ],
       "dataPaths": [
-        "ImprovedLightsForAllShaders"
+        "ImprovedLightsForAllShaders/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13010,7 +13021,7 @@
         }
       ],
       "dataPaths": [
-        "CavernOfTheIncarnate"
+        "CavernOfTheIncarnate/1CavernOfIncarnateReplacer"
       ],
       "content": [],
       "groundcover": [],
@@ -13044,7 +13055,7 @@
         }
       ],
       "dataPaths": [
-        "HighArt"
+        "HighArt/High Art"
       ],
       "content": [],
       "groundcover": [],
@@ -13078,7 +13089,7 @@
         }
       ],
       "dataPaths": [
-        "HighArtNormalMapped"
+        "HighArtNormalMapped/High Art Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -13146,7 +13157,7 @@
         }
       ],
       "dataPaths": [
-        "AtmosphericSouthWallCornerclub"
+        "AtmosphericSouthWallCornerclub/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13180,7 +13191,7 @@
         }
       ],
       "dataPaths": [
-        "InteriorsOfSolstheim"
+        "InteriorsOfSolstheim/Interiors of Solstheim V2.1/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -13214,7 +13225,7 @@
         }
       ],
       "dataPaths": [
-        "InteriorsOfMournhold"
+        "InteriorsOfMournhold/Interiors of Mournhold Version 2.3/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -13248,7 +13259,7 @@
         }
       ],
       "dataPaths": [
-        "TheMagicRockOfMaarGan"
+        "TheMagicRockOfMaarGan/00 - Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13316,7 +13327,7 @@
         }
       ],
       "dataPaths": [
-        "OAABShipwrecksUnchartedArtifactsTRPatch"
+        "OAABShipwrecksUnchartedArtifactsTRPatch/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13350,7 +13361,7 @@
         }
       ],
       "dataPaths": [
-        "OAABVerticalShipwreck"
+        "OAABVerticalShipwreck/Vertical Shipwreck"
       ],
       "content": [],
       "groundcover": [],
@@ -13418,7 +13429,7 @@
         }
       ],
       "dataPaths": [
-        "LibraryOfVivecEnhanced"
+        "LibraryOfVivecEnhanced/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13554,7 +13565,7 @@
         }
       ],
       "dataPaths": [
-        "MinesAndCaverns"
+        "MinesAndCaverns/Mines \u0026 Caverns"
       ],
       "content": [],
       "groundcover": [],
@@ -13588,7 +13599,7 @@
         }
       ],
       "dataPaths": [
-        "NewIlunibi"
+        "NewIlunibi/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -13622,7 +13633,7 @@
         }
       ],
       "dataPaths": [
-        "NewIlunibiNormalMapped"
+        "NewIlunibiNormalMapped/New Ilunibi Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -13724,7 +13735,7 @@
         }
       ],
       "dataPaths": [
-        "OfEggsAndDwarvesOpenMW"
+        "OfEggsAndDwarvesOpenMW/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13827,7 +13838,7 @@
         }
       ],
       "dataPaths": [
-        "DagothUrFleshedOut"
+        "DagothUrFleshedOut/Dagoth Ur Fleshed Out"
       ],
       "content": [],
       "groundcover": [],
@@ -13861,7 +13872,7 @@
         }
       ],
       "dataPaths": [
-        "SuranSewers"
+        "SuranSewers/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -13895,7 +13906,7 @@
         }
       ],
       "dataPaths": [
-        "KogoruhnExtinctCityOfAshAndSulfur"
+        "KogoruhnExtinctCityOfAshAndSulfur/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -13963,7 +13974,7 @@
         }
       ],
       "dataPaths": [
-        "TheStoneHallsOfSolstheimReforged"
+        "TheStoneHallsOfSolstheimReforged/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -14270,7 +14281,7 @@
         }
       ],
       "dataPaths": [
-        "MamaeaAwakened"
+        "MamaeaAwakened/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -14304,7 +14315,7 @@
         }
       ],
       "dataPaths": [
-        "MamaeaAwakenedNormalMapped"
+        "MamaeaAwakenedNormalMapped/Mamaea Awakened Normal Mapped"
       ],
       "content": [],
       "groundcover": [],
@@ -14372,7 +14383,7 @@
         }
       ],
       "dataPaths": [
-        "FromWindIntoStone"
+        "FromWindIntoStone/From Wind Into Stone"
       ],
       "content": [],
       "groundcover": [],
@@ -14440,7 +14451,7 @@
         }
       ],
       "dataPaths": [
-        "CalderaPrioryAndTheDepthsOfBloodAndBone"
+        "CalderaPrioryAndTheDepthsOfBloodAndBone/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -14508,7 +14519,7 @@
         }
       ],
       "dataPaths": [
-        "TelvanniLighthouseInTelVos"
+        "TelvanniLighthouseInTelVos/00 - Main Files"
       ],
       "content": [],
       "groundcover": [],
@@ -14680,7 +14691,7 @@
         }
       ],
       "dataPaths": [
-        "OAABDwemerPavements"
+        "OAABDwemerPavements/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -14714,7 +14725,7 @@
         }
       ],
       "dataPaths": [
-        "ConceptArtPalaceVivecCIty"
+        "ConceptArtPalaceVivecCIty/00 - Core Files"
       ],
       "content": [],
       "groundcover": [],
@@ -14783,7 +14794,7 @@
         }
       ],
       "dataPaths": [
-        "ConceptArtsPlantations"
+        "ConceptArtsPlantations/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -14817,7 +14828,9 @@
         }
       ],
       "dataPaths": [
-        "SolstheimTombOfTheSnowPrince"
+        "SolstheimTombOfTheSnowPrince/000 Core",
+        "SolstheimTombOfTheSnowPrince/001 Core - Interiors With Glow in the Dahrk",
+        "SolstheimTombOfTheSnowPrince/001 Core - Interiors Without Glow in the Dahrk"
       ],
       "content": [],
       "groundcover": [],
@@ -14920,7 +14933,7 @@
         }
       ],
       "dataPaths": [
-        "RedMountainReborn"
+        "RedMountainReborn/00 - Red Mountain Reborn"
       ],
       "content": [],
       "groundcover": [],
@@ -14954,7 +14967,7 @@
         }
       ],
       "dataPaths": [
-        "CalderaMineExpandedSimplifiedAndBugfree"
+        "CalderaMineExpandedSimplifiedAndBugfree/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -14988,7 +15001,7 @@
         }
       ],
       "dataPaths": [
-        "TheStoneWoodPassReworked"
+        "TheStoneWoodPassReworked/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -15154,7 +15167,7 @@
         }
       ],
       "dataPaths": [
-        "NordicDagonFel"
+        "NordicDagonFel/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -15222,7 +15235,7 @@
         }
       ],
       "dataPaths": [
-        "AldruhnunderSkar"
+        "AldruhnunderSkar/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -15256,7 +15269,7 @@
         }
       ],
       "dataPaths": [
-        "AesthesiaGroundcoverReworked"
+        "AesthesiaGroundcoverReworked/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -15476,7 +15489,7 @@
         }
       ],
       "dataPaths": [
-        "FairCareOpenMW"
+        "FairCareOpenMW/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -15510,7 +15523,7 @@
         }
       ],
       "dataPaths": [
-        "WeaponRefinementLua"
+        "WeaponRefinementLua/weapon-refinement-lua"
       ],
       "content": [],
       "groundcover": [],
@@ -15541,7 +15554,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWFarming"
+        "OpenMWFarming/Data_Files"
       ],
       "content": [],
       "groundcover": [],
@@ -15570,7 +15583,7 @@
         }
       ],
       "dataPaths": [
-        "LevelsAndLimits"
+        "LevelsAndLimits/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -15636,7 +15649,7 @@
         }
       ],
       "dataPaths": [
-        "SolthasCombatPackOpenMWLua"
+        "SolthasCombatPackOpenMWLua/Solthas Combat Pack"
       ],
       "content": [],
       "groundcover": [],
@@ -15670,7 +15683,7 @@
         }
       ],
       "dataPaths": [
-        "RobeOfMoonAndStar"
+        "RobeOfMoonAndStar/Robe of moon and star Merged (Better Bodies ver.)"
       ],
       "content": [],
       "groundcover": [],
@@ -15704,7 +15717,7 @@
         }
       ],
       "dataPaths": [
-        "DaggerfallDungeonMapOpenMWLua"
+        "DaggerfallDungeonMapOpenMWLua/Solthas Daggerfall Dungeon Map"
       ],
       "content": [],
       "groundcover": [],
@@ -15886,7 +15899,7 @@
         }
       ],
       "dataPaths": [
-        "SeaFortsOfMorrowind"
+        "SeaFortsOfMorrowind/Sea Forts of Morrowind"
       ],
       "content": [],
       "groundcover": [],
@@ -15949,7 +15962,7 @@
         }
       ],
       "dataPaths": [
-        "TurnAroundOpenmwLua"
+        "TurnAroundOpenmwLua/Turn Around"
       ],
       "content": [],
       "groundcover": [],
@@ -15983,7 +15996,7 @@
         }
       ],
       "dataPaths": [
-        "FreshLootOpenMW"
+        "FreshLootOpenMW/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -16051,7 +16064,7 @@
         }
       ],
       "dataPaths": [
-        "TalkingTrainsSpeechcraftopenmwLua"
+        "TalkingTrainsSpeechcraftopenmwLua/Talking Trains Speechcraft openmw lua"
       ],
       "content": [],
       "groundcover": [],
@@ -16085,7 +16098,7 @@
         }
       ],
       "dataPaths": [
-        "VurtsMorrowindVisualResurgence"
+        "VurtsMorrowindVisualResurgence/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -16153,7 +16166,7 @@
         }
       ],
       "dataPaths": [
-        "HarderBetterFasterStrongerOpenMW"
+        "HarderBetterFasterStrongerOpenMW/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -16221,7 +16234,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWUpscaledInventoryIcons"
+        "OpenMWUpscaledInventoryIcons/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -16255,7 +16268,7 @@
         }
       ],
       "dataPaths": [
-        "DwemerLegacyReforgedArkngthunchSturdumz"
+        "DwemerLegacyReforgedArkngthunchSturdumz/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -16289,7 +16302,7 @@
         }
       ],
       "dataPaths": [
-        "SMSwordOfADeadHero"
+        "SMSwordOfADeadHero/SM_Dae_sword/Data files"
       ],
       "content": [],
       "groundcover": [],
@@ -16425,7 +16438,7 @@
         }
       ],
       "dataPaths": [
-        "CorporealCarryableContainers"
+        "CorporealCarryableContainers/Corporeal-Carryable-Containers-master"
       ],
       "content": [],
       "groundcover": [],
@@ -16459,7 +16472,7 @@
         }
       ],
       "dataPaths": [
-        "TheWakeOfHaninIbarDadOverhaul"
+        "TheWakeOfHaninIbarDadOverhaul/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -16493,7 +16506,7 @@
         }
       ],
       "dataPaths": [
-        "KumarahazTheBanditLair"
+        "KumarahazTheBanditLair/Kumarahaz - The Bandit Lair"
       ],
       "content": [],
       "groundcover": [],
@@ -16524,7 +16537,7 @@
         }
       ],
       "dataPaths": [
-        "BetterMerchantsSkillsOpenMW"
+        "BetterMerchantsSkillsOpenMW/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -16621,7 +16634,7 @@
         }
       ],
       "dataPaths": [
-        "AFFreshFullyVoiced"
+        "AFFreshFullyVoiced/AFFresh_Fully_Voiced_Dialogue_OpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -16757,7 +16770,7 @@
         }
       ],
       "dataPaths": [
-        "DodgeOpenMW"
+        "DodgeOpenMW/Dodge"
       ],
       "content": [],
       "groundcover": [],
@@ -16888,7 +16901,7 @@
         }
       ],
       "dataPaths": [
-        "DevilishNeedsOpenMW049"
+        "DevilishNeedsOpenMW049/Devilish Needs"
       ],
       "content": [],
       "groundcover": [],
@@ -17013,7 +17026,7 @@
         }
       ],
       "dataPaths": [
-        "ImmersiveTravelOpenMW"
+        "ImmersiveTravelOpenMW/Immersive Travel/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -17045,7 +17058,7 @@
         }
       ],
       "dataPaths": [
-        "ShieldsUpOpenMW"
+        "ShieldsUpOpenMW/Shields Up"
       ],
       "content": [],
       "groundcover": [],
@@ -17113,7 +17126,7 @@
         }
       ],
       "dataPaths": [
-        "S3maphoreOpenMWMusicManagementFromTheFuture"
+        "S3maphoreOpenMWMusicManagementFromTheFuture/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -17181,7 +17194,7 @@
         }
       ],
       "dataPaths": [
-        "ZerkishHotkeysImprovedForOpenMW"
+        "ZerkishHotkeysImprovedForOpenMW/ZerkishHotkeysImproved"
       ],
       "content": [],
       "groundcover": [],
@@ -17249,7 +17262,7 @@
         }
       ],
       "dataPaths": [
-        "OmnipresenceOpenmw"
+        "OmnipresenceOpenmw/omwOmnipresence"
       ],
       "content": [],
       "groundcover": [],
@@ -17317,7 +17330,7 @@
         }
       ],
       "dataPaths": [
-        "BossOverhaulDagothUr"
+        "BossOverhaulDagothUr/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -17351,7 +17364,7 @@
         }
       ],
       "dataPaths": [
-        "BuildingUpUvirithsGraveV102025BigFixes"
+        "BuildingUpUvirithsGraveV102025BigFixes/Building Up Uvirith\u0027s Grave - 2025 Bug Fixes"
       ],
       "content": [],
       "groundcover": [],
@@ -17385,7 +17398,7 @@
         }
       ],
       "dataPaths": [
-        "ZerkishAutoSaveForOpenMW"
+        "ZerkishAutoSaveForOpenMW/ZerkishAutoSave"
       ],
       "content": [],
       "groundcover": [],
@@ -17521,7 +17534,7 @@
         }
       ],
       "dataPaths": [
-        "LucidDisturbingDreams"
+        "LucidDisturbingDreams/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -17589,7 +17602,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMW049PickpocketOverhaulForQuickLoot"
+        "OpenMW049PickpocketOverhaulForQuickLoot/QL_Pickpocket"
       ],
       "content": [],
       "groundcover": [],
@@ -17691,7 +17704,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWFortifyHealthFix"
+        "OpenMWFortifyHealthFix/FortifyFix"
       ],
       "content": [],
       "groundcover": [],
@@ -17725,7 +17738,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWFortifyNerf"
+        "OpenMWFortifyNerf/FortifyNerf"
       ],
       "content": [],
       "groundcover": [],
@@ -17759,7 +17772,7 @@
         }
       ],
       "dataPaths": [
-        "AnalogFilmShadersForOpenMW"
+        "AnalogFilmShadersForOpenMW/AnalogFilmShaders"
       ],
       "content": [],
       "groundcover": [],
@@ -17793,7 +17806,7 @@
         }
       ],
       "dataPaths": [
-        "RhymersLockpicks"
+        "RhymersLockpicks/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -17861,7 +17874,7 @@
         }
       ],
       "dataPaths": [
-        "ThirtySixPlayableDiceGame"
+        "ThirtySixPlayableDiceGame/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -17895,7 +17908,7 @@
         }
       ],
       "dataPaths": [
-        "TorchHotkeyForOpenMW049"
+        "TorchHotkeyForOpenMW049/TorchHotkey"
       ],
       "content": [],
       "groundcover": [],
@@ -17929,7 +17942,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMW049EasySpeechcraft"
+        "OpenMW049EasySpeechcraft/EasySpeechcraft"
       ],
       "content": [],
       "groundcover": [],
@@ -17963,7 +17976,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMW049FixMercantileExploit"
+        "OpenMW049FixMercantileExploit/fixMerc"
       ],
       "content": [],
       "groundcover": [],
@@ -17997,7 +18010,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMW049EasyHarvest"
+        "OpenMW049EasyHarvest/EasyHarvest"
       ],
       "content": [],
       "groundcover": [],
@@ -18031,7 +18044,7 @@
         }
       ],
       "dataPaths": [
-        "PlaceStacks"
+        "PlaceStacks/placeStacks"
       ],
       "content": [],
       "groundcover": [],
@@ -18065,7 +18078,7 @@
         }
       ],
       "dataPaths": [
-        "ZoomToSeeOpenMW049"
+        "ZoomToSeeOpenMW049/ZoomToSee"
       ],
       "content": [],
       "groundcover": [],
@@ -18099,7 +18112,7 @@
         }
       ],
       "dataPaths": [
-        "PhotoModeForOpenMW049"
+        "PhotoModeForOpenMW049/Photo Mode"
       ],
       "content": [],
       "groundcover": [],
@@ -18167,7 +18180,7 @@
         }
       ],
       "dataPaths": [
-        "SMGreaterBonewalkerReplacerOverhaul"
+        "SMGreaterBonewalkerReplacerOverhaul/sm_GreaterBoneWalker/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -18201,7 +18214,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMW049Disenchanting"
+        "OpenMW049Disenchanting/disenchanting"
       ],
       "content": [],
       "groundcover": [],
@@ -18264,7 +18277,7 @@
         }
       ],
       "dataPaths": [
-        "BurglaryOverhaul"
+        "BurglaryOverhaul/ErnBurglary-main"
       ],
       "content": [],
       "groundcover": [],
@@ -18332,7 +18345,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWSimplyMining"
+        "OpenMWSimplyMining/SimplyMining"
       ],
       "content": [],
       "groundcover": [],
@@ -18434,7 +18447,7 @@
         }
       ],
       "dataPaths": [
-        "RadiantTheftQuests"
+        "RadiantTheftQuests/ErnRadiantTheft-main"
       ],
       "content": [],
       "groundcover": [],
@@ -18468,7 +18481,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWCraftingFramework"
+        "OpenMWCraftingFramework/CraftingFramework"
       ],
       "content": [],
       "groundcover": [],
@@ -18536,7 +18549,7 @@
         }
       ],
       "dataPaths": [
-        "PoisonWeaponsOpenMW"
+        "PoisonWeaponsOpenMW/Poison Weapons/data_files"
       ],
       "content": [],
       "groundcover": [],
@@ -18570,7 +18583,7 @@
         }
       ],
       "dataPaths": [
-        "EbonheartUnderworksFullyVoiced"
+        "EbonheartUnderworksFullyVoiced/Ebonheart_Underworks_Fully_Voiced_Dialogue_Only"
       ],
       "content": [],
       "groundcover": [],
@@ -18672,7 +18685,7 @@
         }
       ],
       "dataPaths": [
-        "ActorInteractionsOpenMW"
+        "ActorInteractionsOpenMW/ActorInteractions"
       ],
       "content": [],
       "groundcover": [],
@@ -18740,7 +18753,7 @@
         }
       ],
       "dataPaths": [
-        "LoadoutsOpenMW"
+        "LoadoutsOpenMW/openmw-loadouts-0.6.0"
       ],
       "content": [],
       "groundcover": [],
@@ -18842,7 +18855,7 @@
         }
       ],
       "dataPaths": [
-        "Urnlings"
+        "Urnlings/Urnlings Vurt\u0027s MVR Medium-HD (0.96a)/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -18876,7 +18889,7 @@
         }
       ],
       "dataPaths": [
-        "QuickSelectUltimateOpenMWFullGamepadKeyboardMous"
+        "QuickSelectUltimateOpenMWFullGamepadKeyboardMous/Quick Select Ultimate 1.6"
       ],
       "content": [],
       "groundcover": [],
@@ -18978,7 +18991,7 @@
         }
       ],
       "dataPaths": [
-        "SpellsBookmarksOpenMW"
+        "SpellsBookmarksOpenMW/spellsBookmark"
       ],
       "content": [],
       "groundcover": [],
@@ -19046,7 +19059,7 @@
         }
       ],
       "dataPaths": [
-        "SmartInterfaceMenuOpeningSIMOOpenMW"
+        "SmartInterfaceMenuOpeningSIMOOpenMW/openmw-smart-interface-menu-opening/smartInterfaceMenuOpening"
       ],
       "content": [],
       "groundcover": [],
@@ -19080,7 +19093,7 @@
         }
       ],
       "dataPaths": [
-        "ShowGoldAmountSGAOpenMW"
+        "ShowGoldAmountSGAOpenMW/openmw-show-gold-amount/showGoldAmount"
       ],
       "content": [],
       "groundcover": [],
@@ -19114,7 +19127,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWBetterElementalShields"
+        "OpenMWBetterElementalShields/Better Elemental Shields"
       ],
       "content": [],
       "groundcover": [],
@@ -19148,7 +19161,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWCombat360"
+        "OpenMWCombat360/combat360"
       ],
       "content": [],
       "groundcover": [],
@@ -19182,7 +19195,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWLeaveTheLightsOff"
+        "OpenMWLeaveTheLightsOff/LeaveTheLightsOff"
       ],
       "content": [],
       "groundcover": [],
@@ -19216,7 +19229,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWUntilHealedFix"
+        "OpenMWUntilHealedFix/UntilHealedFix"
       ],
       "content": [],
       "groundcover": [],
@@ -19250,7 +19263,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWWorthlessSoulgems"
+        "OpenMWWorthlessSoulgems/worthless_soulgems"
       ],
       "content": [],
       "groundcover": [],
@@ -19284,7 +19297,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWFittingSoulgems"
+        "OpenMWFittingSoulgems/fittingSoulgems"
       ],
       "content": [],
       "groundcover": [],
@@ -19318,7 +19331,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWPureLuaMultiMark"
+        "OpenMWPureLuaMultiMark/puremultimark"
       ],
       "content": [],
       "groundcover": [],
@@ -19488,7 +19501,7 @@
         }
       ],
       "dataPaths": [
-        "SMDwemerArmorOfWastelands"
+        "SMDwemerArmorOfWastelands/sm_dmw_light/Data files"
       ],
       "content": [],
       "groundcover": [],
