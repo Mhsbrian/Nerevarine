@@ -77,6 +77,7 @@ public sealed class InstallLog : IDisposable
             {
                 if (_disposed)
                     return;
+                message = Umo.UmoProgressParser.StripAnsi(message);
                 message = Redactor.Apply(message, _redactions);
                 foreach (var line in message.Split('\n'))
                     _writer.WriteLine($"{DateTime.Now:HH:mm:ss.fff} [{level}] [{category}] {line.TrimEnd('\r')}");

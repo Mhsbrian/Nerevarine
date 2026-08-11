@@ -135,18 +135,17 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
             }),
             ct).ConfigureAwait(false);
 
-        ctx.State.FailedMods = result.FailedMods.Distinct().ToList();
+        // Disk truth is the authority on what failed: any non-skipped mod
+        // whose data dir never appeared. Parser events feed the live UI, but
+        // umo's prose must never decide the failure list (it once produced a
+        // state file full of mod-description fragments).
+        var missing = PendingMods(ctx).Select(m => m.Name).Distinct().ToList();
+        ctx.State.FailedMods = missing;
         ctx.SaveState();
 
-        var unresolved = ctx.State.FailedMods.Except(ctx.State.SkippedMods).ToList();
-        if (!result.Process.Success && unresolved.Count == 0)
+        if (!result.Process.Success && missing.Count == 0)
             throw new InvalidOperationException(
                 $"umo install exited with code {result.Process.ExitCode}.");
-        if (unresolved.Count > 0)
-            throw new ModsFailedException(unresolved);
-
-        // Also catch silently-missing mods umo never mentioned.
-        var missing = PendingMods(ctx).Select(m => m.Name).ToList();
         if (missing.Count > 0)
             throw new ModsFailedException(missing);
     }

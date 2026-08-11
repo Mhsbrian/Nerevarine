@@ -4669,36 +4669,6 @@
       }
     },
     {
-      "id": "traveling-merchants",
-      "name": "Traveling Merchants",
-      "category": "Quality Of Life / Immersive",
-      "source": {
-        "handler": "direct",
-        "url": "https://mw.modhistory.com/download-90-15577",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Traveling Merchants",
-          "pinned": false,
-          "directUrl": "https://mw.modhistory.com/download-90-15577",
-          "sizeBytes": 0,
-          "extractTo": "TravelingMerchants",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "TravelingMerchants"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 162
-      }
-    },
-    {
       "id": "traveling-merchants-openmw-bcom",
       "name": "Traveling Merchants OpenMW BCOM",
       "category": "Quality Of Life / Immersive",
@@ -5388,36 +5358,6 @@
       "tags": [],
       "provenance": {
         "csvRow": 185
-      }
-    },
-    {
-      "id": "transmog-menu-openmw",
-      "name": "Transmog Menu (OpenMW)",
-      "category": "Quality Of Life / Immersive",
-      "source": {
-        "handler": "direct",
-        "url": "https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/transmog/",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Transmog Menu (OpenMW)",
-          "pinned": false,
-          "directUrl": "https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/transmog/",
-          "sizeBytes": 0,
-          "extractTo": "TransmogMenuOpenMW",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "TransmogMenuOpenMW"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 186
       }
     },
     {
@@ -7731,39 +7671,6 @@
       }
     },
     {
-      "id": "khajiit-head-replacer",
-      "name": "Khajiit Head Replacer",
-      "category": "Player / Npc Models",
-      "source": {
-        "handler": "direct",
-        "url": "https://mw.modhistory.com/download-42-15171",
-        "nexusGame": "morrowind",
-        "nexusId": 43110
-      },
-      "downloads": [
-        {
-          "fileName": "Khajiit Head Replacer",
-          "nexusFileId": 1000002546,
-          "pinned": true,
-          "directUrl": "https://mw.modhistory.com/download-42-15171",
-          "sizeBytes": 0,
-          "extractTo": "KhajiitHeadReplacer",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "KhajiitHeadReplacer"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Go to textures/ash/khajiit replace/m, make copies of the files \u201Ckhj_m_01_g.dds\u201D and \u201Ckhj_m_05_g.dds\u201D. Rename the copies to \u201Ckhj_m_01g.dds\u201D and \u201Ckhj_m_05g.dds\u201D Whiskers version",
-      "provenance": {
-        "csvRow": 267
-      }
-    },
-    {
       "id": "improved-argonians",
       "name": "Improved Argonians",
       "category": "Player / Npc Models",
@@ -8354,36 +8261,6 @@
       "tags": [],
       "provenance": {
         "csvRow": 286
-      }
-    },
-    {
-      "id": "westly-s-unique-winged-twilight",
-      "name": "Westly\u0027s Unique Winged Twilight",
-      "category": "Player / Npc Models",
-      "source": {
-        "handler": "direct",
-        "url": "http://www.fliggerty.com/phpBB3/viewtopic.php?f=129\u0026t=5456",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Westly\u0027s Unique Winged Twilight",
-          "pinned": false,
-          "directUrl": "http://www.fliggerty.com/phpBB3/viewtopic.php?f=129\u0026t=5456",
-          "sizeBytes": 0,
-          "extractTo": "WestlysUniqueWingedTwilight",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "WestlysUniqueWingedTwilight"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 287
       }
     },
     {
@@ -9994,38 +9871,6 @@
       "tags": [],
       "provenance": {
         "csvRow": 341
-      }
-    },
-    {
-      "id": "mesh-fix",
-      "name": "Mesh Fix",
-      "category": "Meshes \u0026 Textures",
-      "source": {
-        "handler": "direct",
-        "url": "https://mw.modhistory.com/download-15-6088",
-        "nexusGame": "morrowind",
-        "nexusId": 42134
-      },
-      "downloads": [
-        {
-          "fileName": "Mesh Fix",
-          "nexusFileId": 90362,
-          "pinned": true,
-          "directUrl": "https://mw.modhistory.com/download-15-6088",
-          "sizeBytes": 0,
-          "extractTo": "MeshFix",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "MeshFix"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 343
       }
     },
     {
@@ -15029,36 +14874,6 @@
       }
     },
     {
-      "id": "luamics-openmw-mimic-spawner",
-      "name": "Luamics - OpenMW Mimic Spawner",
-      "category": "New Mods",
-      "source": {
-        "handler": "direct",
-        "url": "https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/luamics/",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Luamics - OpenMW Mimic Spawner",
-          "pinned": false,
-          "directUrl": "https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/luamics/",
-          "sizeBytes": 0,
-          "extractTo": "LuamicsOpenMWMimicSpawner",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "LuamicsOpenMWMimicSpawner"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 526
-      }
-    },
-    {
       "id": "3rd-person-alt-attacks-reanimation-plugin",
       "name": "3rd Person Alt Attacks (ReAnimation plugin)",
       "category": "New Mods",
@@ -15655,37 +15470,6 @@
       "notes": "Adds a natural camera noise effect. Customize by editing values in cameranoise.lua file. https://imgur.com/a/2AwQ3R3 Made by Epoch on OpenMW discord server.",
       "provenance": {
         "csvRow": 547
-      }
-    },
-    {
-      "id": "openmw-chim-climbing",
-      "name": "OPENMW - Chim Climbing",
-      "category": "New Mods",
-      "source": {
-        "handler": "direct",
-        "url": "https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/chim_climbing/",
-        "nexusGame": "morrowind",
-        "nexusId": 56296
-      },
-      "downloads": [
-        {
-          "fileName": "OPENMW - Chim Climbing",
-          "pinned": false,
-          "directUrl": "https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/chim_climbing/",
-          "sizeBytes": 0,
-          "extractTo": "OPENMWChimClimbing",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OPENMWChimClimbing"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 548
       }
     },
     {

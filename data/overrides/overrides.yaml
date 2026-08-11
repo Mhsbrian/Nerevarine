@@ -56,6 +56,37 @@ rules:
     skip: true
     skipReason: "Duplicate of the earlier SM Masque of Clavicus Vile row."
 
+  # ── Dead hosts (probed 2026-08-10: connection refused / project made private).
+  #    Field-confirmed: umo cannot download any of these. Skipped until M2
+  #    finds mirrors (candidates: Nexus re-uploads, Wayback snapshots). ──
+  - match: { slug: traveling-merchants }
+    skip: true
+    skipReason: "mw.modhistory.com is dead (connect timeout) — needs a mirror."
+
+  - match: { slug: khajiit-head-replacer }
+    skip: true
+    skipReason: "mw.modhistory.com is dead (connect timeout) — needs a mirror."
+
+  - match: { slug: mesh-fix }
+    skip: true
+    skipReason: "mw.modhistory.com is dead (connect timeout) — needs a mirror."
+
+  - match: { slug: westly-s-unique-winged-twilight }
+    skip: true
+    skipReason: "fliggerty.com is dead (connect timeout) — needs a mirror."
+
+  - match: { slug: transmog-menu-openmw }
+    skip: true
+    skipReason: "s3ctors-s3cret-st4sh gitlab project is now private (403) — needs a mirror."
+
+  - match: { slug: luamics-openmw-mimic-spawner }
+    skip: true
+    skipReason: "s3ctors-s3cret-st4sh gitlab project is now private (403) — needs a mirror."
+
+  - match: { slug: openmw-chim-climbing }
+    skip: true
+    skipReason: "s3ctors-s3cret-st4sh gitlab project is now private (403) — needs a mirror."
+
   # ── Example prose-rule encodings (patterns for the M2 curation pass). ──
 
   # "Individual. Delete bcsounds.esp, maser_inex.esp" — the sheet's typo means
