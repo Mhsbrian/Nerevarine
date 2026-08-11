@@ -123,7 +123,6 @@ rules:
     set:
       dataPaths: ["QuickLootOpenMW/QuickLoot"]
   # NEEDS CHOICE "containers-animated-openmw": ContainersAnimatedOpenMW/Containers Animated | ContainersAnimatedOpenMW/Optional/kollops
-  # NO DATA FOUND "updated-pluginless-no-glow" — inspect UpdatedPluginlessNoGlow manually
   - match: { slug: "dot-crosshair-recolored" }
     set:
       dataPaths: ["DotCrosshairRecolored/Data Files"]
@@ -268,7 +267,10 @@ rules:
     set:
       dataPaths: ["DaedricLordArmorOpenMWPatch/00 Core"]
     # other candidates: DaedricLordArmorOpenMWPatch/01 Colored specular maps
-  # NEEDS CHOICE "better-clothes-complete": BetterClothesComplete/#Data Files | BetterClothesComplete/Darknut's HD Retexture
+  - match: { slug: "better-clothes-complete" }
+    set:
+      dataPaths: ["BetterClothesComplete/#Data Files"]
+    # other candidates: BetterClothesComplete/Darknut's HD Retexture
   - match: { slug: "better-clothesd-retextured" }
     set:
       dataPaths: ["BetterClothesdRetextured/Better Clothes Retexture"]
@@ -533,7 +535,6 @@ rules:
     set:
       dataPaths: ["MorrowindEnhancedTexturesNormalMapped/Morrowind Enhanced Textures Normal Mapped"]
   # NEEDS CHOICE "sotha-sil-is-a-dunmer": SothaSilIsADunmer/HD /Data Files | SothaSilIsADunmer/Vanilla/Data Files
-  # NO DATA FOUND "chaos-heart-main-menu-replacer" — inspect ChaosHeartMainMenuReplacer manually
   # NEEDS CHOICE "skies-iv": SkiesIV/Particles | SkiesIV/Skies - .IV | SkiesIV/Skies - AoF Skies | SkiesIV/Skies - Extreme Textures
   - match: { slug: "new-starfields" }
     set:
@@ -724,7 +725,10 @@ rules:
       dataPaths: ["TheStoneWoodPassReworked/00 Core"]
     # other candidates: TheStoneWoodPassReworked/01 OAAB - Foyada Mamaea Overhaul (patch) | TheStoneWoodPassReworked/02 Caldera Mine Expansion - Simplified and Bug Free | TheStoneWoodPassReworked/03 Traveling Merchants (esp replacer) | TheStoneWoodPassReworked/04 Riders | TheStoneWoodPassReworked/04 Riders - to use with OAAB Grazelands
   # NEEDS CHOICE "momw-post-processing-pack": MOMWPostProcessingPack/01 XE-Shaders | MOMWPostProcessingPack/02 OMWFX-Shaders | MOMWPostProcessingPack/03 ZesterersVolumetricClouds | MOMWPostProcessingPack/04 WareyaOpenMWShaders | MOMWPostProcessingPack/05 SlippyDinkerOpenMWShaders | MOMWPostProcessingPack/07 ZesterersSSAO
-  # NEEDS CHOICE "beautiful-cities-of-morrowind": BeautifulCitiesOfMorrowind/01 Patch for Purists | BeautifulCitiesOfMorrowind/02 Red Mountain Reborn | BeautifulCitiesOfMorrowind/03 OAAB Foyada Mamaea | BeautifulCitiesOfMorrowind/04 Main Quest Enhancers | BeautifulCitiesOfMorrowind/04 Main Quest Enhancers - Waterworks | BeautifulCitiesOfMorrowind/05 Animated Morrowind | BeautifulCitiesOfMorrowind/05 Animated Morrowind for OpenMW | BeautifulCitiesOfMorrowind/06 Broadsheets and Notice Boards | BeautifulCitiesOfMorrowind/07 Rise of House Telvanni | BeautifulCitiesOfMorrowind/07 Rise of House Telvanni 2.0 | BeautifulCitiesOfMorrowind/08 Tel Aruhn Chronicles quest and Yansirramus Overhaul addon | BeautifulCitiesOfMorrowind/09 Magical Missions | BeautifulCitiesOfMorrowind/10 Concept Art Plantations | BeautifulCitiesOfMorrowind/11 Far From Home | BeautifulCitiesOfMorrowind/11 Imperial Legion Expansion | BeautifulCitiesOfMorrowind/12 Mandas Manor | BeautifulCitiesOfMorrowind/13 Red Mountain Reborn - Kogoruhn Expanded patch-fix | BeautifulCitiesOfMorrowind/14 Master Index Redux | BeautifulCitiesOfMorrowind/15 Vivec City | BeautifulCitiesOfMorrowind/16 Siege at Firemoth | BeautifulCitiesOfMorrowind/17 GITD Telvanni Dormers | BeautifulCitiesOfMorrowind/18 Abots Boats - activate both esp | BeautifulCitiesOfMorrowind/19 Abot's boats patch for Tomb of the Snow Prince | BeautifulCitiesOfMorrowind/20 Abot's gondoliers - activate both esp | BeautifulCitiesOfMorrowind/21 Abots Silt Striders | BeautifulCitiesOfMorrowind/22 Tamriel Rebuilt patch | BeautifulCitiesOfMorrowind/23 Welcome to the Arena | BeautifulCitiesOfMorrowind/23 Welcome to the Arena - Open Arena | BeautifulCitiesOfMorrowind/24 Foreign Quarter Market Square | BeautifulCitiesOfMorrowind/25 Province Cyrodiil Patch | BeautifulCitiesOfMorrowind/26 Arvesa - An Armingers Tale patch | BeautifulCitiesOfMorrowind/27 Ebonheart Underworks | BeautifulCitiesOfMorrowind/28 Cephalopod armor | BeautifulCitiesOfMorrowind/29 Yet Another Guard Diversity - Cephalopod Armor | BeautifulCitiesOfMorrowind/29 Yet Another Guard Diversity - Cephalopod Armor - Waterworks | BeautifulCitiesOfMorrowind/29 Yet Another Guard Diversity - Regular | BeautifulCitiesOfMorrowind/29 Yet Another Guard Diversity - Regular - Waterworks | BeautifulCitiesOfMorrowind/29 Yet Another Guard Diversity - RR Cephalopod Armor | BeautifulCitiesOfMorrowind/29 Yet Another Guard Diversity - RR Cephalopod Armor - Waterworks | BeautifulCitiesOfMorrowind/30 Morrowind Anticheese | BeautifulCitiesOfMorrowind/31 LGNPC FQ | BeautifulCitiesOfMorrowind/32 Apartments of Morrowind | BeautifulCitiesOfMorrowind/32 Apartments of Morrowind - Waterworks | BeautifulCitiesOfMorrowind/33 Caius' rooftop renovations | BeautifulCitiesOfMorrowind/34 Imperial Employment Office | BeautifulCitiesOfMorrowind/34 Shabby Seyda Neen | BeautifulCitiesOfMorrowind/35 Bustling Vivec | BeautifulCitiesOfMorrowind/35 Bustling Vivec - Reworked | BeautifulCitiesOfMorrowind/36 Suran Underworld | BeautifulCitiesOfMorrowind/36 Suran Underworld - TOTSP | BeautifulCitiesOfMorrowind/37 Welcome Home | BeautifulCitiesOfMorrowind/37 Welcome Home - TOTSP | BeautifulCitiesOfMorrowind/38 Bounty Hunter Assignments | BeautifulCitiesOfMorrowind/39 Ashlander Traders Remastered | BeautifulCitiesOfMorrowind/40 Holidays Across Tamriel | BeautifulCitiesOfMorrowind/41 Realistic Repair Addon | BeautifulCitiesOfMorrowind/42 True Light and Darkness Patch | BeautifulCitiesOfMorrowind/43 Uvirith Legacy Patch | BeautifulCitiesOfMorrowind/44 Correspondances of Morrowind | BeautifulCitiesOfMorrowind/45 Unique banners and signs | BeautifulCitiesOfMorrowind/45 Unique Banners and Signs - Waterworks | BeautifulCitiesOfMorrowind/46 Vality's Bitter Coast | BeautifulCitiesOfMorrowind/46 Vality's Bitter Coast for Vurt's BC Trees | BeautifulCitiesOfMorrowind/47 NPC Schedules | BeautifulCitiesOfMorrowind/48 Velothi Wall Art | BeautifulCitiesOfMorrowind/49 MWSE Containers | BeautifulCitiesOfMorrowind/50 Julan The Ashlander Companion | BeautifulCitiesOfMorrowind/51 Ghastly Glowyfence patch | BeautifulCitiesOfMorrowind/52 Starfire npcs addition | BeautifulCitiesOfMorrowind/52 Starfire npss additions - only interiors and telemages | BeautifulCitiesOfMorrowind/53 Morag Tong Expanded | BeautifulCitiesOfMorrowind/54 Area of effect Arrows | BeautifulCitiesOfMorrowind/55 Guild of Vampire hunters | BeautifulCitiesOfMorrowind/56 Dartboards expanded | BeautifulCitiesOfMorrowind/57 Sload and Slavers | BeautifulCitiesOfMorrowind/58 Racer Dust Arms and Armor | BeautifulCitiesOfMorrowind/59 Redoran Patrols | BeautifulCitiesOfMorrowind/60 Traveling Merchants | BeautifulCitiesOfMorrowind/60 Traveling Merchants - Stonewood pass reworked | BeautifulCitiesOfMorrowind/61 Vivec Illuminated Palace Redux | BeautifulCitiesOfMorrowind/62 An issue of thrust | BeautifulCitiesOfMorrowind/63 Lights Ald-ruhn | BeautifulCitiesOfMorrowind/64 The Publicans | BeautifulCitiesOfMorrowind/65 Imperials Go Home | BeautifulCitiesOfMorrowind/65 Imperials Go Home - Imperial Gatehouses Addon | BeautifulCitiesOfMorrowind/66 Gildergreen patch | BeautifulCitiesOfMorrowind/66 Gildergreen patch - Waterworks | BeautifulCitiesOfMorrowind/67 Caldera Governor Manor | BeautifulCitiesOfMorrowind/68 Moonlight On the Odai River | BeautifulCitiesOfMorrowind/70 The Cottage | BeautifulCitiesOfMorrowind/71 Pillow Mage Manor | BeautifulCitiesOfMorrowind/72 No trespassing - Merged | BeautifulCitiesOfMorrowind/73 Store Entrance Chimes | BeautifulCitiesOfMorrowind/74 Striderport Lights | BeautifulCitiesOfMorrowind/75 The Lamp | BeautifulCitiesOfMorrowind/76 High Art | BeautifulCitiesOfMorrowind/77 LGNPC Pax Redoran | BeautifulCitiesOfMorrowind/78 Faction Living Quarters | BeautifulCitiesOfMorrowind/79 Main Quest Overhaul | BeautifulCitiesOfMorrowind/80 Mamaea Awakened | BeautifulCitiesOfMorrowind/81 Illuminated Order Improved | BeautifulCitiesOfMorrowind/82 Ashfall interop | BeautifulCitiesOfMorrowind/83 OAAB Pomegranates patch | BeautifulCitiesOfMorrowind/84 Morrowind Crafting | BeautifulCitiesOfMorrowind/84 Morrowind Crafting - Waterworks | BeautifulCitiesOfMorrowind/85 Logs on fire | BeautifulCitiesOfMorrowind/86 Global Cantons on the Map
+  - match: { slug: "beautiful-cities-of-morrowind" }
+    set:
+      dataPaths: ["BeautifulCitiesOfMorrowind/00 Core"]
+    # other candidates: BeautifulCitiesOfMorrowind/01 Waterworks Core | BeautifulCitiesOfMorrowind/02 Options/01 Haalu Council Hall Plaza - Brevur of Balmora | BeautifulCitiesOfMorrowind/02 Options/01 Haalu Council Hall Plaza - Izy Style | BeautifulCitiesOfMorrowind/02 Options/01 Haalu Council Hall Plaza - Vanilla Trees | BeautifulCitiesOfMorrowind/02 Options/02 Riverside - Simple Cluttering | BeautifulCitiesOfMorrowind/02 Options/02 Riverside - Stone Dock | BeautifulCitiesOfMorrowind/02 Options/03 Plaza Weather Mechanics (MWSE) - Required | BeautifulCitiesOfMorrowind/02 Options/03 Weather Mechanics for (OpenMW) - Required | BeautifulCitiesOfMorrowind/02 Options/04 Suran dock expansion | BeautifulCitiesOfMorrowind/02 Options/05 White Suran | BeautifulCitiesOfMorrowind/02 Options/06 Stav's Mages Guilds | BeautifulCitiesOfMorrowind/02 Options/06 Stav's Mages Guilds - Alternate Hlaalu | BeautifulCitiesOfMorrowind/02 Options/07 Taller Seyda Neen Lighthouse | BeautifulCitiesOfMorrowind/02 Options/08 Expanded Sadrith Mora Dock | BeautifulCitiesOfMorrowind/02 Options/09 Concept Art Ghostfence Pillars | BeautifulCitiesOfMorrowind/02 Options/10 Open Arena | BeautifulCitiesOfMorrowind/02 Options/11 Vivec Customization Options | BeautifulCitiesOfMorrowind/02 Options/12 Ghostgate - Animated Statues | BeautifulCitiesOfMorrowind/02 Options/13 Vanilla Skar | BeautifulCitiesOfMorrowind/02 Options/14 More Tribal Erabenimsun | BeautifulCitiesOfMorrowind/02 Options/15 Molag Mar Broken Dome | BeautifulCitiesOfMorrowind/02 Options/16 Maar Gan | BeautifulCitiesOfMorrowind/02 Options/17 Caldera Mages Guild Basement | BeautifulCitiesOfMorrowind/02 Options/18 Urshilaku Camp Concept Art Husk | BeautifulCitiesOfMorrowind/02 Options/19 Ald'Ruhn Outdoor Merchants | BeautifulCitiesOfMorrowind/02 Options/20 Imperial Gatehouses Addon | BeautifulCitiesOfMorrowind/02 Options/21 City of Contrasts Balmora Merchants Addon | BeautifulCitiesOfMorrowind/02 Options/22 More Logical Census Office | BeautifulCitiesOfMorrowind/02 Options/23 Eight Plates Quest Addon | BeautifulCitiesOfMorrowind/02 Options/24 Khuul Lighthouse | BeautifulCitiesOfMorrowind/02 Options/25 Sadrith Mora South Gates | BeautifulCitiesOfMorrowind/02 Options/26 Molag Mar Vanilla Glass Dome | BeautifulCitiesOfMorrowind/03 Waterworks Options/01 Optional Merchants | BeautifulCitiesOfMorrowind/03 Waterworks Options/02 Cluttered Canal | BeautifulCitiesOfMorrowind/03 Waterworks Options/03 City of Contrasts Balmora Merchants Addon | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/01 Project Atlas Patch | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/02 GITD | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/02 GITD + Atlas | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/03 Balmora Bridghes with bigger arch | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/03 Balmora Bridghes with bigger arch - Atlas | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/04 Stav MGO  - GITD | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/04 Stav MGO - Alternate Hlaalu - GITD + Atlas | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/04 Stav MGO - Alternate Hlaalu Atlas | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/04 Stav MGO - Alternate Hlaalu GITD | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/04 Stav MGO - Atlased | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/04 Stav MGO - GITD + Atlas | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/05 RR Statues patch | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/06 Vegetto Azura Statue Replacer patch | BeautifulCitiesOfMorrowind/05 Grass Patches/01 Aesthesia Reworked Groundcover | BeautifulCitiesOfMorrowind/05 Grass Patches/01 Ozzy | BeautifulCitiesOfMorrowind/05 Grass Patches/01 Remiros Groundcover | BeautifulCitiesOfMorrowind/05 Grass Patches/02 Caldera Priory Grass Patches | BeautifulCitiesOfMorrowind/06 HD Textures
   - match: { slug: "nordic-dagon-fel" }
     set:
       dataPaths: ["NordicDagonFel/00 Core"]
@@ -838,7 +842,6 @@ rules:
   - match: { slug: "zerkish-autosave-for-openmw" }
     set:
       dataPaths: ["ZerkishAutoSaveForOpenMW/ZerkishAutoSave"]
-  # NO DATA FOUND "stacked-stats-window-for-openmw" — inspect StackedStatsWindowForOpenMW manually
   - match: { slug: "lucid-disturbing-dreams" }
     set:
       dataPaths: ["LucidDisturbingDreams/Data Files"]
@@ -900,7 +903,9 @@ rules:
   - match: { slug: "openmw-crafting-framework" }
     set:
       dataPaths: ["OpenMWCraftingFramework/CraftingFramework"]
-  # NO DATA FOUND "openmw-simply-crafting" — inspect OpenMWSimplyCrafting manually
+  - match: { slug: "openmw-simply-crafting" }
+    set:
+      dataPaths: ["OpenMWSimplyCrafting/SimplyCrafting"]
   - match: { slug: "poison-weapons-openmw" }
     set:
       dataPaths: ["PoisonWeaponsOpenMW/Poison Weapons/data_files"]
@@ -922,7 +927,6 @@ rules:
   - match: { slug: "spells-bookmarks-openmw" }
     set:
       dataPaths: ["SpellsBookmarksOpenMW/spellsBookmark"]
-  # NEEDS CHOICE "balmora-a-modern-font-replacer": BalmoraAModernFontReplacer/Balmora - Modern Font Replacer - non OpenMW Version/Data Files | BalmoraAModernFontReplacer/__MACOSX/Balmora - Modern Font Replacer - non OpenMW Version/Data Files
   - match: { slug: "smart-interface-menu-opening-simo-open-mw" }
     set:
       dataPaths: ["SmartInterfaceMenuOpeningSIMOOpenMW/openmw-smart-interface-menu-opening/smartInterfaceMenuOpening"]
@@ -950,12 +954,16 @@ rules:
   - match: { slug: "openmw-pure-lua-multi-mark" }
     set:
       dataPaths: ["OpenMWPureLuaMultiMark/puremultimark"]
-  # NO DATA FOUND "simplycrafting-jewelry-and-transmuting" — inspect SimplyCraftingJewelryAndTransmuting manually
-  # NO DATA FOUND "openmw-crafting-framework-crafting-materials" — inspect OpenMWCraftingFrameworkCraftingMaterials manually
-  # NO DATA FOUND "openmw-crafting-framework-nordic-and-stalhrim" — inspect OpenMWCraftingFrameworkNordicAndStalhrim manually
-  # NO DATA FOUND "crafting-the-dwemer-armor-of-the-wastelands" — inspect CraftingTheDwemerArmorOfTheWastelands manually
+  - match: { slug: "simplycrafting-jewelry-and-transmuting" }
+    set:
+      dataPaths: ["SimplyCraftingJewelryAndTransmuting/SC_Jewelry_and_Transmute"]
+  - match: { slug: "crafting-the-dwemer-armor-of-the-wastelands" }
+    set:
+      dataPaths: ["CraftingTheDwemerArmorOfTheWastelands/Crafting_SM_DwemerWastelands"]
   - match: { slug: "sm-dwemer-armor-of-wastelands" }
     set:
       dataPaths: ["SMDwemerArmorOfWastelands/sm_dmw_light/Data files"]
-  # NO DATA FOUND "crafting-the-telvanni-magister-robes" — inspect CraftingTheTelvanniMagisterRobes manually
-  # NO DATA FOUND "dubious-miscellaneous-crafting-assemblage-for-openmw-crafting-framework" — inspect DubiousMiscellaneousCraftingAssemblageForOpenMWC manually
+  - match: { slug: "crafting-the-telvanni-magister-robes" }
+    set:
+      dataPaths: ["CraftingTheTelvanniMagisterRobes/Crafting_Telvanni/Magister_Robes"]
+    # other candidates: CraftingTheTelvanniMagisterRobes/Crafting_Telvanni/Optional No_Rank

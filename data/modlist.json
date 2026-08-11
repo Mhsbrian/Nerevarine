@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "listVersion": "2026.08.1",
   "name": "morrowind-remake",
-  "estimatedDownloadBytes": 20480239390,
-  "estimatedInstalledBytes": 61440718170,
+  "estimatedDownloadBytes": 20479644474,
+  "estimatedInstalledBytes": 61438933422,
   "mods": [
     {
       "id": "vanilla-textures-normal-mapped",
@@ -27,7 +27,8 @@
         }
       ],
       "dataPaths": [
-        "VanillaTexturesNormalMapped"
+        "VanillaTexturesNormalMapped/Vanilla Textures Normal Mapped/01 Vanilla Textures Normal Mapped",
+        "VanillaTexturesNormalMapped/Vanilla Textures Normal Mapped/02 Expansion Resource Conflicts Compatched"
       ],
       "content": [],
       "groundcover": [],
@@ -62,7 +63,12 @@
       ],
       "dataPaths": [
         "OfficialPluginsUnofficialPatch/00 adamantium armor",
-        "OfficialPluginsUnofficialPatch/00 adamantium armor compatibility"
+        "OfficialPluginsUnofficialPatch/01 area effect arrows",
+        "OfficialPluginsUnofficialPatch/02 bitter coast sounds",
+        "OfficialPluginsUnofficialPatch/03 entertainers",
+        "OfficialPluginsUnofficialPatch/04 helm of tohan",
+        "OfficialPluginsUnofficialPatch/05 lefemm armor",
+        "OfficialPluginsUnofficialPatch/06 master index"
       ],
       "content": [],
       "groundcover": [],
@@ -338,7 +344,10 @@
         }
       ],
       "dataPaths": [
-        "PikasMiscellaneousMods"
+        "PikasMiscellaneousMods/Adamantium Pauldrons Enchant Fix",
+        "PikasMiscellaneousMods/Better Master Index Mesh",
+        "PikasMiscellaneousMods/Better Siege at Firemoth Followers",
+        "PikasMiscellaneousMods/Sirollus Saccus Training Fix"
       ],
       "content": [],
       "groundcover": [],
@@ -373,7 +382,11 @@
         }
       ],
       "dataPaths": [
-        "OAABData/00 Core"
+        "OAABData/00 Core",
+        "OAABData/07 Improved Kwama Eggs",
+        "OAABData/04 Better Telvanni Crystal Patch",
+        "OAABData/05 Glass Glowset Patch",
+        "OAABData/08 GitD Shacks Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -407,7 +420,11 @@
         }
       ],
       "dataPaths": [
-        "OAABDataHD/00 Core"
+        "OAABDataHD/00 Core",
+        "OAABDataHD/07 Improved Kwama Eggs",
+        "OAABDataHD/04 Better Telvanni Crystal Patch",
+        "OAABDataHD/05 Glass Glowset Patch",
+        "OAABDataHD/08 GitD Shacks Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -543,7 +560,8 @@
         }
       ],
       "dataPaths": [
-        "TamrielDataHD/00 Data Files"
+        "TamrielDataHD/00 Data Files",
+        "TamrielDataHD/01 Data Files - Normal Maps"
       ],
       "content": [],
       "groundcover": [],
@@ -1740,7 +1758,12 @@
         }
       ],
       "dataPaths": [
-        "WaresUltimate/00 Core"
+        "WaresUltimate/00 Core",
+        "WaresUltimate/02 Wares to vanilla lists",
+        "WaresUltimate/03 TD to Wares",
+        "WaresUltimate/04 OAAB to Wares",
+        "WaresUltimate/06 Wares to Traders",
+        "WaresUltimate/09 Wares to containers"
       ],
       "content": [],
       "groundcover": [],
@@ -2183,7 +2206,8 @@
         }
       ],
       "dataPaths": [
-        "VanillaFriendlyCreaturesAndUndeadsExpansion/00 Core"
+        "VanillaFriendlyCreaturesAndUndeadsExpansion/00 Core",
+        "VanillaFriendlyCreaturesAndUndeadsExpansion/03 Summons have 0 soul"
       ],
       "content": [],
       "groundcover": [],
@@ -2355,7 +2379,7 @@
         }
       ],
       "dataPaths": [
-        "PriceBalance"
+        "PriceBalance/Price Balance 1.2/Price Balance"
       ],
       "content": [],
       "groundcover": [],
@@ -2389,7 +2413,7 @@
         }
       ],
       "dataPaths": [
-        "BewareTheSixthHouse"
+        "BewareTheSixthHouse/Modular"
       ],
       "content": [],
       "groundcover": [],
@@ -3572,7 +3596,8 @@
         }
       ],
       "dataPaths": [
-        "ContainersAnimatedOpenMW"
+        "ContainersAnimatedOpenMW/Containers Animated",
+        "ContainersAnimatedOpenMW/Optional/kollops"
       ],
       "content": [],
       "groundcover": [],
@@ -3636,7 +3661,14 @@
           "pinned": true,
           "sizeBytes": 1418,
           "extractTo": "UpdatedPluginlessNoGlow",
-          "actions": []
+          "actions": [
+            {
+              "type": "rename",
+              "src": "UpdatedPluginlessNoGlow/magicitem",
+              "dst": "UpdatedPluginlessNoGlow/Textures/magicitem",
+              "force": false
+            }
+          ]
         }
       ],
       "dataPaths": [
@@ -3984,7 +4016,7 @@
         }
       ],
       "dataPaths": [
-        "ReligionsElaborated"
+        "ReligionsElaborated/Full Edition"
       ],
       "content": [],
       "groundcover": [],
@@ -4392,7 +4424,7 @@
         }
       ],
       "dataPaths": [
-        "CorprusNatives"
+        "CorprusNatives/512px/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -4632,7 +4664,8 @@
         }
       ],
       "dataPaths": [
-        "SeptimGoldAndDwemerDumacs/00 Core"
+        "SeptimGoldAndDwemerDumacs/00 Core",
+        "SeptimGoldAndDwemerDumacs/01 OpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -4972,7 +5005,7 @@
         }
       ],
       "dataPaths": [
-        "BigIcons"
+        "BigIcons/07 8X Textured"
       ],
       "content": [],
       "groundcover": [],
@@ -5777,7 +5810,7 @@
         }
       ],
       "dataPaths": [
-        "BetterMorrowindArmor"
+        "BetterMorrowindArmor/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -6625,7 +6658,7 @@
         }
       ],
       "dataPaths": [
-        "GoldArmorReforged"
+        "GoldArmorReforged/Bethesda Official Plugin"
       ],
       "content": [],
       "groundcover": [],
@@ -6865,7 +6898,7 @@
         }
       ],
       "dataPaths": [
-        "BetterClothesComplete"
+        "BetterClothesComplete/#Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -7376,7 +7409,8 @@
         }
       ],
       "dataPaths": [
-        "SMTelvanniCeremonialRobe/Telvanni_Robe/Data files"
+        "SMTelvanniCeremonialRobe/Telvanni_Robe/Data files",
+        "SMTelvanniCeremonialRobe/Telvanni_Robe/Icons HD 512 for OpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -7752,7 +7786,7 @@
         }
       ],
       "dataPaths": [
-        "NewVelothsJudgement"
+        "NewVelothsJudgement/A/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8060,7 +8094,7 @@
         }
       ],
       "dataPaths": [
-        "BetterSoundsYetAnotherPatch"
+        "BetterSoundsYetAnotherPatch/01 Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -8265,7 +8299,7 @@
         }
       ],
       "dataPaths": [
-        "BetterBodiesManual"
+        "BetterBodiesManual/Underwear/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -8783,7 +8817,9 @@
         }
       ],
       "dataPaths": [
-        "AmazingAtronachsReplacer"
+        "AmazingAtronachsReplacer/04 Creatures VFX Restoration",
+        "AmazingAtronachsReplacer/04a Shiny Ice Creatures VFX Restoration",
+        "AmazingAtronachsReplacer/05 HD Particle Textures"
       ],
       "content": [],
       "groundcover": [],
@@ -8886,7 +8922,8 @@
         }
       ],
       "dataPaths": [
-        "BetterDwarvenSpectresMerAndMaidens/00 Core"
+        "BetterDwarvenSpectresMerAndMaidens/00 Core",
+        "BetterDwarvenSpectresMerAndMaidens/01 Dwarven Spectres"
       ],
       "content": [],
       "groundcover": [],
@@ -9022,7 +9059,8 @@
         }
       ],
       "dataPaths": [
-        "TamrielRebuilt/00 Core"
+        "TamrielRebuilt/00 Core",
+        "TamrielRebuilt/01 Faction Integration"
       ],
       "content": [],
       "groundcover": [],
@@ -9125,7 +9163,8 @@
         }
       ],
       "dataPaths": [
-        "SkyrimHomeOfTheNords/00 Core"
+        "SkyrimHomeOfTheNords/00 Core",
+        "SkyrimHomeOfTheNords/01 Grass for MGEXE and OpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -9227,7 +9266,7 @@
         }
       ],
       "dataPaths": [
-        "RiseOfHouseTelvanni"
+        "RiseOfHouseTelvanni/Base Mod"
       ],
       "content": [],
       "groundcover": [],
@@ -9776,7 +9815,7 @@
         }
       ],
       "dataPaths": [
-        "MoragTongPolishedTRFactionsPatch"
+        "MoragTongPolishedTRFactionsPatch/01 TR_Factions"
       ],
       "content": [],
       "groundcover": [],
@@ -9810,7 +9849,8 @@
         }
       ],
       "dataPaths": [
-        "SecretsOfTheCrystalCity/00 Core"
+        "SecretsOfTheCrystalCity/00 Core",
+        "SecretsOfTheCrystalCity/01 HD Textures"
       ],
       "content": [],
       "groundcover": [],
@@ -9878,7 +9918,8 @@
         }
       ],
       "dataPaths": [
-        "InvestigationAtTelEurus/Data Files"
+        "InvestigationAtTelEurus/Data Files",
+        "InvestigationAtTelEurus/Extras for OpenMW only"
       ],
       "content": [],
       "groundcover": [],
@@ -10048,7 +10089,9 @@
         }
       ],
       "dataPaths": [
-        "QuestsForClansAndVampireLegendsPatches"
+        "QuestsForClansAndVampireLegendsPatches/01 Misc",
+        "QuestsForClansAndVampireLegendsPatches/02 Script Fix",
+        "QuestsForClansAndVampireLegendsPatches/03 Creature Leveled Lists"
       ],
       "content": [],
       "groundcover": [],
@@ -10116,7 +10159,8 @@
         }
       ],
       "dataPaths": [
-        "TheCorprusariumExperience/00 - Core"
+        "TheCorprusariumExperience/00 - Core",
+        "TheCorprusariumExperience/02 - Doors of Oblivion patch"
       ],
       "content": [],
       "groundcover": [],
@@ -10661,7 +10705,7 @@
         }
       ],
       "dataPaths": [
-        "CorrectUVMudcrabs"
+        "CorrectUVMudcrabs/Correct Mudcrab/Smoothed/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -10729,7 +10773,9 @@
         }
       ],
       "dataPaths": [
-        "MorrowindOptimizationPatch/00 Core"
+        "MorrowindOptimizationPatch/00 Core",
+        "MorrowindOptimizationPatch/05 Graphic Herbalism Patch",
+        "MorrowindOptimizationPatch/02 Weapon Sheathing Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -10832,7 +10878,11 @@
         }
       ],
       "dataPaths": [
-        "ProperlySmoothedMeshes/00 Core"
+        "ProperlySmoothedMeshes/00 Core",
+        "ProperlySmoothedMeshes/01 Optional Textures",
+        "ProperlySmoothedMeshes/03 Higher Poly Glowing Candles",
+        "ProperlySmoothedMeshes/05 Beaker, Flasks - clear glass",
+        "ProperlySmoothedMeshes/06 Inkwell - cut glass"
       ],
       "content": [],
       "groundcover": [],
@@ -10901,7 +10951,7 @@
         }
       ],
       "dataPaths": [
-        "AtlasTexturesAIONormalMapped"
+        "AtlasTexturesAIONormalMapped/Atlas Textures Normal Mapped/01 Vanilla Textures Atlas Normal Maps"
       ],
       "content": [],
       "groundcover": [],
@@ -11038,7 +11088,9 @@
         }
       ],
       "dataPaths": [
-        "DunmerLanternsReplacer/00 Core"
+        "DunmerLanternsReplacer/01 Glow Effect",
+        "DunmerLanternsReplacer/04 Tamriel_Data Patch - Glow Effect",
+        "DunmerLanternsReplacer/05 OAAB_Data Patch - Glow Effect"
       ],
       "content": [],
       "groundcover": [],
@@ -11277,7 +11329,8 @@
         }
       ],
       "dataPaths": [
-        "BetterWaterfalls/00 Core"
+        "BetterWaterfalls/00 Core",
+        "BetterWaterfalls/02 Tamriel Rebuilt Water"
       ],
       "content": [],
       "groundcover": [],
@@ -11786,7 +11839,7 @@
         }
       ],
       "dataPaths": [
-        "SothaSilIsADunmer"
+        "SothaSilIsADunmer/HD /Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -11816,7 +11869,14 @@
           "pinned": true,
           "sizeBytes": 7101557,
           "extractTo": "ChaosHeartMainMenuReplacer",
-          "actions": []
+          "actions": [
+            {
+              "type": "rename",
+              "src": "ChaosHeartMainMenuReplacer/menu_morrowind.dds",
+              "dst": "ChaosHeartMainMenuReplacer/Textures/menu_morrowind.dds",
+              "force": false
+            }
+          ]
         }
       ],
       "dataPaths": [
@@ -11956,7 +12016,8 @@
         }
       ],
       "dataPaths": [
-        "SkiesIV"
+        "SkiesIV/Skies - .IV",
+        "SkiesIV/Particles"
       ],
       "content": [],
       "groundcover": [],
@@ -12128,14 +12189,7 @@
         }
       ],
       "dataPaths": [
-        "ParasolParticles/00 Core",
-        "ParasolParticles/00 Core - Ashfall",
-        "ParasolParticles/00 PeterBitt\u0027s Replacer",
-        "ParasolParticles/00 PeterBitt\u0027s Replacer - Ashfall",
-        "ParasolParticles/00 SWG\u0027s Replacer",
-        "ParasolParticles/00 SWG\u0027s Replacer - Ashfall",
-        "ParasolParticles/00 Telvanni Bump Maps",
-        "ParasolParticles/00 Telvanni Bump Maps - Ashfall"
+        "ParasolParticles/01 OAAB_Data Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -12645,7 +12699,9 @@
         }
       ],
       "dataPaths": [
-        "LogsOnFire/00 Core"
+        "LogsOnFire/00 Core",
+        "LogsOnFire/01 HD Textures",
+        "LogsOnFire/02 Apel\u0027s Fire Retexture Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -12714,7 +12770,10 @@
         }
       ],
       "dataPaths": [
-        "GlowInTheDahrk/00 Core"
+        "GlowInTheDahrk/00 Core",
+        "GlowInTheDahrk/01 Hi Res Window Texture Replacer",
+        "GlowInTheDahrk/04 Raven Rock Glass Windows",
+        "GlowInTheDahrk/07 Telvanni Tower Interior Glow OpenMW"
       ],
       "content": [],
       "groundcover": [],
@@ -12952,7 +13011,8 @@
         }
       ],
       "dataPaths": [
-        "ImprovedLightsForAllShaders/00 Core"
+        "ImprovedLightsForAllShaders/00 Core",
+        "ImprovedLightsForAllShaders/01 Smoke and Steam Emitters"
       ],
       "content": [],
       "groundcover": [],
@@ -13327,7 +13387,9 @@
         }
       ],
       "dataPaths": [
-        "OAABShipwrecksUnchartedArtifactsTRPatch/00 Core"
+        "OAABShipwrecksUnchartedArtifactsTRPatch/00 Core",
+        "OAABShipwrecksUnchartedArtifactsTRPatch/02 Patch - TR Patch",
+        "OAABShipwrecksUnchartedArtifactsTRPatch/01 Patch - Uncharted Artifacts"
       ],
       "content": [],
       "groundcover": [],
@@ -13599,7 +13661,7 @@
         }
       ],
       "dataPaths": [
-        "NewIlunibi/Data Files"
+        "NewIlunibi"
       ],
       "content": [],
       "groundcover": [],
@@ -13735,7 +13797,8 @@
         }
       ],
       "dataPaths": [
-        "OfEggsAndDwarvesOpenMW/00 Core"
+        "OfEggsAndDwarvesOpenMW/00 Core",
+        "OfEggsAndDwarvesOpenMW/01 BCOM Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -14691,7 +14754,8 @@
         }
       ],
       "dataPaths": [
-        "OAABDwemerPavements/00 Core"
+        "OAABDwemerPavements/00 Core",
+        "OAABDwemerPavements/01 Trackless Grazelands Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -15033,7 +15097,7 @@
         }
       ],
       "dataPaths": [
-        "MOMWPostProcessingPack"
+        "MOMWPostProcessingPack/02 OMWFX-Shaders"
       ],
       "content": [],
       "groundcover": [],
@@ -15091,7 +15155,7 @@
       "downloads": [
         {
           "fileName": "Beautiful Cities of Morrowind - Patches-49231-3-3-0-1776625601.7z",
-          "nexusFileId": 1000062829,
+          "nexusFileId": 1000062828,
           "pinned": true,
           "sizeBytes": 11082655,
           "extractTo": "BeautifulCitiesOfMorrowind",
@@ -15099,7 +15163,7 @@
         }
       ],
       "dataPaths": [
-        "BeautifulCitiesOfMorrowind"
+        "BeautifulCitiesOfMorrowind/00 Core"
       ],
       "content": [],
       "groundcover": [],
@@ -15167,7 +15231,8 @@
         }
       ],
       "dataPaths": [
-        "NordicDagonFel/00 Core"
+        "NordicDagonFel/00 Core",
+        "NordicDagonFel/01 More Nordic Dagon Fel"
       ],
       "content": [],
       "groundcover": [],
@@ -15303,7 +15368,32 @@
         }
       ],
       "dataPaths": [
-        "BCOMPatches"
+        "BCOMPatches/01 Patch for Purists",
+        "BCOMPatches/02 Red Mountain Reborn",
+        "BCOMPatches/03 OAAB Foyada Mamaea",
+        "BCOMPatches/07 Rise of House Telvanni 2.0",
+        "BCOMPatches/09 Magical Missions",
+        "BCOMPatches/10 Concept Art Plantations",
+        "BCOMPatches/11 Imperial Legion Expansion",
+        "BCOMPatches/14 Master Index Redux",
+        "BCOMPatches/17 GITD Telvanni Dormers",
+        "BCOMPatches/18 Abots Boats - activate both esp",
+        "BCOMPatches/19 Abot\u0027s boats patch for Tomb of the Snow Prince",
+        "BCOMPatches/22 Tamriel Rebuilt patch",
+        "BCOMPatches/25 Province Cyrodiil Patch",
+        "BCOMPatches/27 Ebonheart Underworks",
+        "BCOMPatches/29 Yet Another Guard Diversity - Regular",
+        "BCOMPatches/30 Morrowind Anticheese",
+        "BCOMPatches/32 Apartments of Morrowind",
+        "BCOMPatches/39 Ashlander Traders Remastered",
+        "BCOMPatches/43 Uvirith Legacy Patch",
+        "BCOMPatches/55 Guild of Vampire hunters",
+        "BCOMPatches/56 Dartboards expanded",
+        "BCOMPatches/59 Redoran Patrols",
+        "BCOMPatches/73 Store Entrance Chimes",
+        "BCOMPatches/76 High Art",
+        "BCOMPatches/80 Mamaea Awakened",
+        "BCOMPatches/85 Logs on fire"
       ],
       "content": [],
       "groundcover": [],
@@ -15428,7 +15518,7 @@
         }
       ],
       "dataPaths": [
-        "AdvancedCamera"
+        "AdvancedCamera/AdvancedCamera"
       ],
       "content": [],
       "groundcover": [],
@@ -16472,7 +16562,8 @@
         }
       ],
       "dataPaths": [
-        "TheWakeOfHaninIbarDadOverhaul/00 Core"
+        "TheWakeOfHaninIbarDadOverhaul/00 Core",
+        "TheWakeOfHaninIbarDadOverhaul/01 TR Patch"
       ],
       "content": [],
       "groundcover": [],
@@ -17126,7 +17217,13 @@
         }
       ],
       "dataPaths": [
-        "S3maphoreOpenMWMusicManagementFromTheFuture/00 Core"
+        "S3maphoreOpenMWMusicManagementFromTheFuture/00 Core",
+        "S3maphoreOpenMWMusicManagementFromTheFuture/01 Tamriel Rebuilt Playlists",
+        "S3maphoreOpenMWMusicManagementFromTheFuture/02 Project Cyrodiil Playlists",
+        "S3maphoreOpenMWMusicManagementFromTheFuture/03 Muse Expansion Playlists",
+        "S3maphoreOpenMWMusicManagementFromTheFuture/04 Vindsvept Solstheim",
+        "S3maphoreOpenMWMusicManagementFromTheFuture/05 Secrets of the Crystal City",
+        "S3maphoreOpenMWMusicManagementFromTheFuture/06 Songbook of the North"
       ],
       "content": [],
       "groundcover": [],
@@ -17228,7 +17325,7 @@
         }
       ],
       "dataPaths": [
-        "SMMasqueClavicusVileReplacer"
+        "SMMasqueClavicusVileReplacer/sm_CV_mask/With_Violet_Effect/Data Files"
       ],
       "content": [],
       "groundcover": [],
@@ -18515,7 +18612,7 @@
         }
       ],
       "dataPaths": [
-        "OpenMWSimplyCrafting"
+        "OpenMWSimplyCrafting/SimplyCrafting"
       ],
       "content": [],
       "groundcover": [],
@@ -19004,40 +19101,6 @@
       }
     },
     {
-      "id": "balmora-a-modern-font-replacer",
-      "name": "Balmora - A Modern Font Replacer",
-      "category": "New Mods",
-      "author": "thenasty",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/57343",
-        "nexusGame": "morrowind",
-        "nexusId": 57343
-      },
-      "downloads": [
-        {
-          "fileName": "Balmora - Font Replacer - non OpenMW Version-57343-1-0b-1755992031.zip",
-          "nexusFileId": 1000056304,
-          "pinned": true,
-          "sizeBytes": 594916,
-          "extractTo": "BalmoraAModernFontReplacer",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "BalmoraAModernFontReplacer"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 625,
-        "resolvedVersion": "1.0b",
-        "resolvedAt": "2026-08-11T10:32:55.6891786\u002B00:00"
-      }
-    },
-    {
       "id": "smart-interface-menu-opening-simo-open-mw",
       "name": "Smart Interface Menu Opening (SIMO) - Open MW",
       "category": "New Mods",
@@ -19365,7 +19428,7 @@
         }
       ],
       "dataPaths": [
-        "SimplyCraftingJewelryAndTransmuting"
+        "SimplyCraftingJewelryAndTransmuting/SC_Jewelry_and_Transmute"
       ],
       "content": [],
       "groundcover": [],
@@ -19467,7 +19530,7 @@
         }
       ],
       "dataPaths": [
-        "CraftingTheDwemerArmorOfTheWastelands"
+        "CraftingTheDwemerArmorOfTheWastelands/Crafting_SM_DwemerWastelands"
       ],
       "content": [],
       "groundcover": [],
@@ -19535,7 +19598,7 @@
         }
       ],
       "dataPaths": [
-        "CraftingTheTelvanniMagisterRobes"
+        "CraftingTheTelvanniMagisterRobes/Crafting_Telvanni/Magister_Robes"
       ],
       "content": [],
       "groundcover": [],

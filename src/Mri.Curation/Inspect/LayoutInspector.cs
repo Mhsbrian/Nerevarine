@@ -18,6 +18,9 @@ public static class LayoutInspector
     {
         "textures", "meshes", "icons", "fonts", "music", "sound", "sounds", "video",
         "splash", "bookart", "animations", "shaders", "scripts", "l10n", "mwse", "distantland",
+        // OpenMW ecosystem conventions: Crafting Framework recipe packs and
+        // MyGUI layout overrides are valid data roots of their own.
+        "cf_recipes", "mygui",
     };
 
     private static readonly HashSet<string> DataFileExtensions = new(StringComparer.OrdinalIgnoreCase)
@@ -96,12 +99,23 @@ public static class LayoutInspector
             return new ModInspection(mod.Id, extractTo, "auto", [Rel(dataFiles[0])],
                 roots.Except(dataFiles).Select(Rel).ToList());
 
-        // BAIN convention: "00 …" folders are the core; later numbers are options.
-        var core = roots.Where(r => Path.GetFileName(r).StartsWith("00", StringComparison.Ordinal))
+        // BAIN convention: "00 …" folders are the core; later numbers are
+        // options. BCOM convention: '#'-prefixed folders are the core.
+        var core = roots.Where(r =>
+                Path.GetFileName(r).StartsWith("00", StringComparison.Ordinal) ||
+                Path.GetFileName(r).StartsWith("#", StringComparison.Ordinal))
             .Select(Rel).ToList();
         if (core.Count > 0)
             return new ModInspection(mod.Id, extractTo, "core-picked", core,
                 roots.Select(Rel).Except(core).ToList());
+
+        // "Optional …" folders are add-ons by convention; if ignoring them
+        // leaves exactly one candidate, that one is the mod.
+        var required = roots.Where(r => !Path.GetFileName(r)
+            .Contains("optional", StringComparison.OrdinalIgnoreCase)).ToList();
+        if (required.Count == 1)
+            return new ModInspection(mod.Id, extractTo, "auto", [Rel(required[0])],
+                roots.Except(required).Select(Rel).ToList());
 
         return new ModInspection(mod.Id, extractTo, "flagged", [], roots.Select(Rel).ToList());
     }

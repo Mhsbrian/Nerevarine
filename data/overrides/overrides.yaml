@@ -144,3 +144,117 @@ rules:
   - match: { slug: s3lightfixes }
     skip: true
     skipReason: "Tool, not a mod — already shipped in the MOMW tools pack."
+
+  # ══ Variant picks (human layer, 2026-08-11) — each pick cites its basis. ══
+
+  # WRONG FILE PINNED: both BCOM rows resolved to the Patches archive. Re-pin
+  # the main row to "Beautiful Cities of Morrowind - BCOM Core" 3.3.0.
+  - match: { slug: beautiful-cities-of-morrowind }
+    set:
+      nexusFileId: 1000062828
+
+  # BCOM Patches: numbered folders matched against mods present in this list
+  # (Waterworks variants skipped — Balmora Waterworks edition not installed;
+  # TOTSP boat patch included because both Abot's Boats and TOTSP are in-list).
+  - match: { slug: bcom-patches }
+    set:
+      dataPaths: ["BCOMPatches/01 Patch for Purists", "BCOMPatches/02 Red Mountain Reborn", "BCOMPatches/03 OAAB Foyada Mamaea", "BCOMPatches/07 Rise of House Telvanni 2.0", "BCOMPatches/09 Magical Missions", "BCOMPatches/10 Concept Art Plantations", "BCOMPatches/11 Imperial Legion Expansion", "BCOMPatches/14 Master Index Redux", "BCOMPatches/17 GITD Telvanni Dormers", "BCOMPatches/18 Abots Boats - activate both esp", "BCOMPatches/19 Abot's boats patch for Tomb of the Snow Prince", "BCOMPatches/22 Tamriel Rebuilt patch", "BCOMPatches/25 Province Cyrodiil Patch", "BCOMPatches/27 Ebonheart Underworks", "BCOMPatches/29 Yet Another Guard Diversity - Regular", "BCOMPatches/30 Morrowind Anticheese", "BCOMPatches/32 Apartments of Morrowind", "BCOMPatches/39 Ashlander Traders Remastered", "BCOMPatches/43 Uvirith Legacy Patch", "BCOMPatches/55 Guild of Vampire hunters", "BCOMPatches/56 Dartboards expanded", "BCOMPatches/59 Redoran Patrols", "BCOMPatches/73 Store Entrance Chimes", "BCOMPatches/76 High Art", "BCOMPatches/80 Mamaea Awakened", "BCOMPatches/85 Logs on fire"]
+
+  # Sheet comment names the wanted sub-mods explicitly.
+  - match: { slug: pikas-miscellaneous-mods }
+    set:
+      dataPaths: ["PikasMiscellaneousMods/Adamantium Pauldrons Enchant Fix", "PikasMiscellaneousMods/Better Master Index Mesh", "PikasMiscellaneousMods/Better Siege at Firemoth Followers", "PikasMiscellaneousMods/Sirollus Saccus Training Fix"]
+
+  - match: { slug: vanilla-textures-normal-mapped }   # GOTY: core + expansion-conflict fixes
+    set:
+      dataPaths: ["VanillaTexturesNormalMapped/Vanilla Textures Normal Mapped/01 Vanilla Textures Normal Mapped", "VanillaTexturesNormalMapped/Vanilla Textures Normal Mapped/02 Expansion Resource Conflicts Compatched"]
+
+  - match: { slug: atlas-textures-aio-normal-mapped }  # matches our Vanilla Textures base (not Intelligent Textures)
+    set:
+      dataPaths: ["AtlasTexturesAIONormalMapped/Atlas Textures Normal Mapped/01 Vanilla Textures Atlas Normal Maps"]
+
+  - match: { slug: price-balance }   # full edition; Coherent Guards row expects Price Balance active
+    set:
+      dataPaths: ["PriceBalance/Price Balance 1.2/Price Balance"]
+
+  - match: { slug: religions-elaborated }   # author's recommended default
+    set:
+      dataPaths: ["ReligionsElaborated/Full Edition"]
+
+  - match: { slug: corprus-natives }   # visual-overhaul list → higher res
+    set:
+      dataPaths: ["CorprusNatives/512px/Data Files"]
+
+  - match: { slug: better-morrowind-armor }   # base only; LeFemm/joint addons reference absent mods
+    set:
+      dataPaths: ["BetterMorrowindArmor/Data Files"]
+
+  - match: { slug: gold-armor-reforged }   # matches the activated Bethesda official plugins
+    set:
+      dataPaths: ["GoldArmorReforged/Bethesda Official Plugin"]
+
+  - match: { slug: new-veloths-judgement }   # style A = author default
+    set:
+      dataPaths: ["NewVelothsJudgement/A/Data Files"]
+
+  - match: { slug: better-sounds-yet-another-patch }   # the patch itself; expansions optional
+    set:
+      dataPaths: ["BetterSoundsYetAnotherPatch/01 Patch"]
+
+  - match: { slug: better-bodies-manual }   # standard modlist default
+    set:
+      dataPaths: ["BetterBodiesManual/Underwear/Data Files"]
+
+  - match: { slug: rise-of-house-telvanni }
+    set:
+      dataPaths: ["RiseOfHouseTelvanni/Base Mod"]
+
+  - match: { slug: morag-tong-polished-tr-factions-patch }   # the TR factions variant is the point
+    set:
+      dataPaths: ["MoragTongPolishedTRFactionsPatch/01 TR_Factions"]
+
+  - match: { slug: quests-for-clans-and-vampire-legends-patches }
+    set:
+      dataPaths: ["QuestsForClansAndVampireLegendsPatches/01 Misc", "QuestsForClansAndVampireLegendsPatches/02 Script Fix", "QuestsForClansAndVampireLegendsPatches/03 Creature Leveled Lists"]
+
+  - match: { slug: correct-uv-mudcrabs }   # consistent with Properly Smoothed Meshes in-list
+    set:
+      dataPaths: ["CorrectUVMudcrabs/Correct Mudcrab/Smoothed/Data Files"]
+
+  - match: { slug: sotha-sil-is-a-dunmer }
+    set:
+      dataPaths: ["SothaSilIsADunmer/HD /Data Files"]
+
+  - match: { slug: momw-post-processing-pack }   # OMWFX = the OpenMW shader set (XE = MGE, wrong engine)
+    set:
+      dataPaths: ["MOMWPostProcessingPack/02 OMWFX-Shaders"]
+
+  - match: { slug: advancedcamera }   # repo hosts many mods; the sheet row wants AdvancedCamera
+    set:
+      dataPaths: ["AdvancedCamera/AdvancedCamera"]
+
+  - match: { slug: sm-masque-clavicus-vile-replacer }   # author's showcased default
+    set:
+      dataPaths: ["SMMasqueClavicusVileReplacer/sm_CV_mask/With_Violet_Effect/Data Files"]
+
+  # Repack actions: loose files that belong under Textures/.
+  - match: { slug: chaos-heart-main-menu-replacer }
+    set:
+      dataPaths: ["ChaosHeartMainMenuReplacer"]
+    actions:
+      - type: rename
+        src: "ChaosHeartMainMenuReplacer/menu_morrowind.dds"
+        dst: "ChaosHeartMainMenuReplacer/Textures/menu_morrowind.dds"
+
+  - match: { slug: updated-pluginless-no-glow }
+    set:
+      dataPaths: ["UpdatedPluginlessNoGlow"]
+    actions:
+      - type: rename
+        src: "UpdatedPluginlessNoGlow/magicitem"
+        dst: "UpdatedPluginlessNoGlow/Textures/magicitem"
+
+  # Downloaded archive only contains the non-OpenMW variant.
+  - match: { slug: balmora-a-modern-font-replacer }
+    skip: true
+    skipReason: "Archive holds the non-OpenMW variant only — pin the OpenMW file in M2."
