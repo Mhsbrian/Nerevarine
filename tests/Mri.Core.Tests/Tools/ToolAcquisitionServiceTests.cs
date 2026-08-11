@@ -54,11 +54,17 @@ public class ToolAcquisitionServiceTests : IDisposable
     {
         Id = "fake-tool",
         Version = "1.0",
-        Url = "https://example.com/fake-tool.zip",
-        Sha256 = sha256,
-        ArchiveType = ToolArchiveType.Zip,
         InstallSubdir = "fake-tool",
-        ExeProbe = "fake-tool.exe",
+        Platforms = new Dictionary<string, ToolVariant>
+        {
+            [ToolManifest.CurrentRid] = new()
+            {
+                Url = "https://example.com/fake-tool.zip",
+                Sha256 = sha256,
+                ArchiveType = ToolArchiveType.Zip,
+                ExeProbe = "fake-tool.exe",
+            },
+        },
     };
 
     [Fact]
@@ -125,11 +131,17 @@ public class ToolAcquisitionServiceTests : IDisposable
     {
         Id = "openmw",
         Version = "0.51.0",
-        Url = "https://example.com/OpenMW-Setup.exe",
-        Sha256 = null,
-        ArchiveType = ToolArchiveType.NsisExe,
         InstallSubdir = "openmw",
-        ExeProbe = "openmw.exe",
+        Platforms = new Dictionary<string, ToolVariant>
+        {
+            [ToolManifest.CurrentRid] = new()
+            {
+                Url = "https://example.com/OpenMW-Setup.exe",
+                Sha256 = null,
+                ArchiveType = ToolArchiveType.NsisExe,
+                ExeProbe = "openmw.exe",
+            },
+        },
     };
 
     /// <summary>Records specs and simulates 7z by dropping files into the -o&lt;dir&gt; target.</summary>
@@ -191,6 +203,54 @@ public class ToolAcquisitionServiceTests : IDisposable
         Assert.False(Directory.Exists(Path.Combine(toolDir, "$PLUGINSDIR")));
         Assert.False(File.Exists(Path.Combine(toolDir, "Uninstall.exe")));
         Assert.True(Directory.Exists(Path.Combine(toolDir, "resources")));
+    }
+
+    [Fact]
+    public async Task TarGzToolExtractsWithProbe()
+    {
+        // Build a tar.gz containing the probe binary, like the Linux packs.
+        using var buffer = new MemoryStream();
+        using (var gzip = new System.IO.Compression.GZipStream(
+                   buffer, System.IO.Compression.CompressionMode.Compress, leaveOpen: true))
+        using (var tar = new System.Formats.Tar.TarWriter(gzip))
+        {
+            var entry = new System.Formats.Tar.PaxTarEntry(
+                System.Formats.Tar.TarEntryType.RegularFile, "pack-1.0/fake-tool")
+            {
+                DataStream = new MemoryStream("ELF fake"u8.ToArray()),
+            };
+            tar.WriteEntry(entry);
+        }
+        var tarBytes = buffer.ToArray();
+
+        var service = new ToolAcquisitionService(
+            new HttpClient(new StubHandler(_ => new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new ByteArrayContent(tarBytes),
+            })),
+            new ProcessRunner(),
+            Path.Combine(_root, "tools-targz"));
+
+        var spec = new ToolSpec
+        {
+            Id = "fake-linux-tool",
+            Version = "1.0",
+            InstallSubdir = "fake-linux-tool",
+            Platforms = new Dictionary<string, ToolVariant>
+            {
+                [ToolManifest.CurrentRid] = new()
+                {
+                    Url = "https://example.com/pack.tar.gz",
+                    ArchiveType = ToolArchiveType.TarGz,
+                    ExeProbe = "fake-tool",
+                },
+            },
+        };
+
+        await service.EnsureToolAsync(spec);
+
+        Assert.True(service.IsInstalled(spec));
+        Assert.EndsWith(Path.Combine("pack-1.0", "fake-tool"), service.FindExe(spec));
     }
 
     [Fact]

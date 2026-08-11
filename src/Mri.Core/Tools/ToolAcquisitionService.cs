@@ -25,7 +25,7 @@ public sealed class ToolAcquisitionService(
     public string GetToolDir(ToolSpec tool) => Path.Combine(ToolsRoot, tool.InstallSubdir);
 
     /// <summary>Recursively finds the probe exe — pack layouts move around between versions.</summary>
-    public string? FindExe(ToolSpec tool) => FindExe(tool, tool.ExeProbe);
+    public string? FindExe(ToolSpec tool) => FindExe(tool, tool.Variant.ExeProbe);
 
     public string? FindExe(ToolSpec tool, string exeName)
     {
@@ -63,10 +63,10 @@ public sealed class ToolAcquisitionService(
         Directory.CreateDirectory(DownloadsDir);
         var archivePath = Path.Combine(DownloadsDir, FileNameFor(tool));
 
-        if (!File.Exists(archivePath) || !await HashMatchesAsync(archivePath, tool.Sha256, ct).ConfigureAwait(false))
+        if (!File.Exists(archivePath) || !await HashMatchesAsync(archivePath, tool.Variant.Sha256, ct).ConfigureAwait(false))
         {
             await DownloadAsync(tool, archivePath, progress, ct).ConfigureAwait(false);
-            if (!await HashMatchesAsync(archivePath, tool.Sha256, ct).ConfigureAwait(false))
+            if (!await HashMatchesAsync(archivePath, tool.Variant.Sha256, ct).ConfigureAwait(false))
                 throw new InvalidDataException(
                     $"Downloaded {tool.Id} does not match its pinned sha256 — refusing to install it.");
         }
@@ -76,7 +76,7 @@ public sealed class ToolAcquisitionService(
 
         if (FindExe(tool) is null)
             throw new InvalidOperationException(
-                $"{tool.Id} was extracted but '{tool.ExeProbe}' was not found anywhere under " +
+                $"{tool.Id} was extracted but '{tool.Variant.ExeProbe}' was not found anywhere under " +
                 $"'{GetToolDir(tool)}' — either the archive layout changed or an antivirus " +
                 "quarantined the binary.");
 
@@ -87,7 +87,7 @@ public sealed class ToolAcquisitionService(
     private async Task DownloadAsync(
         ToolSpec tool, string archivePath, IProgress<ToolProgress>? progress, CancellationToken ct)
     {
-        using var response = await http.GetAsync(tool.Url, HttpCompletionOption.ResponseHeadersRead, ct)
+        using var response = await http.GetAsync(tool.Variant.Url, HttpCompletionOption.ResponseHeadersRead, ct)
             .ConfigureAwait(false);
         response.EnsureSuccessStatusCode();
         var total = response.Content.Headers.ContentLength;
@@ -115,10 +115,14 @@ public sealed class ToolAcquisitionService(
         var toolDir = GetToolDir(tool);
         var extractor = new ArchiveExtractor(runner);
 
-        switch (tool.ArchiveType)
+        switch (tool.Variant.ArchiveType)
         {
             case ToolArchiveType.Zip:
                 extractor.ExtractZip(archivePath, toolDir);
+                break;
+
+            case ToolArchiveType.TarGz:
+                extractor.ExtractTarGz(archivePath, toolDir);
                 break;
 
             case ToolArchiveType.NsisExe:
@@ -133,7 +137,7 @@ public sealed class ToolAcquisitionService(
                 break;
 
             default:
-                throw new ArgumentOutOfRangeException(nameof(tool), tool.ArchiveType, null);
+                throw new ArgumentOutOfRangeException(nameof(tool), tool.Variant.ArchiveType, null);
         }
     }
 
@@ -217,11 +221,12 @@ public sealed class ToolAcquisitionService(
 
     private static string FileNameFor(ToolSpec tool)
     {
-        var extension = tool.ArchiveType switch
+        var extension = tool.Variant.ArchiveType switch
         {
             ToolArchiveType.Zip => ".zip",
             ToolArchiveType.NsisExe => ".exe",
             ToolArchiveType.SevenZip => ".7z",
+            ToolArchiveType.TarGz => ".tar.gz",
             _ => ".bin",
         };
         return $"{tool.Id}-{tool.Version}{extension}";
@@ -247,7 +252,7 @@ public sealed class ToolAcquisitionService(
             var marker = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(MarkerPath(tool)));
             return marker is not null &&
                    marker.GetValueOrDefault("version") == tool.Version &&
-                   marker.GetValueOrDefault("url") == tool.Url;
+                   marker.GetValueOrDefault("url") == tool.Variant.Url;
         }
         catch (JsonException)
         {
@@ -260,7 +265,7 @@ public sealed class ToolAcquisitionService(
         {
             ["id"] = tool.Id,
             ["version"] = tool.Version,
-            ["url"] = tool.Url,
+            ["url"] = tool.Variant.Url,
             ["installedAt"] = DateTimeOffset.UtcNow.ToString("O"),
         }, new JsonSerializerOptions { WriteIndented = true }));
 }

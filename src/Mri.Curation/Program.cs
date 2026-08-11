@@ -19,6 +19,7 @@ internal static class Program
                 ["resolve", .. var rest] => await ResolveAsync(Options.From(rest)),
                 ["emit", .. var rest] => Emit(Options.From(rest)),
                 ["check", .. var rest] => Check(Options.From(rest)),
+                ["tools-check", .. var rest] => await ToolsCheckAsync(Options.From(rest)),
                 _ => Usage(),
             };
         }
@@ -45,6 +46,10 @@ internal static class Program
                        produce the canonical modlist + curation report
               check    same inputs as emit; exit 1 on any constraint violation
                        (CI gate — does not write outputs)
+              tools-check  [--dir <dir>]  (default build/tools-check)
+                       REAL tool acquisition for this platform: download,
+                       extract, probe, run umo/iniimporter, detect Steam.
+                       The platform-parity smoke test.
             """);
         return 2;
     }
@@ -182,6 +187,97 @@ internal static class Program
         foreach (var violation in result.ConstraintViolations)
             Console.Error.WriteLine($"  ❌ {violation}");
         return result.ConstraintViolations.Count > 0 ? 1 : 0;
+    }
+
+    /// <summary>
+    /// The platform-parity smoke: acquires the REAL tools for this OS into a
+    /// scratch dir, probes every binary the pipeline needs, and executes umo
+    /// and openmw-iniimporter to prove they actually run here.
+    /// </summary>
+    private static async Task<int> ToolsCheckAsync(Options options)
+    {
+        var dir = Path.GetFullPath(options.Values.GetValueOrDefault("dir", "build/tools-check"));
+        Console.WriteLine($"platform: {Mri.Core.Tools.ToolManifest.CurrentRid}; tools dir: {dir}");
+
+        var manifestPath = "data/tools.json";
+        var manifest = Mri.Core.Tools.ToolManifest.Load(File.ReadAllText(manifestPath));
+        var runner = new Mri.Core.IO.ProcessRunner();
+        var tools = new Mri.Core.Tools.ToolAcquisitionService(new HttpClient(), runner, dir);
+
+        var lastPercent = -1;
+        await tools.EnsureAllAsync(manifest, new Progress<Mri.Core.Tools.ToolProgress>(p =>
+        {
+            var percent = p.BytesTotal is > 0 ? (int)(100.0 * p.BytesDone / p.BytesTotal.Value) : -1;
+            if (percent != lastPercent)
+            {
+                lastPercent = percent;
+                Console.WriteLine($"  {p.ToolId}: {p.Phase} {(percent >= 0 ? percent + "%" : "")}");
+            }
+        }));
+
+        var locator = new Mri.Core.Tools.ToolLocator(tools, manifest);
+        var ok = true;
+        foreach (var (name, path) in new (string, string?)[]
+        {
+            ("umo", locator.UmoExe),
+            ("openmw", locator.OpenMwExe),
+            ("openmw-iniimporter", locator.IniImporterExe),
+            ("openmw-navmeshtool", locator.NavmeshToolExe),
+            ("delta_plugin", locator.DeltaPluginExe),
+            ("tes3cmd", locator.Tes3cmdExe),
+            ("7z", locator.SevenZipExe),
+            ("openmw-validator", locator.ValidatorExe),
+        })
+        {
+            Console.WriteLine($"  probe {name,-20} {(path is null ? "✗ MISSING" : "✓ " + path)}");
+            ok &= path is not null;
+        }
+
+        async Task<bool> RunsAsync(string label, string? exe, params string[] args)
+        {
+            if (exe is null)
+                return false;
+            var lines = new List<string>();
+            try
+            {
+                var result = await runner.RunAsync(new Mri.Core.IO.ProcessSpec
+                {
+                    Exe = exe,
+                    Args = args,
+                    Env = new Dictionary<string, string> { ["UMO_CONF_DIR"] = Path.Combine(dir, "umo-conf") },
+                    Timeout = TimeSpan.FromSeconds(60),
+                }, new Progress<Mri.Core.IO.OutputLine>(l =>
+                {
+                    lock (lines)
+                        lines.Add(l.Text);
+                }));
+                await Task.Delay(150);
+                string first;
+                lock (lines)
+                    first = lines.FirstOrDefault("") ?? "";
+                Console.WriteLine($"  run   {label,-20} exit {result.ExitCode}: {first[..Math.Min(first.Length, 60)]}");
+                return result.Success;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"  run   {label,-20} ✗ {e.Message}");
+                return false;
+            }
+        }
+
+        ok &= await RunsAsync("umo --version", locator.UmoExe, "--version");
+        ok &= await RunsAsync("iniimporter --help", locator.IniImporterExe, "--help");
+
+        var registry = OperatingSystem.IsWindows()
+            ? (Mri.Core.GameDetection.IRegistryReader)new Mri.Core.GameDetection.WindowsRegistryReader()
+            : new Mri.Core.GameDetection.NullRegistryReader();
+        var candidates = new Mri.Core.GameDetection.GamePathService(registry).DetectCandidates();
+        Console.WriteLine(candidates.Count == 0
+            ? "  steam: no Morrowind install detected (fine if not installed yet)"
+            : $"  steam: found {string.Join("; ", candidates.Select(c => $"{c.Source}: {c.Path}"))}");
+
+        Console.WriteLine(ok ? "TOOLS CHECK PASSED" : "TOOLS CHECK FAILED");
+        return ok ? 0 : 1;
     }
 
     private static EmitResult RunEmit(Options options)

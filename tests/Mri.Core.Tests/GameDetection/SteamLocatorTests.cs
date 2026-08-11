@@ -122,6 +122,17 @@ public class SteamLocatorTests : IDisposable
     }
 
     [Fact]
+    public void LinuxSteamRootsCoverNativeSymlinkAndFlatpakHomes()
+    {
+        var roots = SteamLocator.LinuxSteamRoots("/home/brian");
+
+        Assert.Contains("/home/brian/.local/share/Steam", roots);
+        Assert.Contains("/home/brian/.steam/steam", roots);
+        Assert.Contains(
+            "/home/brian/.var/app/com.valvesoftware.Steam/.local/share/Steam", roots);
+    }
+
+    [Fact]
     public void ManifestPointingAtMissingInstallDirIsSkipped()
     {
         var steamRoot = MakeSteamRoot("steam");

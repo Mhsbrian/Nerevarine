@@ -14,14 +14,20 @@ public sealed class SteamLocator(IRegistryReader registry)
 
     public IReadOnlyList<string> FindSteamRoots()
     {
-        var candidates = new List<string?>
+        var candidates = new List<string?>();
+        if (OperatingSystem.IsWindows())
         {
-            registry.GetString(RegistryRoot.CurrentUser, RegistryWidth.Registry64, @"Software\Valve\Steam", "SteamPath"),
-            registry.GetString(RegistryRoot.CurrentUser, RegistryWidth.Registry32, @"Software\Valve\Steam", "SteamPath"),
-            registry.GetString(RegistryRoot.LocalMachine, RegistryWidth.Registry32, @"SOFTWARE\Valve\Steam", "InstallPath"),
-            registry.GetString(RegistryRoot.LocalMachine, RegistryWidth.Registry64, @"SOFTWARE\Valve\Steam", "InstallPath"),
-            @"C:\Program Files (x86)\Steam",
-        };
+            candidates.Add(registry.GetString(RegistryRoot.CurrentUser, RegistryWidth.Registry64, @"Software\Valve\Steam", "SteamPath"));
+            candidates.Add(registry.GetString(RegistryRoot.CurrentUser, RegistryWidth.Registry32, @"Software\Valve\Steam", "SteamPath"));
+            candidates.Add(registry.GetString(RegistryRoot.LocalMachine, RegistryWidth.Registry32, @"SOFTWARE\Valve\Steam", "InstallPath"));
+            candidates.Add(registry.GetString(RegistryRoot.LocalMachine, RegistryWidth.Registry64, @"SOFTWARE\Valve\Steam", "InstallPath"));
+            candidates.Add(@"C:\Program Files (x86)\Steam");
+        }
+        else
+        {
+            candidates.AddRange(LinuxSteamRoots(
+                Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)));
+        }
 
         return candidates
             .Where(c => !string.IsNullOrWhiteSpace(c))
@@ -30,6 +36,20 @@ public sealed class SteamLocator(IRegistryReader registry)
             .Where(Directory.Exists)
             .ToList();
     }
+
+    /// <summary>
+    /// Steam's Linux homes: native (~/.local/share/Steam, with ~/.steam
+    /// symlinks) and the Flatpak sandbox. Proton-installed Windows games like
+    /// Morrowind live in the same steamapps/common layout, so everything
+    /// downstream (vdf, acf, esm validation) is identical.
+    /// </summary>
+    public static IReadOnlyList<string> LinuxSteamRoots(string home) =>
+    [
+        Path.Combine(home, ".local", "share", "Steam"),
+        Path.Combine(home, ".steam", "steam"),
+        Path.Combine(home, ".steam", "root"),
+        Path.Combine(home, ".var", "app", "com.valvesoftware.Steam", ".local", "share", "Steam"),
+    ];
 
     /// <summary>
     /// All Steam library roots reachable from a Steam install dir. The Steam

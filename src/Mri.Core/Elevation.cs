@@ -13,10 +13,14 @@ public static class Elevation
     /// </summary>
     public static bool IsElevated()
     {
-        if (!OperatingSystem.IsWindows())
-            return false;
+        if (OperatingSystem.IsWindows())
+        {
+            using var identity = WindowsIdentity.GetCurrent();
+            return new WindowsPrincipal(identity).IsInRole(WindowsBuiltInRole.Administrator);
+        }
 
-        using var identity = WindowsIdentity.GetCurrent();
-        return new WindowsPrincipal(identity).IsInRole(WindowsBuiltInRole.Administrator);
+        // Linux/macOS: running as root causes the same trouble (root-owned
+        // mod files, umo refusal), so the same gate applies.
+        return Environment.IsPrivilegedProcess;
     }
 }
