@@ -68,6 +68,7 @@ internal static class Program
         public string Overrides => Values.GetValueOrDefault("overrides", "data/overrides/overrides.yaml");
         public string Out(string fallback) => Values.GetValueOrDefault("out", fallback);
         public string Report => Values.GetValueOrDefault("report", "build/report.md");
+        public string UmoOut => Values.GetValueOrDefault("umo-out", "build/umo-list.json");
         public string ListVersion => Values.GetValueOrDefault("list-version",
             $"{DateTime.UtcNow:yyyy.MM}.0");
         public int? Limit => Values.TryGetValue("limit", out var limit) ? int.Parse(limit) : null;
@@ -148,6 +149,13 @@ internal static class Program
         var outPath = options.Out("data/modlist.json");
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(outPath))!);
         File.WriteAllText(outPath, ModlistLoader.Serialize(result.Modlist));
+
+        // The umo ModDesc projection — what `umo list add` will actually
+        // ingest. tools/validate-moddesc.py runs umo's own Pydantic model
+        // against this file so contract violations surface here, not mid-install.
+        var umoOut = options.UmoOut;
+        Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(umoOut))!);
+        File.WriteAllText(umoOut, ModlistCompiler.ToUmoModDescJson(result.Modlist));
 
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(options.Report))!);
         File.WriteAllText(options.Report, result.Report);

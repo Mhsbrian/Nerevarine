@@ -15627,36 +15627,6 @@
       }
     },
     {
-      "id": "scalable-dwemer-puzzle-box-randomizer-2",
-      "name": "Scalable Dwemer Puzzle Box Randomizer",
-      "category": "New Mods",
-      "source": {
-        "handler": "direct",
-        "url": "https://modding-openmw.gitlab.io/gonzos-scalable-dwemer-puzzle-box-randomizer/",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Scalable Dwemer Puzzle Box Randomizer",
-          "pinned": false,
-          "directUrl": "https://modding-openmw.gitlab.io/gonzos-scalable-dwemer-puzzle-box-randomizer/",
-          "sizeBytes": 0,
-          "extractTo": "ScalableDwemerPuzzleBoxRandomizer",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "ScalableDwemerPuzzleBoxRandomizer"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 546
-      }
-    },
-    {
       "id": "camera-noise-openmw",
       "name": "Camera Noise (OpenMW)",
       "category": "New Mods",
@@ -18296,66 +18266,6 @@
       }
     },
     {
-      "id": "openmw-simply-crafting-2",
-      "name": "(OpenMW) Simply Crafting",
-      "category": "New Mods",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/57248",
-        "nexusGame": "morrowind",
-        "nexusId": 57248
-      },
-      "downloads": [
-        {
-          "fileName": "(OpenMW) Simply Crafting",
-          "pinned": false,
-          "sizeBytes": 0,
-          "extractTo": "OpenMWSimplyCrafting",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OpenMWSimplyCrafting"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 635
-      }
-    },
-    {
-      "id": "openmw-crafting-framework-2",
-      "name": "(OpenMW) Crafting Framework",
-      "category": "New Mods",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/57247",
-        "nexusGame": "morrowind",
-        "nexusId": 57247
-      },
-      "downloads": [
-        {
-          "fileName": "(OpenMW) Crafting Framework",
-          "pinned": false,
-          "sizeBytes": 0,
-          "extractTo": "OpenMWCraftingFramework",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OpenMWCraftingFramework"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 636
-      }
-    },
-    {
       "id": "simplycrafting-jewelry-and-transmuting",
       "name": "SimplyCrafting Jewelry and Transmuting",
       "category": "New Mods",
@@ -18503,36 +18413,6 @@
       "tags": [],
       "provenance": {
         "csvRow": 641
-      }
-    },
-    {
-      "id": "sm-masque-clavicus-vile-replacer-2",
-      "name": "SM Masque Clavicus Vile Replacer",
-      "category": "New Mods",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/56897",
-        "nexusGame": "morrowind",
-        "nexusId": 56897
-      },
-      "downloads": [
-        {
-          "fileName": "SM Masque Clavicus Vile Replacer",
-          "pinned": false,
-          "sizeBytes": 0,
-          "extractTo": "SMMasqueClavicusVileReplacer",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "SMMasqueClavicusVileReplacer"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 642
       }
     },
     {

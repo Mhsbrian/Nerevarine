@@ -25,6 +25,17 @@ jobs:
           --csv data/modlist.source.csv
           --cache data/resolve-cache.json
           --overrides data/overrides/overrides.yaml
+      - name: Validate umo projection against umo's own Pydantic model
+        run: |
+          UMO_TAG=0.11.1
+          git clone -q --depth 1 --branch "$UMO_TAG" https://gitlab.com/modding-openmw/umo.git /tmp/umo-src
+          python3 -m venv /tmp/venv && /tmp/venv/bin/pip -q install pydantic
+          dotnet run --project src/Mri.Curation -- emit \
+            --csv data/modlist.source.csv \
+            --cache data/resolve-cache.json \
+            --overrides data/overrides/overrides.yaml \
+            --out /tmp/modlist.json --umo-out /tmp/umo-list.json --report /tmp/report.md
+          /tmp/venv/bin/python tools/validate-moddesc.py --umo-src /tmp/umo-src/src --list /tmp/umo-list.json
       - name: Verify committed modlist.json is current
         run: |
           dotnet run --project src/Mri.Curation -- emit \

@@ -39,6 +39,23 @@ rules:
     skip: true
     skipReason: "Load order is baked into the curated list; no runtime sorting."
 
+  # ── Duplicate spreadsheet rows (same mod listed twice in NEW MODS). ──
+  - match: { slug: scalable-dwemer-puzzle-box-randomizer-2 }
+    skip: true
+    skipReason: "Duplicate of csv row 521 (same mod listed twice)."
+
+  - match: { slug: openmw-simply-crafting-2 }
+    skip: true
+    skipReason: "Duplicate of the earlier OpenMW Simply Crafting row."
+
+  - match: { slug: openmw-crafting-framework-2 }
+    skip: true
+    skipReason: "Duplicate of the earlier OpenMW Crafting Framework row."
+
+  - match: { slug: sm-masque-clavicus-vile-replacer-2 }
+    skip: true
+    skipReason: "Duplicate of the earlier SM Masque of Clavicus Vile row."
+
   # ── Example prose-rule encodings (patterns for the M2 curation pass). ──
 
   # "Individual. Delete bcsounds.esp, maser_inex.esp" — the sheet's typo means

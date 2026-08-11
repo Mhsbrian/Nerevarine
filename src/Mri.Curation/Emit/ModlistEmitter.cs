@@ -32,6 +32,7 @@ public static partial class ModlistEmitter
         var drafts = BuildDrafts(rows, cache);
         var matchedRules = ApplyOverrides(drafts, overrides);
         ApplyMoves(drafts, overrides);
+        EnsureUniqueDirs(drafts);
 
         var active = drafts.Where(d => !d.Skipped).ToList();
         var modlist = new Mri.Core.Modlist.Modlist
@@ -238,6 +239,49 @@ public static partial class ModlistEmitter
         };
         ApplySet(clone, split);
         return clone;
+    }
+
+    /// <summary>
+    /// umo caches mods keyed by their dir ("mods_by_name[mod.dir]") — two mods
+    /// sharing a dir silently overwrite each other. Collisions get a numeric
+    /// suffix with data paths and action paths rewritten to match, plus a
+    /// review flag: a collision usually means the sheet listed a mod twice.
+    /// </summary>
+    private static void EnsureUniqueDirs(List<DraftMod> drafts)
+    {
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (var draft in drafts.Where(d => !d.Skipped))
+        {
+            var dir = draft.ExtractTo;
+            if (seen.Add(dir))
+                continue;
+
+            var n = 2;
+            string renamed;
+            do
+            {
+                renamed = $"{dir}{n++}";
+            } while (!seen.Add(renamed));
+
+            string Rewrite(string path) =>
+                path.Equals(dir, StringComparison.OrdinalIgnoreCase) ? renamed
+                : path.StartsWith(dir + "/", StringComparison.OrdinalIgnoreCase)
+                    ? renamed + path[dir.Length..]
+                    : path;
+
+            draft.ExtractTo = renamed;
+            draft.DataPaths = draft.DataPaths.Select(Rewrite).ToList();
+            foreach (var action in draft.Actions)
+            {
+                action.Path = action.Path is null ? null : Rewrite(action.Path);
+                action.Src = action.Src is null ? null : Rewrite(action.Src);
+                action.Dst = action.Dst is null ? null : Rewrite(action.Dst);
+                action.Paths = action.Paths?.Select(Rewrite).ToList();
+            }
+            draft.Problems.Add(
+                $"dir collided with another mod and was renamed to '{renamed}' — " +
+                "duplicate spreadsheet row? Consider a skip override.");
+        }
     }
 
     private static void ApplyMoves(List<DraftMod> drafts, OverridesFile overrides)

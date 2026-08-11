@@ -89,7 +89,8 @@ public class ModlistCompilerTests
         Assert.Equal("Patch for Purists", pfp.GetProperty("name").GetString());
         Assert.Equal("patch-for-purists", pfp.GetProperty("slug").GetString());
         Assert.Equal("nexus", pfp.GetProperty("handler").GetString());
-        Assert.Equal(45096, pfp.GetProperty("nexus_id").GetInt32());
+        // String, not int — umo's Pydantic model requires Optional[str].
+        Assert.Equal("45096", pfp.GetProperty("nexus_id").GetString());
         Assert.Equal("morrowind", pfp.GetProperty("nexus_game").GetString());
         Assert.Equal("PatchForPurists", pfp.GetProperty("dir").GetString());
         Assert.Equal("PatchForPurists", pfp.GetProperty("data_paths")[0].GetString());

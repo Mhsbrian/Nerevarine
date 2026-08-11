@@ -74,7 +74,10 @@ public static class ModlistCompiler
                 ModHandler.Github => "github",
                 _ => "direct",
             },
-            ["nexus_id"] = mod.Source.NexusId,
+            // umo's ModDesc declares nexus_id as Optional[str] — an int fails
+            // Pydantic validation (field-confirmed). umo re-derives it from the
+            // url regex anyway; emitting it as a string keeps the data honest.
+            ["nexus_id"] = mod.Source.NexusId?.ToString(),
             ["nexus_game"] = mod.Source.Handler == ModHandler.Nexus ? mod.Source.NexusGame : null,
         };
     }
