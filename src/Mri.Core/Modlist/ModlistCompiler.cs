@@ -171,8 +171,11 @@ public static class ModlistCompiler
             if (options.SkippedModIds.Contains(mod.Id))
                 continue;
 
-            // Mirror umo's on-disk layout: BASEPATH/<category>/<data path>.
-            dataDirs.AddRange(mod.DataPaths.Select(p => $"{CategoryDir(mod.Category)}/{p}"));
+            // Mirror umo's on-disk layout: during install umo rebases to
+            // BASEPATH/<list name> (subcmds.py: Config.BASEPATH += MODLIST),
+            // so a mod lives at <mods root>/<list>/<category>/<data path>.
+            dataDirs.AddRange(mod.DataPaths.Select(p =>
+                $"{modlist.Name}/{CategoryDir(mod.Category)}/{p}"));
             archives.AddRange(mod.BsaArchives);
             groundcover.AddRange(mod.Groundcover);
 

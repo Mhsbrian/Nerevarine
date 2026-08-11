@@ -125,7 +125,7 @@ public class ModlistCompilerTests
 
         // umo extracts to BASEPATH/<category>/<extract_to>; data= lines must
         // point at exactly that.
-        Assert.Equal(["BugFixesPatches/PatchForPurists", "Groundcover/Aesthesia/00 Core"], plan.DataDirs);
+        Assert.Equal(["morrowind-remake/BugFixesPatches/PatchForPurists", "morrowind-remake/Groundcover/Aesthesia/00 Core"], plan.DataDirs);
         Assert.Equal(["Patch for Purists.esm", "PfP - Merge Input.esp"], plan.ContentFiles);
         Assert.Equal(["Grass_AC.esp"], plan.GroundcoverFiles);
     }
@@ -137,7 +137,7 @@ public class ModlistCompilerTests
             SampleList(), new LoadOrderOptions { IncludeDelta = true });
 
         Assert.Equal(
-            ["BugFixesPatches/PatchForPurists", "Groundcover/Aesthesia/00 Core", "delta-merged"],
+            ["morrowind-remake/BugFixesPatches/PatchForPurists", "morrowind-remake/Groundcover/Aesthesia/00 Core", "delta-merged"],
             plan.DataDirs);
         Assert.Equal(["Patch for Purists.esm", "delta-merged.omwaddon"], plan.ContentFiles);
     }
@@ -150,7 +150,7 @@ public class ModlistCompilerTests
             SkippedModIds = new HashSet<string> { "aesthesia-groundcover" },
         });
 
-        Assert.Equal(["BugFixesPatches/PatchForPurists"], plan.DataDirs);
+        Assert.Equal(["morrowind-remake/BugFixesPatches/PatchForPurists"], plan.DataDirs);
         Assert.Empty(plan.GroundcoverFiles);
     }
 

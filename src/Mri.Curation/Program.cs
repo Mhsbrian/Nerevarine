@@ -20,6 +20,7 @@ internal static class Program
                 ["emit", .. var rest] => Emit(Options.From(rest)),
                 ["check", .. var rest] => Check(Options.From(rest)),
                 ["tools-check", .. var rest] => await ToolsCheckAsync(Options.From(rest)),
+                ["install", .. var rest] => await InstallAsync(Options.From(rest)),
                 _ => Usage(),
             };
         }
@@ -187,6 +188,88 @@ internal static class Program
         foreach (var violation in result.ConstraintViolations)
             Console.Error.WriteLine($"  ❌ {violation}");
         return result.ConstraintViolations.Count > 0 ? 1 : 0;
+    }
+
+    /// <summary>
+    /// Headless installer: drives the EXACT production pipeline
+    /// (PipelineFactory — same steps, same logging) without the wizard UI.
+    /// The dev/tester harness: --list &lt;modlist.json&gt; --dir &lt;install dir&gt;
+    /// [--game &lt;path&gt;] [--skip step-id,step-id] [--key or NEXUS_APIKEY env].
+    /// </summary>
+    private static async Task<int> InstallAsync(Options options)
+    {
+        var installDir = Path.GetFullPath(options.Values.GetValueOrDefault("dir")
+            ?? throw new ArgumentException("--dir is required."));
+        var listPath = options.Values.GetValueOrDefault("list", "data/modlist.json");
+        var skips = (options.Values.GetValueOrDefault("skip") ?? "")
+            .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .ToHashSet();
+        var apiKey = options.Values.GetValueOrDefault("key")
+            ?? Environment.GetEnvironmentVariable("NEXUS_APIKEY") ?? "";
+
+        // Game: explicit --game or first auto-detected candidate.
+        Mri.Core.GameDetection.GameValidation game;
+        if (options.Values.GetValueOrDefault("game") is { } gamePath)
+        {
+            game = Mri.Core.GameDetection.GameValidator.Validate(gamePath);
+        }
+        else
+        {
+            var registry = OperatingSystem.IsWindows()
+                ? (Mri.Core.GameDetection.IRegistryReader)new Mri.Core.GameDetection.WindowsRegistryReader()
+                : new Mri.Core.GameDetection.NullRegistryReader();
+            var candidate = new Mri.Core.GameDetection.GamePathService(registry).DetectCandidates().FirstOrDefault()
+                ?? throw new InvalidOperationException("No Morrowind install detected — pass --game <path>.");
+            Console.WriteLine($"game auto-detected ({candidate.Source}): {candidate.Path}");
+            game = candidate.Validation;
+        }
+        if (!game.IsValid)
+            throw new InvalidOperationException($"Game validation failed: {game.FailReason}");
+
+        Directory.CreateDirectory(installDir);
+        var modlist = ModlistLoader.LoadFile(listPath);
+        var stateStore = new Mri.Core.Pipeline.InstallStateStore(Path.Combine(installDir, "state.json"));
+        var ctx = new Mri.Core.Pipeline.InstallContext
+        {
+            InstallDir = installDir,
+            Game = game,
+            Modlist = modlist,
+            ToolManifest = Mri.Core.Tools.ToolManifest.Load(File.ReadAllText("data/tools.json")),
+            NexusApiKey = apiKey,
+            OpenMwPaths = Mri.Core.OpenMw.OpenMwUserPaths.Detect(),
+            State = stateStore.Load(),
+            StateStore = stateStore,
+        };
+
+        using var log = Mri.Core.Logging.InstallLog.CreateInDirectory(
+            Path.Combine(installDir, "logs"), "dev-cli");
+        log.AddRedaction(apiKey);
+        Console.WriteLine($"log: {log.FilePath}");
+
+        var engine = Mri.Core.Pipeline.PipelineFactory.Create(
+            ctx,
+            new HttpClient(),
+            new Mri.Core.Logging.LoggingProcessRunner(new Mri.Core.IO.ProcessRunner(), log),
+            File.ReadAllText("data/templates/settings.template.cfg"),
+            File.ReadAllText("data/templates/shaders.template.yaml"),
+            log);
+
+        var steps = engine.Steps.Where(s => !skips.Contains(s.Id)).ToList();
+        if (skips.Count > 0)
+            Console.WriteLine($"skipping steps: {string.Join(", ", skips)}");
+
+        var result = await new Mri.Core.Pipeline.InstallEngine(steps, log).RunAsync(
+            ctx,
+            new Progress<Mri.Core.Pipeline.EngineProgress>(p =>
+            {
+                if (p.Detail is null || p.Status != Mri.Core.Pipeline.StepStatus.Running)
+                    Console.WriteLine($"[{p.StepId}] {p.Status}{(p.Detail is { } d ? ": " + d.Message : "")}");
+            }));
+
+        Console.WriteLine(result.Success
+            ? "INSTALL SUCCEEDED"
+            : $"INSTALL FAILED at {result.FailedStepId}: {result.Error?.Message}");
+        return result.Success ? 0 : 1;
     }
 
     /// <summary>

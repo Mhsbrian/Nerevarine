@@ -20,6 +20,15 @@ public interface IInstallStep
     /// </summary>
     bool Verify(InstallContext ctx);
 
+    /// <summary>
+    /// Whether the engine re-runs Verify after RunAsync succeeds. Steps whose
+    /// only durable signal is the completion record itself (navmesh, validator
+    /// — their outputs live outside the install dir) must return false:
+    /// completion is recorded AFTER post-verify, so a marker-based Verify can
+    /// never pass on first success (field-hit deadlock, twice).
+    /// </summary>
+    bool VerifyAfterRun => true;
+
     Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct);
 }
 

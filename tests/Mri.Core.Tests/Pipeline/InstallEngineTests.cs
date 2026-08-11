@@ -118,6 +118,44 @@ public class InstallEngineTests : IDisposable
         Assert.Contains(reports, r => r.StepId == "failing" && r.Status == StepStatus.Failed);
     }
 
+    private sealed class MarkerStep(string id) : IInstallStep
+    {
+        public int RunCount;
+        public string Id => id;
+        public string Label => id;
+
+        // The navmesh/validator pattern: the completion record IS the signal.
+        public bool Verify(InstallContext ctx) => ctx.State.CompletedSteps.ContainsKey(Id);
+
+        public bool VerifyAfterRun => false;
+
+        public Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
+        {
+            RunCount++;
+            return Task.CompletedTask;
+        }
+    }
+
+    [Fact]
+    public async Task MarkerBasedStepCompletesWithoutPostVerifyDeadlock()
+    {
+        // Field-hit twice: a step whose Verify reads CompletedSteps can never
+        // pass post-run verification, because completion is recorded after it.
+        var ctx = MakeContext();
+        var step = new MarkerStep("navmesh-like");
+
+        var result = await new InstallEngine([step]).RunAsync(ctx);
+
+        Assert.True(result.Success);
+        Assert.Equal(1, step.RunCount);
+        Assert.True(ctx.StateStore.Load().CompletedSteps.ContainsKey("navmesh-like"));
+
+        // And on resume it skips via the recorded marker.
+        var resumed = await new InstallEngine([step]).RunAsync(MakeContext());
+        Assert.True(resumed.Success);
+        Assert.Equal(1, step.RunCount);
+    }
+
     [Fact]
     public async Task StepThatLiesAboutSuccessFailsVerification()
     {

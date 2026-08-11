@@ -63,7 +63,7 @@ public sealed class InstallEngine(IReadOnlyList<IInstallStep> steps, InstallLog?
             {
                 await step.RunAsync(ctx, stepProgress, ct).ConfigureAwait(false);
 
-                if (!step.Verify(ctx))
+                if (step.VerifyAfterRun && !step.Verify(ctx))
                     throw new InvalidOperationException(
                         $"Step '{step.Label}' reported success but its artifacts failed verification.");
 

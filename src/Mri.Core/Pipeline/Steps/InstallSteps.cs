@@ -94,24 +94,23 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
     public string Id => "install-mods";
     public string Label => "Download and install all mods";
 
-    public bool Verify(InstallContext ctx)
-    {
-        var pending = PendingMods(ctx).ToList();
-        // Disk truth: every non-skipped mod with data paths has its first
-        // data dir on disk, and no unskipped failures remain recorded.
-        return pending.Count == 0 &&
-               ctx.State.FailedMods.Except(ctx.State.SkippedMods).Any() == false &&
-               ctx.State.CompletedSteps.ContainsKey(Id);
-    }
+    // Disk truth: every non-skipped mod with data paths has its first data
+    // dir on disk, and no unskipped failures remain recorded. Deliberately
+    // NOT conditioned on CompletedSteps — the engine records completion only
+    // AFTER post-run Verify passes, so that would deadlock first success.
+    public bool Verify(InstallContext ctx) =>
+        !PendingMods(ctx).Any() &&
+        !ctx.State.FailedMods.Except(ctx.State.SkippedMods).Any();
 
     private static IEnumerable<ModEntry> PendingMods(InstallContext ctx) =>
         ctx.Modlist.Mods
             .Where(m => !ctx.State.SkippedMods.Contains(m.Id))
             .Where(m => m.DataPaths.Count > 0)
-            // umo's layout is BASEPATH/<category>/<extract_to> — the verifier
-            // must look exactly where umo extracts.
+            // umo's layout is BASEPATH/<list>/<category>/<extract_to> — the
+            // verifier must look exactly where umo extracts (field-verified).
             .Where(m => !Directory.Exists(Path.Combine(
-                ctx.ModsRootDir, ModlistCompiler.CategoryDir(m.Category), m.DataPaths[0])));
+                ctx.ModsRootDir, ctx.Modlist.Name,
+                ModlistCompiler.CategoryDir(m.Category), m.DataPaths[0])));
 
     public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {
@@ -281,6 +280,8 @@ public sealed class NavmeshStep(NavmeshService navmesh, Func<InstallContext, str
     // completion record is the only cheap signal. Re-running is always safe.
     public bool Verify(InstallContext ctx) => ctx.State.CompletedSteps.ContainsKey(Id);
 
+    public bool VerifyAfterRun => false;
+
     public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {
         var exe = navmeshExe(ctx)
@@ -301,6 +302,8 @@ public sealed class ValidateStep(IProcessRunner runner, Func<InstallContext, str
     public bool IsOptional => true;
 
     public bool Verify(InstallContext ctx) => ctx.State.CompletedSteps.ContainsKey(Id);
+
+    public bool VerifyAfterRun => false;
 
     public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {
