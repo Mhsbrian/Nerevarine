@@ -127,11 +127,27 @@ internal static class Program
 
         Console.WriteLine($"{pending.Count} mods to resolve (cache already has {cache.Mods.Count}).");
         var done = 0;
+        var errors = 0;
         try
         {
             foreach (var nexusId in pending)
             {
-                cache.Put(nexusId, await resolver.ResolveAsync(nexusId));
+                try
+                {
+                    cache.Put(nexusId, await resolver.ResolveAsync(nexusId));
+                }
+                catch (NexusResolver.DailyBudgetExhaustedException)
+                {
+                    throw; // Genuine stop condition — resume tomorrow.
+                }
+                catch (Exception e) when (e is HttpRequestException or TaskCanceledException)
+                {
+                    // One flaky mod must not kill the pass; absent from the
+                    // cache, it stays flagged for review and a later retry.
+                    errors++;
+                    Console.WriteLine($"  mod {nexusId}: {e.Message} — skipped, will retry on next resolve");
+                }
+
                 if (++done % 10 == 0)
                 {
                     cache.SaveFile(options.Cache);
@@ -143,6 +159,9 @@ internal static class Program
         {
             cache.SaveFile(options.Cache);
         }
+
+        if (errors > 0)
+            Console.WriteLine($"{errors} mod(s) errored and remain unresolved.");
 
         Console.WriteLine($"Resolved {done}; cache now covers {cache.Mods.Count} mods → {options.Cache}");
         return 0;

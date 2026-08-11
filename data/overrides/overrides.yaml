@@ -89,14 +89,11 @@ rules:
 
   # ── Example prose-rule encodings (patterns for the M2 curation pass). ──
 
-  # "Individual. Delete bcsounds.esp, maser_inex.esp" — the sheet's typo means
-  # master_index.esp; exact archive paths get confirmed by M2 archive inspection.
+  # "Individual. Delete bcsounds.esp, maser_inex.esp" — archive inspection
+  # (2026-08-11) shows a BAIN layout ("02 bitter coast sounds/bcsounds.esp", …):
+  # the instruction means VARIANT SELECTION, not deletion. Honored at M2 by
+  # simply never adding those folders as data paths. No file actions needed.
   - match: { slug: official-plugins-unofficial-patch }
-    actions:
-      - type: remove
-        path: "OfficialPluginsUnofficialPatch/bcsounds.esp"
-      - type: remove
-        path: "OfficialPluginsUnofficialPatch/master_index.esp"
 
   # "Load before Patch for Purist, Version 1.3" — the spreadsheet row order
   # already satisfies this; the constraint makes it an enforced invariant.
@@ -104,8 +101,46 @@ rules:
     constraints:
       - contentBefore: "Patch for Purists.esm"
 
-  # "Remove Vivec.esp" (Voiced Vivec and Yakety Yagrum)
+  # "Remove Vivec.esp" — archive inspection (2026-08-11): the archive ships
+  # VoicedVivec.ESP + YaketyYagrum.ESP only; no Vivec.esp exists to remove.
   - match: { slug: voiced-vivec-and-yakety-yagrum }
-    actions:
-      - type: remove
-        path: "VoicedVivecAndYaketyYagrum/Vivec.esp"
+
+  # ── Sync-breakers found by the first full run (umo refuses to download
+  #    ANYTHING until every mod's metadata sync succeeds, so these block all). ──
+  - match: { slug: go-home-locking-doors }
+    skip: true
+    skipReason: "Sub-page of the go-home gitlab project with no package of its own — umo sync permanently incomplete (field-verified). Fold into go-home or find artifact URL in M2."
+
+  - match: { slug: omw-achievements }
+    skip: true
+    skipReason: "caz1que.gitlab.io page has no resolvable gitlab package — umo sync permanently incomplete (field-verified)."
+
+  # ── Page-URL stragglers from full run 3 (the URL is a webpage, not a file;
+  #    each needs a real artifact URL or mirror in M2). ──
+  - match: { slug: economy-fixes-v1-0-item-list-only }
+    skip: true
+    skipReason: "Wayback-archived modhistory PAGE, not a file — needs the snapshot's direct download URL."
+
+  - match: { slug: thief-experience-overhaul }
+    skip: true
+    skipReason: "Wayback-archived modhistory PAGE, not a file — needs the snapshot's direct download URL."
+
+  - match: { slug: simple-sleeping }
+    skip: true
+    skipReason: "Mediafire landing page — needs a direct mirror."
+
+  - match: { slug: balmora-underworld-bcom-esp }
+    skip: true
+    skipReason: "Dropbox link no longer serves the file (probed) — needs a fresh mirror."
+
+  - match: { slug: balmora-underworld-nav-point-fix }
+    skip: true
+    skipReason: "modding-openmw.com mod PAGE — needs the real artifact URL."
+
+  - match: { slug: tyddy-s-landscape-retexture }
+    skip: true
+    skipReason: "fullrest.ru file PAGE — needs the real artifact URL."
+
+  - match: { slug: s3lightfixes }
+    skip: true
+    skipReason: "Tool, not a mod — already shipped in the MOMW tools pack."

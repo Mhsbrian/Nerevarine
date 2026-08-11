@@ -108,6 +108,10 @@ public static partial class ModlistEmitter
         draft.ResolvedAt = cached.FetchedAt;
         if (!cached.Available)
         {
+            // Hidden (403), removed (404/410) or moderated — it cannot download,
+            // so it must not poison an install run with a guaranteed failure.
+            draft.Skipped = true;
+            draft.SkipReason = "hidden/removed on Nexus (auto-skip) — needs a mirror to rejoin the list";
             draft.Problems.Add("mod is hidden/removed on Nexus — needs a mirror or removal");
             return;
         }
@@ -130,6 +134,8 @@ public static partial class ModlistEmitter
         var (best, confident) = FilePickHeuristics.Choose(cached.Files, draft.Name, draft.Version);
         if (best is null)
         {
+            draft.Skipped = true;
+            draft.SkipReason = "no downloadable files on Nexus (auto-skip)";
             draft.Problems.Add("no downloadable files listed on Nexus");
             return;
         }
@@ -199,7 +205,13 @@ public static partial class ModlistEmitter
         if (set.Id is not null) draft.Id = set.Id;
         if (set.Name is not null) draft.Name = set.Name;
         if (set.ExtractTo is not null) draft.ExtractTo = set.ExtractTo;
-        if (set.DirectUrl is not null) draft.DirectUrl = set.DirectUrl;
+        if (set.DirectUrl is not null)
+        {
+            draft.DirectUrl = set.DirectUrl;
+            // A curated mirror rescues an auto-skipped (hidden/removed) mod.
+            draft.Skipped = false;
+            draft.SkipReason = null;
+        }
         if (set.NexusFileId is not null) draft.NexusFileId = set.NexusFileId;
         if (set.DataPaths is not null) draft.DataPaths = set.DataPaths.ToList();
         if (set.Groundcover is not null) draft.Groundcover = set.Groundcover.ToList();

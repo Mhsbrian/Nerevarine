@@ -70,7 +70,13 @@ public sealed class NexusResolver(HttpClient http, string apiKey, Action<string>
         using var response = await http.SendAsync(request, ct).ConfigureAwait(false);
         ReadBudgetHeaders(response);
 
-        if (response.StatusCode is System.Net.HttpStatusCode.NotFound or System.Net.HttpStatusCode.Gone)
+        // 404/410: removed. 403: hidden/moderated (confirmed in the field —
+        // one forbidden mod must not kill a 500-mod pass). All mean
+        // "not available for automated download".
+        if (response.StatusCode is System.Net.HttpStatusCode.NotFound
+            or System.Net.HttpStatusCode.Gone
+            or System.Net.HttpStatusCode.Forbidden
+            or System.Net.HttpStatusCode.Unauthorized)
             return null;
         if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
         {
