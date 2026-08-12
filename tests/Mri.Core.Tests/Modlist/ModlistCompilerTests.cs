@@ -143,6 +143,23 @@ public class ModlistCompilerTests
     }
 
     [Fact]
+    public void FixupsMountAfterModsAndBeforeDelta()
+    {
+        var plan = ModlistCompiler.BuildLoadOrderPlan(SampleList(), new LoadOrderOptions
+        {
+            IncludeDelta = true,
+            FixupsContentFiles = ["MRI_AbeceanGreetingFix.esp"],
+        });
+
+        Assert.Equal(
+            ["morrowind-remake/BugFixesPatches/PatchForPurists", "morrowind-remake/Groundcover/Aesthesia/00 Core", "mri-fixups", "delta-merged"],
+            plan.DataDirs);
+        Assert.Equal(
+            ["Patch for Purists.esm", "MRI_AbeceanGreetingFix.esp", "delta-merged.omwaddon"],
+            plan.ContentFiles);
+    }
+
+    [Fact]
     public void SkippedModsAreOmittedEverywhere()
     {
         var plan = ModlistCompiler.BuildLoadOrderPlan(SampleList(), new LoadOrderOptions

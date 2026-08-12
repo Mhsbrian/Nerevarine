@@ -107,9 +107,6 @@ rules:
   - match: { slug: "hircine-s-artifacts" }
     set:
       dataPaths: ["HircinesArtifacts/Hircine's Artifacts"]
-  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }
-    set:
-      dataPaths: ["DevilishVampireOverhaulTotalOverhaulEdition/Data Files"]
   - match: { slug: "solthas-sneak-attack-buff-openmw" }
     set:
       dataPaths: ["SolthasSneakAttackBuffOpenMW/SolSneakAttackBuff"]
@@ -399,6 +396,9 @@ rules:
     set:
       dataPaths: ["TamrielRebuilt/00 Core"]
     # other candidates: TamrielRebuilt/01 Faction Integration | TamrielRebuilt/02 Siege at Firemoth Compatibility Patch
+  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }
+    set:
+      dataPaths: ["DevilishVampireOverhaulTotalOverhaulEdition/Data Files"]
   - match: { slug: "project-cyrodiil" }
     set:
       dataPaths: ["ProjectCyrodiil/00 Core"]

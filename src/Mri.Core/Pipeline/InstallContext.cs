@@ -33,6 +33,7 @@ public sealed class InstallContext
     public string LogsDir => Path.Combine(InstallDir, "logs");
     public string EmittedUmoListPath => Path.Combine(ModlistDir, $"{Modlist.Name}.json");
     public string UmoListName => Modlist.Name;
+    public string FixupsDir => Path.Combine(ModsRootDir, "mri-fixups");
 
     public void SaveState() => StateStore.Save(State);
 
@@ -40,6 +41,16 @@ public sealed class InstallContext
     {
         IncludeDelta = includeDelta,
         SkippedModIds = State.SkippedMods.ToHashSet(),
+        FixupsContentFiles = Directory.Exists(FixupsDir)
+            ? Directory.EnumerateFiles(FixupsDir)
+                .Select(Path.GetFileName)
+                .Where(f => f is not null &&
+                            Path.GetExtension(f).ToLowerInvariant()
+                                is ".esp" or ".esm" or ".omwaddon" or ".omwscripts")
+                .Select(f => f!)
+                .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
+                .ToList()
+            : [],
     };
 
     public CfgComposition CfgComposition(bool includeDelta) => new()

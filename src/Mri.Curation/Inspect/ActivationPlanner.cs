@@ -50,6 +50,15 @@ public static class ActivationPlanner
             if (found.Count == 0)
                 continue;
 
+            // Overlapping dataPaths (e.g. a variant dir shadowing the same
+            // esp) must not activate the same file twice. Keep the LAST
+            // occurrence: later data paths win in OpenMW, and variant/patch
+            // folders are mounted after core for exactly that reason.
+            found = found
+                .GroupBy(f => f.File, StringComparer.OrdinalIgnoreCase)
+                .Select(g => g.Last())
+                .ToList();
+
             foreach (var (file, full) in found)
                 if (!masters.ContainsKey(file) &&
                     Path.GetExtension(file).ToLowerInvariant() is ".esm" or ".esp" or ".omwaddon" or ".omwgame")
@@ -123,7 +132,19 @@ public static class ActivationPlanner
         // provided by a LATER mod must move after that provider (field crash:
         // a TR dialogue patch loading ~200 slots before Tamriel Rebuilt
         // OOM-killed the engine). Emitted as moveAfter rules.
-        var modIndex = modlist.Mods.Select((m, i) => (m.Id, i)).ToDictionary(x => x.Id, x => x.i);
+        //
+        // Positions come from the CSV sheet row (the stable base order), NOT
+        // the incoming modlist order: that order already contains previously
+        // emitted moveAfter rules, so comparing against it concludes "already
+        // fine" and silently erases the rules on every regeneration (field
+        // crash #2: the same TR dialogue patch, restored to sheet order).
+        // Composite (csvRow, listIndex) keeps positions unique when several
+        // mods share a sheet row (splitInto) or lack provenance entirely.
+        var modIndex = modlist.Mods
+            .Select((m, i) => (m.Id,
+                Pos: (m.Provenance is { CsvRow: > 0 } p ? p.CsvRow : i) * 1024 + Math.Min(i, 1023)))
+            .ToDictionary(x => x.Id, x => x.Pos);
+        var idAtPos = modIndex.ToDictionary(kv => kv.Value, kv => kv.Key);
         var providerOf = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
         foreach (var mod in modlist.Mods)
             if (perMod.TryGetValue(mod.Id, out var list))
@@ -143,7 +164,7 @@ public static class ActivationPlanner
                         if (providerOf.TryGetValue(dep, out var pi) && pi > mi && pi > latestProvider)
                             latestProvider = pi;
             if (latestProvider >= 0)
-                moveAfter[mod.Id] = modlist.Mods[latestProvider].Id;
+                moveAfter[mod.Id] = idAtPos[latestProvider];
         }
 
         // Emit YAML.

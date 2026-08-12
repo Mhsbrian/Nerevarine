@@ -17,7 +17,8 @@ public static class PipelineFactory
         IProcessRunner runner,
         string settingsTemplate,
         string shadersTemplate,
-        Logging.InstallLog? log = null)
+        Logging.InstallLog? log = null,
+        string? fixupsSourceDir = null)
     {
         var tools = new ToolAcquisitionService(http, runner, ctx.ToolsDir);
         var locator = new ToolLocator(tools, ctx.ToolManifest);
@@ -35,6 +36,7 @@ public static class PipelineFactory
             }),
             new RegisterModlistStep(umo),
             new InstallModsStep(umo),
+            new InstallFixupsStep(fixupsSourceDir),
             new ImportIniStep(new IniImporterService(runner), _ => locator.IniImporterExe),
             new GenerateOpenMwCfgStep(),
             new GenerateSettingsStep(settingsTemplate, shadersTemplate),

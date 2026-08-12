@@ -298,6 +298,42 @@ public sealed class NavmeshStep(NavmeshService navmesh, Func<InstallContext, str
     }
 }
 
+/// <summary>
+/// Copies repo-shipped record-repair plugins (data/fixups) into
+/// mods/mri-fixups. These override broken records in mods we must not edit
+/// in place (re-extraction would revert the edit); the load-order plan
+/// mounts them after all modlist content, before the delta merge.
+/// </summary>
+public sealed class InstallFixupsStep(string? fixupsSourceDir) : IInstallStep
+{
+    public string Id => "install-fixups";
+    public string Label => "Install record-repair plugins";
+
+    private IReadOnlyList<string> SourceFiles =>
+        fixupsSourceDir is not null && Directory.Exists(fixupsSourceDir)
+            ? Directory.EnumerateFiles(fixupsSourceDir)
+                .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
+                .ToList()
+            : [];
+
+    public bool Verify(InstallContext ctx) => SourceFiles.All(src =>
+    {
+        var dest = Path.Combine(ctx.FixupsDir, Path.GetFileName(src));
+        return File.Exists(dest) && new FileInfo(dest).Length == new FileInfo(src).Length;
+    });
+
+    public Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
+    {
+        Directory.CreateDirectory(ctx.FixupsDir);
+        foreach (var src in SourceFiles)
+        {
+            File.Copy(src, Path.Combine(ctx.FixupsDir, Path.GetFileName(src)), overwrite: true);
+            progress.Report(new StepProgress($"fixup installed: {Path.GetFileName(src)}"));
+        }
+        return Task.CompletedTask;
+    }
+}
+
 public sealed class ValidateStep(IProcessRunner runner, Func<InstallContext, string?> validatorExe)
     : IInstallStep
 {

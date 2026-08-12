@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.2",
+  "listVersion": "2026.08.6",
   "name": "morrowind-remake",
-  "estimatedDownloadBytes": 20479644474,
-  "estimatedInstalledBytes": 61438933422,
+  "estimatedDownloadBytes": 20479638829,
+  "estimatedInstalledBytes": 61438916487,
   "mods": [
     {
       "id": "vanilla-textures-normal-mapped",
@@ -743,775 +743,6 @@
       }
     },
     {
-      "id": "fmi-notalldunmer",
-      "name": "FMI - NotAllDunmer",
-      "category": "Dialogue",
-      "author": "PoodleSandwich",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47569?tab=description",
-        "nexusGame": "morrowind",
-        "nexusId": 47569
-      },
-      "downloads": [
-        {
-          "fileName": "FMI - NotAllDunmer-47569-1-0-1580850171.zip",
-          "nexusFileId": 1000017154,
-          "pinned": true,
-          "sizeBytes": 1629,
-          "extractTo": "FMINotAllDunmer",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "FMINotAllDunmer"
-      ],
-      "content": [
-        {
-          "file": "FMI_#NotAllDunmer.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 26,
-        "resolvedVersion": "1.0",
-        "resolvedAt": "2026-08-11T10:28:10.8162852\u002B00:00"
-      }
-    },
-    {
-      "id": "so-you-re-the-nerevarine",
-      "name": "So. You\u0027re the Nerevarine.",
-      "category": "Dialogue",
-      "author": "halidors",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/46896",
-        "nexusGame": "morrowind",
-        "nexusId": 46896
-      },
-      "downloads": [
-        {
-          "fileName": "SYTN-46896-1-5-1560268922.zip",
-          "nexusFileId": 1000014892,
-          "pinned": true,
-          "sizeBytes": 981,
-          "extractTo": "SoYoureTheNerevarine",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "SoYoureTheNerevarine"
-      ],
-      "content": [
-        {
-          "file": "SYTN.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 27,
-        "resolvedVersion": "1.5",
-        "resolvedAt": "2026-08-11T10:28:11.1173390\u002B00:00"
-      }
-    },
-    {
-      "id": "ldm-context-matters",
-      "name": "LDM - Context Matters",
-      "category": "Dialogue",
-      "author": "Lucevar",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/48273",
-        "nexusGame": "morrowind",
-        "nexusId": 48273
-      },
-      "downloads": [
-        {
-          "fileName": "LDM - Context Matters-48273-1-7-1673721570.zip",
-          "nexusFileId": 1000034614,
-          "pinned": true,
-          "sizeBytes": 80367,
-          "extractTo": "LDMContextMatters",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "LDMContextMatters"
-      ],
-      "content": [
-        {
-          "file": "LDM - Context Matters 1.7.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 28,
-        "resolvedVersion": "1.7",
-        "resolvedAt": "2026-08-11T10:28:11.4304191\u002B00:00"
-      }
-    },
-    {
-      "id": "free-the-slaves",
-      "name": "Free The Slaves",
-      "category": "Dialogue",
-      "author": "Caeris",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/45191",
-        "nexusGame": "morrowind",
-        "nexusId": 45191
-      },
-      "downloads": [
-        {
-          "fileName": "Free the Slaves-45191-2-01-1769810110.7z",
-          "nexusFileId": 1000060372,
-          "pinned": true,
-          "sizeBytes": 2298,
-          "extractTo": "FreeTheSlaves",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "FreeTheSlaves"
-      ],
-      "content": [
-        {
-          "file": "FreeTheSlaves!.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 29,
-        "resolvedVersion": "2.01",
-        "resolvedAt": "2026-08-11T10:28:11.7923974\u002B00:00"
-      }
-    },
-    {
-      "id": "fmi-service-refusal-and-contraband",
-      "name": "FMI - Service Refusal and Contraband",
-      "category": "Dialogue",
-      "author": "PoodleSandwich",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47456",
-        "nexusGame": "morrowind",
-        "nexusId": 47456
-      },
-      "downloads": [
-        {
-          "fileName": "FMI - Service Refusal and Contraband-47456-1-9-3-1597872631.zip",
-          "nexusFileId": 1000020456,
-          "pinned": true,
-          "sizeBytes": 124199,
-          "extractTo": "FMIServiceRefusalAndContraband",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "FMIServiceRefusalAndContraband"
-      ],
-      "content": [
-        {
-          "file": "FMI_ServiceRefusal_Contraband.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 30,
-        "resolvedVersion": "1.9.3",
-        "resolvedAt": "2026-08-11T10:28:12.1052531\u002B00:00"
-      }
-    },
-    {
-      "id": "greetings-for-no-lore",
-      "name": "Greetings for No Lore",
-      "category": "Dialogue",
-      "author": "Caeris",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/46063",
-        "nexusGame": "morrowind",
-        "nexusId": 46063
-      },
-      "downloads": [
-        {
-          "fileName": "Greetings for No Lore-46063-2-0-1577323496.7z",
-          "nexusFileId": 1000016661,
-          "pinned": true,
-          "sizeBytes": 3420,
-          "extractTo": "GreetingsForNoLore",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "GreetingsForNoLore"
-      ],
-      "content": [
-        {
-          "file": "Greetings for No Lore.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 31,
-        "resolvedVersion": "2.0",
-        "resolvedAt": "2026-08-11T10:28:12.5513213\u002B00:00"
-      }
-    },
-    {
-      "id": "great-service",
-      "name": "Great Service",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47767",
-        "nexusGame": "morrowind",
-        "nexusId": 47767
-      },
-      "downloads": [
-        {
-          "fileName": "Great Service-47767-1-11-1592332753.zip",
-          "nexusFileId": 1000019303,
-          "pinned": true,
-          "sizeBytes": 402006,
-          "extractTo": "GreatService",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "GreatService/Great Service"
-      ],
-      "content": [
-        {
-          "file": "Great Service.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 32,
-        "resolvedVersion": "1.11",
-        "resolvedAt": "2026-08-11T10:28:12.9597481\u002B00:00"
-      }
-    },
-    {
-      "id": "silent-assassins",
-      "name": "Silent Assassins",
-      "category": "Dialogue",
-      "author": "R-Zero",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/44371",
-        "nexusGame": "morrowind",
-        "nexusId": 44371
-      },
-      "downloads": [
-        {
-          "fileName": "Silent Assassins-44371-1-0.7z",
-          "nexusFileId": 1000005975,
-          "pinned": true,
-          "sizeBytes": 887,
-          "extractTo": "SilentAssassins",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "SilentAssassins"
-      ],
-      "content": [
-        {
-          "file": "Silent Assassins.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 33,
-        "resolvedVersion": "1.0",
-        "resolvedAt": "2026-08-11T10:28:13.3710628\u002B00:00"
-      }
-    },
-    {
-      "id": "tunnel-cough",
-      "name": "Tunnel Cough",
-      "category": "Dialogue",
-      "author": "R-Zero aka Reizeron",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47603",
-        "nexusGame": "morrowind",
-        "nexusId": 47603
-      },
-      "downloads": [
-        {
-          "fileName": "Tunnel_Cough-47603-1-0-1581789455.7z",
-          "nexusFileId": 1000017235,
-          "pinned": true,
-          "sizeBytes": 1868,
-          "extractTo": "TunnelCough",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "TunnelCough/Data Files"
-      ],
-      "content": [
-        {
-          "file": "Tunnel Cough.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 34,
-        "resolvedVersion": "1.0",
-        "resolvedAt": "2026-08-11T10:28:13.7797023\u002B00:00"
-      }
-    },
-    {
-      "id": "fmi-current-councilors",
-      "name": "FMI - Current Councilors",
-      "category": "Dialogue",
-      "author": "PoodleSandwich",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47342",
-        "nexusGame": "morrowind",
-        "nexusId": 47342
-      },
-      "downloads": [
-        {
-          "fileName": "FMI_Current_Councilors-47342-1-0-1575157900.zip",
-          "nexusFileId": 1000016398,
-          "pinned": true,
-          "sizeBytes": 1114,
-          "extractTo": "FMICurrentCouncilors",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "FMICurrentCouncilors"
-      ],
-      "content": [
-        {
-          "file": "FMI_Current_Councilors.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 35,
-        "resolvedVersion": "1.0",
-        "resolvedAt": "2026-08-11T10:28:14.1898485\u002B00:00"
-      }
-    },
-    {
-      "id": "oath-to-saint-roris-instead",
-      "name": "Oath to Saint Roris Instead",
-      "category": "Dialogue",
-      "author": "AliceL93",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47339/",
-        "nexusGame": "morrowind",
-        "nexusId": 47339
-      },
-      "downloads": [
-        {
-          "fileName": "Oath to Saint Roris Instead-47339-1-2-1633294137.zip",
-          "nexusFileId": 1000027197,
-          "pinned": true,
-          "sizeBytes": 2404,
-          "extractTo": "OathToSaintRorisInstead",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OathToSaintRorisInstead"
-      ],
-      "content": [
-        {
-          "file": "Oath to Saint Roris Instead.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 36,
-        "resolvedVersion": "1.2",
-        "resolvedAt": "2026-08-11T10:28:14.5988391\u002B00:00"
-      }
-    },
-    {
-      "id": "raym-s-vampire-rumors",
-      "name": "Raym\u0027s Vampire Rumors",
-      "category": "Dialogue",
-      "author": "Raym",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/48469",
-        "nexusGame": "morrowind",
-        "nexusId": 48469
-      },
-      "downloads": [
-        {
-          "fileName": "Raym\u0027s Vampire Rumors-48469-1-2-1593355039.7z",
-          "nexusFileId": 1000019597,
-          "pinned": true,
-          "sizeBytes": 20128,
-          "extractTo": "RaymsVampireRumors",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "RaymsVampireRumors/Data Files"
-      ],
-      "content": [
-        {
-          "file": "Raym\u0027s Vampire Rumors.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 37,
-        "resolvedVersion": "1.2",
-        "resolvedAt": "2026-08-11T10:28:15.0107505\u002B00:00"
-      }
-    },
-    {
-      "id": "djangos-dialogue",
-      "name": "Djangos Dialogue",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/47253",
-        "nexusGame": "morrowind",
-        "nexusId": 47253
-      },
-      "downloads": [
-        {
-          "fileName": "Djangos Dialogue 1.42-47253-1-42-1592244472.zip",
-          "nexusFileId": 1000019280,
-          "pinned": true,
-          "sizeBytes": 110532,
-          "extractTo": "DjangosDialogue",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "DjangosDialogue/Djangos Dialogue"
-      ],
-      "content": [
-        {
-          "file": "Djangos Dialogue.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Patch for Purists Patch https://www.nexusmods.com/morrowind/mods/48955?tab=files",
-      "provenance": {
-        "csvRow": 38,
-        "resolvedVersion": "1.42",
-        "resolvedAt": "2026-08-11T10:28:15.4130880\u002B00:00"
-      }
-    },
-    {
-      "id": "barilzar-voice",
-      "name": "Barilzar Voice",
-      "category": "Dialogue",
-      "author": "unknown",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/31655",
-        "nexusGame": "morrowind",
-        "nexusId": 31655
-      },
-      "downloads": [
-        {
-          "fileName": "Barilzar Voice-31655.zip",
-          "nexusFileId": 60549,
-          "pinned": true,
-          "sizeBytes": 257900,
-          "extractTo": "BarilzarVoice",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "BarilzarVoice"
-      ],
-      "content": [
-        {
-          "file": "barilzar_voice.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 40,
-        "resolvedVersion": "",
-        "resolvedAt": "2026-08-11T10:29:13.7261806\u002B00:00"
-      }
-    },
-    {
-      "id": "dagoth-gares-voice",
-      "name": "Dagoth Gares Voice",
-      "category": "Dialogue",
-      "author": "Skydiver and Tyana Rie",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/593",
-        "nexusGame": "morrowind",
-        "nexusId": 593
-      },
-      "downloads": [
-        {
-          "fileName": " Dagoth Gares Voice Addon 1dot1-593.zip",
-          "nexusFileId": 16318,
-          "pinned": true,
-          "sizeBytes": 3674635,
-          "extractTo": "DagothGaresVoice",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "DagothGaresVoice"
-      ],
-      "content": [
-        {
-          "file": "Dagoth Gares_Voice_addon v1.1.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 41,
-        "resolvedVersion": "",
-        "resolvedAt": "2026-08-11T10:29:14.0940921\u002B00:00"
-      }
-    },
-    {
-      "id": "dagoth-ur-voice",
-      "name": "Dagoth Ur Voice",
-      "category": "Dialogue",
-      "author": "Voice Addon Project Team",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/592",
-        "nexusGame": "morrowind",
-        "nexusId": 592
-      },
-      "downloads": [
-        {
-          "fileName": "Dagoth Ur Voice addon v1.0-592.7z",
-          "nexusFileId": 14349,
-          "pinned": true,
-          "sizeBytes": 7243858,
-          "extractTo": "DagothUrVoice",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "DagothUrVoice"
-      ],
-      "content": [
-        {
-          "file": "Dagoth Ur Voice Addon.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Fix: DYI Recipies section https://www.nexusmods.com/morrowind/mods/48955? , Beware the Sixth House must overwrite this",
-      "provenance": {
-        "csvRow": 42,
-        "resolvedVersion": "",
-        "resolvedAt": "2026-08-11T10:29:14.4590835\u002B00:00"
-      }
-    },
-    {
-      "id": "openmw-lua-helper-utility",
-      "name": "OpenMW Lua helper utility",
-      "category": "Dialogue",
-      "author": "taitechnic",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/54629",
-        "nexusGame": "morrowind",
-        "nexusId": 54629
-      },
-      "downloads": [
-        {
-          "fileName": "OpenMW lua helper utility-54629-0-56-1754247063.zip",
-          "nexusFileId": 1000055641,
-          "pinned": true,
-          "sizeBytes": 2488737,
-          "extractTo": "OpenMWLuaHelperUtility",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OpenMWLuaHelperUtility"
-      ],
-      "content": [
-        {
-          "file": "OpenMW_luahelper.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "OpenMW_luahelper_dialog.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "OpenMW_luahelper.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 43,
-        "resolvedVersion": "0.56",
-        "resolvedAt": "2026-08-11T10:29:14.7660765\u002B00:00"
-      }
-    },
-    {
-      "id": "lua-helper-patch-for-purists",
-      "name": "Lua helper Patch for Purists",
-      "category": "Dialogue",
-      "author": "taitechnic",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/54629",
-        "nexusGame": "morrowind",
-        "nexusId": 54629
-      },
-      "downloads": [
-        {
-          "fileName": "OpenMW lua helper utility-54629-0-56-1754247063.zip",
-          "nexusFileId": 1000055641,
-          "pinned": true,
-          "sizeBytes": 2488737,
-          "extractTo": "LuaHelperPatchForPurists",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "LuaHelperPatchForPurists"
-      ],
-      "content": [
-        {
-          "file": "OpenMW_luahelper.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "OpenMW_luahelper_dialog.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "OpenMW_luahelper.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Lua helper Dialogue ESP for Patch for Purists",
-      "provenance": {
-        "csvRow": 44,
-        "resolvedVersion": "0.56",
-        "resolvedAt": "2026-08-11T10:29:14.7660765\u002B00:00"
-      }
-    },
-    {
-      "id": "lua-helper-tamriel-rebuilt",
-      "name": "Lua helper Tamriel Rebuilt",
-      "category": "Dialogue",
-      "author": "taitechnic",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/54629",
-        "nexusGame": "morrowind",
-        "nexusId": 54629
-      },
-      "downloads": [
-        {
-          "fileName": "OpenMW lua helper utility-54629-0-56-1754247063.zip",
-          "nexusFileId": 1000055641,
-          "pinned": true,
-          "sizeBytes": 2488737,
-          "extractTo": "LuaHelperTamrielRebuilt",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "LuaHelperTamrielRebuilt"
-      ],
-      "content": [
-        {
-          "file": "OpenMW_luahelper.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "OpenMW_luahelper_dialog.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "OpenMW_luahelper.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Lua helper Dialogue ESP for Tamriel Rebuilt",
-      "provenance": {
-        "csvRow": 45,
-        "resolvedVersion": "0.56",
-        "resolvedAt": "2026-08-11T10:29:14.7660765\u002B00:00"
-      }
-    },
-    {
       "id": "kezyma-s-voices-of-vvardenfell",
       "name": "Kezyma\u0027s Voices of Vvardenfell",
       "category": "Dialogue",
@@ -1543,481 +774,6 @@
         "csvRow": 46,
         "resolvedVersion": "0.4.1",
         "resolvedAt": "2026-08-11T10:29:15.1758551\u002B00:00"
-      }
-    },
-    {
-      "id": "openmw-voices-of-vvardenfell-patch",
-      "name": "OpenMW Voices of Vvardenfell patch",
-      "category": "Dialogue",
-      "author": "taitechnic",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/54137",
-        "nexusGame": "morrowind",
-        "nexusId": 54137
-      },
-      "downloads": [
-        {
-          "fileName": "OpenMW Voices of Vvardenfell patch-54137-0-56-1779646570.zip",
-          "nexusFileId": 1000064551,
-          "pinned": true,
-          "sizeBytes": 3624,
-          "extractTo": "OpenMWVoicesOfVvardenfellPatch",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OpenMWVoicesOfVvardenfellPatch"
-      ],
-      "content": [
-        {
-          "file": "VoV OpenMW.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 48,
-        "resolvedVersion": "0.56",
-        "resolvedAt": "2026-08-11T10:29:15.9372430\u002B00:00"
-      }
-    },
-    {
-      "id": "voiced-vivec-and-yakety-yagrum",
-      "name": "Voiced Vivec and Yakety Yagrum",
-      "category": "Dialogue",
-      "author": "Trainwiz",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/40994",
-        "nexusGame": "morrowind",
-        "nexusId": 40994
-      },
-      "downloads": [
-        {
-          "fileName": "Voiced Vivec and Yakety Yagrum-40994-1-1.rar",
-          "nexusFileId": 87097,
-          "pinned": true,
-          "sizeBytes": 2240,
-          "extractTo": "VoicedVivecAndYaketyYagrum",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "VoicedVivecAndYaketyYagrum"
-      ],
-      "content": [
-        {
-          "file": "VoicedVivec.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "YaketyYagrum.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Remove Vivec.esp",
-      "provenance": {
-        "csvRow": 49,
-        "resolvedVersion": "1.1",
-        "resolvedAt": "2026-08-11T10:29:16.3460067\u002B00:00"
-      }
-    },
-    {
-      "id": "voice-overhaul",
-      "name": "Voice Overhaul",
-      "category": "Dialogue",
-      "author": "Phoenix Rime",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/51215",
-        "nexusGame": "morrowind",
-        "nexusId": 51215
-      },
-      "downloads": [
-        {
-          "fileName": "PR Voice Overhaul-51215-0-13-1658867660.7z",
-          "nexusFileId": 1000032374,
-          "pinned": true,
-          "sizeBytes": 29798,
-          "extractTo": "VoiceOverhaul",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "VoiceOverhaul"
-      ],
-      "content": [
-        {
-          "file": "PR Voice Overhaul 0.13.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 50,
-        "resolvedVersion": "0.13",
-        "resolvedAt": "2026-08-11T10:29:16.7570256\u002B00:00"
-      }
-    },
-    {
-      "id": "dual-faction-membership-for-npcs",
-      "name": "Dual Faction Membership for NPCs",
-      "category": "Dialogue",
-      "author": "AliceL93",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/49885",
-        "nexusGame": "morrowind",
-        "nexusId": 49885
-      },
-      "downloads": [
-        {
-          "fileName": "Dual Faction Membership for NPCs-49885-1-0-1622343189.zip",
-          "nexusFileId": 1000025114,
-          "pinned": true,
-          "sizeBytes": 1087,
-          "extractTo": "DualFactionMembershipForNPCs",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "DualFactionMembershipForNPCs"
-      ],
-      "content": [
-        {
-          "file": "Dual Faction Membership for NPCs.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 51,
-        "resolvedVersion": "1.0",
-        "resolvedAt": "2026-08-11T10:29:17.1285057\u002B00:00"
-      }
-    },
-    {
-      "id": "quest-voice-greetings",
-      "name": "Quest Voice Greetings",
-      "category": "Dialogue",
-      "author": "Von Djangos - ElevenAI - Original Morrowind voice actors",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/52273",
-        "nexusGame": "morrowind",
-        "nexusId": 52273
-      },
-      "downloads": [
-        {
-          "fileName": "Quest Voice Greetings-52273-3-82-1721416774.zip",
-          "nexusFileId": 1000046349,
-          "pinned": true,
-          "sizeBytes": 101479457,
-          "extractTo": "QuestVoiceGreetings",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "QuestVoiceGreetings/Quest Voice Greetings 3.82"
-      ],
-      "content": [
-        {
-          "file": "Quest Voice Greetings.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Quest Voice Greetings - Census Exercised version",
-      "provenance": {
-        "csvRow": 52,
-        "resolvedVersion": "3.82",
-        "resolvedAt": "2026-08-11T10:29:17.4133512\u002B00:00"
-      }
-    },
-    {
-      "id": "gares-last-gasp-new-ilunibi-version",
-      "name": "Gares Last Gasp - New Ilunibi version",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53926",
-        "nexusGame": "morrowind",
-        "nexusId": 53926
-      },
-      "downloads": [
-        {
-          "fileName": "Gares Last Gasp - New Ilunibi version-53926-1-11-1706787023.zip",
-          "nexusFileId": 1000042480,
-          "pinned": true,
-          "sizeBytes": 5283954,
-          "extractTo": "GaresLastGaspNewIlunibiVersion",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "GaresLastGaspNewIlunibiVersion/Gares Last Gasp"
-      ],
-      "content": [
-        {
-          "file": "Gares Last Gasp.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "New Ilunibi version",
-      "provenance": {
-        "csvRow": 53,
-        "resolvedVersion": "1.11",
-        "resolvedAt": "2026-08-11T10:29:17.7812035\u002B00:00"
-      }
-    },
-    {
-      "id": "idle-talk",
-      "name": "Idle Talk",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/46948",
-        "nexusGame": "morrowind",
-        "nexusId": 46948
-      },
-      "downloads": [
-        {
-          "fileName": "Idle Talk-46948-0-71-1586604370.zip",
-          "nexusFileId": 1000017893,
-          "pinned": true,
-          "sizeBytes": 3887093,
-          "extractTo": "IdleTalk",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "IdleTalk/Idle Talk"
-      ],
-      "content": [
-        {
-          "file": "Idle Talk.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 54,
-        "resolvedVersion": "0.71",
-        "resolvedAt": "2026-08-11T10:29:18.1960518\u002B00:00"
-      }
-    },
-    {
-      "id": "ultimate-creeper-party-house",
-      "name": "Ultimate Creeper Party House",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53641",
-        "nexusGame": "morrowind",
-        "nexusId": 53641
-      },
-      "downloads": [
-        {
-          "fileName": "Ultimate Creeper Party House-53641-1-1-1698596535.zip",
-          "nexusFileId": 1000040693,
-          "pinned": true,
-          "sizeBytes": 29796879,
-          "extractTo": "UltimateCreeperPartyHouse",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "UltimateCreeperPartyHouse/Ultimate Creeper Party House"
-      ],
-      "content": [
-        {
-          "file": "Ultimate Creeper Party House.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 55,
-        "resolvedVersion": "1.1",
-        "resolvedAt": "2026-08-11T10:29:18.5426904\u002B00:00"
-      }
-    },
-    {
-      "id": "nordic-banter",
-      "name": "Nordic Banter",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53715",
-        "nexusGame": "morrowind",
-        "nexusId": 53715
-      },
-      "downloads": [
-        {
-          "fileName": "Nordic Banter-53715-1-0-1699712379.zip",
-          "nexusFileId": 1000040943,
-          "pinned": true,
-          "sizeBytes": 3123619,
-          "extractTo": "NordicBanter",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "NordicBanter/Nordic Banter"
-      ],
-      "content": [
-        {
-          "file": "Nordic Banter.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 56,
-        "resolvedVersion": "1.0",
-        "resolvedAt": "2026-08-11T10:29:18.8494037\u002B00:00"
-      }
-    },
-    {
-      "id": "sermons-and-preachers-vanilla-edit",
-      "name": "Sermons and Preachers Vanilla edit",
-      "category": "Dialogue",
-      "author": "kruzhem and ElevenAI",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53294",
-        "nexusGame": "morrowind",
-        "nexusId": 53294
-      },
-      "downloads": [
-        {
-          "fileName": "Sermons and Preachers - vanilla edit-53294-1-1-1691758110.zip",
-          "nexusFileId": 1000039696,
-          "pinned": true,
-          "sizeBytes": 106576210,
-          "extractTo": "SermonsAndPreachersVanillaEdit",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "SermonsAndPreachersVanillaEdit/Sermons and Preachers (Vanilla edit)/Data Files"
-      ],
-      "content": [
-        {
-          "file": "sermons_preachers_RandomTemplesOnly.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 57,
-        "resolvedVersion": "1.1",
-        "resolvedAt": "2026-08-11T10:29:19.2628215\u002B00:00"
-      }
-    },
-    {
-      "id": "immersive-morrowind",
-      "name": "Immersive Morrowind",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/54513",
-        "nexusGame": "morrowind",
-        "nexusId": 54513
-      },
-      "downloads": [
-        {
-          "fileName": "Immersive Morrowind-54513-0-4-1714642223.zip",
-          "nexusFileId": 1000044290,
-          "pinned": true,
-          "sizeBytes": 6734800,
-          "extractTo": "ImmersiveMorrowind",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "ImmersiveMorrowind/Immersive Morrowind 0.4"
-      ],
-      "content": [
-        {
-          "file": "Immersive Morrowind.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 58,
-        "resolvedVersion": "0.4",
-        "resolvedAt": "2026-08-11T10:29:19.6742008\u002B00:00"
-      }
-    },
-    {
-      "id": "friends-reunited",
-      "name": "Friends Reunited",
-      "category": "Dialogue",
-      "author": "Von Djangos",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53601",
-        "nexusGame": "morrowind",
-        "nexusId": 53601
-      },
-      "downloads": [
-        {
-          "fileName": "Friends Reunited-53601-1-41-1707486138.zip",
-          "nexusFileId": 1000042673,
-          "pinned": true,
-          "sizeBytes": 7097148,
-          "extractTo": "FriendsReunited",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "FriendsReunited/Friends Reunited"
-      ],
-      "content": [
-        {
-          "file": "Friends Reunited.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 59,
-        "resolvedVersion": "1.41",
-        "resolvedAt": "2026-08-11T10:29:20.0331058\u002B00:00"
       }
     },
     {
@@ -2245,45 +1001,6 @@
         "csvRow": 65,
         "resolvedVersion": "1.1",
         "resolvedAt": "2026-08-11T10:29:22.3882507\u002B00:00"
-      }
-    },
-    {
-      "id": "protective-guards-factions-and-npcs-protections-openmw",
-      "name": "Protective Guards - Factions and NPCs Protections (OpenMW)",
-      "category": "Balance",
-      "author": "kuyondo and lelimule",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/54858",
-        "nexusGame": "morrowind",
-        "nexusId": 54858
-      },
-      "downloads": [
-        {
-          "fileName": "Protective Guards - Factions and NPCs Protections-54858-1-6-1772627968.zip",
-          "nexusFileId": 1000061283,
-          "pinned": true,
-          "sizeBytes": 5645,
-          "extractTo": "ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW"
-      ],
-      "content": [
-        {
-          "file": "protective_guards_for_omw.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 66,
-        "resolvedVersion": "1.6",
-        "resolvedAt": "2026-08-11T10:29:22.7981475\u002B00:00"
       }
     },
     {
@@ -6471,16 +5188,7 @@
       "dataPaths": [
         "HDForgeForOpenMWLua"
       ],
-      "content": [
-        {
-          "file": "PherimAnimatedBellowsSounds.omwaddon",
-          "mode": "normal"
-        },
-        {
-          "file": "HD Forge.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14684,10 +13392,6 @@
       ],
       "content": [
         {
-          "file": "logs on Fire.esp",
-          "mode": "normal"
-        },
-        {
           "file": "Logs on Fire.esp",
           "mode": "normal"
         }
@@ -17137,10 +15841,6 @@
       "content": [
         {
           "file": "Solstheim Tomb of The Snow Prince.esm",
-          "mode": "normal"
-        },
-        {
-          "file": "GITD_WL_RR_Interiors.esp",
           "mode": "normal"
         },
         {
@@ -20084,12 +18784,7 @@
       "dataPaths": [
         "ZerkishHotkeysImprovedForOpenMW/ZerkishHotkeysImproved"
       ],
-      "content": [
-        {
-          "file": "ZerkishHotkeysImproved.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -20389,12 +19084,7 @@
       "dataPaths": [
         "OpenMWFullBodyAwareness"
       ],
-      "content": [
-        {
-          "file": "FBA-Alex_s_Better_Fitted_Armors.omwaddon",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -22765,6 +21455,1250 @@
         "csvRow": 644,
         "resolvedVersion": "1.0",
         "resolvedAt": "2026-08-11T10:33:02.1028104\u002B00:00"
+      }
+    },
+    {
+      "id": "fmi-notalldunmer",
+      "name": "FMI - NotAllDunmer",
+      "category": "Dialogue",
+      "author": "PoodleSandwich",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47569?tab=description",
+        "nexusGame": "morrowind",
+        "nexusId": 47569
+      },
+      "downloads": [
+        {
+          "fileName": "FMI - NotAllDunmer-47569-1-0-1580850171.zip",
+          "nexusFileId": 1000017154,
+          "pinned": true,
+          "sizeBytes": 1629,
+          "extractTo": "FMINotAllDunmer",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "FMINotAllDunmer"
+      ],
+      "content": [
+        {
+          "file": "FMI_#NotAllDunmer.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 26,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:28:10.8162852\u002B00:00"
+      }
+    },
+    {
+      "id": "so-you-re-the-nerevarine",
+      "name": "So. You\u0027re the Nerevarine.",
+      "category": "Dialogue",
+      "author": "halidors",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/46896",
+        "nexusGame": "morrowind",
+        "nexusId": 46896
+      },
+      "downloads": [
+        {
+          "fileName": "SYTN-46896-1-5-1560268922.zip",
+          "nexusFileId": 1000014892,
+          "pinned": true,
+          "sizeBytes": 981,
+          "extractTo": "SoYoureTheNerevarine",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "SoYoureTheNerevarine"
+      ],
+      "content": [
+        {
+          "file": "SYTN.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 27,
+        "resolvedVersion": "1.5",
+        "resolvedAt": "2026-08-11T10:28:11.1173390\u002B00:00"
+      }
+    },
+    {
+      "id": "ldm-context-matters",
+      "name": "LDM - Context Matters",
+      "category": "Dialogue",
+      "author": "Lucevar",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/48273",
+        "nexusGame": "morrowind",
+        "nexusId": 48273
+      },
+      "downloads": [
+        {
+          "fileName": "LDM - Context Matters-48273-1-7-1673721570.zip",
+          "nexusFileId": 1000034614,
+          "pinned": true,
+          "sizeBytes": 80367,
+          "extractTo": "LDMContextMatters",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "LDMContextMatters"
+      ],
+      "content": [
+        {
+          "file": "LDM - Context Matters 1.7.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 28,
+        "resolvedVersion": "1.7",
+        "resolvedAt": "2026-08-11T10:28:11.4304191\u002B00:00"
+      }
+    },
+    {
+      "id": "free-the-slaves",
+      "name": "Free The Slaves",
+      "category": "Dialogue",
+      "author": "Caeris",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/45191",
+        "nexusGame": "morrowind",
+        "nexusId": 45191
+      },
+      "downloads": [
+        {
+          "fileName": "Free the Slaves-45191-2-01-1769810110.7z",
+          "nexusFileId": 1000060372,
+          "pinned": true,
+          "sizeBytes": 2298,
+          "extractTo": "FreeTheSlaves",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "FreeTheSlaves"
+      ],
+      "content": [
+        {
+          "file": "FreeTheSlaves!.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 29,
+        "resolvedVersion": "2.01",
+        "resolvedAt": "2026-08-11T10:28:11.7923974\u002B00:00"
+      }
+    },
+    {
+      "id": "fmi-service-refusal-and-contraband",
+      "name": "FMI - Service Refusal and Contraband",
+      "category": "Dialogue",
+      "author": "PoodleSandwich",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47456",
+        "nexusGame": "morrowind",
+        "nexusId": 47456
+      },
+      "downloads": [
+        {
+          "fileName": "FMI - Service Refusal and Contraband-47456-1-9-3-1597872631.zip",
+          "nexusFileId": 1000020456,
+          "pinned": true,
+          "sizeBytes": 124199,
+          "extractTo": "FMIServiceRefusalAndContraband",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "FMIServiceRefusalAndContraband"
+      ],
+      "content": [
+        {
+          "file": "FMI_ServiceRefusal_Contraband.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 30,
+        "resolvedVersion": "1.9.3",
+        "resolvedAt": "2026-08-11T10:28:12.1052531\u002B00:00"
+      }
+    },
+    {
+      "id": "greetings-for-no-lore",
+      "name": "Greetings for No Lore",
+      "category": "Dialogue",
+      "author": "Caeris",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/46063",
+        "nexusGame": "morrowind",
+        "nexusId": 46063
+      },
+      "downloads": [
+        {
+          "fileName": "Greetings for No Lore-46063-2-0-1577323496.7z",
+          "nexusFileId": 1000016661,
+          "pinned": true,
+          "sizeBytes": 3420,
+          "extractTo": "GreetingsForNoLore",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "GreetingsForNoLore"
+      ],
+      "content": [
+        {
+          "file": "Greetings for No Lore.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 31,
+        "resolvedVersion": "2.0",
+        "resolvedAt": "2026-08-11T10:28:12.5513213\u002B00:00"
+      }
+    },
+    {
+      "id": "great-service",
+      "name": "Great Service",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47767",
+        "nexusGame": "morrowind",
+        "nexusId": 47767
+      },
+      "downloads": [
+        {
+          "fileName": "Great Service-47767-1-11-1592332753.zip",
+          "nexusFileId": 1000019303,
+          "pinned": true,
+          "sizeBytes": 402006,
+          "extractTo": "GreatService",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "GreatService/Great Service"
+      ],
+      "content": [
+        {
+          "file": "Great Service.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 32,
+        "resolvedVersion": "1.11",
+        "resolvedAt": "2026-08-11T10:28:12.9597481\u002B00:00"
+      }
+    },
+    {
+      "id": "silent-assassins",
+      "name": "Silent Assassins",
+      "category": "Dialogue",
+      "author": "R-Zero",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/44371",
+        "nexusGame": "morrowind",
+        "nexusId": 44371
+      },
+      "downloads": [
+        {
+          "fileName": "Silent Assassins-44371-1-0.7z",
+          "nexusFileId": 1000005975,
+          "pinned": true,
+          "sizeBytes": 887,
+          "extractTo": "SilentAssassins",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "SilentAssassins"
+      ],
+      "content": [
+        {
+          "file": "Silent Assassins.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 33,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:28:13.3710628\u002B00:00"
+      }
+    },
+    {
+      "id": "tunnel-cough",
+      "name": "Tunnel Cough",
+      "category": "Dialogue",
+      "author": "R-Zero aka Reizeron",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47603",
+        "nexusGame": "morrowind",
+        "nexusId": 47603
+      },
+      "downloads": [
+        {
+          "fileName": "Tunnel_Cough-47603-1-0-1581789455.7z",
+          "nexusFileId": 1000017235,
+          "pinned": true,
+          "sizeBytes": 1868,
+          "extractTo": "TunnelCough",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "TunnelCough/Data Files"
+      ],
+      "content": [
+        {
+          "file": "Tunnel Cough.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 34,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:28:13.7797023\u002B00:00"
+      }
+    },
+    {
+      "id": "fmi-current-councilors",
+      "name": "FMI - Current Councilors",
+      "category": "Dialogue",
+      "author": "PoodleSandwich",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47342",
+        "nexusGame": "morrowind",
+        "nexusId": 47342
+      },
+      "downloads": [
+        {
+          "fileName": "FMI_Current_Councilors-47342-1-0-1575157900.zip",
+          "nexusFileId": 1000016398,
+          "pinned": true,
+          "sizeBytes": 1114,
+          "extractTo": "FMICurrentCouncilors",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "FMICurrentCouncilors"
+      ],
+      "content": [
+        {
+          "file": "FMI_Current_Councilors.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 35,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:28:14.1898485\u002B00:00"
+      }
+    },
+    {
+      "id": "oath-to-saint-roris-instead",
+      "name": "Oath to Saint Roris Instead",
+      "category": "Dialogue",
+      "author": "AliceL93",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47339/",
+        "nexusGame": "morrowind",
+        "nexusId": 47339
+      },
+      "downloads": [
+        {
+          "fileName": "Oath to Saint Roris Instead-47339-1-2-1633294137.zip",
+          "nexusFileId": 1000027197,
+          "pinned": true,
+          "sizeBytes": 2404,
+          "extractTo": "OathToSaintRorisInstead",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "OathToSaintRorisInstead"
+      ],
+      "content": [
+        {
+          "file": "Oath to Saint Roris Instead.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 36,
+        "resolvedVersion": "1.2",
+        "resolvedAt": "2026-08-11T10:28:14.5988391\u002B00:00"
+      }
+    },
+    {
+      "id": "raym-s-vampire-rumors",
+      "name": "Raym\u0027s Vampire Rumors",
+      "category": "Dialogue",
+      "author": "Raym",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/48469",
+        "nexusGame": "morrowind",
+        "nexusId": 48469
+      },
+      "downloads": [
+        {
+          "fileName": "Raym\u0027s Vampire Rumors-48469-1-2-1593355039.7z",
+          "nexusFileId": 1000019597,
+          "pinned": true,
+          "sizeBytes": 20128,
+          "extractTo": "RaymsVampireRumors",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "RaymsVampireRumors/Data Files"
+      ],
+      "content": [
+        {
+          "file": "Raym\u0027s Vampire Rumors.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 37,
+        "resolvedVersion": "1.2",
+        "resolvedAt": "2026-08-11T10:28:15.0107505\u002B00:00"
+      }
+    },
+    {
+      "id": "djangos-dialogue",
+      "name": "Djangos Dialogue",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/47253",
+        "nexusGame": "morrowind",
+        "nexusId": 47253
+      },
+      "downloads": [
+        {
+          "fileName": "Djangos Dialogue 1.42-47253-1-42-1592244472.zip",
+          "nexusFileId": 1000019280,
+          "pinned": true,
+          "sizeBytes": 110532,
+          "extractTo": "DjangosDialogue",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "DjangosDialogue/Djangos Dialogue"
+      ],
+      "content": [
+        {
+          "file": "Djangos Dialogue.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Patch for Purists Patch https://www.nexusmods.com/morrowind/mods/48955?tab=files",
+      "provenance": {
+        "csvRow": 38,
+        "resolvedVersion": "1.42",
+        "resolvedAt": "2026-08-11T10:28:15.4130880\u002B00:00"
+      }
+    },
+    {
+      "id": "barilzar-voice",
+      "name": "Barilzar Voice",
+      "category": "Dialogue",
+      "author": "unknown",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/31655",
+        "nexusGame": "morrowind",
+        "nexusId": 31655
+      },
+      "downloads": [
+        {
+          "fileName": "Barilzar Voice-31655.zip",
+          "nexusFileId": 60549,
+          "pinned": true,
+          "sizeBytes": 257900,
+          "extractTo": "BarilzarVoice",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BarilzarVoice"
+      ],
+      "content": [
+        {
+          "file": "barilzar_voice.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 40,
+        "resolvedVersion": "",
+        "resolvedAt": "2026-08-11T10:29:13.7261806\u002B00:00"
+      }
+    },
+    {
+      "id": "dagoth-gares-voice",
+      "name": "Dagoth Gares Voice",
+      "category": "Dialogue",
+      "author": "Skydiver and Tyana Rie",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/593",
+        "nexusGame": "morrowind",
+        "nexusId": 593
+      },
+      "downloads": [
+        {
+          "fileName": " Dagoth Gares Voice Addon 1dot1-593.zip",
+          "nexusFileId": 16318,
+          "pinned": true,
+          "sizeBytes": 3674635,
+          "extractTo": "DagothGaresVoice",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "DagothGaresVoice"
+      ],
+      "content": [
+        {
+          "file": "Dagoth Gares_Voice_addon v1.1.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 41,
+        "resolvedVersion": "",
+        "resolvedAt": "2026-08-11T10:29:14.0940921\u002B00:00"
+      }
+    },
+    {
+      "id": "dagoth-ur-voice",
+      "name": "Dagoth Ur Voice",
+      "category": "Dialogue",
+      "author": "Voice Addon Project Team",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/592",
+        "nexusGame": "morrowind",
+        "nexusId": 592
+      },
+      "downloads": [
+        {
+          "fileName": "Dagoth Ur Voice addon v1.0-592.7z",
+          "nexusFileId": 14349,
+          "pinned": true,
+          "sizeBytes": 7243858,
+          "extractTo": "DagothUrVoice",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "DagothUrVoice"
+      ],
+      "content": [
+        {
+          "file": "Dagoth Ur Voice Addon.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Fix: DYI Recipies section https://www.nexusmods.com/morrowind/mods/48955? , Beware the Sixth House must overwrite this",
+      "provenance": {
+        "csvRow": 42,
+        "resolvedVersion": "",
+        "resolvedAt": "2026-08-11T10:29:14.4590835\u002B00:00"
+      }
+    },
+    {
+      "id": "openmw-lua-helper-utility",
+      "name": "OpenMW Lua helper utility",
+      "category": "Dialogue",
+      "author": "taitechnic",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/54629",
+        "nexusGame": "morrowind",
+        "nexusId": 54629
+      },
+      "downloads": [
+        {
+          "fileName": "OpenMW lua helper utility-54629-0-56-1754247063.zip",
+          "nexusFileId": 1000055641,
+          "pinned": true,
+          "sizeBytes": 2488737,
+          "extractTo": "OpenMWLuaHelperUtility",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "OpenMWLuaHelperUtility"
+      ],
+      "content": [
+        {
+          "file": "OpenMW_luahelper.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper_dialog.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 43,
+        "resolvedVersion": "0.56",
+        "resolvedAt": "2026-08-11T10:29:14.7660765\u002B00:00"
+      }
+    },
+    {
+      "id": "lua-helper-patch-for-purists",
+      "name": "Lua helper Patch for Purists",
+      "category": "Dialogue",
+      "author": "taitechnic",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/54629",
+        "nexusGame": "morrowind",
+        "nexusId": 54629
+      },
+      "downloads": [
+        {
+          "fileName": "OpenMW lua helper utility-54629-0-56-1754247063.zip",
+          "nexusFileId": 1000055641,
+          "pinned": true,
+          "sizeBytes": 2488737,
+          "extractTo": "LuaHelperPatchForPurists",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "LuaHelperPatchForPurists"
+      ],
+      "content": [
+        {
+          "file": "OpenMW_luahelper.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper_dialog.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Lua helper Dialogue ESP for Patch for Purists",
+      "provenance": {
+        "csvRow": 44,
+        "resolvedVersion": "0.56",
+        "resolvedAt": "2026-08-11T10:29:14.7660765\u002B00:00"
+      }
+    },
+    {
+      "id": "lua-helper-tamriel-rebuilt",
+      "name": "Lua helper Tamriel Rebuilt",
+      "category": "Dialogue",
+      "author": "taitechnic",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/54629",
+        "nexusGame": "morrowind",
+        "nexusId": 54629
+      },
+      "downloads": [
+        {
+          "fileName": "OpenMW lua helper utility-54629-0-56-1754247063.zip",
+          "nexusFileId": 1000055641,
+          "pinned": true,
+          "sizeBytes": 2488737,
+          "extractTo": "LuaHelperTamrielRebuilt",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "LuaHelperTamrielRebuilt"
+      ],
+      "content": [
+        {
+          "file": "OpenMW_luahelper.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper_dialog.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Lua helper Dialogue ESP for Tamriel Rebuilt",
+      "provenance": {
+        "csvRow": 45,
+        "resolvedVersion": "0.56",
+        "resolvedAt": "2026-08-11T10:29:14.7660765\u002B00:00"
+      }
+    },
+    {
+      "id": "openmw-voices-of-vvardenfell-patch",
+      "name": "OpenMW Voices of Vvardenfell patch",
+      "category": "Dialogue",
+      "author": "taitechnic",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/54137",
+        "nexusGame": "morrowind",
+        "nexusId": 54137
+      },
+      "downloads": [
+        {
+          "fileName": "OpenMW Voices of Vvardenfell patch-54137-0-56-1779646570.zip",
+          "nexusFileId": 1000064551,
+          "pinned": true,
+          "sizeBytes": 3624,
+          "extractTo": "OpenMWVoicesOfVvardenfellPatch",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "OpenMWVoicesOfVvardenfellPatch"
+      ],
+      "content": [
+        {
+          "file": "VoV OpenMW.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 48,
+        "resolvedVersion": "0.56",
+        "resolvedAt": "2026-08-11T10:29:15.9372430\u002B00:00"
+      }
+    },
+    {
+      "id": "voiced-vivec-and-yakety-yagrum",
+      "name": "Voiced Vivec and Yakety Yagrum",
+      "category": "Dialogue",
+      "author": "Trainwiz",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/40994",
+        "nexusGame": "morrowind",
+        "nexusId": 40994
+      },
+      "downloads": [
+        {
+          "fileName": "Voiced Vivec and Yakety Yagrum-40994-1-1.rar",
+          "nexusFileId": 87097,
+          "pinned": true,
+          "sizeBytes": 2240,
+          "extractTo": "VoicedVivecAndYaketyYagrum",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "VoicedVivecAndYaketyYagrum"
+      ],
+      "content": [
+        {
+          "file": "VoicedVivec.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "YaketyYagrum.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Remove Vivec.esp",
+      "provenance": {
+        "csvRow": 49,
+        "resolvedVersion": "1.1",
+        "resolvedAt": "2026-08-11T10:29:16.3460067\u002B00:00"
+      }
+    },
+    {
+      "id": "voice-overhaul",
+      "name": "Voice Overhaul",
+      "category": "Dialogue",
+      "author": "Phoenix Rime",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/51215",
+        "nexusGame": "morrowind",
+        "nexusId": 51215
+      },
+      "downloads": [
+        {
+          "fileName": "PR Voice Overhaul-51215-0-13-1658867660.7z",
+          "nexusFileId": 1000032374,
+          "pinned": true,
+          "sizeBytes": 29798,
+          "extractTo": "VoiceOverhaul",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "VoiceOverhaul"
+      ],
+      "content": [
+        {
+          "file": "PR Voice Overhaul 0.13.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 50,
+        "resolvedVersion": "0.13",
+        "resolvedAt": "2026-08-11T10:29:16.7570256\u002B00:00"
+      }
+    },
+    {
+      "id": "dual-faction-membership-for-npcs",
+      "name": "Dual Faction Membership for NPCs",
+      "category": "Dialogue",
+      "author": "AliceL93",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/49885",
+        "nexusGame": "morrowind",
+        "nexusId": 49885
+      },
+      "downloads": [
+        {
+          "fileName": "Dual Faction Membership for NPCs-49885-1-0-1622343189.zip",
+          "nexusFileId": 1000025114,
+          "pinned": true,
+          "sizeBytes": 1087,
+          "extractTo": "DualFactionMembershipForNPCs",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "DualFactionMembershipForNPCs"
+      ],
+      "content": [
+        {
+          "file": "Dual Faction Membership for NPCs.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 51,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:29:17.1285057\u002B00:00"
+      }
+    },
+    {
+      "id": "quest-voice-greetings",
+      "name": "Quest Voice Greetings",
+      "category": "Dialogue",
+      "author": "Von Djangos - ElevenAI - Original Morrowind voice actors",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/52273",
+        "nexusGame": "morrowind",
+        "nexusId": 52273
+      },
+      "downloads": [
+        {
+          "fileName": "Quest Voice Greetings-52273-3-82-1721416774.zip",
+          "nexusFileId": 1000046349,
+          "pinned": true,
+          "sizeBytes": 101479457,
+          "extractTo": "QuestVoiceGreetings",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "QuestVoiceGreetings/Quest Voice Greetings 3.82"
+      ],
+      "content": [
+        {
+          "file": "Quest Voice Greetings.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Quest Voice Greetings - Census Exercised version",
+      "provenance": {
+        "csvRow": 52,
+        "resolvedVersion": "3.82",
+        "resolvedAt": "2026-08-11T10:29:17.4133512\u002B00:00"
+      }
+    },
+    {
+      "id": "gares-last-gasp-new-ilunibi-version",
+      "name": "Gares Last Gasp - New Ilunibi version",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53926",
+        "nexusGame": "morrowind",
+        "nexusId": 53926
+      },
+      "downloads": [
+        {
+          "fileName": "Gares Last Gasp - New Ilunibi version-53926-1-11-1706787023.zip",
+          "nexusFileId": 1000042480,
+          "pinned": true,
+          "sizeBytes": 5283954,
+          "extractTo": "GaresLastGaspNewIlunibiVersion",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "GaresLastGaspNewIlunibiVersion/Gares Last Gasp"
+      ],
+      "content": [
+        {
+          "file": "Gares Last Gasp.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "New Ilunibi version",
+      "provenance": {
+        "csvRow": 53,
+        "resolvedVersion": "1.11",
+        "resolvedAt": "2026-08-11T10:29:17.7812035\u002B00:00"
+      }
+    },
+    {
+      "id": "idle-talk",
+      "name": "Idle Talk",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/46948",
+        "nexusGame": "morrowind",
+        "nexusId": 46948
+      },
+      "downloads": [
+        {
+          "fileName": "Idle Talk-46948-0-71-1586604370.zip",
+          "nexusFileId": 1000017893,
+          "pinned": true,
+          "sizeBytes": 3887093,
+          "extractTo": "IdleTalk",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "IdleTalk/Idle Talk"
+      ],
+      "content": [
+        {
+          "file": "Idle Talk.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 54,
+        "resolvedVersion": "0.71",
+        "resolvedAt": "2026-08-11T10:29:18.1960518\u002B00:00"
+      }
+    },
+    {
+      "id": "ultimate-creeper-party-house",
+      "name": "Ultimate Creeper Party House",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53641",
+        "nexusGame": "morrowind",
+        "nexusId": 53641
+      },
+      "downloads": [
+        {
+          "fileName": "Ultimate Creeper Party House-53641-1-1-1698596535.zip",
+          "nexusFileId": 1000040693,
+          "pinned": true,
+          "sizeBytes": 29796879,
+          "extractTo": "UltimateCreeperPartyHouse",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "UltimateCreeperPartyHouse/Ultimate Creeper Party House"
+      ],
+      "content": [
+        {
+          "file": "Ultimate Creeper Party House.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 55,
+        "resolvedVersion": "1.1",
+        "resolvedAt": "2026-08-11T10:29:18.5426904\u002B00:00"
+      }
+    },
+    {
+      "id": "nordic-banter",
+      "name": "Nordic Banter",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53715",
+        "nexusGame": "morrowind",
+        "nexusId": 53715
+      },
+      "downloads": [
+        {
+          "fileName": "Nordic Banter-53715-1-0-1699712379.zip",
+          "nexusFileId": 1000040943,
+          "pinned": true,
+          "sizeBytes": 3123619,
+          "extractTo": "NordicBanter",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "NordicBanter/Nordic Banter"
+      ],
+      "content": [
+        {
+          "file": "Nordic Banter.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 56,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:29:18.8494037\u002B00:00"
+      }
+    },
+    {
+      "id": "sermons-and-preachers-vanilla-edit",
+      "name": "Sermons and Preachers Vanilla edit",
+      "category": "Dialogue",
+      "author": "kruzhem and ElevenAI",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53294",
+        "nexusGame": "morrowind",
+        "nexusId": 53294
+      },
+      "downloads": [
+        {
+          "fileName": "Sermons and Preachers - vanilla edit-53294-1-1-1691758110.zip",
+          "nexusFileId": 1000039696,
+          "pinned": true,
+          "sizeBytes": 106576210,
+          "extractTo": "SermonsAndPreachersVanillaEdit",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "SermonsAndPreachersVanillaEdit/Sermons and Preachers (Vanilla edit)/Data Files"
+      ],
+      "content": [
+        {
+          "file": "sermons_preachers_RandomTemplesOnly.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 57,
+        "resolvedVersion": "1.1",
+        "resolvedAt": "2026-08-11T10:29:19.2628215\u002B00:00"
+      }
+    },
+    {
+      "id": "immersive-morrowind",
+      "name": "Immersive Morrowind",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/54513",
+        "nexusGame": "morrowind",
+        "nexusId": 54513
+      },
+      "downloads": [
+        {
+          "fileName": "Immersive Morrowind-54513-0-4-1714642223.zip",
+          "nexusFileId": 1000044290,
+          "pinned": true,
+          "sizeBytes": 6734800,
+          "extractTo": "ImmersiveMorrowind",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "ImmersiveMorrowind/Immersive Morrowind 0.4"
+      ],
+      "content": [
+        {
+          "file": "Immersive Morrowind.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 58,
+        "resolvedVersion": "0.4",
+        "resolvedAt": "2026-08-11T10:29:19.6742008\u002B00:00"
+      }
+    },
+    {
+      "id": "friends-reunited",
+      "name": "Friends Reunited",
+      "category": "Dialogue",
+      "author": "Von Djangos",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53601",
+        "nexusGame": "morrowind",
+        "nexusId": 53601
+      },
+      "downloads": [
+        {
+          "fileName": "Friends Reunited-53601-1-41-1707486138.zip",
+          "nexusFileId": 1000042673,
+          "pinned": true,
+          "sizeBytes": 7097148,
+          "extractTo": "FriendsReunited",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "FriendsReunited/Friends Reunited"
+      ],
+      "content": [
+        {
+          "file": "Friends Reunited.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 59,
+        "resolvedVersion": "1.41",
+        "resolvedAt": "2026-08-11T10:29:20.0331058\u002B00:00"
       }
     }
   ]

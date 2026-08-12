@@ -25,4 +25,12 @@ public sealed record LoadOrderOptions
 
     /// <summary>Mods the user chose to skip after failed downloads.</summary>
     public IReadOnlySet<string> SkippedModIds { get; init; } = new HashSet<string>();
+
+    /// <summary>
+    /// Repo-shipped record-level repair plugins (data/fixups). They load
+    /// after all modlist content — overriding broken records in mods we
+    /// cannot edit in place — and before the delta merge so delta sees them.
+    /// </summary>
+    public string FixupsDataDir { get; init; } = "mri-fixups";
+    public IReadOnlyList<string> FixupsContentFiles { get; init; } = [];
 }

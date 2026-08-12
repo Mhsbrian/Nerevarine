@@ -360,3 +360,126 @@ rules:
   - match: { slug: bardcraft-openmw }
     set:
       content: []
+
+# ---------------------------------------------------------------------------
+# Dialogue category loads LAST (field bug 2026-08-11): the sheet places
+# Dialogue near the top, but TES3 greeting INFO chains insert later plugins'
+# entries ABOVE earlier ones at the same anchor. New-lands mods (The Abecean
+# Isles xOTM_01.ESP) ship unconditioned bottom-of-chain fallback greetings for
+# their custom races; loading them after LDM/Djangos hoisted Sload riddle
+# greetings above the overhauls' entries, so ordinary NPCs (Seyda Neen, game
+# start) greeted with Abecean riddles. MOMW loads dialogue overhauls at
+# ~position 458-469 of 656 (after all content mods) — we mirror that by
+# chaining the whole Dialogue block after the final content mod.
+# ---------------------------------------------------------------------------
+  - match: { slug: "fmi-notalldunmer" }
+    moveAfter: "dubious-miscellaneous-crafting-assemblage-for-openmw-crafting-framework"
+  - match: { slug: "so-you-re-the-nerevarine" }
+    moveAfter: "fmi-notalldunmer"
+  - match: { slug: "ldm-context-matters" }
+    moveAfter: "so-you-re-the-nerevarine"
+  - match: { slug: "free-the-slaves" }
+    moveAfter: "ldm-context-matters"
+  - match: { slug: "fmi-service-refusal-and-contraband" }
+    moveAfter: "free-the-slaves"
+  - match: { slug: "greetings-for-no-lore" }
+    moveAfter: "fmi-service-refusal-and-contraband"
+  - match: { slug: "great-service" }
+    moveAfter: "greetings-for-no-lore"
+  - match: { slug: "silent-assassins" }
+    moveAfter: "great-service"
+  - match: { slug: "tunnel-cough" }
+    moveAfter: "silent-assassins"
+  - match: { slug: "fmi-current-councilors" }
+    moveAfter: "tunnel-cough"
+  - match: { slug: "oath-to-saint-roris-instead" }
+    moveAfter: "fmi-current-councilors"
+  - match: { slug: "raym-s-vampire-rumors" }
+    moveAfter: "oath-to-saint-roris-instead"
+  - match: { slug: "djangos-dialogue" }
+    moveAfter: "raym-s-vampire-rumors"
+  - match: { slug: "barilzar-voice" }
+    moveAfter: "djangos-dialogue"
+  - match: { slug: "dagoth-gares-voice" }
+    moveAfter: "barilzar-voice"
+  - match: { slug: "dagoth-ur-voice" }
+    moveAfter: "dagoth-gares-voice"
+  - match: { slug: "openmw-lua-helper-utility" }
+    moveAfter: "dagoth-ur-voice"
+  - match: { slug: "lua-helper-patch-for-purists" }
+    moveAfter: "openmw-lua-helper-utility"
+  - match: { slug: "lua-helper-tamriel-rebuilt" }
+    moveAfter: "lua-helper-patch-for-purists"
+  - match: { slug: "openmw-voices-of-vvardenfell-patch" }
+    moveAfter: "lua-helper-tamriel-rebuilt"
+  - match: { slug: "voiced-vivec-and-yakety-yagrum" }
+    moveAfter: "openmw-voices-of-vvardenfell-patch"
+  - match: { slug: "voice-overhaul" }
+    moveAfter: "voiced-vivec-and-yakety-yagrum"
+  - match: { slug: "dual-faction-membership-for-npcs" }
+    moveAfter: "voice-overhaul"
+  - match: { slug: "quest-voice-greetings" }
+    moveAfter: "dual-faction-membership-for-npcs"
+  - match: { slug: "gares-last-gasp-new-ilunibi-version" }
+    moveAfter: "quest-voice-greetings"
+  - match: { slug: "idle-talk" }
+    moveAfter: "gares-last-gasp-new-ilunibi-version"
+  - match: { slug: "ultimate-creeper-party-house" }
+    moveAfter: "idle-talk"
+  - match: { slug: "nordic-banter" }
+    moveAfter: "ultimate-creeper-party-house"
+  - match: { slug: "sermons-and-preachers-vanilla-edit" }
+    moveAfter: "nordic-banter"
+  - match: { slug: "immersive-morrowind" }
+    moveAfter: "sermons-and-preachers-vanilla-edit"
+  - match: { slug: "friends-reunited" }
+    moveAfter: "immersive-morrowind"
+
+  # hd-forge-for-openmw-lua requires Pherim's original HD Forge (assets), which
+  # the sheet never listed — its global.lua refuses to start ("Missing assets
+  # from HD Forge!"). Deactivated pending a decision to add the base mod (M3),
+  # same policy as bardcraft-openmw's missing Skill Framework.
+  - match: { slug: "hd-forge-for-openmw-lua" }
+    set:
+      content: []
+
+  # KNOWN COSMETIC: ShieldsUpOpenMW ships l10n/ShieldsUp/en.yaml wrapped in a
+  # markdown ```yaml fence (upstream packaging bug) — OpenMW logs a yaml-cpp
+  # error and UI strings fall back to key names. Harmless; no patch mechanism.
+
+  # openmw-full-body-awareness: our download contains ONLY the compat addon
+  # for "Alex's Better Fitted Armors" (meshes/abffa/*), a mod the sheet never
+  # listed — activating it re-points female guard armor at absent meshes
+  # (field: yellow error markers on guards). Deactivated pending an M3
+  # decision on adding the base mod / re-picking the FBA main file.
+  - match: { slug: "openmw-full-body-awareness" }
+    set:
+      content: []
+
+  # zerkish-hotkeys-improved requires the unlisted ZModUtils library
+  # (log: "module not found: scripts.ZModUtils.Utility.Items"); nothing on
+  # disk ships it. Same missing-dependency policy as bardcraft-openmw.
+  - match: { slug: "zerkish-hotkeys-improved-for-openmw" }
+    set:
+      content: []
+
+  # protective-guards-factions-and-npcs-protections-openmw is a partial
+  # overlay (2 lua files, no modInfo.lua) targeting a NEWER base than our
+  # protective-guards-openmw Lua Edition download; its files shadow the
+  # working base via VFS (later data dir wins) and then fail requiring
+  # modInfo. Skipped entirely so the base mod works; M3: re-pin base+overlay
+  # to matching versions.
+  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }
+    skip: true
+    skipReason: "partial overlay for a newer base version; shadows and breaks the working Lua Edition"
+
+  # RECORD FIXUP (not a rule — shipped via data/fixups + install-fixups step):
+  # the-abecean-isles xOTM_01.ESP has two Greeting 5 INFOs with no speaker
+  # filter (one gated only by Random100>50); any NPC anywhere falling through
+  # the conditioned greetings above gets a Sload riddle (field: Seyda Neen
+  # census NPCs, shopkeepers). Upstream dead since 2024-04; no recoverable
+  # intended scope (no Sload NPC record, no coherent cell naming).
+  # data/fixups/MRI_AbeceanGreetingFix.esp overrides both records verbatim
+  # plus a never-true condition (Global Random100 < 0). Generator:
+  # tools/make-abecean-greeting-fix.py. Load order is not the culprit and
+  # cannot fix it — conditions, not order, decide which greeting fires.

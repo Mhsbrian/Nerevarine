@@ -194,6 +194,12 @@ public static class ModlistCompiler
             }
         }
 
+        if (options.FixupsContentFiles.Count > 0)
+        {
+            dataDirs.Add(options.FixupsDataDir);
+            content.AddRange(options.FixupsContentFiles);
+        }
+
         if (options.IncludeDelta)
         {
             dataDirs.Add(options.DeltaDataDir);

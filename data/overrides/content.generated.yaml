@@ -228,6 +228,7 @@ rules:
   - match: { slug: "ncgdmw-lua-edition" }
     set:
       content:
+        - { file: "ncgdmw.omwaddon", mode: "normal" }
         - { file: "ncgdmw.omwscripts", mode: "normal" }
   - match: { slug: "better-moon-and-star" }
     set:
@@ -1206,7 +1207,6 @@ rules:
   - match: { slug: "logs-on-fire" }
     set:
       content:
-        - { file: "logs on Fire.esp", mode: "normal" }
         - { file: "Logs on Fire.esp", mode: "normal" }
   - match: { slug: "glow-in-the-dahrk" }
     set:
@@ -1419,7 +1419,6 @@ rules:
     set:
       content:
         - { file: "Solstheim Tomb of The Snow Prince.esm", mode: "normal" }
-        - { file: "GITD_WL_RR_Interiors.esp", mode: "normal" }
         - { file: "GITD_WL_RR_Interiors.esp", mode: "normal" }
   - match: { slug: "sheogorad-groves-of-the-north" }
     set:

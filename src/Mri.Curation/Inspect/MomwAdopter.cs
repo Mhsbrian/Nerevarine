@@ -138,13 +138,14 @@ public static class MomwAdopter
                 continue;
             }
 
-            if (!translated.SequenceEqual(mod.DataPaths, StringComparer.OrdinalIgnoreCase))
-            {
-                adopted++;
-                yaml.AppendLine($"  - match: {{ slug: {Q(mod.Id)} }}   # momw:{entry.SourceList}");
-                yaml.AppendLine("    set:");
-                yaml.AppendLine($"      dataPaths: [{string.Join(", ", translated.Select(t => Q(t!)))}]");
-            }
+            // Always emit, even when the current modlist already agrees: this
+            // layer must be self-contained. Comparing against mod.DataPaths
+            // here silently erased rules on re-runs (the modlist being compared
+            // against already contained this generator's previous output).
+            adopted++;
+            yaml.AppendLine($"  - match: {{ slug: {Q(mod.Id)} }}   # momw:{entry.SourceList}");
+            yaml.AppendLine("    set:");
+            yaml.AppendLine($"      dataPaths: [{string.Join(", ", translated.Select(t => Q(t!)))}]");
 
             if (entry.Plugins.Count > 0)
             {

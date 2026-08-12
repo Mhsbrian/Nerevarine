@@ -9,9 +9,21 @@ rules:
     set:
       dataPaths: ["OfficialPluginsUnofficialPatch/00 adamantium armor", "OfficialPluginsUnofficialPatch/01 area effect arrows", "OfficialPluginsUnofficialPatch/02 bitter coast sounds", "OfficialPluginsUnofficialPatch/03 entertainers", "OfficialPluginsUnofficialPatch/04 helm of tohan", "OfficialPluginsUnofficialPatch/05 lefemm armor", "OfficialPluginsUnofficialPatch/06 master index"]
   # content candidate "official-plugins-unofficial-patch" (momw:i-heart-vanilla-directors-cut): adamantiumarmor.esp | AreaEffectArrows.esp | bcsounds.esp | entertainers.esp | EBQ_Artifact.esp | LeFemmArmor.esp | master_index.esp
+  - match: { slug: "expansion-delay" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ExpansionDelay"]
   # content candidate "expansion-delay" (momw:total-overhaul): Expansion Delay.ESP
+  - match: { slug: "patch-for-purists" }   # momw:total-overhaul
+    set:
+      dataPaths: ["PatchForPurists"]
   # content candidate "patch-for-purists" (momw:total-overhaul): Patch for Purists.esm
+  - match: { slug: "no-more-stage-diving" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NoMoreStageDiving"]
   # content candidate "no-more-stage-diving" (momw:total-overhaul): NoMoreStageDiving_TalkativeGirls.ESP
+  - match: { slug: "same-low-price-fix" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SameLowPriceFix"]
   - match: { slug: "oaab-data" }   # momw:total-overhaul
     set:
       dataPaths: ["OAABData/00 Core", "OAABData/07 Improved Kwama Eggs", "OAABData/04 Better Telvanni Crystal Patch", "OAABData/05 Glass Glowset Patch", "OAABData/08 GitD Shacks Patch"]
@@ -27,17 +39,35 @@ rules:
       dataPaths: ["TamrielDataHD/00 Data Files", "TamrielDataHD/01 Data Files - Normal Maps"]
   # content candidate "tamriel-data-hd" (momw:total-overhaul): Tamriel_Data.esm | Tamriel_Data.omwscripts
   # NOT ADOPTED "tamriel-data-normal-mapped" (momw:total-overhaul): missing on disk: TamrielDataNormalMapped/Mamaea Awakened Normal Mapped | TamrielDataNormalMapped/Morrowind Enhanced Textures Normal Mapped | TamrielDataNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | TamrielDataNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | TamrielDataNormalMapped/PherimComberryBushandIngredientReplacer | TamrielDataNormalMapped/PherimFireFernandFirePetal | TamrielDataNormalMapped/Strider Burial Normal Mapped | TamrielDataNormalMapped/ExcellentGrazalandsAcacia | TamrielDataNormalMapped/RemirosAscadianIslesTrees2 | TamrielDataNormalMapped/New Ilunibi Normal Mapped | TamrielDataNormalMapped/Know Thy Ancestors Normal Mapped | TamrielDataNormalMapped/FMGS - Unique Items Compilation Normal Mapped | TamrielDataNormalMapped/Salts | TamrielDataNormalMapped/HDForge | TamrielDataNormalMapped/AstrologiansGuild | TamrielDataNormalMapped/SecretsOfTheCrystalCity | TamrielDataNormalMapped/OAAB Grazelands Normal Mapped | TamrielDataNormalMapped/BlightedAnimalsRetextured | TamrielDataNormalMapped/UniqueCaveRats20HD | TamrielDataNormalMapped/Creatures_RP Normal Mapped | TamrielDataNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | TamrielDataNormalMapped/Danae's Mods AIO Normal Mapped | TamrielDataNormalMapped/TelEurus | TamrielDataNormalMapped/TheWolverineHall | TamrielDataNormalMapped/BCOM | TamrielDataNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | TamrielDataNormalMapped/NecromArkitektoraHQ | TamrielDataNormalMapped/OAAB Tel Mora Normal Mapped | TamrielDataNormalMapped/The Corprusarium Experience Normal Mapped | TamrielDataNormalMapped/R-Zero's Throbbing Meat Normal Mapped | TamrielDataNormalMapped/TelvanniMagisterRobes | TamrielDataNormalMapped/RemirosVolendrungHD | TamrielDataNormalMapped/UmbraBlademaster | TamrielDataNormalMapped/TheSearchfortheWhiteWave | TamrielDataNormalMapped/UvirithsLegacy | TamrielDataNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "fmi-notalldunmer" }   # momw:total-overhaul
+    set:
+      dataPaths: ["FMINotAllDunmer"]
   # content candidate "fmi-notalldunmer" (momw:total-overhaul): FMI_#NotAllDunmer.ESP
+  - match: { slug: "ldm-context-matters" }   # momw:total-overhaul
+    set:
+      dataPaths: ["LDMContextMatters"]
   # content candidate "ldm-context-matters" (momw:total-overhaul): LDM - Context Matters 1.7.ESP
+  - match: { slug: "fmi-service-refusal-and-contraband" }   # momw:total-overhaul
+    set:
+      dataPaths: ["FMIServiceRefusalAndContraband"]
   # content candidate "fmi-service-refusal-and-contraband" (momw:total-overhaul): FMI_ServiceRefusal_Contraband.ESP
+  - match: { slug: "greetings-for-no-lore" }   # momw:total-overhaul
+    set:
+      dataPaths: ["GreetingsForNoLore"]
   # content candidate "greetings-for-no-lore" (momw:total-overhaul): Greetings for No Lore.esp
   # NOT ADOPTED "djangos-dialogue" (momw:total-overhaul): missing on disk: DjangosDialogue/Djangos Dialogue 1.44
+  - match: { slug: "voice-overhaul" }   # momw:total-overhaul
+    set:
+      dataPaths: ["VoiceOverhaul"]
   # content candidate "voice-overhaul" (momw:total-overhaul): PR Voice Overhaul.esp
   - match: { slug: "wares-ultimate" }   # momw:total-overhaul
     set:
       dataPaths: ["WaresUltimate/00 Core", "WaresUltimate/02 Wares to vanilla lists", "WaresUltimate/03 TD to Wares", "WaresUltimate/04 OAAB to Wares", "WaresUltimate/06 Wares to Traders", "WaresUltimate/09 Wares to containers"]
   # content candidate "wares-ultimate" (momw:total-overhaul): Wares-base.esm | Wares_lists_OAAB.ESP | Wares_lists_TD.ESP | Wares_vanilla_random_lists.ESP | Wares_traders.ESP | Wares_containers.ESP
   # NOT ADOPTED "protective-guards-openmw" (momw:total-overhaul): missing on disk: ProtectiveGuardsOpenMW/Protective Guards for OpenMW
+  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW"]
   # content candidate "protective-guards-factions-and-npcs-protections-openmw" (momw:total-overhaul): protective_guards_for_omw.omwscripts
   # NOT ADOPTED "attend-me" (momw:total-overhaul): missing on disk: AttendMe/AttendMe_1.9
   - match: { slug: "vanilla-friendly-creatures-and-undeads-expansion" }   # momw:total-overhaul
@@ -45,69 +75,189 @@ rules:
       dataPaths: ["VanillaFriendlyCreaturesAndUndeadsExpansion/00 Core", "VanillaFriendlyCreaturesAndUndeadsExpansion/03 Summons have 0 soul"]
   # content candidate "vanilla-friendly-creatures-and-undeads-expansion" (momw:total-overhaul): Creatures_RP_Purist.ESP | Creatures_RP_Soulless summons.ESP
   # NOT ADOPTED "vanilla-friendly-creatures-and-undeads-expansion-normal-mapped" (momw:total-overhaul): missing on disk: VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Mamaea Awakened Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/TR_PC_SHOTN Normal Mapped Ordenadored by Me | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Morrowind Enhanced Textures Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/SolstheimTomboftheSnowPrinceGraphicalReplacers | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/PherimComberryBushandIngredientReplacer | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/PherimFireFernandFirePetal | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Strider Burial Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/ExcellentGrazalandsAcacia | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/RemirosAscadianIslesTrees2 | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/New Ilunibi Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Know Thy Ancestors Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/FMGS - Unique Items Compilation Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Salts | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/HDForge | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/AstrologiansGuild | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/SecretsOfTheCrystalCity | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/OAAB Grazelands Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/BlightedAnimalsRetextured | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/UniqueCaveRats20HD | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/WestlyPresentsUniqueWingedTwilightsNormalMapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/Danae's Mods AIO Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/TelEurus | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/TheWolverineHall | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/BCOM | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/TamrielRebuiltHallofJusticeOverhaulNormalMapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/NecromArkitektoraHQ | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/OAAB Tel Mora Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/The Corprusarium Experience Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/R-Zero's Throbbing Meat Normal Mapped | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/TelvanniMagisterRobes | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/RemirosVolendrungHD | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/UmbraBlademaster | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/TheSearchfortheWhiteWave | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/UvirithsLegacy | VanillaFriendlyCreaturesAndUndeadsExpansionNorma/DunmerLanternsReplacer
+  - match: { slug: "mdmd-more-deadly-morrowind-denizens" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MDMDMoreDeadlyMorrowindDenizens"]
   # content candidate "mdmd-more-deadly-morrowind-denizens" (momw:total-overhaul): MDMD - More Deadly Morrowind Denizens.ESP | mdmd - uvirith legacy cooperation.ESP | MDMD - Creatures Add-On.ESP
+  - match: { slug: "early-transport-to-mournhold" }   # momw:total-overhaul
+    set:
+      dataPaths: ["EarlyTransportToMournhold"]
   # content candidate "early-transport-to-mournhold" (momw:total-overhaul): Early Transport to Mournhold.esp
+  - match: { slug: "real-disposition" }   # momw:total-overhaul
+    set:
+      dataPaths: ["RealDisposition"]
   # content candidate "real-disposition" (momw:total-overhaul): PR Real Disposition Base.esp
   - match: { slug: "beware-the-sixth-house" }   # momw:total-overhaul
     set:
       dataPaths: ["BewareTheSixthHouse/Modular"]
   # content candidate "beware-the-sixth-house" (momw:total-overhaul): Ash Vampire Script Fix.esp | Sixth House Rebalance.ESP | Sunder and keening hurt on pickup.ESP | Unused Dagoth Placement.ESP
+  - match: { slug: "zack-s-lua-multimark-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ZacksLuaMultimarkOpenMW"]
   # content candidate "zack-s-lua-multimark-openmw" (momw:total-overhaul): LuaMultiMark.omwscripts
+  - match: { slug: "projectile-overhaul-modular" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ProjectileOverhaulModular"]
   # content candidate "projectile-overhaul-modular" (momw:total-overhaul): Projectile Overhaul - Faster Magic Missiles.esp | Projectile Overhaul - Faster Projectiles.esp | Projectile Overhaul - Recovery Chance.esp
+  - match: { slug: "hircine-s-artifacts" }   # momw:total-overhaul
+    set:
+      dataPaths: ["HircinesArtifacts/Hircine's Artifacts"]
   # content candidate "hircine-s-artifacts" (momw:total-overhaul): Hircine's Artifacts.ESP
+  - match: { slug: "no-witness-no-bounty" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NoWitnessNoBounty"]
   # content candidate "no-witness-no-bounty" (momw:total-overhaul): NoWitnessNoBounty.omwaddon | NoWitnessNoBounty.omwscripts
+  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DevilishVampireOverhaulTotalOverhaulEdition/Data Files"]
   # content candidate "devilish-vampire-overhaul-total-overhaul-edition" (momw:total-overhaul): Devilish_Vampire_Overhaul.esp | Devilish_Vampire_Overhaul.omwscripts | Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP
+  - match: { slug: "hidden-sea-loot" }   # momw:total-overhaul
+    set:
+      dataPaths: ["HiddenSeaLoot"]
   # content candidate "hidden-sea-loot" (momw:total-overhaul): Hidden Sea Loot.ESP
+  - match: { slug: "bad-default-spells-disable-useless-spells-for-npcs" }   # momw:total-overhaul
+    set:
+      dataPaths: ["BadDefaultSpellsDisableUselessSpellsForNPCs"]
   # content candidate "bad-default-spells-disable-useless-spells-for-npcs" (momw:total-overhaul): MaiqMainland.esp
+  - match: { slug: "fatigue-and-speed-and-carryweight-rebalance-openmw-less-carry-weight" }   # momw:total-overhaul
+    set:
+      dataPaths: ["FatigueAndSpeedAndCarryweightRebalanceOpenMWLess"]
   # content candidate "fatigue-and-speed-and-carryweight-rebalance-openmw-less-carry-weight" (momw:total-overhaul): FatigueSpeedAndCarryWeightRebalance.omwaddon
   # NOT ADOPTED "cooking-and-eating-cooking-and-eating-publicans-expansion" (momw:total-overhaul): missing on disk: CookingAndEatingCookingAndEatingPublicansExpansi/01 PFP - Compat
   - match: { slug: "containers-animated-openmw" }   # momw:total-overhaul
     set:
       dataPaths: ["ContainersAnimatedOpenMW/Containers Animated", "ContainersAnimatedOpenMW/Optional/kollops"]
   # content candidate "containers-animated-openmw" (momw:total-overhaul): Containers Animated.esp
+  - match: { slug: "timescale-change-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TimeScaleChangeOpenMW"]
   # content candidate "timescale-change-openmw" (momw:total-overhaul): TimescaleChange.omwaddon
+  - match: { slug: "clear-your-name" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ClearYourName"]
   # content candidate "clear-your-name" (momw:total-overhaul): Clear Your Name.esp
+  - match: { slug: "corprus-natives" }   # momw:total-overhaul
+    set:
+      dataPaths: ["CorprusNatives"]
   # content candidate "corprus-natives" (momw:total-overhaul): MaiqMainland.esp
+  - match: { slug: "m-aiq-on-the-mainland" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MAiqOnTheMainland"]
   # content candidate "m-aiq-on-the-mainland" (momw:total-overhaul): MaiqMainland.esp
   # NOT ADOPTED "nine-holes" (momw:total-overhaul): missing on disk: Nineholes/00 Core | Nineholes/01 Ald-ruhn, The Rat In The Pot | Nineholes/04 Ebonheart, Six Fishes | Nineholes/05 Moonmoth Legion Fort | Nineholes/06 Pelagiad, Halfway Tavern | Nineholes/07 Sadrith Mora, Dirty Muriel's Cornerclub | Nineholes/08 Seyda Neen, Arrille's Tradehouse | Nineholes/09 (BCOM) Suran, Goldyn Belaram | Nineholes/10 Vivec, Elven Nations Cornerclub
   - match: { slug: "septim-gold-and-dwemer-dumacs" }   # momw:total-overhaul
     set:
       dataPaths: ["SeptimGoldAndDwemerDumacs/00 Core", "SeptimGoldAndDwemerDumacs/01 OpenMW"]
+  - match: { slug: "fmi-caius-big-package" }   # momw:total-overhaul
+    set:
+      dataPaths: ["FMICaiusBigPackage"]
   # content candidate "fmi-caius-big-package" (momw:total-overhaul): FMI_CaiusBigPackage.ESP
+  - match: { slug: "improved-thrown-weapon-projectiles" }   # momw:expanded-vanilla
+    set:
+      dataPaths: ["ImprovedThrownWeaponProjectiles/Data Files"]
   - match: { slug: "big-icons" }   # momw:total-overhaul
     set:
       dataPaths: ["BigIcons/07 8X Textured"]
+  - match: { slug: "yet-another-guard-diversity-regular" }   # momw:total-overhaul
+    set:
+      dataPaths: ["YetAnotherGuardDiversityRegular"]
+  - match: { slug: "openmw-skyrim-style-quest-notifications" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OpenMWSkyrimStyleQuestNotifications"]
   # content candidate "openmw-skyrim-style-quest-notifications" (momw:total-overhaul): SSQN.omwscripts
+  - match: { slug: "tabletop-alchemy-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TabletopAlchemyOpenMW"]
   # content candidate "tabletop-alchemy-openmw" (momw:total-overhaul): TabletopAlchemy.omwscripts
+  - match: { slug: "sme-useful-widgets-actor-info-health-bar-hit-chance-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SMEUsefulWidgetsActorInfoHealthBarHitChanceOpenM/SMEUsefulWidgetsActorInfoHealthBarHitChanceEdited"]
   # content candidate "sme-useful-widgets-actor-info-health-bar-hit-chance-openmw" (momw:total-overhaul): SME - Actor UI and Healthbar.omwscripts
+  - match: { slug: "perfect-placement-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["PerfectPlacementOpenMW"]
   # content candidate "perfect-placement-openmw" (momw:total-overhaul): Perfect Placement.omwscripts
+  - match: { slug: "interface-reimagined-for-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["InterfaceReimaginedForOpenMW"]
+  - match: { slug: "openmw-impact-effects" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OpenMWImpactEffects"]
   # content candidate "openmw-impact-effects" (momw:total-overhaul): Impact Effects.omwscripts
+  - match: { slug: "telvanni-magister-robes" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TelvanniMagisterRobes/Telvanni Magister Robes-52278-1-25-1683240241/Telvanni Magister robes/Data Files"]
   # content candidate "telvanni-magister-robes" (momw:total-overhaul): Telvanni Magister Robes.esp
   # NOT ADOPTED "telvanni-magister-robes-normal-mapped" (momw:total-overhaul): missing on disk: TelvanniMagisterRobesNormalMapped/Mamaea Awakened Normal Mapped | TelvanniMagisterRobesNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | TelvanniMagisterRobesNormalMapped/Morrowind Enhanced Textures Normal Mapped | TelvanniMagisterRobesNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | TelvanniMagisterRobesNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | TelvanniMagisterRobesNormalMapped/PherimComberryBushandIngredientReplacer | TelvanniMagisterRobesNormalMapped/PherimFireFernandFirePetal | TelvanniMagisterRobesNormalMapped/Strider Burial Normal Mapped | TelvanniMagisterRobesNormalMapped/ExcellentGrazalandsAcacia | TelvanniMagisterRobesNormalMapped/RemirosAscadianIslesTrees2 | TelvanniMagisterRobesNormalMapped/New Ilunibi Normal Mapped | TelvanniMagisterRobesNormalMapped/Know Thy Ancestors Normal Mapped | TelvanniMagisterRobesNormalMapped/FMGS - Unique Items Compilation Normal Mapped | TelvanniMagisterRobesNormalMapped/Salts | TelvanniMagisterRobesNormalMapped/HDForge | TelvanniMagisterRobesNormalMapped/AstrologiansGuild | TelvanniMagisterRobesNormalMapped/SecretsOfTheCrystalCity | TelvanniMagisterRobesNormalMapped/OAAB Grazelands Normal Mapped | TelvanniMagisterRobesNormalMapped/BlightedAnimalsRetextured | TelvanniMagisterRobesNormalMapped/UniqueCaveRats20HD | TelvanniMagisterRobesNormalMapped/Creatures_RP Normal Mapped | TelvanniMagisterRobesNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | TelvanniMagisterRobesNormalMapped/Danae's Mods AIO Normal Mapped | TelvanniMagisterRobesNormalMapped/TelEurus | TelvanniMagisterRobesNormalMapped/TheWolverineHall | TelvanniMagisterRobesNormalMapped/BCOM | TelvanniMagisterRobesNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | TelvanniMagisterRobesNormalMapped/NecromArkitektoraHQ | TelvanniMagisterRobesNormalMapped/OAAB Tel Mora Normal Mapped | TelvanniMagisterRobesNormalMapped/The Corprusarium Experience Normal Mapped | TelvanniMagisterRobesNormalMapped/R-Zero's Throbbing Meat Normal Mapped | TelvanniMagisterRobesNormalMapped/TelvanniMagisterRobes | TelvanniMagisterRobesNormalMapped/RemirosVolendrungHD | TelvanniMagisterRobesNormalMapped/UmbraBlademaster | TelvanniMagisterRobesNormalMapped/TheSearchfortheWhiteWave | TelvanniMagisterRobesNormalMapped/UvirithsLegacy | TelvanniMagisterRobesNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "adventurer-s-backpack-wares" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AdventurersBackpackWares"]
   # content candidate "adventurer-s-backpack-wares" (momw:total-overhaul): Adventurer's backback.ESP
   # NOT ADOPTED "mage-robes" (momw:total-overhaul): missing on disk: MageRobes/04 HD Textures
+  - match: { slug: "better-robes" }   # momw:total-overhaul
+    set:
+      dataPaths: ["BetterRobes/Data Files"]
   # content candidate "better-robes" (momw:total-overhaul): Better Robes.ESP
   # NOT ADOPTED "better-robes-tamriel-rebuilt-patch" (momw:total-overhaul): missing on disk: BetterRobesTamrielRebuiltPatch/Better Robes Updated TR Patch
+  - match: { slug: "ebony-mail-replacer" }   # momw:total-overhaul
+    set:
+      dataPaths: ["EbonyMailReplacer"]
   # content candidate "ebony-mail-replacer" (momw:total-overhaul): EbonyMailReplacer.ESP
+  - match: { slug: "daedric-lord-armor" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DaedricLordArmor"]
   # content candidate "daedric-lord-armor" (momw:total-overhaul): DaedricArmor.esp
   - match: { slug: "better-clothes-complete" }   # momw:total-overhaul
     set:
       dataPaths: ["BetterClothesComplete/#Data Files"]
   # content candidate "better-clothes-complete" (momw:total-overhaul): Better Clothes Complete.ESP
   # NOT ADOPTED "better-clothes-normal-mapped" (momw:total-overhaul): missing on disk: BetterClothesNormalMapped/Mamaea Awakened Normal Mapped | BetterClothesNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | BetterClothesNormalMapped/Morrowind Enhanced Textures Normal Mapped | BetterClothesNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | BetterClothesNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | BetterClothesNormalMapped/PherimComberryBushandIngredientReplacer | BetterClothesNormalMapped/PherimFireFernandFirePetal | BetterClothesNormalMapped/Strider Burial Normal Mapped | BetterClothesNormalMapped/ExcellentGrazalandsAcacia | BetterClothesNormalMapped/RemirosAscadianIslesTrees2 | BetterClothesNormalMapped/New Ilunibi Normal Mapped | BetterClothesNormalMapped/Know Thy Ancestors Normal Mapped | BetterClothesNormalMapped/FMGS - Unique Items Compilation Normal Mapped | BetterClothesNormalMapped/Salts | BetterClothesNormalMapped/HDForge | BetterClothesNormalMapped/AstrologiansGuild | BetterClothesNormalMapped/SecretsOfTheCrystalCity | BetterClothesNormalMapped/OAAB Grazelands Normal Mapped | BetterClothesNormalMapped/BlightedAnimalsRetextured | BetterClothesNormalMapped/UniqueCaveRats20HD | BetterClothesNormalMapped/Creatures_RP Normal Mapped | BetterClothesNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | BetterClothesNormalMapped/Danae's Mods AIO Normal Mapped | BetterClothesNormalMapped/TelEurus | BetterClothesNormalMapped/TheWolverineHall | BetterClothesNormalMapped/BCOM | BetterClothesNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | BetterClothesNormalMapped/NecromArkitektoraHQ | BetterClothesNormalMapped/OAAB Tel Mora Normal Mapped | BetterClothesNormalMapped/The Corprusarium Experience Normal Mapped | BetterClothesNormalMapped/R-Zero's Throbbing Meat Normal Mapped | BetterClothesNormalMapped/TelvanniMagisterRobes | BetterClothesNormalMapped/RemirosVolendrungHD | BetterClothesNormalMapped/UmbraBlademaster | BetterClothesNormalMapped/TheSearchfortheWhiteWave | BetterClothesNormalMapped/UvirithsLegacy | BetterClothesNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "common-shoe-pack" }   # momw:total-overhaul
+    set:
+      dataPaths: ["CommonShoePack/Data Files"]
+  - match: { slug: "new-fists-of-randagulf" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NewFistsOfRandagulf/Data files"]
   # content candidate "new-fists-of-randagulf" (momw:total-overhaul): New Randagulf's Fists.ESP
+  - match: { slug: "new-gondoiler-helm" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NewGondoilerHelm/NewGondolierHelm"]
   # NOT ADOPTED "sm-dagoth-mask" (momw:total-overhaul): missing on disk: SMDagothMask/update_and_normal_map
   - match: { slug: "sm-telvanni-ceremonial-robe" }   # momw:total-overhaul
     set:
       dataPaths: ["SMTelvanniCeremonialRobe/Telvanni_Robe/Data files", "SMTelvanniCeremonialRobe/Telvanni_Robe/Icons HD 512 for OpenMW"]
   # NOT ADOPTED "sm-boiled-netch-leather-armor-set-custom-style" (momw:total-overhaul): missing on disk: SMBoiledNetchLeatherArmorSetCustomStyle/SM_Boiled_Armor_Set_Vanila Style/Data Files
+  - match: { slug: "new-bow-of-shadows" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NewBowOfShadows/Data files"]
   # content candidate "new-bow-of-shadows" (momw:total-overhaul): New Bow of Shadows.esp
+  - match: { slug: "new-widowmaker" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NewWidowmaker/Data Files"]
   # content candidate "new-widowmaker" (momw:total-overhaul): New Widowmaker.ESP
   # NOT ADOPTED "skullcrusher-redone" (momw:total-overhaul): missing on disk: SkullcrusherRedone/modern | SkullcrusherRedone/diff-spec-normal | SkullcrusherRedone/diff-spec-normal/textures
+  - match: { slug: "the-madstone" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TheMadstone"]
   # content candidate "the-madstone" (momw:total-overhaul): The Madstone.ESP
+  - match: { slug: "sm-mace-of-aevar-stone-singer-replacer-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SMMaceOfAevarStoneSingerReplacerOpenMW/sm_aevar_mace/Data files"]
   # NOT ADOPTED "sm-tools-of-kagrenak" (momw:total-overhaul): missing on disk: SMToolsOfKagrenak/update_kg_tools/sheath and glow/Data files
   # NOT ADOPTED "better-sounds-yet-another-patch" (momw:total-overhaul): missing on disk: BetterSoundsYetAnotherPatch/01 PFP - Compat
+  - match: { slug: "store-entrance-chimes" }   # momw:total-overhaul
+    set:
+      dataPaths: ["StoreEntranceChimes"]
+  - match: { slug: "weapon-sheathing" }   # momw:total-overhaul
+    set:
+      dataPaths: ["WeaponSheathing/Data Files"]
+  - match: { slug: "weapon-sheathing-additions" }   # momw:total-overhaul
+    set:
+      dataPaths: ["WeaponSheathingAdditions"]
   # NOT ADOPTED "simply-walking-remastered" (momw:total-overhaul): missing on disk: SimplyWalkingRemastered/Simply Walking (WS Edition)
+  - match: { slug: "reanimation-v2-rogue-first-person-animation-pack" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ReAnimationV2RogueFirstpersonAnimationPack"]
   # content candidate "reanimation-v2-rogue-first-person-animation-pack" (momw:total-overhaul): ReAnimation_API.omwscripts | ReAnimation_v2_Rogue.omwscripts
   # NOT ADOPTED "divine-dagoths" (momw:total-overhaul): missing on disk: DivineDagoths/01 - OpenMW Model Fix | DivineDagoths/01 - Uthol's Greeting
   # NOT ADOPTED "by-azura" (momw:total-overhaul): missing on disk: ByAzura/01 High Res Textures
@@ -119,10 +269,16 @@ rules:
     set:
       dataPaths: ["BetterDwarvenSpectresMerAndMaidens/00 Core", "BetterDwarvenSpectresMerAndMaidens/01 Dwarven Spectres"]
   # content candidate "better-dwarven-spectres-mer-and-maidens" (momw:total-overhaul): Dwarven Spectres BB.ESP
+  - match: { slug: "better-almalexia" }   # momw:total-overhaul
+    set:
+      dataPaths: ["BetterAlmalexia"]
   - match: { slug: "tamriel-rebuilt" }   # momw:total-overhaul
     set:
       dataPaths: ["TamrielRebuilt/00 Core", "TamrielRebuilt/01 Faction Integration"]
   # content candidate "tamriel-rebuilt" (momw:total-overhaul): TR_Mainland.esm | TR_Factions.esp | tamrielrebuilt.omwscripts
+  - match: { slug: "project-cyrodiil" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ProjectCyrodiil/00 Core"]
   # content candidate "project-cyrodiil" (momw:total-overhaul): Cyr_Main.esm
   - match: { slug: "skyrim-home-of-the-nords" }   # momw:total-overhaul
     set:
@@ -131,10 +287,16 @@ rules:
   # NOT ADOPTED "wyrmhaven-normal-mapped" (momw:total-overhaul): missing on disk: WyrmhavenNormalMapped/Mamaea Awakened Normal Mapped | WyrmhavenNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | WyrmhavenNormalMapped/Morrowind Enhanced Textures Normal Mapped | WyrmhavenNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | WyrmhavenNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | WyrmhavenNormalMapped/PherimComberryBushandIngredientReplacer | WyrmhavenNormalMapped/PherimFireFernandFirePetal | WyrmhavenNormalMapped/Strider Burial Normal Mapped | WyrmhavenNormalMapped/ExcellentGrazalandsAcacia | WyrmhavenNormalMapped/RemirosAscadianIslesTrees2 | WyrmhavenNormalMapped/New Ilunibi Normal Mapped | WyrmhavenNormalMapped/Know Thy Ancestors Normal Mapped | WyrmhavenNormalMapped/FMGS - Unique Items Compilation Normal Mapped | WyrmhavenNormalMapped/Salts | WyrmhavenNormalMapped/HDForge | WyrmhavenNormalMapped/AstrologiansGuild | WyrmhavenNormalMapped/SecretsOfTheCrystalCity | WyrmhavenNormalMapped/OAAB Grazelands Normal Mapped | WyrmhavenNormalMapped/BlightedAnimalsRetextured | WyrmhavenNormalMapped/UniqueCaveRats20HD | WyrmhavenNormalMapped/Creatures_RP Normal Mapped | WyrmhavenNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | WyrmhavenNormalMapped/Danae's Mods AIO Normal Mapped | WyrmhavenNormalMapped/TelEurus | WyrmhavenNormalMapped/TheWolverineHall | WyrmhavenNormalMapped/BCOM | WyrmhavenNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | WyrmhavenNormalMapped/NecromArkitektoraHQ | WyrmhavenNormalMapped/OAAB Tel Mora Normal Mapped | WyrmhavenNormalMapped/The Corprusarium Experience Normal Mapped | WyrmhavenNormalMapped/R-Zero's Throbbing Meat Normal Mapped | WyrmhavenNormalMapped/TelvanniMagisterRobes | WyrmhavenNormalMapped/RemirosVolendrungHD | WyrmhavenNormalMapped/UmbraBlademaster | WyrmhavenNormalMapped/TheSearchfortheWhiteWave | WyrmhavenNormalMapped/UvirithsLegacy | WyrmhavenNormalMapped/DunmerLanternsReplacer
   # NOT ADOPTED "rise-of-house-telvanni" (momw:total-overhaul): missing on disk: RiseOfHouseTelvanni/FlaskMeshUpdate
   # NOT ADOPTED "uviriths-legacy-normal-mapped" (momw:total-overhaul): missing on disk: UvirithsLegacyNormalMapped/Mamaea Awakened Normal Mapped | UvirithsLegacyNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | UvirithsLegacyNormalMapped/Morrowind Enhanced Textures Normal Mapped | UvirithsLegacyNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | UvirithsLegacyNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | UvirithsLegacyNormalMapped/PherimComberryBushandIngredientReplacer | UvirithsLegacyNormalMapped/PherimFireFernandFirePetal | UvirithsLegacyNormalMapped/Strider Burial Normal Mapped | UvirithsLegacyNormalMapped/ExcellentGrazalandsAcacia | UvirithsLegacyNormalMapped/RemirosAscadianIslesTrees2 | UvirithsLegacyNormalMapped/New Ilunibi Normal Mapped | UvirithsLegacyNormalMapped/Know Thy Ancestors Normal Mapped | UvirithsLegacyNormalMapped/FMGS - Unique Items Compilation Normal Mapped | UvirithsLegacyNormalMapped/Salts | UvirithsLegacyNormalMapped/HDForge | UvirithsLegacyNormalMapped/AstrologiansGuild | UvirithsLegacyNormalMapped/SecretsOfTheCrystalCity | UvirithsLegacyNormalMapped/OAAB Grazelands Normal Mapped | UvirithsLegacyNormalMapped/BlightedAnimalsRetextured | UvirithsLegacyNormalMapped/UniqueCaveRats20HD | UvirithsLegacyNormalMapped/Creatures_RP Normal Mapped | UvirithsLegacyNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | UvirithsLegacyNormalMapped/Danae's Mods AIO Normal Mapped | UvirithsLegacyNormalMapped/TelEurus | UvirithsLegacyNormalMapped/TheWolverineHall | UvirithsLegacyNormalMapped/BCOM | UvirithsLegacyNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | UvirithsLegacyNormalMapped/NecromArkitektoraHQ | UvirithsLegacyNormalMapped/OAAB Tel Mora Normal Mapped | UvirithsLegacyNormalMapped/The Corprusarium Experience Normal Mapped | UvirithsLegacyNormalMapped/R-Zero's Throbbing Meat Normal Mapped | UvirithsLegacyNormalMapped/TelvanniMagisterRobes | UvirithsLegacyNormalMapped/RemirosVolendrungHD | UvirithsLegacyNormalMapped/UmbraBlademaster | UvirithsLegacyNormalMapped/TheSearchfortheWhiteWave | UvirithsLegacyNormalMapped/UvirithsLegacy | UvirithsLegacyNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "the-archmagister-s-abode" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TheArchmagistersAbode/data files"]
   # content candidate "the-archmagister-s-abode" (momw:total-overhaul): The Archmagister's Abode.ESP
   # NOT ADOPTED "a-strange-plant-normal-mapped" (momw:total-overhaul): missing on disk: AStrangePlantNormalMapped/Mamaea Awakened Normal Mapped | AStrangePlantNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | AStrangePlantNormalMapped/Morrowind Enhanced Textures Normal Mapped | AStrangePlantNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | AStrangePlantNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | AStrangePlantNormalMapped/PherimComberryBushandIngredientReplacer | AStrangePlantNormalMapped/PherimFireFernandFirePetal | AStrangePlantNormalMapped/Strider Burial Normal Mapped | AStrangePlantNormalMapped/ExcellentGrazalandsAcacia | AStrangePlantNormalMapped/RemirosAscadianIslesTrees2 | AStrangePlantNormalMapped/New Ilunibi Normal Mapped | AStrangePlantNormalMapped/Know Thy Ancestors Normal Mapped | AStrangePlantNormalMapped/FMGS - Unique Items Compilation Normal Mapped | AStrangePlantNormalMapped/Salts | AStrangePlantNormalMapped/HDForge | AStrangePlantNormalMapped/AstrologiansGuild | AStrangePlantNormalMapped/SecretsOfTheCrystalCity | AStrangePlantNormalMapped/OAAB Grazelands Normal Mapped | AStrangePlantNormalMapped/BlightedAnimalsRetextured | AStrangePlantNormalMapped/UniqueCaveRats20HD | AStrangePlantNormalMapped/Creatures_RP Normal Mapped | AStrangePlantNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | AStrangePlantNormalMapped/Danae's Mods AIO Normal Mapped | AStrangePlantNormalMapped/TelEurus | AStrangePlantNormalMapped/TheWolverineHall | AStrangePlantNormalMapped/BCOM | AStrangePlantNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | AStrangePlantNormalMapped/NecromArkitektoraHQ | AStrangePlantNormalMapped/OAAB Tel Mora Normal Mapped | AStrangePlantNormalMapped/The Corprusarium Experience Normal Mapped | AStrangePlantNormalMapped/R-Zero's Throbbing Meat Normal Mapped | AStrangePlantNormalMapped/TelvanniMagisterRobes | AStrangePlantNormalMapped/RemirosVolendrungHD | AStrangePlantNormalMapped/UmbraBlademaster | AStrangePlantNormalMapped/TheSearchfortheWhiteWave | AStrangePlantNormalMapped/UvirithsLegacy | AStrangePlantNormalMapped/DunmerLanternsReplacer
   # NOT ADOPTED "magicalmissions-normal-mapped" (momw:total-overhaul): missing on disk: MagicalMissionsNormalMapped/Mamaea Awakened Normal Mapped | MagicalMissionsNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | MagicalMissionsNormalMapped/Morrowind Enhanced Textures Normal Mapped | MagicalMissionsNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | MagicalMissionsNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | MagicalMissionsNormalMapped/PherimComberryBushandIngredientReplacer | MagicalMissionsNormalMapped/PherimFireFernandFirePetal | MagicalMissionsNormalMapped/Strider Burial Normal Mapped | MagicalMissionsNormalMapped/ExcellentGrazalandsAcacia | MagicalMissionsNormalMapped/RemirosAscadianIslesTrees2 | MagicalMissionsNormalMapped/New Ilunibi Normal Mapped | MagicalMissionsNormalMapped/Know Thy Ancestors Normal Mapped | MagicalMissionsNormalMapped/FMGS - Unique Items Compilation Normal Mapped | MagicalMissionsNormalMapped/Salts | MagicalMissionsNormalMapped/HDForge | MagicalMissionsNormalMapped/AstrologiansGuild | MagicalMissionsNormalMapped/SecretsOfTheCrystalCity | MagicalMissionsNormalMapped/OAAB Grazelands Normal Mapped | MagicalMissionsNormalMapped/BlightedAnimalsRetextured | MagicalMissionsNormalMapped/UniqueCaveRats20HD | MagicalMissionsNormalMapped/Creatures_RP Normal Mapped | MagicalMissionsNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | MagicalMissionsNormalMapped/Danae's Mods AIO Normal Mapped | MagicalMissionsNormalMapped/TelEurus | MagicalMissionsNormalMapped/TheWolverineHall | MagicalMissionsNormalMapped/BCOM | MagicalMissionsNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | MagicalMissionsNormalMapped/NecromArkitektoraHQ | MagicalMissionsNormalMapped/OAAB Tel Mora Normal Mapped | MagicalMissionsNormalMapped/The Corprusarium Experience Normal Mapped | MagicalMissionsNormalMapped/R-Zero's Throbbing Meat Normal Mapped | MagicalMissionsNormalMapped/TelvanniMagisterRobes | MagicalMissionsNormalMapped/RemirosVolendrungHD | MagicalMissionsNormalMapped/UmbraBlademaster | MagicalMissionsNormalMapped/TheSearchfortheWhiteWave | MagicalMissionsNormalMapped/UvirithsLegacy | MagicalMissionsNormalMapped/DunmerLanternsReplacer
   # NOT ADOPTED "sotha-sil-expanded-normal-mapped" (momw:total-overhaul): missing on disk: SothaSilExpandedNormalMapped/Mamaea Awakened Normal Mapped | SothaSilExpandedNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | SothaSilExpandedNormalMapped/Morrowind Enhanced Textures Normal Mapped | SothaSilExpandedNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | SothaSilExpandedNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | SothaSilExpandedNormalMapped/PherimComberryBushandIngredientReplacer | SothaSilExpandedNormalMapped/PherimFireFernandFirePetal | SothaSilExpandedNormalMapped/Strider Burial Normal Mapped | SothaSilExpandedNormalMapped/ExcellentGrazalandsAcacia | SothaSilExpandedNormalMapped/RemirosAscadianIslesTrees2 | SothaSilExpandedNormalMapped/New Ilunibi Normal Mapped | SothaSilExpandedNormalMapped/Know Thy Ancestors Normal Mapped | SothaSilExpandedNormalMapped/FMGS - Unique Items Compilation Normal Mapped | SothaSilExpandedNormalMapped/Salts | SothaSilExpandedNormalMapped/HDForge | SothaSilExpandedNormalMapped/AstrologiansGuild | SothaSilExpandedNormalMapped/SecretsOfTheCrystalCity | SothaSilExpandedNormalMapped/OAAB Grazelands Normal Mapped | SothaSilExpandedNormalMapped/BlightedAnimalsRetextured | SothaSilExpandedNormalMapped/UniqueCaveRats20HD | SothaSilExpandedNormalMapped/Creatures_RP Normal Mapped | SothaSilExpandedNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | SothaSilExpandedNormalMapped/Danae's Mods AIO Normal Mapped | SothaSilExpandedNormalMapped/TelEurus | SothaSilExpandedNormalMapped/TheWolverineHall | SothaSilExpandedNormalMapped/BCOM | SothaSilExpandedNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | SothaSilExpandedNormalMapped/NecromArkitektoraHQ | SothaSilExpandedNormalMapped/OAAB Tel Mora Normal Mapped | SothaSilExpandedNormalMapped/The Corprusarium Experience Normal Mapped | SothaSilExpandedNormalMapped/R-Zero's Throbbing Meat Normal Mapped | SothaSilExpandedNormalMapped/TelvanniMagisterRobes | SothaSilExpandedNormalMapped/RemirosVolendrungHD | SothaSilExpandedNormalMapped/UmbraBlademaster | SothaSilExpandedNormalMapped/TheSearchfortheWhiteWave | SothaSilExpandedNormalMapped/UvirithsLegacy | SothaSilExpandedNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "morag-tong-polished-bcom-patch" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MoragTongPolishedBCoMPatch"]
   # content candidate "morag-tong-polished-bcom-patch" (momw:total-overhaul): Dunmer Stronghold - Hlormaren V1.0.esp
   # NOT ADOPTED "morag-tong-polished-tr-factions-patch" (momw:total-overhaul): missing on disk: MoragTongPolishedTRFactionsPatch/01 PFP - Compat
   - match: { slug: "secrets-of-the-crystal-city" }   # momw:total-overhaul
@@ -149,6 +311,9 @@ rules:
   # NOT ADOPTED "tel-eurus-normal-mapped" (momw:total-overhaul): missing on disk: TelEurusNormalMapped/Mamaea Awakened Normal Mapped | TelEurusNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | TelEurusNormalMapped/Morrowind Enhanced Textures Normal Mapped | TelEurusNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | TelEurusNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | TelEurusNormalMapped/PherimComberryBushandIngredientReplacer | TelEurusNormalMapped/PherimFireFernandFirePetal | TelEurusNormalMapped/Strider Burial Normal Mapped | TelEurusNormalMapped/ExcellentGrazalandsAcacia | TelEurusNormalMapped/RemirosAscadianIslesTrees2 | TelEurusNormalMapped/New Ilunibi Normal Mapped | TelEurusNormalMapped/Know Thy Ancestors Normal Mapped | TelEurusNormalMapped/FMGS - Unique Items Compilation Normal Mapped | TelEurusNormalMapped/Salts | TelEurusNormalMapped/HDForge | TelEurusNormalMapped/AstrologiansGuild | TelEurusNormalMapped/SecretsOfTheCrystalCity | TelEurusNormalMapped/OAAB Grazelands Normal Mapped | TelEurusNormalMapped/BlightedAnimalsRetextured | TelEurusNormalMapped/UniqueCaveRats20HD | TelEurusNormalMapped/Creatures_RP Normal Mapped | TelEurusNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | TelEurusNormalMapped/Danae's Mods AIO Normal Mapped | TelEurusNormalMapped/TelEurus | TelEurusNormalMapped/TheWolverineHall | TelEurusNormalMapped/BCOM | TelEurusNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | TelEurusNormalMapped/NecromArkitektoraHQ | TelEurusNormalMapped/OAAB Tel Mora Normal Mapped | TelEurusNormalMapped/The Corprusarium Experience Normal Mapped | TelEurusNormalMapped/R-Zero's Throbbing Meat Normal Mapped | TelEurusNormalMapped/TelvanniMagisterRobes | TelEurusNormalMapped/RemirosVolendrungHD | TelEurusNormalMapped/UmbraBlademaster | TelEurusNormalMapped/TheSearchfortheWhiteWave | TelEurusNormalMapped/UvirithsLegacy | TelEurusNormalMapped/DunmerLanternsReplacer
   # NOT ADOPTED "astrologian-s-guild" (momw:total-overhaul): missing on disk: AstrologiansGuild/main | AstrologiansGuild/OpenMWpatch
   # NOT ADOPTED "astrologians-guild-normal-mapped" (momw:total-overhaul): missing on disk: AstrologiansGuildNormalMapped/Mamaea Awakened Normal Mapped | AstrologiansGuildNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | AstrologiansGuildNormalMapped/Morrowind Enhanced Textures Normal Mapped | AstrologiansGuildNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | AstrologiansGuildNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | AstrologiansGuildNormalMapped/PherimComberryBushandIngredientReplacer | AstrologiansGuildNormalMapped/PherimFireFernandFirePetal | AstrologiansGuildNormalMapped/Strider Burial Normal Mapped | AstrologiansGuildNormalMapped/ExcellentGrazalandsAcacia | AstrologiansGuildNormalMapped/RemirosAscadianIslesTrees2 | AstrologiansGuildNormalMapped/New Ilunibi Normal Mapped | AstrologiansGuildNormalMapped/Know Thy Ancestors Normal Mapped | AstrologiansGuildNormalMapped/FMGS - Unique Items Compilation Normal Mapped | AstrologiansGuildNormalMapped/Salts | AstrologiansGuildNormalMapped/HDForge | AstrologiansGuildNormalMapped/AstrologiansGuild | AstrologiansGuildNormalMapped/SecretsOfTheCrystalCity | AstrologiansGuildNormalMapped/OAAB Grazelands Normal Mapped | AstrologiansGuildNormalMapped/BlightedAnimalsRetextured | AstrologiansGuildNormalMapped/UniqueCaveRats20HD | AstrologiansGuildNormalMapped/Creatures_RP Normal Mapped | AstrologiansGuildNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | AstrologiansGuildNormalMapped/Danae's Mods AIO Normal Mapped | AstrologiansGuildNormalMapped/TelEurus | AstrologiansGuildNormalMapped/TheWolverineHall | AstrologiansGuildNormalMapped/BCOM | AstrologiansGuildNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | AstrologiansGuildNormalMapped/NecromArkitektoraHQ | AstrologiansGuildNormalMapped/OAAB Tel Mora Normal Mapped | AstrologiansGuildNormalMapped/The Corprusarium Experience Normal Mapped | AstrologiansGuildNormalMapped/R-Zero's Throbbing Meat Normal Mapped | AstrologiansGuildNormalMapped/TelvanniMagisterRobes | AstrologiansGuildNormalMapped/RemirosVolendrungHD | AstrologiansGuildNormalMapped/UmbraBlademaster | AstrologiansGuildNormalMapped/TheSearchfortheWhiteWave | AstrologiansGuildNormalMapped/UvirithsLegacy | AstrologiansGuildNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "quests-for-clans-and-vampire-legends" }   # momw:total-overhaul
+    set:
+      dataPaths: ["QuestsForClansAndVampireLegends/Quests for Clans and Vampire Legends/Data Files"]
   # content candidate "quests-for-clans-and-vampire-legends" (momw:total-overhaul): Quests for Clans and Vampire Legends.ESP
   # NOT ADOPTED "quests-for-clans-and-vampire-legends-patches" (momw:total-overhaul): missing on disk: QuestsForClansAndVampireLegendsPatches/01 PFP - Compat
   - match: { slug: "the-corprusarium-experience" }   # momw:total-overhaul
@@ -156,9 +321,27 @@ rules:
       dataPaths: ["TheCorprusariumExperience/00 - Core", "TheCorprusariumExperience/02 - Doors of Oblivion patch"]
   # content candidate "the-corprusarium-experience" (momw:total-overhaul): The_corprusarium_Exp.ESP | Corprusarium_Doors_of_Oblivion_Patch.ESP
   # NOT ADOPTED "roaring-arena" (momw:total-overhaul): missing on disk: RoaringArena/Data Files
+  - match: { slug: "imperial-legion-expansion" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ImperialLegionExpansion"]
+  - match: { slug: "ebonheart-underworks" }   # momw:total-overhaul
+    set:
+      dataPaths: ["EbonheartUnderworks"]
   # content candidate "ebonheart-underworks" (momw:total-overhaul): Ebonheart_Underworks.esp
   # NOT ADOPTED "guild-of-vampire-hunters-the-weary-vampire-patch" (momw:total-overhaul): missing on disk: GuildOfVampireHuntersTheWearyVampirePatch/02 Shacks Arkitektora | GuildOfVampireHuntersTheWearyVampirePatch/04 Vivec Arkitektora | GuildOfVampireHuntersTheWearyVampirePatch/01 Redoran Arkitektora
+  - match: { slug: "oh-no-stolen-reports" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OhNoStolenReports"]
   # content candidate "oh-no-stolen-reports" (momw:total-overhaul): onsr.esp
+  - match: { slug: "master-index-redux" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MasterIndexRedux"]
+  - match: { slug: "correct-meshes" }   # momw:total-overhaul
+    set:
+      dataPaths: ["CorrectMeshes/Data Files"]
+  - match: { slug: "correct-uv-rocks" }   # momw:total-overhaul
+    set:
+      dataPaths: ["CorrectUVRocks/Data Files"]
   - match: { slug: "morrowind-optimization-patch" }   # momw:total-overhaul
     set:
       dataPaths: ["MorrowindOptimizationPatch/00 Core", "MorrowindOptimizationPatch/05 Graphic Herbalism Patch", "MorrowindOptimizationPatch/02 Weapon Sheathing Patch"]
@@ -169,28 +352,79 @@ rules:
   # NOT ADOPTED "atlas-textures-aio-normal-mapped" (momw:total-overhaul): missing on disk: AtlasTexturesAIONormalMapped/Mamaea Awakened Normal Mapped | AtlasTexturesAIONormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | AtlasTexturesAIONormalMapped/Morrowind Enhanced Textures Normal Mapped | AtlasTexturesAIONormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | AtlasTexturesAIONormalMapped/PherimComberryBushandIngredientReplacer | AtlasTexturesAIONormalMapped/PherimFireFernandFirePetal | AtlasTexturesAIONormalMapped/Strider Burial Normal Mapped | AtlasTexturesAIONormalMapped/ExcellentGrazalandsAcacia | AtlasTexturesAIONormalMapped/RemirosAscadianIslesTrees2 | AtlasTexturesAIONormalMapped/New Ilunibi Normal Mapped | AtlasTexturesAIONormalMapped/Know Thy Ancestors Normal Mapped | AtlasTexturesAIONormalMapped/FMGS - Unique Items Compilation Normal Mapped | AtlasTexturesAIONormalMapped/Salts | AtlasTexturesAIONormalMapped/HDForge | AtlasTexturesAIONormalMapped/AstrologiansGuild | AtlasTexturesAIONormalMapped/SecretsOfTheCrystalCity | AtlasTexturesAIONormalMapped/OAAB Grazelands Normal Mapped | AtlasTexturesAIONormalMapped/BlightedAnimalsRetextured | AtlasTexturesAIONormalMapped/UniqueCaveRats20HD | AtlasTexturesAIONormalMapped/Creatures_RP Normal Mapped | AtlasTexturesAIONormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | AtlasTexturesAIONormalMapped/Danae's Mods AIO Normal Mapped | AtlasTexturesAIONormalMapped/TelEurus | AtlasTexturesAIONormalMapped/TheWolverineHall | AtlasTexturesAIONormalMapped/BCOM | AtlasTexturesAIONormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | AtlasTexturesAIONormalMapped/NecromArkitektoraHQ | AtlasTexturesAIONormalMapped/OAAB Tel Mora Normal Mapped | AtlasTexturesAIONormalMapped/The Corprusarium Experience Normal Mapped | AtlasTexturesAIONormalMapped/R-Zero's Throbbing Meat Normal Mapped | AtlasTexturesAIONormalMapped/TelvanniMagisterRobes | AtlasTexturesAIONormalMapped/RemirosVolendrungHD | AtlasTexturesAIONormalMapped/UmbraBlademaster | AtlasTexturesAIONormalMapped/TheSearchfortheWhiteWave | AtlasTexturesAIONormalMapped/UvirithsLegacy | AtlasTexturesAIONormalMapped/DunmerLanternsReplacer
   # NOT ADOPTED "graphical-herbalism-openmw" (momw:total-overhaul): missing on disk: GraphicalHerbalismOpenMW/00 Correct UV Ore + README | GraphicalHerbalismOpenMW/12 Atlas - Smoothed BC Mushrooms | GraphicalHerbalismOpenMW/01 Pherim's Replacers | GraphicalHerbalismOpenMW/15 Apel's Azura's Coast | GraphicalHerbalismOpenMW/03 Pherim Pulsing Kwama | GraphicalHerbalismOpenMW/19 Glass Glowset ores
   # NOT ADOPTED "graphic-herbalism-patches-and-replacers" (momw:total-overhaul): missing on disk: GraphicHerbalismPatchesAndReplacers/00 Correct UV Ore + README | GraphicHerbalismPatchesAndReplacers/12 Atlas - Smoothed BC Mushrooms | GraphicHerbalismPatchesAndReplacers/01 Pherim's Replacers | GraphicHerbalismPatchesAndReplacers/15 Apel's Azura's Coast | GraphicHerbalismPatchesAndReplacers/03 Pherim Pulsing Kwama | GraphicHerbalismPatchesAndReplacers/19 Glass Glowset ores
+  - match: { slug: "dwemer-mesh-improvement" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DwemerMeshImprovement"]
   - match: { slug: "dunmer-lanterns-replacer" }   # momw:total-overhaul
     set:
       dataPaths: ["DunmerLanternsReplacer/01 Glow Effect", "DunmerLanternsReplacer/04 Tamriel_Data Patch - Glow Effect", "DunmerLanternsReplacer/05 OAAB_Data Patch - Glow Effect"]
   # NOT ADOPTED "dunmer-lanterns-replacer-normal-mapped" (momw:total-overhaul): missing on disk: DunmerLanternsReplacerNormalMapped/Mamaea Awakened Normal Mapped | DunmerLanternsReplacerNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | DunmerLanternsReplacerNormalMapped/Morrowind Enhanced Textures Normal Mapped | DunmerLanternsReplacerNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | DunmerLanternsReplacerNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | DunmerLanternsReplacerNormalMapped/PherimComberryBushandIngredientReplacer | DunmerLanternsReplacerNormalMapped/PherimFireFernandFirePetal | DunmerLanternsReplacerNormalMapped/Strider Burial Normal Mapped | DunmerLanternsReplacerNormalMapped/ExcellentGrazalandsAcacia | DunmerLanternsReplacerNormalMapped/RemirosAscadianIslesTrees2 | DunmerLanternsReplacerNormalMapped/New Ilunibi Normal Mapped | DunmerLanternsReplacerNormalMapped/Know Thy Ancestors Normal Mapped | DunmerLanternsReplacerNormalMapped/FMGS - Unique Items Compilation Normal Mapped | DunmerLanternsReplacerNormalMapped/Salts | DunmerLanternsReplacerNormalMapped/HDForge | DunmerLanternsReplacerNormalMapped/AstrologiansGuild | DunmerLanternsReplacerNormalMapped/SecretsOfTheCrystalCity | DunmerLanternsReplacerNormalMapped/OAAB Grazelands Normal Mapped | DunmerLanternsReplacerNormalMapped/BlightedAnimalsRetextured | DunmerLanternsReplacerNormalMapped/UniqueCaveRats20HD | DunmerLanternsReplacerNormalMapped/Creatures_RP Normal Mapped | DunmerLanternsReplacerNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | DunmerLanternsReplacerNormalMapped/Danae's Mods AIO Normal Mapped | DunmerLanternsReplacerNormalMapped/TelEurus | DunmerLanternsReplacerNormalMapped/TheWolverineHall | DunmerLanternsReplacerNormalMapped/BCOM | DunmerLanternsReplacerNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | DunmerLanternsReplacerNormalMapped/NecromArkitektoraHQ | DunmerLanternsReplacerNormalMapped/OAAB Tel Mora Normal Mapped | DunmerLanternsReplacerNormalMapped/The Corprusarium Experience Normal Mapped | DunmerLanternsReplacerNormalMapped/R-Zero's Throbbing Meat Normal Mapped | DunmerLanternsReplacerNormalMapped/TelvanniMagisterRobes | DunmerLanternsReplacerNormalMapped/RemirosVolendrungHD | DunmerLanternsReplacerNormalMapped/UmbraBlademaster | DunmerLanternsReplacerNormalMapped/TheSearchfortheWhiteWave | DunmerLanternsReplacerNormalMapped/UvirithsLegacy | DunmerLanternsReplacerNormalMapped/DunmerLanternsReplacer
   # NOT ADOPTED "rr-better-meshes" (momw:total-overhaul): missing on disk: RRBetterMeshes/BetterCratesAndBarrels
+  - match: { slug: "dwemer-mesh-improvemen-revamped" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DwemerMeshImprovemenRevamped"]
+  - match: { slug: "subtle-smoke" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SubtleSmoke"]
+  - match: { slug: "dunmer-ashpits" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DunmerAshpits/Data files"]
   - match: { slug: "better-waterfalls" }   # momw:total-overhaul
     set:
       dataPaths: ["BetterWaterfalls/00 Core", "BetterWaterfalls/02 Tamriel Rebuilt Water"]
+  - match: { slug: "mistify" }   # momw:total-overhaul
+    set:
+      dataPaths: ["Mistify/00 Core"]
   # content candidate "mistify" (momw:total-overhaul): mistify.ESP
+  - match: { slug: "scum-retexture" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ScumRetexture"]
+  - match: { slug: "scummy-scum" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ScummyScum/Scummy Scum/Data Files"]
+  - match: { slug: "pr-perfect-scum" }   # momw:total-overhaul
+    set:
+      dataPaths: ["PRPerfectScum"]
   # content candidate "pr-perfect-scum" (momw:total-overhaul): PR Perfect Scum.esp
+  - match: { slug: "correct-iron-warhammer" }   # momw:expanded-vanilla
+    set:
+      dataPaths: ["CorrectIronWarhammer/Data Files"]
+  - match: { slug: "swayland" }   # momw:total-overhaul
+    set:
+      dataPaths: ["Swayland"]
+  - match: { slug: "openmw-dynamic-water-meshes" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OpenMWDynamicWaterMeshes"]
   # NOT ADOPTED "enhanced-textures" (momw:total-overhaul): missing on disk: EnhancedTextures/MET 6-1 main | EnhancedTextures/Interface | EnhancedTextures/atlas
   # NOT ADOPTED "morrowind-enhanced-textures-normal-mapped" (momw:total-overhaul): missing on disk: MorrowindEnhancedTexturesNormalMapped/Mamaea Awakened Normal Mapped | MorrowindEnhancedTexturesNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | MorrowindEnhancedTexturesNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | MorrowindEnhancedTexturesNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | MorrowindEnhancedTexturesNormalMapped/PherimComberryBushandIngredientReplacer | MorrowindEnhancedTexturesNormalMapped/PherimFireFernandFirePetal | MorrowindEnhancedTexturesNormalMapped/Strider Burial Normal Mapped | MorrowindEnhancedTexturesNormalMapped/ExcellentGrazalandsAcacia | MorrowindEnhancedTexturesNormalMapped/RemirosAscadianIslesTrees2 | MorrowindEnhancedTexturesNormalMapped/New Ilunibi Normal Mapped | MorrowindEnhancedTexturesNormalMapped/Know Thy Ancestors Normal Mapped | MorrowindEnhancedTexturesNormalMapped/FMGS - Unique Items Compilation Normal Mapped | MorrowindEnhancedTexturesNormalMapped/Salts | MorrowindEnhancedTexturesNormalMapped/HDForge | MorrowindEnhancedTexturesNormalMapped/AstrologiansGuild | MorrowindEnhancedTexturesNormalMapped/SecretsOfTheCrystalCity | MorrowindEnhancedTexturesNormalMapped/OAAB Grazelands Normal Mapped | MorrowindEnhancedTexturesNormalMapped/BlightedAnimalsRetextured | MorrowindEnhancedTexturesNormalMapped/UniqueCaveRats20HD | MorrowindEnhancedTexturesNormalMapped/Creatures_RP Normal Mapped | MorrowindEnhancedTexturesNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | MorrowindEnhancedTexturesNormalMapped/Danae's Mods AIO Normal Mapped | MorrowindEnhancedTexturesNormalMapped/TelEurus | MorrowindEnhancedTexturesNormalMapped/TheWolverineHall | MorrowindEnhancedTexturesNormalMapped/BCOM | MorrowindEnhancedTexturesNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | MorrowindEnhancedTexturesNormalMapped/NecromArkitektoraHQ | MorrowindEnhancedTexturesNormalMapped/OAAB Tel Mora Normal Mapped | MorrowindEnhancedTexturesNormalMapped/The Corprusarium Experience Normal Mapped | MorrowindEnhancedTexturesNormalMapped/R-Zero's Throbbing Meat Normal Mapped | MorrowindEnhancedTexturesNormalMapped/TelvanniMagisterRobes | MorrowindEnhancedTexturesNormalMapped/RemirosVolendrungHD | MorrowindEnhancedTexturesNormalMapped/UmbraBlademaster | MorrowindEnhancedTexturesNormalMapped/TheSearchfortheWhiteWave | MorrowindEnhancedTexturesNormalMapped/UvirithsLegacy | MorrowindEnhancedTexturesNormalMapped/DunmerLanternsReplacer
   - match: { slug: "skies-iv" }   # momw:total-overhaul
     set:
       dataPaths: ["SkiesIV/Skies - .IV", "SkiesIV/Particles"]
+  - match: { slug: "new-starfields" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NewStarfields/00 Core"]
   - match: { slug: "parasol-particles" }   # momw:total-overhaul
     set:
       dataPaths: ["ParasolParticles/01 OAAB_Data Patch"]
+  - match: { slug: "diverse-blood" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DiverseBlood/Data Files"]
   # content candidate "diverse-blood" (momw:total-overhaul): Bob's Diverse Blood.ESP
+  - match: { slug: "long-live-the-glassware-retexture" }   # momw:total-overhaul
+    set:
+      dataPaths: ["LongLiveTheGlasswareRetexture/Long Live The Glassware - Retexture/Data Files"]
+  - match: { slug: "long-live-the-plates-retexture" }   # momw:total-overhaul
+    set:
+      dataPaths: ["LongLiveThePlatesRetexture/Long Live The Plates/Data Files"]
   # NOT ADOPTED "graht-morrowind-swamp-trees-normal-mapped" (momw:total-overhaul): missing on disk: GrahtMorrowindSwampTreesNormalMapped/Mamaea Awakened Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | GrahtMorrowindSwampTreesNormalMapped/Morrowind Enhanced Textures Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | GrahtMorrowindSwampTreesNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | GrahtMorrowindSwampTreesNormalMapped/PherimComberryBushandIngredientReplacer | GrahtMorrowindSwampTreesNormalMapped/PherimFireFernandFirePetal | GrahtMorrowindSwampTreesNormalMapped/Strider Burial Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/ExcellentGrazalandsAcacia | GrahtMorrowindSwampTreesNormalMapped/RemirosAscadianIslesTrees2 | GrahtMorrowindSwampTreesNormalMapped/New Ilunibi Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/Know Thy Ancestors Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/FMGS - Unique Items Compilation Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/Salts | GrahtMorrowindSwampTreesNormalMapped/HDForge | GrahtMorrowindSwampTreesNormalMapped/AstrologiansGuild | GrahtMorrowindSwampTreesNormalMapped/SecretsOfTheCrystalCity | GrahtMorrowindSwampTreesNormalMapped/OAAB Grazelands Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/BlightedAnimalsRetextured | GrahtMorrowindSwampTreesNormalMapped/UniqueCaveRats20HD | GrahtMorrowindSwampTreesNormalMapped/Creatures_RP Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | GrahtMorrowindSwampTreesNormalMapped/Danae's Mods AIO Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/TelEurus | GrahtMorrowindSwampTreesNormalMapped/TheWolverineHall | GrahtMorrowindSwampTreesNormalMapped/BCOM | GrahtMorrowindSwampTreesNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | GrahtMorrowindSwampTreesNormalMapped/NecromArkitektoraHQ | GrahtMorrowindSwampTreesNormalMapped/OAAB Tel Mora Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/The Corprusarium Experience Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/R-Zero's Throbbing Meat Normal Mapped | GrahtMorrowindSwampTreesNormalMapped/TelvanniMagisterRobes | GrahtMorrowindSwampTreesNormalMapped/RemirosVolendrungHD | GrahtMorrowindSwampTreesNormalMapped/UmbraBlademaster | GrahtMorrowindSwampTreesNormalMapped/TheSearchfortheWhiteWave | GrahtMorrowindSwampTreesNormalMapped/UvirithsLegacy | GrahtMorrowindSwampTreesNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "aesthesia-strongholds-2k" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AesthesiaStrongholds2k"]
   # NOT ADOPTED "silt-strider" (momw:total-overhaul): missing on disk: SiltStrider/No bump/Data files
   # NOT ADOPTED "sm-bonelord-replacer-overhaul" (momw:total-overhaul): missing on disk: SMBoneLordReplacerOverhaul/Vanilla_Animations_ver/Data Files
+  - match: { slug: "sm-bonewalker-replacer-open-mw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SMBonewalkerReplacerOpenMW/SM Bonewalker OpenMW/Data files"]
   - match: { slug: "logs-on-fire" }   # momw:total-overhaul
     set:
       dataPaths: ["LogsOnFire/00 Core", "LogsOnFire/01 HD Textures", "LogsOnFire/02 Apel's Fire Retexture Patch"]
@@ -198,19 +432,37 @@ rules:
     set:
       dataPaths: ["GlowInTheDahrk/00 Core", "GlowInTheDahrk/01 Hi Res Window Texture Replacer", "GlowInTheDahrk/04 Raven Rock Glass Windows", "GlowInTheDahrk/07 Telvanni Tower Interior Glow OpenMW"]
   # NOT ADOPTED "salts-high-res-glowmaps" (momw:total-overhaul): missing on disk: SaltsHighresGlowmaps/main | SaltsHighresGlowmaps/hi-res-glowmaps | SaltsHighresGlowmaps/main/Data files | SaltsHighresGlowmaps/hi-res-glowmaps/Data files
+  - match: { slug: "fireflies" }   # momw:total-overhaul
+    set:
+      dataPaths: ["Fireflies"]
   # content candidate "fireflies" (momw:total-overhaul): RP_fireflies.ESP
+  - match: { slug: "lighted-dwemer-towers" }   # momw:graphics-overhaul
+    set:
+      dataPaths: ["LightedDwemerTowers/Data Files"]
   # content candidate "lighted-dwemer-towers" (momw:graphics-overhaul): DN-Lighted_Dwemer_Towers.ESP
   - match: { slug: "improved-lights-for-all-shaders" }   # momw:total-overhaul
     set:
       dataPaths: ["ImprovedLightsForAllShaders/00 Core", "ImprovedLightsForAllShaders/01 Smoke and Steam Emitters"]
+  - match: { slug: "openmw-vanilla-candles-ilfas-enlightened-flames" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OpenMWVanillaCandlesILFASEnlightenedFlames"]
   # NOT ADOPTED "cavern-of-the-incarnate" (momw:total-overhaul): missing on disk: CavernOfTheIncarnate/1CavernOfIncarnateOverhaul
   # NOT ADOPTED "high-art-normal-mapped" (momw:total-overhaul): missing on disk: HighArtNormalMapped/Mamaea Awakened Normal Mapped | HighArtNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | HighArtNormalMapped/Morrowind Enhanced Textures Normal Mapped | HighArtNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | HighArtNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | HighArtNormalMapped/PherimComberryBushandIngredientReplacer | HighArtNormalMapped/PherimFireFernandFirePetal | HighArtNormalMapped/Strider Burial Normal Mapped | HighArtNormalMapped/ExcellentGrazalandsAcacia | HighArtNormalMapped/RemirosAscadianIslesTrees2 | HighArtNormalMapped/New Ilunibi Normal Mapped | HighArtNormalMapped/Know Thy Ancestors Normal Mapped | HighArtNormalMapped/FMGS - Unique Items Compilation Normal Mapped | HighArtNormalMapped/Salts | HighArtNormalMapped/HDForge | HighArtNormalMapped/AstrologiansGuild | HighArtNormalMapped/SecretsOfTheCrystalCity | HighArtNormalMapped/OAAB Grazelands Normal Mapped | HighArtNormalMapped/BlightedAnimalsRetextured | HighArtNormalMapped/UniqueCaveRats20HD | HighArtNormalMapped/Creatures_RP Normal Mapped | HighArtNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | HighArtNormalMapped/Danae's Mods AIO Normal Mapped | HighArtNormalMapped/TelEurus | HighArtNormalMapped/TheWolverineHall | HighArtNormalMapped/BCOM | HighArtNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | HighArtNormalMapped/NecromArkitektoraHQ | HighArtNormalMapped/OAAB Tel Mora Normal Mapped | HighArtNormalMapped/The Corprusarium Experience Normal Mapped | HighArtNormalMapped/R-Zero's Throbbing Meat Normal Mapped | HighArtNormalMapped/TelvanniMagisterRobes | HighArtNormalMapped/RemirosVolendrungHD | HighArtNormalMapped/UmbraBlademaster | HighArtNormalMapped/TheSearchfortheWhiteWave | HighArtNormalMapped/UvirithsLegacy | HighArtNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "uncharted-artifacts" }   # momw:total-overhaul
+    set:
+      dataPaths: ["UnchartedArtifacts"]
   - match: { slug: "oaab-shipwrecks-uncharted-artifacts-tr-patch" }   # momw:total-overhaul
     set:
       dataPaths: ["OAABShipwrecksUnchartedArtifactsTRPatch/00 Core", "OAABShipwrecksUnchartedArtifactsTRPatch/02 Patch - TR Patch", "OAABShipwrecksUnchartedArtifactsTRPatch/01 Patch - Uncharted Artifacts"]
   # content candidate "oaab-shipwrecks-uncharted-artifacts-tr-patch" (momw:total-overhaul): Uncharted Artifacts.esp | OAAB - Shipwrecks.esm | OAAB - Shipwrecks - TR Patch.ESP
   # NOT ADOPTED "oaab-vertical-shipwreck-normal-mapped" (momw:total-overhaul): missing on disk: OAABVerticalShipwreckNormalMapped/Mamaea Awakened Normal Mapped | OAABVerticalShipwreckNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | OAABVerticalShipwreckNormalMapped/Morrowind Enhanced Textures Normal Mapped | OAABVerticalShipwreckNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | OAABVerticalShipwreckNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | OAABVerticalShipwreckNormalMapped/PherimComberryBushandIngredientReplacer | OAABVerticalShipwreckNormalMapped/PherimFireFernandFirePetal | OAABVerticalShipwreckNormalMapped/Strider Burial Normal Mapped | OAABVerticalShipwreckNormalMapped/ExcellentGrazalandsAcacia | OAABVerticalShipwreckNormalMapped/RemirosAscadianIslesTrees2 | OAABVerticalShipwreckNormalMapped/New Ilunibi Normal Mapped | OAABVerticalShipwreckNormalMapped/Know Thy Ancestors Normal Mapped | OAABVerticalShipwreckNormalMapped/FMGS - Unique Items Compilation Normal Mapped | OAABVerticalShipwreckNormalMapped/Salts | OAABVerticalShipwreckNormalMapped/HDForge | OAABVerticalShipwreckNormalMapped/AstrologiansGuild | OAABVerticalShipwreckNormalMapped/SecretsOfTheCrystalCity | OAABVerticalShipwreckNormalMapped/OAAB Grazelands Normal Mapped | OAABVerticalShipwreckNormalMapped/BlightedAnimalsRetextured | OAABVerticalShipwreckNormalMapped/UniqueCaveRats20HD | OAABVerticalShipwreckNormalMapped/Creatures_RP Normal Mapped | OAABVerticalShipwreckNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | OAABVerticalShipwreckNormalMapped/Danae's Mods AIO Normal Mapped | OAABVerticalShipwreckNormalMapped/TelEurus | OAABVerticalShipwreckNormalMapped/TheWolverineHall | OAABVerticalShipwreckNormalMapped/BCOM | OAABVerticalShipwreckNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | OAABVerticalShipwreckNormalMapped/NecromArkitektoraHQ | OAABVerticalShipwreckNormalMapped/OAAB Tel Mora Normal Mapped | OAABVerticalShipwreckNormalMapped/The Corprusarium Experience Normal Mapped | OAABVerticalShipwreckNormalMapped/R-Zero's Throbbing Meat Normal Mapped | OAABVerticalShipwreckNormalMapped/TelvanniMagisterRobes | OAABVerticalShipwreckNormalMapped/RemirosVolendrungHD | OAABVerticalShipwreckNormalMapped/UmbraBlademaster | OAABVerticalShipwreckNormalMapped/TheSearchfortheWhiteWave | OAABVerticalShipwreckNormalMapped/UvirithsLegacy | OAABVerticalShipwreckNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "library-of-vivec-enhanced" }   # momw:total-overhaul
+    set:
+      dataPaths: ["LibraryOfVivecEnhanced/00 Core"]
   # content candidate "library-of-vivec-enhanced" (momw:total-overhaul): RPNR_Library.ESP
+  - match: { slug: "oaab-tombs-and-towers" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OAABTombsAndTowers"]
   # content candidate "oaab-tombs-and-towers" (momw:total-overhaul): OAAB - Tombs and Towers.esm
   # NOT ADOPTED "mines-and-caverns" (momw:total-overhaul): missing on disk: MinesAndCaverns/Mines and Caverns
   - match: { slug: "new-ilunibi" }   # momw:total-overhaul
@@ -218,52 +470,130 @@ rules:
       dataPaths: ["NewIlunibi"]
   # content candidate "new-ilunibi" (momw:total-overhaul): New Ilunibi.ESP
   # NOT ADOPTED "new-ilunibi-normal-mapped" (momw:total-overhaul): missing on disk: NewIlunibiNormalMapped/Mamaea Awakened Normal Mapped | NewIlunibiNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | NewIlunibiNormalMapped/Morrowind Enhanced Textures Normal Mapped | NewIlunibiNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | NewIlunibiNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | NewIlunibiNormalMapped/PherimComberryBushandIngredientReplacer | NewIlunibiNormalMapped/PherimFireFernandFirePetal | NewIlunibiNormalMapped/Strider Burial Normal Mapped | NewIlunibiNormalMapped/ExcellentGrazalandsAcacia | NewIlunibiNormalMapped/RemirosAscadianIslesTrees2 | NewIlunibiNormalMapped/Know Thy Ancestors Normal Mapped | NewIlunibiNormalMapped/FMGS - Unique Items Compilation Normal Mapped | NewIlunibiNormalMapped/Salts | NewIlunibiNormalMapped/HDForge | NewIlunibiNormalMapped/AstrologiansGuild | NewIlunibiNormalMapped/SecretsOfTheCrystalCity | NewIlunibiNormalMapped/OAAB Grazelands Normal Mapped | NewIlunibiNormalMapped/BlightedAnimalsRetextured | NewIlunibiNormalMapped/UniqueCaveRats20HD | NewIlunibiNormalMapped/Creatures_RP Normal Mapped | NewIlunibiNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | NewIlunibiNormalMapped/Danae's Mods AIO Normal Mapped | NewIlunibiNormalMapped/TelEurus | NewIlunibiNormalMapped/TheWolverineHall | NewIlunibiNormalMapped/BCOM | NewIlunibiNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | NewIlunibiNormalMapped/NecromArkitektoraHQ | NewIlunibiNormalMapped/OAAB Tel Mora Normal Mapped | NewIlunibiNormalMapped/The Corprusarium Experience Normal Mapped | NewIlunibiNormalMapped/R-Zero's Throbbing Meat Normal Mapped | NewIlunibiNormalMapped/TelvanniMagisterRobes | NewIlunibiNormalMapped/RemirosVolendrungHD | NewIlunibiNormalMapped/UmbraBlademaster | NewIlunibiNormalMapped/TheSearchfortheWhiteWave | NewIlunibiNormalMapped/UvirithsLegacy | NewIlunibiNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "berandas-overhaul" }   # momw:total-overhaul
+    set:
+      dataPaths: ["BerandasOverhaul"]
   # content candidate "berandas-overhaul" (momw:total-overhaul): Berandas Overhaul.esp
+  - match: { slug: "maren-s-misfit-mabrigash" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MarensMisfitMabrigash"]
   # content candidate "maren-s-misfit-mabrigash" (momw:total-overhaul): MarenMabrigash.ESP
   - match: { slug: "of-eggs-and-dwarves-openmw" }   # momw:total-overhaul
     set:
       dataPaths: ["OfEggsAndDwarvesOpenMW/00 Core", "OfEggsAndDwarvesOpenMW/01 BCOM Patch"]
   # content candidate "of-eggs-and-dwarves-openmw" (momw:total-overhaul): Of Eggs and Dwarves.ESP | Of Eggs and Dwarves.omwscripts | OEAD_BCOM_Patch.ESP
+  - match: { slug: "kogoruhn-extinct-city-of-ash-and-sulfur" }   # momw:total-overhaul
+    set:
+      dataPaths: ["KogoruhnExtinctCityOfAshAndSulfur/Data Files"]
   # content candidate "kogoruhn-extinct-city-of-ash-and-sulfur" (momw:total-overhaul): Kogoruhn - Extinct City of Ash and Sulfur.esp
+  - match: { slug: "the-woe-of-indalen-tomb-bcom" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TheWoeOfIndalenTombBCOM"]
   # content candidate "the-woe-of-indalen-tomb-bcom" (momw:total-overhaul): DM_IndalenWoe.ESP
+  - match: { slug: "vennin-s-hlaalu-ancestral-tomb" }   # momw:total-overhaul
+    set:
+      dataPaths: ["VenninsHlaaluAncestralTomb"]
   # content candidate "vennin-s-hlaalu-ancestral-tomb" (momw:total-overhaul): Clean_Vennin's Hlaalu Tomb.ESP
+  - match: { slug: "vennin-s-hlervi-tomb-overhaul" }   # momw:total-overhaul
+    set:
+      dataPaths: ["VenninsHlerviTombOverhaul"]
   # content candidate "vennin-s-hlervi-tomb-overhaul" (momw:total-overhaul): Clean_Vennin's Hlervi Tomb.ESP
+  - match: { slug: "superior-shulk-eggmine" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SuperiorShulkEggmine"]
   # content candidate "superior-shulk-eggmine" (momw:total-overhaul): Superb Shulk Eggmine.ESP
+  - match: { slug: "dunmer-strongholds-vo" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DunmerStrongholdsVO"]
   # content candidate "dunmer-strongholds-vo" (momw:total-overhaul): Dunmer Stronghold - Hlormaren V1.0.esp
+  - match: { slug: "mamaea-awakened" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MamaeaAwakened/Data Files"]
   # NOT ADOPTED "mamaea-awakened-normal-mapped" (momw:total-overhaul): missing on disk: MamaeaAwakenedNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | MamaeaAwakenedNormalMapped/Morrowind Enhanced Textures Normal Mapped | MamaeaAwakenedNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | MamaeaAwakenedNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | MamaeaAwakenedNormalMapped/PherimComberryBushandIngredientReplacer | MamaeaAwakenedNormalMapped/PherimFireFernandFirePetal | MamaeaAwakenedNormalMapped/Strider Burial Normal Mapped | MamaeaAwakenedNormalMapped/ExcellentGrazalandsAcacia | MamaeaAwakenedNormalMapped/RemirosAscadianIslesTrees2 | MamaeaAwakenedNormalMapped/New Ilunibi Normal Mapped | MamaeaAwakenedNormalMapped/Know Thy Ancestors Normal Mapped | MamaeaAwakenedNormalMapped/FMGS - Unique Items Compilation Normal Mapped | MamaeaAwakenedNormalMapped/Salts | MamaeaAwakenedNormalMapped/HDForge | MamaeaAwakenedNormalMapped/AstrologiansGuild | MamaeaAwakenedNormalMapped/SecretsOfTheCrystalCity | MamaeaAwakenedNormalMapped/OAAB Grazelands Normal Mapped | MamaeaAwakenedNormalMapped/BlightedAnimalsRetextured | MamaeaAwakenedNormalMapped/UniqueCaveRats20HD | MamaeaAwakenedNormalMapped/Creatures_RP Normal Mapped | MamaeaAwakenedNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | MamaeaAwakenedNormalMapped/Danae's Mods AIO Normal Mapped | MamaeaAwakenedNormalMapped/TelEurus | MamaeaAwakenedNormalMapped/TheWolverineHall | MamaeaAwakenedNormalMapped/BCOM | MamaeaAwakenedNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | MamaeaAwakenedNormalMapped/NecromArkitektoraHQ | MamaeaAwakenedNormalMapped/OAAB Tel Mora Normal Mapped | MamaeaAwakenedNormalMapped/The Corprusarium Experience Normal Mapped | MamaeaAwakenedNormalMapped/R-Zero's Throbbing Meat Normal Mapped | MamaeaAwakenedNormalMapped/TelvanniMagisterRobes | MamaeaAwakenedNormalMapped/RemirosVolendrungHD | MamaeaAwakenedNormalMapped/UmbraBlademaster | MamaeaAwakenedNormalMapped/TheSearchfortheWhiteWave | MamaeaAwakenedNormalMapped/UvirithsLegacy | MamaeaAwakenedNormalMapped/DunmerLanternsReplacer
+  - match: { slug: "drethos-ancestral-tomb" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DrethosAncestralTomb"]
   # content candidate "drethos-ancestral-tomb" (momw:total-overhaul): Drethos_Ancestral_Tomb.ESP
   # NOT ADOPTED "blackthorn-barrow" (momw:total-overhaul): missing on disk: BlackthornBarrow/00 Expansions Integrated Patch
   # NOT ADOPTED "caldera-priory-and-the-depths-of-blood-and-bone" (momw:total-overhaul): missing on disk: CalderaPrioryAndTheDepthsOfBloodAndBone/HD | CalderaPrioryAndTheDepthsOfBloodAndBone/normal_maps
   # NOT ADOPTED "telvanni-lighthouse-in-tel-vos" (momw:total-overhaul): missing on disk: TelvanniLighthouseInTelVos/00 - Main patch files
+  - match: { slug: "oaab-foyada-mamaea" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OAABFoyadaMamaea"]
   - match: { slug: "oaab-dwemer-pavements" }   # momw:total-overhaul
     set:
       dataPaths: ["OAABDwemerPavements/00 Core", "OAABDwemerPavements/01 Trackless Grazelands Patch"]
   # content candidate "oaab-dwemer-pavements" (momw:total-overhaul): OAAB Dwemer Pavements.esm | Trackless Grazeland OAAB Dwemer Pavements Patch.ESP
   # NOT ADOPTED "concept-art-palace-vivec-city" (momw:total-overhaul): missing on disk: ConceptArtPalaceVivecCIty/00 Core | ConceptArtPalaceVivecCIty/01 Symmetrical Palace | ConceptArtPalaceVivecCIty/02 Interior Cluttering | ConceptArtPalaceVivecCIty/03 Flame - Option 1 | ConceptArtPalaceVivecCIty/04 Rotating Planets | ConceptArtPalaceVivecCIty/06 Columns - Concept Art Scribbles - Symmetric Palace | ConceptArtPalaceVivecCIty/07 Decorated Bridge | ConceptArtPalaceVivecCIty/08 Cluttered Staircase | ConceptArtPalaceVivecCIty/09 Unique Door | ConceptArtPalaceVivecCIty/10 TR Water - Symmetric - Original Colour | ConceptArtPalaceVivecCIty/Concept Art Palace distant flames
+  - match: { slug: "immersive-grotto-entrances-lmmcr-mines-and-caverns-patch" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ImmersiveGrottoEntrancesLMMCRMinesAndCavernsPatc"]
+  - match: { slug: "concept-arts-plantations" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ConceptArtsPlantations/00 Core"]
   # NOT ADOPTED "solstheim-tomb-of-the-snow-prince" (momw:total-overhaul): missing on disk: SolstheimTombOfTheSnowPrince/010 Solstheim - HD Worldspace Graphical Replacer | SolstheimTombOfTheSnowPrince/011 Skyrim-Like Trees | SolstheimTombOfTheSnowPrince/012 Remiros' Groundcover for TOTSP
+  - match: { slug: "justice-for-khartag" }   # momw:total-overhaul
+    set:
+      dataPaths: ["JusticeForKhartag"]
   # content candidate "justice-for-khartag" (momw:total-overhaul): Justice4Khartag.esp
-  # NOT ADOPTED "beautiful-cities-of-morrowind" (momw:total-overhaul): missing on disk: BeautifulCitiesOfMorrowind/Patches | BeautifulCitiesOfMorrowind/Patches/54 Area of effect Arrows | BeautifulCitiesOfMorrowind/Patches/80 Mamaea Awakened | BeautifulCitiesOfMorrowind/Patches/51 Ghastly Glowyfence patch | BeautifulCitiesOfMorrowind/Patches/73 Store Entrance Chimes | BeautifulCitiesOfMorrowind/Patches/83 OAAB Pomegranates patch | BeautifulCitiesOfMorrowind/Patches/29 Yet Another Guard Diversity - Cephalopod Armor - Waterworks | BeautifulCitiesOfMorrowind/Patches/57 Sload and Slavers | BeautifulCitiesOfMorrowind/00 Core | BeautifulCitiesOfMorrowind/01 Waterworks Core | BeautifulCitiesOfMorrowind/02 Options/03 Weather Mechanics for (OpenMW) - Required | BeautifulCitiesOfMorrowind/02 Options/04 Suran dock expansion | BeautifulCitiesOfMorrowind/02 Options/07 Taller Seyda Neen Lighthouse | BeautifulCitiesOfMorrowind/02 Options/08 Expanded Sadrith Mora Dock | BeautifulCitiesOfMorrowind/02 Options/09 Concept Art Ghostfence Pillars | BeautifulCitiesOfMorrowind/02 Options/10 Open Arena | BeautifulCitiesOfMorrowind/02 Options/11 Vivec Customization Options | BeautifulCitiesOfMorrowind/02 Options/12 Ghostgate - Animated Statues | BeautifulCitiesOfMorrowind/02 Options/13 Vanilla Skar | BeautifulCitiesOfMorrowind/02 Options/14 More Tribal Erabenimsun | BeautifulCitiesOfMorrowind/02 Options/15 Molag Mar Broken Dome | BeautifulCitiesOfMorrowind/02 Options/17 Caldera Mages Guild Basement | BeautifulCitiesOfMorrowind/02 Options/18 Urshilaku Camp Concept Art Husk | BeautifulCitiesOfMorrowind/02 Options/19 Ald'Ruhn Outdoor Merchants | BeautifulCitiesOfMorrowind/02 Options/20 Imperial Gatehouses Addon | BeautifulCitiesOfMorrowind/02 Options/23 Eight Plates Quest Addon | BeautifulCitiesOfMorrowind/02 Options/24 Khuul Lighthouse | BeautifulCitiesOfMorrowind/02 Options/25 Sadrith Mora South Gates | BeautifulCitiesOfMorrowind/03 Waterworks Options/01 Optional Merchants | BeautifulCitiesOfMorrowind/03 Waterworks Options/02 Cluttered Canal | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/01 Project Atlas Patch | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/05 RR Statues patch | BeautifulCitiesOfMorrowind/06 HD Textures | BeautifulCitiesOfMorrowind/Patches/01 Patch for Purists | BeautifulCitiesOfMorrowind/Patches/03 OAAB Foyada Mamaea | BeautifulCitiesOfMorrowind/Patches/10 Concept Art Plantations | BeautifulCitiesOfMorrowind/Patches/22 Tamriel Rebuilt patch | BeautifulCitiesOfMorrowind/Patches/25 Province Cyrodiil Patch | BeautifulCitiesOfMorrowind/Patches/48 Velothi Wall Art | BeautifulCitiesOfMorrowind/Patches/67 Caldera Governor Manor | BeautifulCitiesOfMorrowind/Patches/30 Morrowind Anticheese | BeautifulCitiesOfMorrowind/Patches/38 Bounty Hunter Assignments | BeautifulCitiesOfMorrowind/Patches/07 Rise of House Telvanni 2.0 | BeautifulCitiesOfMorrowind/Patches/43 Uvirith Legacy Patch | BeautifulCitiesOfMorrowind/05 Grass Patches/01 Remiros Groundcover | BeautifulCitiesOfMorrowind/05 Grass Patches/02 Caldera Priory Grass Patches | BeautifulCitiesOfMorrowind/Patches/17 GITD Telvanni Dormers | BeautifulCitiesOfMorrowind/04 Project Atlas and GiTD Patches/02 GITD + Atlas | BeautifulCitiesOfMorrowind/Patches/85 Logs on fire
+  # NOT ADOPTED "beautiful-cities-of-morrowind" (momw:total-overhaul): missing on disk: BeautifulCitiesOfMorrowind/Patches | BeautifulCitiesOfMorrowind/Patches/54 Area of effect Arrows | BeautifulCitiesOfMorrowind/Patches/80 Mamaea Awakened | BeautifulCitiesOfMorrowind/Patches/51 Ghastly Glowyfence patch | BeautifulCitiesOfMorrowind/Patches/73 Store Entrance Chimes | BeautifulCitiesOfMorrowind/Patches/83 OAAB Pomegranates patch | BeautifulCitiesOfMorrowind/Patches/29 Yet Another Guard Diversity - Cephalopod Armor - Waterworks | BeautifulCitiesOfMorrowind/Patches/57 Sload and Slavers | BeautifulCitiesOfMorrowind/Patches/01 Patch for Purists | BeautifulCitiesOfMorrowind/Patches/03 OAAB Foyada Mamaea | BeautifulCitiesOfMorrowind/Patches/10 Concept Art Plantations | BeautifulCitiesOfMorrowind/Patches/22 Tamriel Rebuilt patch | BeautifulCitiesOfMorrowind/Patches/25 Province Cyrodiil Patch | BeautifulCitiesOfMorrowind/Patches/48 Velothi Wall Art | BeautifulCitiesOfMorrowind/Patches/67 Caldera Governor Manor | BeautifulCitiesOfMorrowind/Patches/30 Morrowind Anticheese | BeautifulCitiesOfMorrowind/Patches/38 Bounty Hunter Assignments | BeautifulCitiesOfMorrowind/Patches/07 Rise of House Telvanni 2.0 | BeautifulCitiesOfMorrowind/Patches/43 Uvirith Legacy Patch | BeautifulCitiesOfMorrowind/Patches/17 GITD Telvanni Dormers | BeautifulCitiesOfMorrowind/Patches/85 Logs on fire
   # NOT ADOPTED "beautiful-cities-of-morrowind-normal-mapped" (momw:total-overhaul): missing on disk: BeautifulCitiesOfMorrowindNormalMapped/Mamaea Awakened Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/TR_PC_SHOTN Normal Mapped Ordenadored by Me | BeautifulCitiesOfMorrowindNormalMapped/Morrowind Enhanced Textures Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | BeautifulCitiesOfMorrowindNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | BeautifulCitiesOfMorrowindNormalMapped/PherimComberryBushandIngredientReplacer | BeautifulCitiesOfMorrowindNormalMapped/PherimFireFernandFirePetal | BeautifulCitiesOfMorrowindNormalMapped/Strider Burial Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/ExcellentGrazalandsAcacia | BeautifulCitiesOfMorrowindNormalMapped/RemirosAscadianIslesTrees2 | BeautifulCitiesOfMorrowindNormalMapped/New Ilunibi Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/Know Thy Ancestors Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/FMGS - Unique Items Compilation Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/Salts | BeautifulCitiesOfMorrowindNormalMapped/HDForge | BeautifulCitiesOfMorrowindNormalMapped/AstrologiansGuild | BeautifulCitiesOfMorrowindNormalMapped/SecretsOfTheCrystalCity | BeautifulCitiesOfMorrowindNormalMapped/OAAB Grazelands Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/BlightedAnimalsRetextured | BeautifulCitiesOfMorrowindNormalMapped/UniqueCaveRats20HD | BeautifulCitiesOfMorrowindNormalMapped/Creatures_RP Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | BeautifulCitiesOfMorrowindNormalMapped/Danae's Mods AIO Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/TelEurus | BeautifulCitiesOfMorrowindNormalMapped/TheWolverineHall | BeautifulCitiesOfMorrowindNormalMapped/BCOM | BeautifulCitiesOfMorrowindNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | BeautifulCitiesOfMorrowindNormalMapped/NecromArkitektoraHQ | BeautifulCitiesOfMorrowindNormalMapped/OAAB Tel Mora Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/The Corprusarium Experience Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/R-Zero's Throbbing Meat Normal Mapped | BeautifulCitiesOfMorrowindNormalMapped/TelvanniMagisterRobes | BeautifulCitiesOfMorrowindNormalMapped/RemirosVolendrungHD | BeautifulCitiesOfMorrowindNormalMapped/UmbraBlademaster | BeautifulCitiesOfMorrowindNormalMapped/TheSearchfortheWhiteWave | BeautifulCitiesOfMorrowindNormalMapped/UvirithsLegacy | BeautifulCitiesOfMorrowindNormalMapped/DunmerLanternsReplacer
   - match: { slug: "nordic-dagon-fel" }   # momw:total-overhaul
     set:
       dataPaths: ["NordicDagonFel/00 Core", "NordicDagonFel/01 More Nordic Dagon Fel"]
   # content candidate "nordic-dagon-fel" (momw:total-overhaul): Nordic Dagon Fel.ESP
+  - match: { slug: "nordic-dagon-fel-npcs" }   # momw:total-overhaul
+    set:
+      dataPaths: ["NordicDagonFelNPCs"]
   # content candidate "nordic-dagon-fel-npcs" (momw:total-overhaul): Nordic Dagon Fel NPCs.ESP
+  - match: { slug: "ald-ruhn-under-skar" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AldruhnunderSkar/Data files"]
   # content candidate "ald-ruhn-under-skar" (momw:total-overhaul): Under-Skar.ESP
   # NOT ADOPTED "bcom-patches" (momw:total-overhaul): missing on disk: BCOMPatches/Patches | BCOMPatches/Patches/54 Area of effect Arrows | BCOMPatches/Patches/80 Mamaea Awakened | BCOMPatches/Patches/51 Ghastly Glowyfence patch | BCOMPatches/Patches/73 Store Entrance Chimes | BCOMPatches/Patches/83 OAAB Pomegranates patch | BCOMPatches/Patches/29 Yet Another Guard Diversity - Cephalopod Armor - Waterworks | BCOMPatches/Patches/57 Sload and Slavers | BCOMPatches/00 Core | BCOMPatches/01 Waterworks Core | BCOMPatches/02 Options/03 Weather Mechanics for (OpenMW) - Required | BCOMPatches/02 Options/04 Suran dock expansion | BCOMPatches/02 Options/07 Taller Seyda Neen Lighthouse | BCOMPatches/02 Options/08 Expanded Sadrith Mora Dock | BCOMPatches/02 Options/09 Concept Art Ghostfence Pillars | BCOMPatches/02 Options/10 Open Arena | BCOMPatches/02 Options/11 Vivec Customization Options | BCOMPatches/02 Options/12 Ghostgate - Animated Statues | BCOMPatches/02 Options/13 Vanilla Skar | BCOMPatches/02 Options/14 More Tribal Erabenimsun | BCOMPatches/02 Options/15 Molag Mar Broken Dome | BCOMPatches/02 Options/17 Caldera Mages Guild Basement | BCOMPatches/02 Options/18 Urshilaku Camp Concept Art Husk | BCOMPatches/02 Options/19 Ald'Ruhn Outdoor Merchants | BCOMPatches/02 Options/20 Imperial Gatehouses Addon | BCOMPatches/02 Options/23 Eight Plates Quest Addon | BCOMPatches/02 Options/24 Khuul Lighthouse | BCOMPatches/02 Options/25 Sadrith Mora South Gates | BCOMPatches/03 Waterworks Options/01 Optional Merchants | BCOMPatches/03 Waterworks Options/02 Cluttered Canal | BCOMPatches/04 Project Atlas and GiTD Patches/01 Project Atlas Patch | BCOMPatches/04 Project Atlas and GiTD Patches/05 RR Statues patch | BCOMPatches/06 HD Textures | BCOMPatches/Patches/01 Patch for Purists | BCOMPatches/Patches/03 OAAB Foyada Mamaea | BCOMPatches/Patches/10 Concept Art Plantations | BCOMPatches/Patches/22 Tamriel Rebuilt patch | BCOMPatches/Patches/25 Province Cyrodiil Patch | BCOMPatches/Patches/48 Velothi Wall Art | BCOMPatches/Patches/67 Caldera Governor Manor | BCOMPatches/Patches/30 Morrowind Anticheese | BCOMPatches/Patches/38 Bounty Hunter Assignments | BCOMPatches/Patches/07 Rise of House Telvanni 2.0 | BCOMPatches/Patches/43 Uvirith Legacy Patch | BCOMPatches/05 Grass Patches/01 Remiros Groundcover | BCOMPatches/05 Grass Patches/02 Caldera Priory Grass Patches | BCOMPatches/Patches/17 GITD Telvanni Dormers | BCOMPatches/04 Project Atlas and GiTD Patches/02 GITD + Atlas | BCOMPatches/Patches/85 Logs on fire
+  - match: { slug: "animated-morrowind-openmw-weapon-sheathing-patch" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AnimatedMorrowindOpenMWWeaponSheathingPatch"]
+  - match: { slug: "solthas-combat-pack-openmw-lua" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SolthasCombatPackOpenMWLua/Solthas Combat Pack"]
   # content candidate "solthas-combat-pack-openmw-lua" (momw:total-overhaul): SolCombatPack.omwscripts
+  - match: { slug: "talking-trains-speechcraft-openmw-lua" }   # momw:total-overhaul
+    set:
+      dataPaths: ["TalkingTrainsSpeechcraftopenmwLua/Talking Trains Speechcraft openmw lua"]
   # content candidate "talking-trains-speechcraft-openmw-lua" (momw:total-overhaul): Talking Trains Speechcraft.omwscripts
   # NOT ADOPTED "vurt-s-morrowind-visual-resurgence" (momw:total-overhaul): missing on disk: VurtsMorrowindVisualResurgence/OAAB | VurtsMorrowindVisualResurgence/main | VurtsMorrowindVisualResurgence/main/Data Files | VurtsMorrowindVisualResurgence/vfx | VurtsMorrowindVisualResurgence/vfx/Data Files
+  - match: { slug: "ald-ruhn-outskirts-ancestral-refuge" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AldRuhnOutskirtsAncestralRefuge"]
   # content candidate "ald-ruhn-outskirts-ancestral-refuge" (momw:total-overhaul): Ald'Ruhn Outskirts - Ancestral Refuge.ESP | Ald'Ruhn Outskirts - TR Addon.ESP
+  - match: { slug: "dwemer-legacy-reforged-arkngthunch-sturdumz" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DwemerLegacyReforgedArkngthunchSturdumz/Data Files"]
   # content candidate "dwemer-legacy-reforged-arkngthunch-sturdumz" (momw:total-overhaul): Dwemer Legacy Reforged - Arkngthunch-Sturdumz.esp
+  - match: { slug: "corporeal-carryable-containers" }   # momw:total-overhaul
+    set:
+      dataPaths: ["CorporealCarryableContainers/Corporeal-Carryable-Containers-master"]
   # content candidate "corporeal-carryable-containers" (momw:total-overhaul): Corporeal-Carryable-Containers.omwscripts
   - match: { slug: "the-wake-of-hanin-ibar-dad-overhaul" }   # momw:total-overhaul
     set:
       dataPaths: ["TheWakeOfHaninIbarDadOverhaul/00 Core", "TheWakeOfHaninIbarDadOverhaul/01 TR Patch"]
   # content candidate "the-wake-of-hanin-ibar-dad-overhaul" (momw:total-overhaul): The Wake of Hanin.ESP | The Wake of Hanin - TR Goblet Fix.ESP
+  - match: { slug: "kumarahaz-the-bandit-lair" }   # momw:total-overhaul
+    set:
+      dataPaths: ["KumarahazTheBanditLair/Kumarahaz - The Bandit Lair"]
   # content candidate "kumarahaz-the-bandit-lair" (momw:total-overhaul): Kumarahaz Bandit Lair.ESP
+  - match: { slug: "affresh" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AFFresh"]
   # content candidate "affresh" (momw:total-overhaul): AFFresh.esm
+  - match: { slug: "aether-pirate-s-discovery" }   # momw:total-overhaul
+    set:
+      dataPaths: ["AetherPiratesDiscovery"]
   # content candidate "aether-pirate-s-discovery" (momw:total-overhaul): Aether Pirate's Discovery.omwaddon
+  - match: { slug: "openmw-dynamic-ambient-visual-effects" }   # momw:total-overhaul
+    set:
+      dataPaths: ["OpenMWDynamicAmbientVisualEffects"]
   # content candidate "openmw-dynamic-ambient-visual-effects" (momw:total-overhaul): Dynamic Ambient Visual Effects.omwscripts
   - match: { slug: "s3maphore-openmw-music-management-from-the-future" }   # momw:total-overhaul
     set:
@@ -272,6 +602,18 @@ rules:
   - match: { slug: "sm-masque-clavicus-vile-replacer" }   # momw:total-overhaul
     set:
       dataPaths: ["SMMasqueClavicusVileReplacer/sm_CV_mask/WithOut_Violet_Effect/Data files"]
+  - match: { slug: "lucid-disturbing-dreams" }   # momw:total-overhaul
+    set:
+      dataPaths: ["LucidDisturbingDreams/Data Files"]
   # content candidate "lucid-disturbing-dreams" (momw:total-overhaul): Lucid Disturbing Dreams.ESP | kd_ldd.omwscripts
+  - match: { slug: "sm-greater-bonewalker-replacer-overhaul" }   # momw:total-overhaul
+    set:
+      dataPaths: ["SMGreaterBonewalkerReplacerOverhaul/sm_GreaterBoneWalker/Data Files"]
+  - match: { slug: "stats-window-extender-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["StatsWindowExtenderOpenMW"]
   # content candidate "stats-window-extender-openmw" (momw:total-overhaul): StatsWindow.ESP | StatsWindow.omwscripts
+  - match: { slug: "daedra-use-bound-equipment-for-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DaedraUseBoundEquipmentForOpenMW"]
   # content candidate "daedra-use-bound-equipment-for-openmw" (momw:total-overhaul): Daedra Use Bound Equipment for OpenMW.omwscripts

@@ -278,7 +278,8 @@ internal static class Program
             new Mri.Core.Logging.LoggingProcessRunner(new Mri.Core.IO.ProcessRunner(), log),
             File.ReadAllText("data/templates/settings.template.cfg"),
             File.ReadAllText("data/templates/shaders.template.yaml"),
-            log);
+            log,
+            fixupsSourceDir: "data/fixups");
 
         var steps = engine.Steps.Where(s => !skips.Contains(s.Id)).ToList();
         if (skips.Count > 0)
