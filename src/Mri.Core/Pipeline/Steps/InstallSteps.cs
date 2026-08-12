@@ -276,6 +276,10 @@ public sealed class NavmeshStep(NavmeshService navmesh, Func<InstallContext, str
     public string Id => "navmesh";
     public string Label => "Pre-build navigation meshes";
 
+    // Pre-generation is an optimization — OpenMW builds navmesh in the
+    // background at runtime. An OOM-killed tool must not fail the install.
+    public bool IsOptional => true;
+
     // The navmesh db lands in OpenMW's user-data dir, which varies; the
     // completion record is the only cheap signal. Re-running is always safe.
     public bool Verify(InstallContext ctx) => ctx.State.CompletedSteps.ContainsKey(Id);

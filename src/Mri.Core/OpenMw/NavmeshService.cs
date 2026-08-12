@@ -18,6 +18,9 @@ public sealed class NavmeshService(IProcessRunner runner)
         var result = await runner.RunAsync(new ProcessSpec
         {
             Exe = navmeshToolExe,
+            // All-cores default OOM-killed a 61GB box at 93% of a Tamriel
+            // Rebuilt-sized build; memory scales with worker count.
+            Args = ["--threads", Math.Clamp(Environment.ProcessorCount / 4, 2, 8).ToString()],
             WorkingDir = openMwConfigDir,
             Env = new Dictionary<string, string> { ["OPENMW_CONFIG"] = openMwConfigDir },
             Timeout = TimeSpan.FromHours(4),

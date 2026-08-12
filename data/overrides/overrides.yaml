@@ -274,3 +274,62 @@ rules:
   - match: { slug: aesthesia-groundcover-reworked }
     set:
       dataPaths: ["AesthesiaGroundcoverReworked/00 Core", "AesthesiaGroundcoverReworked/01 Textures - HD", "AesthesiaGroundcoverReworked/02 Plugins - Vanilla Regions", "AesthesiaGroundcoverReworked/02 Plugins - TR"]
+
+  # AOF Potions ships its textures loose at the archive root; meshes look
+  # them up under textures/. Repack via rename actions (field bug).
+  - match: { slug: aof-potions }
+    actions:
+      - type: rename
+        src: "AOFPotions/AOF_potion_cork.dds"
+        dst: "AOFPotions/Textures/AOF_potion_cork.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_glass.dds"
+        dst: "AOFPotions/Textures/AOF_potion_glass.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_glassNM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_glassNM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_Amber.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_Amber.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_AmberGM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_AmberGM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_Blue.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_Blue.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_Green.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_Green.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_GreenGM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_GreenGM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_Red.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_Red.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_RedGM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_RedGM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_yellow.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_yellow.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_liquid_yellowGM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_liquid_yellowGM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_ref_map.dds"
+        dst: "AOFPotions/Textures/AOF_potion_ref_map.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_stem.dds"
+        dst: "AOFPotions/Textures/AOF_potion_stem.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_stemNM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_stemNM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_top.dds"
+        dst: "AOFPotions/Textures/AOF_potion_top.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_topNM.dds"
+        dst: "AOFPotions/Textures/AOF_potion_topNM.dds"
+      - type: rename
+        src: "AOFPotions/AOF_potion_twine.dds"
+        dst: "AOFPotions/Textures/AOF_potion_twine.dds"

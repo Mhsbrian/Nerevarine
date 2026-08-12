@@ -1948,4 +1948,18 @@ rules:
     set:
       content:
         - { file: "sm_dwem_light.ESP", mode: "normal" }
+  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "devilish-guar-riding-openmw" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "devilish-horse-riding-openmw" }   # master provided by a later mod
+    moveAfter: "skyrim-home-of-the-nords"
+  - match: { slug: "m-aiq-on-the-mainland" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "repopulated-waters-rowing-npcs" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "better-robes-tamriel-rebuilt-patch" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "blackthorn-barrow" }   # master provided by a later mod
+    moveAfter: "solstheim-tomb-of-the-snow-prince"
   # DROPPED roaring-arena: 'RoaringArena.ESP' needs missing master(s): Dr_Data.esm
