@@ -10917,7 +10917,10 @@
       ],
       "dataPaths": [
         "ProjectAtlas/00 BATs",
-        "ProjectAtlas/00 Core"
+        "ProjectAtlas/00 Core",
+        "ProjectAtlas/01 Textures - Vanilla",
+        "ProjectAtlas/06 Glow in the Dahrk Patch",
+        "ProjectAtlas/07 Graphic Herbalism Patch"
       ],
       "content": [],
       "groundcover": [],

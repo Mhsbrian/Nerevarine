@@ -258,3 +258,12 @@ rules:
   - match: { slug: balmora-a-modern-font-replacer }
     skip: true
     skipReason: "Archive holds the non-OpenMW variant only — pin the OpenMW file in M2."
+
+  # Project Atlas: atlased MESHES ship in 00*, their TEXTURES in "01 Textures -
+  # Vanilla" (field bug: pink map objects, textures/atl/* not found — includes
+  # BCOM's atlad_* which this folder also carries). Mirrors momw total-overhaul
+  # picks (00 Core + textures + GITD/GH patches) mapped onto our archive's
+  # folders; both patch targets are in-list.
+  - match: { slug: project-atlas }
+    set:
+      dataPaths: ["ProjectAtlas/00 BATs", "ProjectAtlas/00 Core", "ProjectAtlas/01 Textures - Vanilla", "ProjectAtlas/06 Glow in the Dahrk Patch", "ProjectAtlas/07 Graphic Herbalism Patch"]
