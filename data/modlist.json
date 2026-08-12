@@ -2306,9 +2306,14 @@
         }
       ],
       "dataPaths": [
-        "NCGDMWLuaEdition/00 Core"
+        "NCGDMWLuaEdition/00 Core",
+        "NCGDMWLuaEdition/01 NCGD - Normal"
       ],
       "content": [
+        {
+          "file": "ncgdmw.omwaddon",
+          "mode": "normal"
+        },
         {
           "file": "ncgdmw.omwscripts",
           "mode": "normal"
@@ -6121,23 +6126,11 @@
       ],
       "content": [
         {
-          "file": "go-home.omwaddon",
-          "mode": "normal"
-        },
-        {
-          "file": "go-home-fr.omwscripts",
-          "mode": "normal"
-        },
-        {
-          "file": "go-home-locking-doors-fr.omwscripts",
+          "file": "go-home.omwscripts",
           "mode": "normal"
         },
         {
           "file": "go-home-locking-doors.omwscripts",
-          "mode": "normal"
-        },
-        {
-          "file": "go-home.omwscripts",
           "mode": "normal"
         }
       ],
@@ -20203,16 +20196,7 @@
       "dataPaths": [
         "BardcraftOpenMW"
       ],
-      "content": [
-        {
-          "file": "Bardcraft.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Bardcraft.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],

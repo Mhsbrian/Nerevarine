@@ -333,3 +333,30 @@ rules:
       - type: rename
         src: "AOFPotions/AOF_potion_twine.dds"
         dst: "AOFPotions/Textures/AOF_potion_twine.dds"
+
+  # ── Runtime mod-error fixes (in-game dialogs, 2026-08-11 session) ──
+
+  # NCGDMW Lua: "loaded plugins appear to be invalid" — the required delta
+  # omwaddon lives in "01 NCGD - Normal" (Starwind variant correctly excluded).
+  - match: { slug: ncgdmw-lua-edition }
+    set:
+      dataPaths: ["NCGDMWLuaEdition/00 Core", "NCGDMWLuaEdition/01 NCGD - Normal"]
+      content:
+        - { file: "ncgdmw.omwaddon", mode: "normal" }
+        - { file: "ncgdmw.omwscripts", mode: "normal" }
+
+  # Go Home!: on OpenMW 0.51+ the legacy omwaddon must NOT be active (the mod
+  # itself says so), and the -fr localization scripts error alongside English.
+  # Bonus: the archive ships the Locking Doors scripts, recovering the
+  # separately-skipped sub-mod.
+  - match: { slug: go-home-openmw }
+    set:
+      content:
+        - { file: "go-home.omwscripts", mode: "normal" }
+        - { file: "go-home-locking-doors.omwscripts", mode: "normal" }
+
+  # Bardcraft requires "Skill Framework", which the source sheet never listed.
+  # Deactivated (files stay installed) until the framework is added in M3.
+  - match: { slug: bardcraft-openmw }
+    set:
+      content: []
