@@ -339,11 +339,12 @@ public static partial class ModlistEmitter
         List<DraftMod> active, Mri.Core.Modlist.Modlist modlist)
     {
         var violations = new List<string>();
-        var order = ModlistCompiler
+        var order = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+        var contentFiles = ModlistCompiler
             .BuildLoadOrderPlan(modlist, new LoadOrderOptions())
-            .ContentFiles
-            .Select((file, index) => (file, index))
-            .ToDictionary(x => x.file, x => x.index, StringComparer.OrdinalIgnoreCase);
+            .ContentFiles;
+        for (var i = 0; i < contentFiles.Count; i++)
+            order.TryAdd(contentFiles[i], i); // duplicates: first slot wins
 
         foreach (var draft in active)
         foreach (var constraint in draft.Constraints)

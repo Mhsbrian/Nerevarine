@@ -225,9 +225,9 @@ rules:
     set:
       dataPaths: ["SothaSilIsADunmer/HD /Data Files"]
 
-  - match: { slug: momw-post-processing-pack }   # OMWFX = the OpenMW shader set (XE = MGE, wrong engine)
+  - match: { slug: momw-post-processing-pack }   # folders hosting the momw total-overhaul chain shaders
     set:
-      dataPaths: ["MOMWPostProcessingPack/02 OMWFX-Shaders"]
+      dataPaths: ["MOMWPostProcessingPack/01 XE-Shaders", "MOMWPostProcessingPack/02 OMWFX-Shaders", "MOMWPostProcessingPack/03 ZesterersVolumetricClouds", "MOMWPostProcessingPack/04 WareyaOpenMWShaders"]
 
   - match: { slug: advancedcamera }   # repo hosts many mods; the sheet row wants AdvancedCamera
     set:
@@ -267,3 +267,10 @@ rules:
   - match: { slug: project-atlas }
     set:
       dataPaths: ["ProjectAtlas/00 BATs", "ProjectAtlas/00 Core", "ProjectAtlas/01 Textures - Vanilla", "ProjectAtlas/06 Glow in the Dahrk Patch", "ProjectAtlas/07 Graphic Herbalism Patch"]
+
+  # Aesthesia Groundcover (richest): core meshes + HD textures + grass plugin
+  # folders for vanilla regions AND Tamriel Rebuilt (TR is active). The
+  # activation planner routes these esps to groundcover= lines.
+  - match: { slug: aesthesia-groundcover-reworked }
+    set:
+      dataPaths: ["AesthesiaGroundcoverReworked/00 Core", "AesthesiaGroundcoverReworked/01 Textures - HD", "AesthesiaGroundcoverReworked/02 Plugins - Vanilla Regions", "AesthesiaGroundcoverReworked/02 Plugins - TR"]

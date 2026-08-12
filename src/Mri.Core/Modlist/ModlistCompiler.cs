@@ -200,12 +200,22 @@ public static class ModlistCompiler
             content.Add(options.DeltaContentFile);
         }
 
+        // Several mods legitimately ship the SAME plugin (OAAB_Data.esm comes
+        // with OAAB Data, its HD pack and its normal-map pack). content= must
+        // name a plugin exactly once; the first occurrence keeps the slot, and
+        // the VFS decides which mod's file wins (last data dir).
+        static IReadOnlyList<string> Dedupe(IEnumerable<string> items)
+        {
+            var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            return items.Where(seen.Add).ToList();
+        }
+
         return new LoadOrderPlan
         {
             DataDirs = dataDirs,
-            ContentFiles = content,
-            GroundcoverFiles = groundcover,
-            FallbackArchives = archives,
+            ContentFiles = Dedupe(content),
+            GroundcoverFiles = Dedupe(groundcover),
+            FallbackArchives = Dedupe(archives),
         };
     }
 }

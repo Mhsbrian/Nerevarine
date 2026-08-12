@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.1",
+  "listVersion": "2026.08.2",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20479644474,
   "estimatedInstalledBytes": 61438933422,
@@ -70,7 +70,36 @@
         "OfficialPluginsUnofficialPatch/05 lefemm armor",
         "OfficialPluginsUnofficialPatch/06 master index"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "adamantiumarmor.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "AreaEffectArrows.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "bcsounds.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "entertainers.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "EBQ_Artifact.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "LeFemmArmor.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "master_index.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -105,7 +134,12 @@
       "dataPaths": [
         "ExpansionDelay"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Expansion Delay.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -140,7 +174,12 @@
       "dataPaths": [
         "PatchForPurists"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Patch for Purists.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -174,7 +213,12 @@
       "dataPaths": [
         "BuoyantLordVivec/00Vanilla"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Buoyant Lord Vivec.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -209,7 +253,12 @@
       "dataPaths": [
         "NoMoreStageDiving"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "NoMoreStageDiving_TalkativeGirls.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -243,7 +292,12 @@
       "dataPaths": [
         "PortableHomesOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OpenMW - YurtCrafting.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -312,7 +366,12 @@
       "dataPaths": [
         "TelFyrAmuletFix"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AmuletTelFyrFix.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -349,7 +408,20 @@
         "PikasMiscellaneousMods/Better Siege at Firemoth Followers",
         "PikasMiscellaneousMods/Sirollus Saccus Training Fix"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Adamantium Pauldrons Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Better Siege at Firemoth Followers.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Sirollus Saccus Training Fix.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -388,7 +460,12 @@
         "OAABData/05 Glass Glowset Patch",
         "OAABData/08 GitD Shacks Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OAAB_Data.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -426,7 +503,12 @@
         "OAABDataHD/05 Glass Glowset Patch",
         "OAABDataHD/08 GitD Shacks Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OAAB_Data.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -494,7 +576,12 @@
       "dataPaths": [
         "AnAddendumToTamrielicLoreData/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AATL_Data.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -563,7 +650,16 @@
         "TamrielDataHD/00 Data Files",
         "TamrielDataHD/01 Data Files - Normal Maps"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Tamriel_Data.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "Tamriel_Data.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -631,7 +727,12 @@
       "dataPaths": [
         "TamrielDataGraveyeard/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Tamriel_Data_Graveyard.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -665,7 +766,12 @@
       "dataPaths": [
         "FMINotAllDunmer"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FMI_#NotAllDunmer.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -699,7 +805,12 @@
       "dataPaths": [
         "SoYoureTheNerevarine"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SYTN.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -733,7 +844,12 @@
       "dataPaths": [
         "LDMContextMatters"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LDM - Context Matters 1.7.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -767,7 +883,12 @@
       "dataPaths": [
         "FreeTheSlaves"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FreeTheSlaves!.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -801,7 +922,12 @@
       "dataPaths": [
         "FMIServiceRefusalAndContraband"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FMI_ServiceRefusal_Contraband.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -835,7 +961,12 @@
       "dataPaths": [
         "GreetingsForNoLore"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Greetings for No Lore.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -869,7 +1000,12 @@
       "dataPaths": [
         "GreatService/Great Service"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Great Service.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -903,7 +1039,12 @@
       "dataPaths": [
         "SilentAssassins"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Silent Assassins.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -937,7 +1078,12 @@
       "dataPaths": [
         "TunnelCough/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Tunnel Cough.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -971,7 +1117,12 @@
       "dataPaths": [
         "FMICurrentCouncilors"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FMI_Current_Councilors.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1005,7 +1156,12 @@
       "dataPaths": [
         "OathToSaintRorisInstead"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Oath to Saint Roris Instead.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1039,7 +1195,12 @@
       "dataPaths": [
         "RaymsVampireRumors/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Raym\u0027s Vampire Rumors.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1073,7 +1234,12 @@
       "dataPaths": [
         "DjangosDialogue/Djangos Dialogue"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Djangos Dialogue.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1108,7 +1274,12 @@
       "dataPaths": [
         "BarilzarVoice"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "barilzar_voice.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1142,7 +1313,12 @@
       "dataPaths": [
         "DagothGaresVoice"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dagoth Gares_Voice_addon v1.1.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1176,7 +1352,12 @@
       "dataPaths": [
         "DagothUrVoice"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dagoth Ur Voice Addon.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1211,7 +1392,20 @@
       "dataPaths": [
         "OpenMWLuaHelperUtility"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OpenMW_luahelper.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper_dialog.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1245,7 +1439,20 @@
       "dataPaths": [
         "LuaHelperPatchForPurists"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OpenMW_luahelper.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper_dialog.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1280,7 +1487,20 @@
       "dataPaths": [
         "LuaHelperTamrielRebuilt"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OpenMW_luahelper.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper_dialog.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OpenMW_luahelper.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1349,7 +1569,12 @@
       "dataPaths": [
         "OpenMWVoicesOfVvardenfellPatch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "VoV OpenMW.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1383,7 +1608,16 @@
       "dataPaths": [
         "VoicedVivecAndYaketyYagrum"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "VoicedVivec.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "YaketyYagrum.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1418,7 +1652,12 @@
       "dataPaths": [
         "VoiceOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PR Voice Overhaul 0.13.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1452,7 +1691,12 @@
       "dataPaths": [
         "DualFactionMembershipForNPCs"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dual Faction Membership for NPCs.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1486,7 +1730,12 @@
       "dataPaths": [
         "QuestVoiceGreetings/Quest Voice Greetings 3.82"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Quest Voice Greetings.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1521,7 +1770,12 @@
       "dataPaths": [
         "GaresLastGaspNewIlunibiVersion/Gares Last Gasp"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Gares Last Gasp.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1556,7 +1810,12 @@
       "dataPaths": [
         "IdleTalk/Idle Talk"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Idle Talk.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1590,7 +1849,12 @@
       "dataPaths": [
         "UltimateCreeperPartyHouse/Ultimate Creeper Party House"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Ultimate Creeper Party House.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1624,7 +1888,12 @@
       "dataPaths": [
         "NordicBanter/Nordic Banter"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Nordic Banter.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1658,7 +1927,12 @@
       "dataPaths": [
         "SermonsAndPreachersVanillaEdit/Sermons and Preachers (Vanilla edit)/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sermons_preachers_RandomTemplesOnly.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1692,7 +1966,12 @@
       "dataPaths": [
         "ImmersiveMorrowind/Immersive Morrowind 0.4"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Immersive Morrowind.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1726,7 +2005,12 @@
       "dataPaths": [
         "FriendsReunited/Friends Reunited"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Friends Reunited.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1765,7 +2049,32 @@
         "WaresUltimate/06 Wares to Traders",
         "WaresUltimate/09 Wares to containers"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Wares-base.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "Wares_lists_OAAB.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Wares_lists_TD.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Wares_vanilla_random_lists.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Wares_traders.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Wares_containers.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1800,7 +2109,12 @@
       "dataPaths": [
         "FriendsAndFoes/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Friends_and_Foes_base.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1835,7 +2149,12 @@
       "dataPaths": [
         "MorrowindAntiCheese"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Morrowind Anti-Cheese.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1869,7 +2188,16 @@
       "dataPaths": [
         "ProtectiveGuardsOpenMW/Protective Guards for OpenMW - Lua Edition"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Protective Guards for OpenMW - Lua Edition.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "protective_guards_for_omw.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1903,7 +2231,12 @@
       "dataPaths": [
         "CoherentGuardsReactionOpenMWAltPriceBalanceVersi"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Coherent Guards Reaction.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1938,7 +2271,12 @@
       "dataPaths": [
         "ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "protective_guards_for_omw.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -1970,7 +2308,12 @@
       "dataPaths": [
         "NCGDMWLuaEdition/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ncgdmw.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2003,7 +2346,12 @@
       "dataPaths": [
         "BetterMoonAndStar"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "better moon and star.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2037,7 +2385,12 @@
       "dataPaths": [
         "AttendMe"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AttendMe.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2072,7 +2425,16 @@
       "dataPaths": [
         "RapportOpenMWCompanions/RapportCompanions 1.1.2"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RapportCompanions.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "RapportCompanions.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2106,7 +2468,12 @@
       "dataPaths": [
         "InfiniteSkeletonKey"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "infinite_skeletonkey.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2140,7 +2507,12 @@
       "dataPaths": [
         "BetterBalancedBooze"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "better balanced booze.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2174,7 +2546,12 @@
       "dataPaths": [
         "RarerScrapMetal"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Rarer Scrap Metal.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2209,7 +2586,16 @@
         "VanillaFriendlyCreaturesAndUndeadsExpansion/00 Core",
         "VanillaFriendlyCreaturesAndUndeadsExpansion/03 Summons have 0 soul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Creatures_RP_Purist.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Creatures_RP_Soulless summons.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2277,7 +2663,20 @@
       "dataPaths": [
         "MDMDMoreDeadlyMorrowindDenizens"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "MDMD - More Deadly Morrowind Denizens.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "mdmd - uvirith legacy cooperation.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "MDMD - Creatures Add-On.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2311,7 +2710,12 @@
       "dataPaths": [
         "EarlyTransportToMournhold"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Early Transport to Mournhold.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2346,7 +2750,12 @@
       "dataPaths": [
         "RealDisposition"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PR Real Disposition Base.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2381,7 +2790,12 @@
       "dataPaths": [
         "PriceBalance/Price Balance 1.2/Price Balance"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Price Balance.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2415,7 +2829,24 @@
       "dataPaths": [
         "BewareTheSixthHouse/Modular"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Ash Vampire Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Sixth House Rebalance.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Sunder and keening hurt on pickup.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Unused Dagoth Placement.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2449,7 +2880,16 @@
       "dataPaths": [
         "NPCFactionAffiliationCorrector"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "NPC Faction Affiliation Corrector (Maximalistic).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "NPC Faction Affiliation Corrector (Minimalistic).ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2484,7 +2924,12 @@
       "dataPaths": [
         "Hortator"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Hortator.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2518,7 +2963,12 @@
       "dataPaths": [
         "ZacksLuaMultimarkOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LuaMultiMark.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2552,7 +3002,12 @@
       "dataPaths": [
         "QuickSpellCastingOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "QuickSpellCast.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2586,7 +3041,12 @@
       "dataPaths": [
         "FactionService"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Charge Version - Faction Bed Service v1.3.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2620,7 +3080,20 @@
       "dataPaths": [
         "ProjectileOverhaulModular"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Projectile Overhaul - Faster Magic Missiles.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Projectile Overhaul - Faster Projectiles.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Projectile Overhaul - Recovery Chance.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2655,7 +3128,16 @@
       "dataPaths": [
         "MassCure"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Mass_Cure_price.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Mass_Cure_vanilla.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2689,7 +3171,12 @@
       "dataPaths": [
         "HircinesArtifacts/Hircine\u0027s Artifacts"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Hircine\u0027s Artifacts.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2723,7 +3210,16 @@
       "dataPaths": [
         "NoWitnessNoBounty"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "NoWitnessNoBounty.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "NoWitnessNoBounty.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2757,7 +3253,20 @@
       "dataPaths": [
         "DevilishVampireOverhaulTotalOverhaulEdition/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Devilish_Vampire_Overhaul.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish_Vampire_Overhaul.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2791,7 +3300,16 @@
       "dataPaths": [
         "DevilishGuarRidingOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Devilish Guar Riding.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish Guar Riding.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2825,7 +3343,16 @@
       "dataPaths": [
         "DevilishHorseRidingOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Devilish Horse Riding.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish Horse Riding.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2859,7 +3386,12 @@
       "dataPaths": [
         "AnotherPickpocketingFix"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AnotherPickpocketingFix.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2893,7 +3425,12 @@
       "dataPaths": [
         "CreaturesOpenDoors"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "CreaturesOpenDoors.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2927,7 +3464,12 @@
       "dataPaths": [
         "SolthasSneakAttackBuffOpenMW/SolSneakAttackBuff"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SolSneakAttackBuff.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2961,7 +3503,12 @@
       "dataPaths": [
         "TakeCoverOpenMW/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TakeCover.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -2995,7 +3542,12 @@
       "dataPaths": [
         "NoSneakySleepingOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "NoSneakySleeping.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3029,7 +3581,12 @@
       "dataPaths": [
         "NPCsAndCreaturesRestOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "npcs_crea_rest.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3061,7 +3618,16 @@
       "dataPaths": [
         "PharisMagickaRegenerationOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "pharis-magicka-regeneration.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "pharis-magicka-regeneration.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3093,7 +3659,52 @@
       "dataPaths": [
         "ComprehensiveRebalanceOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "comprehensive_rebalance.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "creeper_mudcrab_balance.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "enchant_no_recharge.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "fatigue_changes.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "higher_travel_prices.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "med_armour_buff.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "med_armour_EBQ.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "med_armour_lefemme.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "merchants_gold_limit.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "no_skill_levelling.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "comprehensive_rebalance.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3126,7 +3737,20 @@
       "dataPaths": [
         "BoundBalancOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "bound-balance-testing.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "bound-balance.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "bound-balance.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3158,7 +3782,12 @@
       "dataPaths": [
         "RedoranPatrolsGnisis/Redoran Patrols - Gnisis/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Redoran Patrols - Gnisis.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3192,7 +3821,12 @@
       "dataPaths": [
         "HiddenSeaLoot"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Hidden Sea Loot.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3226,7 +3860,12 @@
       "dataPaths": [
         "BadDefaultSpellsDisableUselessSpellsForNPCs"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Tamriel_Unlimited.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3261,7 +3900,16 @@
       "dataPaths": [
         "ActorsCanGetOutWaterOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "actors_out_of_water_spell.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "actors_out_of_water.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3293,7 +3941,12 @@
       "dataPaths": [
         "CommandSpellsAreIllusionTurnUndeadIsRestoration"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "CommandSpellsAreIllusionTurnUndeadIsRestoration.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3325,7 +3978,12 @@
       "dataPaths": [
         "FatigueAndSpeedAndCarryweightRebalanceOpenMWLess"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FatigueSpeedAndCarryWeightRebalance.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3360,7 +4018,12 @@
       "dataPaths": [
         "CookingAndEating"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Cooking and Eating.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3392,7 +4055,12 @@
       "dataPaths": [
         "CookingAndEatingEnableHunger"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Cooking and Eating - Enable Hunger.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3425,7 +4093,12 @@
       "dataPaths": [
         "CookingAndEatingCookingAndEatingPublicansExpansi"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Cooking and Eating - Publicans Expansion.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3460,7 +4133,12 @@
       "dataPaths": [
         "WaterAndThirst"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Water and Thirst.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3495,7 +4173,12 @@
       "dataPaths": [
         "FishWithFishingPoles"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Fishing.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3529,7 +4212,12 @@
       "dataPaths": [
         "YurtCrafting"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Yurt Crafting.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3564,7 +4252,12 @@
       "dataPaths": [
         "QuickLootOpenMW/QuickLoot"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "QuickLoot.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3599,7 +4292,12 @@
         "ContainersAnimatedOpenMW/Containers Animated",
         "ContainersAnimatedOpenMW/Optional/kollops"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Containers Animated.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3633,7 +4331,12 @@
       "dataPaths": [
         "QuickActionOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "quick_action.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3743,7 +4446,12 @@
       "dataPaths": [
         "EnoughDoesNotHaveEnough"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "EDNHE.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3777,7 +4485,12 @@
       "dataPaths": [
         "DescriptiveShrines"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Descriptive Shrines.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3811,7 +4524,12 @@
       "dataPaths": [
         "StackableAshStatues"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Stackable Ash Statues.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3846,7 +4564,12 @@
       "dataPaths": [
         "SmartAmmoOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "smart-ammo.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3881,7 +4604,12 @@
       "dataPaths": [
         "TimeScaleChangeOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TimescaleChange.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3916,7 +4644,12 @@
       "dataPaths": [
         "IllustratedABCsForBarbarians"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Illustrated ABCs for Barbarians.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3950,7 +4683,12 @@
       "dataPaths": [
         "ComradeRavensBookArtsReplacer/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better_Typography_Bookarts_Fix.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -3984,7 +4722,12 @@
       "dataPaths": [
         "FMISaneOrdinators"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FMI_SaneOrdinators.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4018,7 +4761,12 @@
       "dataPaths": [
         "ReligionsElaborated/Full Edition"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Religions Elaborated.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4053,7 +4801,12 @@
       "dataPaths": [
         "OfferingsAndBlessingsDaedricStatues/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "mtrDaedricOfferings.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4087,7 +4840,12 @@
       "dataPaths": [
         "ClearYourName"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Clear Your Name.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4123,7 +4881,12 @@
         "DwemerLightingRods/00 MWSE",
         "DwemerLightingRods/00 OpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dwemer Lightning Rods - OpenMW.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4157,7 +4920,12 @@
       "dataPaths": [
         "SapriusDisguised/Saprius Disguised"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Saprius\u0027 Disguised.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4191,7 +4959,12 @@
       "dataPaths": [
         "BetterBarsOpenMW/BetterBars"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "BetterBars.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4226,7 +4999,12 @@
       "dataPaths": [
         "AshlanderTradersRemasteredBCOMAndWaresVersion/Ashlander Traders Remastered - BCOM and Wares"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Ashlander Traders Remastered.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4260,7 +5038,12 @@
       "dataPaths": [
         "AbotBoats/00 Base"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "abotBoats.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4294,7 +5077,12 @@
       "dataPaths": [
         "AbotBoatsFirewatchPatchTR2310/00 Base"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "abotBoats.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4394,7 +5182,12 @@
       "dataPaths": [
         "LightHotkeyOpenMWLua"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LightHotkey.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4460,7 +5253,12 @@
       "dataPaths": [
         "MAiqOnTheMainland"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "MaiqMainland.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4494,7 +5292,12 @@
       "dataPaths": [
         "Riders"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "riders.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4528,7 +5331,12 @@
       "dataPaths": [
         "ThirteenTelvanniADunmeriCardGame"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Thirteen Telvanni.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4563,7 +5371,12 @@
       "dataPaths": [
         "Nineholes"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Nine-holes.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4598,7 +5411,12 @@
       "dataPaths": [
         "Dartboards"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "DartboardsExpanded.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4632,7 +5450,12 @@
       "dataPaths": [
         "BladesInformant"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Blades Informant.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4735,7 +5558,12 @@
       "dataPaths": [
         "PacifistOptionsWhenItMakesSense"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Pacifist Options - When it Makes Sense.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4769,7 +5597,12 @@
       "dataPaths": [
         "RealSignposts"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RealSignposts.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4802,7 +5635,12 @@
       "dataPaths": [
         "SkoomaPipe/Skooma Pipe 1.2a"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Skooma Pipe 1.2a.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4835,7 +5673,12 @@
       "dataPaths": [
         "SlofsBoethiasPillowBook/slofs_mw_pillow_book"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Slof\u0027s Pillow Book.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4870,7 +5713,16 @@
       "dataPaths": [
         "TheSittingMod/Sit Down in Morrowind"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sit Down-Singleplayer.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Sit Down-TES3MP.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4905,7 +5757,12 @@
       "dataPaths": [
         "FMICaiusBigPackage"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FMI_CaiusBigPackage.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4973,7 +5830,12 @@
       "dataPaths": [
         "CaveDrips/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Cave Drips.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5041,7 +5903,12 @@
       "dataPaths": [
         "TravelingMerchantsOpenMWBCOM/TM\u0026OMW\u0026BCOM"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TravelingMerchants_v2_3.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5075,7 +5942,12 @@
       "dataPaths": [
         "SheatheYourWeapon/Sheathe your weapon"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sheathe your weapon.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5109,7 +5981,12 @@
       "dataPaths": [
         "HouseShrinesAndStatues/House Shrines and Statues/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Shrines and Statues.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5143,7 +6020,16 @@
       "dataPaths": [
         "RepopulatedWatersRowingNPCs"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RepopulatedWaters.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "RepopulatedWaters_TR.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5177,7 +6063,12 @@
       "dataPaths": [
         "ApartmentsOfMorrowind"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Apartments of Morrowind.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5211,7 +6102,12 @@
       "dataPaths": [
         "YetAnotherGuardDiversityRegular"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Yet Another Guard Diversity - Regular.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5245,7 +6141,16 @@
       "dataPaths": [
         "AudiobooksOfMorrowind"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AudiobooksOfMorrowind.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "audiobook-openmw.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5279,7 +6184,12 @@
       "dataPaths": [
         "AudiobooksOfTamrielRebuilt"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "audiobook-openmw.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5313,7 +6223,12 @@
       "dataPaths": [
         "OpenMWSkyrimStyleQuestNotifications"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SSQN.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5345,7 +6260,12 @@
       "dataPaths": [
         "ConvenientThiefToolsOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "convenient-thief-tools.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5377,7 +6297,12 @@
       "dataPaths": [
         "OpenMWAnimatedPickupAndShopAround"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Animated Pickup and Shop Around.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5409,7 +6334,28 @@
       "dataPaths": [
         "GoHomeOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "go-home.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "go-home-fr.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "go-home-locking-doors-fr.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "go-home-locking-doors.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "go-home.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5441,7 +6387,12 @@
       "dataPaths": [
         "OpenMWDynamicActors"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dynamic Actors.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5475,7 +6426,12 @@
       "dataPaths": [
         "TabletopAlchemyOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TabletopAlchemy.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5509,7 +6465,12 @@
       "dataPaths": [
         "FirstPersonViewDynamicsOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "DynamicCamera.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5543,7 +6504,12 @@
       "dataPaths": [
         "BuffTimersForOpenMW/BuffTimers"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "BuffTimers.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5577,7 +6543,12 @@
       "dataPaths": [
         "SMEUsefulWidgetsActorInfoHealthBarHitChanceOpenM/SMEUsefulWidgetsActorInfoHealthBarHitChanceEdited"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SME - Actor UI and Healthbar.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5612,7 +6583,12 @@
       "dataPaths": [
         "PerfectPlacementOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Perfect Placement.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5680,7 +6656,12 @@
       "dataPaths": [
         "Quicktrain"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Quicktrain.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5712,7 +6693,16 @@
       "dataPaths": [
         "HDForgeForOpenMWLua"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PherimAnimatedBellowsSounds.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "HD Forge.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5744,7 +6734,12 @@
       "dataPaths": [
         "MostWantedNerevarine/MostWantedNerevarine_1.2"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "MostWantedNerevarine.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5778,7 +6773,12 @@
       "dataPaths": [
         "OpenMWImpactEffects"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Impact Effects.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5812,7 +6812,24 @@
       "dataPaths": [
         "BetterMorrowindArmor/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Morrowind Armor DeFemm(a).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Better Morrowind Armor DeFemm(o).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Better Morrowind Armor DeFemm(r).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Better Morrowind Armor.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5847,7 +6864,12 @@
       "dataPaths": [
         "Daggerlad/Daggerlad/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Daggerlad.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5915,7 +6937,12 @@
       "dataPaths": [
         "RobeOfTheDrakesPride/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Robe of the Drake\u0027s Pride.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -5983,7 +7010,12 @@
       "dataPaths": [
         "TelvanniMagisterRobes/Telvanni Magister Robes-52278-1-25-1683240241/Telvanni Magister robes/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Telvanni Magister Robes.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6051,7 +7083,16 @@
       "dataPaths": [
         "RedoranWarArmorAndSathilMercenaryEquipment/Redoran War and Sathil Mercenary Armor 1.2/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Redoran War and Sathil Mercenary Armor.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Redoran War and Sathil Mercenary Armor_RS.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6085,7 +7126,12 @@
       "dataPaths": [
         "SathilMercenaryAndRedoranWarArmorV3/Sathil Mercenary and Redoran War Armor V3.01-53812-3-01-1702273003/RV Sathil and Redoran War Armour V3"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RV Sathil and Redoran War Armour V3.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6119,7 +7165,12 @@
       "dataPaths": [
         "AdventurersBackpackWares"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Adventurer\u0027s backback.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6153,7 +7204,12 @@
       "dataPaths": [
         "IndorilRonin/indoril_ronin_LA/data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Indoril Ronin Armor.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6187,7 +7243,12 @@
       "dataPaths": [
         "NetchScoutHelm/netch_scout_helm/data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Netch_Scout_Helm.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6221,7 +7282,12 @@
       "dataPaths": [
         "MoragTongEquipmentDiversity/Morag Tong Helmets"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Morag Tong Helm Diversity.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6255,7 +7321,12 @@
       "dataPaths": [
         "ManyClothHelms"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ManyClothHelms.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6289,7 +7360,12 @@
       "dataPaths": [
         "MageRobes/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Mage Robes.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6321,7 +7397,12 @@
       "dataPaths": [
         "MageRobesOpenmWLua"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "mage-robes-for-openmw-lua.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6353,7 +7434,12 @@
       "dataPaths": [
         "ConceptArtDunmerHelmets/Concept Art Dunmer Helms"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Concept Art Dunmer Helms.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6387,7 +7473,12 @@
       "dataPaths": [
         "DwemerScrapArmor/Dwemer Scrap Armor V2"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dwemer Scrap Armor V2.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6421,7 +7512,12 @@
       "dataPaths": [
         "HeavyChitinArmor/Heavy Chitin Armor 1.5/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Heavy Chitin.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6456,7 +7552,12 @@
       "dataPaths": [
         "CompleteAndRevisedDreughArmor/Complete and revised dreugh armor/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Complete dreugh armor.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6490,7 +7591,12 @@
       "dataPaths": [
         "CaRImperialStuddedLeatherArmor/Complete and Revised Imperial Studded Leather Armor/data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Complete and Revised Studded leather v 1.5.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6524,7 +7630,12 @@
       "dataPaths": [
         "ConceptArtDaedricHelmets/Concept art daedric helms"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Concept Art Daedric Helms.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6558,7 +7669,12 @@
       "dataPaths": [
         "CompleteDukesGuardSilver/Dukes Guard"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RV Dukes guard.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6592,7 +7708,12 @@
       "dataPaths": [
         "CaRNordicIronArmor/complete Nordic Iron/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Complete Nordic Iron.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6626,7 +7747,12 @@
       "dataPaths": [
         "NecromancerRobes/Necromancer robes/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RV Necrorobes.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6694,7 +7820,12 @@
       "dataPaths": [
         "BetterRobes/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Robes.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6728,7 +7859,12 @@
       "dataPaths": [
         "BetterRobesTamrielRebuiltPatch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Robes TR.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6763,7 +7899,12 @@
       "dataPaths": [
         "RedoranExquisiteRob"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "redorobe.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6797,7 +7938,12 @@
       "dataPaths": [
         "EbonyMailReplacer"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "EbonyMailReplacer.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6831,7 +7977,12 @@
       "dataPaths": [
         "DaedricLordArmor"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "DaedricArmor.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -6900,7 +8051,12 @@
       "dataPaths": [
         "BetterClothesComplete/#Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Clothes Complete.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7036,7 +8192,16 @@
       "dataPaths": [
         "NewBloodwormHelm/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Bloodworm Helm (MW).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "New Bloodworm Helm.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7070,7 +8235,12 @@
       "dataPaths": [
         "NewFistsOfRandagulf/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Randagulf\u0027s Fists.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7104,7 +8274,16 @@
       "dataPaths": [
         "NewBootsOfBlindingSpeed/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Boots of Blinding Speed (MW).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "New Boots of Blinding Speed.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7138,7 +8317,16 @@
       "dataPaths": [
         "NewLordsMail/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Lord\u0027s Mail (MW).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "New Lord\u0027s Mail.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7172,7 +8360,12 @@
       "dataPaths": [
         "PirateOutfit"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Pirate Outfit by Mandamus.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7207,7 +8400,12 @@
       "dataPaths": [
         "LichRobe"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "md_liche_robe.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7275,7 +8473,12 @@
       "dataPaths": [
         "SMTravellersClothing/SM_Travellers_Clothing/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_tr.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7309,7 +8512,12 @@
       "dataPaths": [
         "SMAshkhansArmourSetBBRBBodies/sm_asher_arm_bb_rb"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_ashar_arm_bb_rb.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7343,7 +8551,12 @@
       "dataPaths": [
         "SMDagothMask/sm_mask_eng"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_golden_mask.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7377,7 +8590,12 @@
       "dataPaths": [
         "SMMoragTongArmor/SM MT Armor Main/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_mt_armor_eng.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7412,7 +8630,12 @@
         "SMTelvanniCeremonialRobe/Telvanni_Robe/Data files",
         "SMTelvanniCeremonialRobe/Telvanni_Robe/Icons HD 512 for OpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_tel_robe.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7446,7 +8669,12 @@
       "dataPaths": [
         "SMBoiledNetchLeatherArmorSetCustomStyle/SM_Boiled_Armor_Set_with_Knee and elbow protection/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_boiled_netch_set_vfa.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7480,7 +8708,12 @@
       "dataPaths": [
         "HammerfellAnseiWarriorArmour"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Hammerfel Ansei Warrior Armour.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7514,7 +8747,12 @@
       "dataPaths": [
         "NetchAdamantiumArmourIntegrated"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Netch Adamantium Armor II_RP.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7549,7 +8787,12 @@
       "dataPaths": [
         "RedoranMasterArmorGlovedBracers/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RedoranMasterArmor.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7617,7 +8860,12 @@
       "dataPaths": [
         "UniqueSnowyCrown"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Unique Snowy Crown.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7651,7 +8899,12 @@
       "dataPaths": [
         "TheEbonyBlade/The Ebony Blade"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Ebony Blade.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7720,7 +8973,12 @@
       "dataPaths": [
         "NewBlackHandsDagger/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Black Hands Dagger.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7754,7 +9012,16 @@
       "dataPaths": [
         "NewUmbra/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Umbra (MW).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "New Umbra.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7788,7 +9055,16 @@
       "dataPaths": [
         "NewVelothsJudgement/A/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Veloth\u0027s Judgement (MW).ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "New Veloth\u0027s Judgement.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7822,7 +9098,12 @@
       "dataPaths": [
         "NewBowOfShadows/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Bow of Shadows.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7856,7 +9137,12 @@
       "dataPaths": [
         "NewWidowmaker/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "New Widowmaker.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7925,7 +9211,12 @@
       "dataPaths": [
         "TheMadstone"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Madstone.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -7959,7 +9250,12 @@
       "dataPaths": [
         "Magebane"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OpusSmaragd.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8061,7 +9357,12 @@
       "dataPaths": [
         "BetterSounds/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better_Sounds.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8096,7 +9397,12 @@
       "dataPaths": [
         "BetterSoundsYetAnotherPatch/01 Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Yet Another Better Sounds Patch.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8130,7 +9436,16 @@
       "dataPaths": [
         "BetterSoundsFixedAndCleaned"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Sounds_Fixed.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BS_BM_WeatherChange_Fixed.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8164,7 +9479,12 @@
       "dataPaths": [
         "ThievesStepBetterSounds/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SNR_ThievesStep_Standart.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8232,7 +9552,12 @@
       "dataPaths": [
         "StoreEntranceChimes"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Store Entrance Chimes - Alt Ver.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8266,7 +9591,16 @@
       "dataPaths": [
         "MaxarsDynamicFootstepsOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "MaxarFootsteps.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "MaxarFootsteps.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8301,7 +9635,12 @@
       "dataPaths": [
         "BetterBodiesManual/Underwear/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Bodies.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8336,7 +9675,12 @@
       "dataPaths": [
         "ImprovedArgonians"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Improved Argonians.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8613,7 +9957,16 @@
       "dataPaths": [
         "ReAnimationV2RogueFirstpersonAnimationPack"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ReAnimation_API.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "ReAnimation_v2_Rogue.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8647,7 +10000,12 @@
       "dataPaths": [
         "MudcrabMerchant/RR_Melchiors_Mudcrab_Merchant/English"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RR_Melchior\u0027s_Mudcrab_Merchant_Eng.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8682,7 +10040,16 @@
       "dataPaths": [
         "DivineDagoths/00 - Core Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Unique Dagoth Brandy \u0026 Amulet.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Bob\u0027s Diverse Dagoths - Hostile Gilvoth.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8785,7 +10152,12 @@
       "dataPaths": [
         "SpellsReforged"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SR_5_DamageHealth.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8855,7 +10227,12 @@
       "dataPaths": [
         "FancyBarenziah"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Fancy Barenziah.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8890,7 +10267,12 @@
       "dataPaths": [
         "PreservingFargoth/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "fargothtruehead.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8925,7 +10307,12 @@
         "BetterDwarvenSpectresMerAndMaidens/00 Core",
         "BetterDwarvenSpectresMerAndMaidens/01 Dwarven Spectres"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dwarven Spectres BB.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8993,7 +10380,12 @@
       "dataPaths": [
         "PlayableAlmalexiaOutfit/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Almalexia Outfit.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9027,7 +10419,12 @@
       "dataPaths": [
         "SaucyOldSelvil/Saucy old Selvil/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Saucy old Selvil.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9062,7 +10459,32 @@
         "TamrielRebuilt/00 Core",
         "TamrielRebuilt/01 Faction Integration"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TR_Mainland.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_Factions.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_OldTravels.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_Preview.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_Travels.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_Travels_Preview_and_Mainland.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9097,7 +10519,12 @@
       "dataPaths": [
         "ProjectCyrodiil/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Cyr_Main.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9131,7 +10558,16 @@
       "dataPaths": [
         "ProjectCyrodiilFPSImprover"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "hm-grass-stirk-CONTENT.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "hm-grass-stirk-GROUNDCOVER.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9166,7 +10602,16 @@
         "SkyrimHomeOfTheNords/00 Core",
         "SkyrimHomeOfTheNords/01 Grass for MGEXE and OpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sky_Main.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "Sky_Main_Grass.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9200,7 +10645,16 @@
       "dataPaths": [
         "Wyrmhaven"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Wyrmhaven.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "Wyrmhaven - Grass.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9268,7 +10722,12 @@
       "dataPaths": [
         "RiseOfHouseTelvanni/Base Mod"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Rise of House Telvanni.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9303,7 +10762,12 @@
       "dataPaths": [
         "RiseOfHouseTelvanni20"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ROHT_2_0_8.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9337,7 +10801,12 @@
       "dataPaths": [
         "UvirithsLegacy/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Uvirith\u0027s Legacy_3.53.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9406,7 +10875,16 @@
       "dataPaths": [
         "BuildingUpUvirithsLegacy/Building Up Uvirith\u0027s Legacy"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Building Up Uvirith\u0027s Legacy1.1.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Fast Eddie Fix v .0001.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9440,7 +10918,12 @@
       "dataPaths": [
         "TheArchmagistersAbode/data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Archmagister\u0027s Abode.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9474,7 +10957,12 @@
       "dataPaths": [
         "AStrangePlant"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PB_AStrangePlant.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9542,7 +11030,12 @@
       "dataPaths": [
         "MagicalMissionsRecharged/Magical Missions Recharged 2.43"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Magical Missions Recharged.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9610,7 +11103,12 @@
       "dataPaths": [
         "BalmoraUnderworld/Balmora Underworld V1.1"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FLG - Balmora\u0027s Underworld V1.1.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9645,7 +11143,16 @@
       "dataPaths": [
         "SothaSilExpanded/SothaSilExpanded2_0"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "GDR_MasterFile.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "Sotha Sil Expanded.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9680,7 +11187,12 @@
       "dataPaths": [
         "SothaSilExpandedRetracted"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sotha Sil Expanded.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9748,7 +11260,12 @@
       "dataPaths": [
         "MoragTongPolished"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Morag Tong Polished.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9783,7 +11300,12 @@
       "dataPaths": [
         "MoragTongPolishedBCoMPatch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "BtF - Nordic Dagon Fel Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9817,7 +11339,12 @@
       "dataPaths": [
         "MoragTongPolishedTRFactionsPatch/01 TR_Factions"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Morag Tong Polished - TR_Factions.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9852,7 +11379,12 @@
         "SecretsOfTheCrystalCity/00 Core",
         "SecretsOfTheCrystalCity/01 HD Textures"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SecretsOfTheCrystalCity.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9921,7 +11453,12 @@
         "InvestigationAtTelEurus/Data Files",
         "InvestigationAtTelEurus/Extras for OpenMW only"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Tel_Eurus.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -9989,7 +11526,12 @@
       "dataPaths": [
         "AstrologiansGuild"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Astrologians Guild.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10057,7 +11599,12 @@
       "dataPaths": [
         "QuestsForClansAndVampireLegends/Quests for Clans and Vampire Legends/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Quests for Clans and Vampire Legends.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10093,7 +11640,212 @@
         "QuestsForClansAndVampireLegendsPatches/02 Script Fix",
         "QuestsForClansAndVampireLegendsPatches/03 Creature Leveled Lists"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ABCmod - Dagoth Ur Voice Addon.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Ajira Deflowered - Patch for Purists.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "AliceL93 Vanilla Quest Tweaks - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "AliceL93 Vanilla Quest Tweaks - TR_Factions Compatibility Patch.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Almalexia_Voicev1 - PFP.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Almalexia_Voicev1 - Sotha Sil Expanded.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Alms and Donations - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Area Effect Projectiles Integrated - LeFemmArmor.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Area Effect Projectiles Integrated - Quill of Feyfolken 2.0.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Balmora Guilds Expanded - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Beware the Sixth House - Dagoth Ur Voice Addon.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Boys in the Hood - Balmora Waterworks.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "CCM-SecretsofVos-V2-TB - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Clean_Mines \u0026 Caverns - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Cooking and Eating - Enable Hunger.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "DA_Sobitur_Facility_Clean - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "DA_Sobitur_Quest_Part_1 Clean - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "DD_Caldera_Expansion - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "DRPV1.9 - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Ebonheart_Underworks - Disable Rebirth Question.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "FMI - Alice\u0027s Package - Entertainers Expanded.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "FMI_HulStop 1.6 - Balmora Waterworks.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Frostwind - Rebalance - OpenMW.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Gnisis Tamnsumiran Door Position Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Library of Vivec Overhaul - Full - Dialogue Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Master Index Naturalized - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Mining Pick Requirement - correctUV Ore Replacer_fixed from GH.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Mining Pick Requirement - Diamond Rocks.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "MoonlightOnTheOdaiRiver - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Morrowind - Tombs Leveled Lists Flag Fixed.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OAAB Brother Junipers Twin Lamps - Camonna Tong Compatibility Patch.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OAAB Brother Junipers Twin Lamps - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Patch for Purists - Clean_Mines \u0026 Caverns - Mat.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Quests for Clans and Vampire Legends - Morrowind Anti-Cheese.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Quests for Clans and Vampire Legends - Vampire Clans - Clutter Monkey Overhaul.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "riders - Your Own Ashlander Tribe.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "SHS - Bloodskal Barrow - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Siege at Firemoth Naturalized - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Solstheim Tomb of The Snow Prince - Bloodmoon Rebalance.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Sotha Sil Expanded - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Taskmaster of House Telvanni Part I - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "TeaMod_2.1 - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "The Doors of Oblivion 1.4 - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "The Great Fantasco - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "The Hammer of Orsinium - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Tribunal - Rare Durzogs In Vvardenfell Caves.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Uvirith\u0027s Legacy_3.53 - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Wanderers of Solstheim-TOTSP - Script Fix.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Wares-base - Adamantium Armor - Rare.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Wyrmhaven - Hlarvis Dren - OpenMW.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Wyrmhaven - Script Fix.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10127,7 +11879,12 @@
       "dataPaths": [
         "PlunderTheDungeon"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Plunder the Dungeon.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10162,7 +11919,16 @@
         "TheCorprusariumExperience/00 - Core",
         "TheCorprusariumExperience/02 - Doors of Oblivion patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The_corprusarium_Exp.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Corprusarium_Doors_of_Oblivion_Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10196,7 +11962,12 @@
       "dataPaths": [
         "TheCorpseAndTheSkoomaPipeOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Corpse and the Skooma Pipe Overhaul.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10230,7 +12001,12 @@
       "dataPaths": [
         "ThievesGuildInGnaarMok"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Thieves_Guild_in_Gnaar_Mok.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10264,7 +12040,12 @@
       "dataPaths": [
         "DawnbreakerTheLadyOfLight/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "NL_Dawnbreaker.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10299,7 +12080,12 @@
         "RoaringArena/00 Core",
         "RoaringArena/03 Vivec GtC/00 Default"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RoaringArena.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10333,7 +12119,12 @@
       "dataPaths": [
         "ImperialLegionExpansion"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Imperial Legion Expansion.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10367,7 +12158,12 @@
       "dataPaths": [
         "EbonheartUnderworks"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Ebonheart_Underworks.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10401,7 +12197,12 @@
       "dataPaths": [
         "GuildOfVampireHunters"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Guild of Vampire Hunters.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10435,7 +12236,12 @@
       "dataPaths": [
         "GuildOfVampireHuntersTheWearyVampirePatch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "KHP-GuildOfVampireHunters-TheWearyVampire-Patch.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10469,7 +12275,16 @@
       "dataPaths": [
         "FavorsOfDagon"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Favors of Dagon-LGNPC.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Favors of Dagon.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10503,7 +12318,12 @@
       "dataPaths": [
         "OhNoStolenReports"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "onsr.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10537,7 +12357,12 @@
       "dataPaths": [
         "DeathOfATaxmanExpanded/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TaxCollectorExpansion.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10571,7 +12396,12 @@
       "dataPaths": [
         "QuestsInBalmoraWaterworks"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Quests In Balmora Waterworks - No Dura gra-Bol.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -10605,7 +12435,12 @@
       "dataPaths": [
         "MasterIndexRedux"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "MasterIndexRedux.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -11369,7 +13204,12 @@
       "dataPaths": [
         "WatterfallsTweaks"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Waterfalls Tweaks.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -11403,7 +13243,12 @@
       "dataPaths": [
         "Mistify/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "mistify.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -11505,7 +13350,12 @@
       "dataPaths": [
         "PRPerfectScum"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PR Perfect Scum.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -11641,7 +13491,16 @@
       "dataPaths": [
         "TheKeyMod"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Key Mod - No Names.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "The Key Mod.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -11708,7 +13567,12 @@
       "dataPaths": [
         "TravsOpenMWBooksEnhanced"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "openmw_books_enhanced.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12228,7 +14092,12 @@
       "dataPaths": [
         "DiverseBlood/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Bob\u0027s Diverse Blood.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12364,7 +14233,12 @@
       "dataPaths": [
         "MorrowindSwampTrees/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Morrowind Swamp Trees.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12706,7 +14580,16 @@
         "LogsOnFire/01 HD Textures",
         "LogsOnFire/02 Apel\u0027s Fire Retexture Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "logs on Fire.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Logs on Fire.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12778,7 +14661,12 @@
         "GlowInTheDahrk/04 Raven Rock Glass Windows",
         "GlowInTheDahrk/07 Telvanni Tower Interior Glow OpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "GITD_WL_RR_Interiors.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12846,7 +14734,16 @@
       "dataPaths": [
         "VisuallyFilledSoulGemsForOpenMWLuaScriptingENGAn/ChangeSoulGemOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ChangeSoulGemOMW.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "ChangeSoulGemOMW_RU.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12914,7 +14811,12 @@
       "dataPaths": [
         "Fireflies"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RP_fireflies.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -12982,7 +14884,12 @@
       "dataPaths": [
         "LightedDwemerTowers/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "DN-Lighted_Dwemer_Towers.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13120,7 +15027,12 @@
       "dataPaths": [
         "HighArt/High Art"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "High Art.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13188,7 +15100,12 @@
       "dataPaths": [
         "VampireClansClutterOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Vampire Clans - Clutter Monkey Overhaul.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13222,7 +15139,12 @@
       "dataPaths": [
         "AtmosphericSouthWallCornerclub/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "South Wall_RP.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13256,7 +15178,12 @@
       "dataPaths": [
         "InteriorsOfSolstheim/Interiors of Solstheim V2.1/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Interiors_of_Solstheim_V2.1.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13290,7 +15217,12 @@
       "dataPaths": [
         "InteriorsOfMournhold/Interiors of Mournhold Version 2.3/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Interiors_of_Mournhold_V2.3.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13324,7 +15256,12 @@
       "dataPaths": [
         "TheMagicRockOfMaarGan/00 - Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The_magic_rock_of_Maar_Gan.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13358,7 +15295,12 @@
       "dataPaths": [
         "UnchartedArtifacts"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Uncharted Artifacts.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13394,7 +15336,20 @@
         "OAABShipwrecksUnchartedArtifactsTRPatch/02 Patch - TR Patch",
         "OAABShipwrecksUnchartedArtifactsTRPatch/01 Patch - Uncharted Artifacts"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Uncharted Artifacts.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "OAAB - Shipwrecks.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "OAAB - Shipwrecks - TR Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13428,7 +15383,12 @@
       "dataPaths": [
         "OAABVerticalShipwreck/Vertical Shipwreck"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dim Vertical Shipwreck.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13496,7 +15456,12 @@
       "dataPaths": [
         "LibraryOfVivecEnhanced/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RPNR_Library.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13530,7 +15495,12 @@
       "dataPaths": [
         "AndasrethOverhaulu"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Andasreth Overhaul.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13564,7 +15534,12 @@
       "dataPaths": [
         "ShalOvergrown"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Shal_Overgrown.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13598,7 +15573,12 @@
       "dataPaths": [
         "OAABTombsAndTowers"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OAAB - Tombs and Towers.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13632,7 +15612,12 @@
       "dataPaths": [
         "MinesAndCaverns/Mines \u0026 Caverns"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Clean_Mines \u0026 Caverns.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13734,7 +15719,12 @@
       "dataPaths": [
         "BerandasOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Berandas Overhaul.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13768,7 +15758,12 @@
       "dataPaths": [
         "MarensMisfitMabrigash"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "MarenMabrigash.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13803,7 +15798,20 @@
         "OfEggsAndDwarvesOpenMW/00 Core",
         "OfEggsAndDwarvesOpenMW/01 BCOM Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Of Eggs and Dwarves.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Of Eggs and Dwarves.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "OEAD_BCOM_Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13837,7 +15845,12 @@
       "dataPaths": [
         "TheVestigeOfBethaleft"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Vestige of Bethaleft.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13871,7 +15884,16 @@
       "dataPaths": [
         "CavernsOverhaulFixedAndImproved"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Ashinabi Overhaul.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Dubdilla Overhaul.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13906,7 +15928,12 @@
       "dataPaths": [
         "DagothUrFleshedOut/Dagoth Ur Fleshed Out"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dagoth Ur Fleshed Out.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13940,7 +15967,12 @@
       "dataPaths": [
         "SuranSewers/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Suran sewers.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -13974,7 +16006,12 @@
       "dataPaths": [
         "KogoruhnExtinctCityOfAshAndSulfur/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Kogoruhn - Extinct City of Ash and Sulfur.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14008,7 +16045,12 @@
       "dataPaths": [
         "TheWoeOfIndalenTombBCOM"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "DM_IndalenWoeVanilla.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14076,7 +16118,12 @@
       "dataPaths": [
         "VenninsHlaaluAncestralTomb"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Clean_Vennin\u0027s Hlaalu Tomb.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14110,7 +16157,12 @@
       "dataPaths": [
         "VenninsHlerviTombOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Clean_Vennin\u0027s Hlervi Tomb.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14144,7 +16196,12 @@
       "dataPaths": [
         "SeranAncestralTombOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Seran Ancestral Tomb Overhaul.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14178,7 +16235,12 @@
       "dataPaths": [
         "OAABGreaterSamarysTomb"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Greater Samarys.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14212,7 +16274,12 @@
       "dataPaths": [
         "SuperiorShulkEggmine"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Superb Shulk Eggmine.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14246,7 +16313,12 @@
       "dataPaths": [
         "SelfishnessOfTheSea"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "koalcaveexp.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14280,7 +16352,12 @@
       "dataPaths": [
         "DunmerStrongholdsVO"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "BtF - Nordic Dagon Fel Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14315,7 +16392,12 @@
       "dataPaths": [
         "Undercity"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Undercity.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14349,7 +16431,12 @@
       "dataPaths": [
         "MamaeaAwakened/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Mamaea Awakened.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14417,7 +16504,12 @@
       "dataPaths": [
         "DrethosAncestralTomb"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Drethos_Ancestral_Tomb.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14451,7 +16543,12 @@
       "dataPaths": [
         "FromWindIntoStone/From Wind Into Stone"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FromWindIntoStone.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14485,7 +16582,12 @@
       "dataPaths": [
         "BlackthornBarrow"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Blackthorn Barrow.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14519,7 +16621,12 @@
       "dataPaths": [
         "CalderaPrioryAndTheDepthsOfBloodAndBone/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Caldera Priory.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14553,7 +16660,24 @@
       "dataPaths": [
         "MeteoriteMinistry"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Meteorite Ministry Palace - Higher.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Meteorite Ministry Palace.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Meteorite Ministry Temple - Higher.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Meteorite Ministry Temple.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14622,7 +16746,12 @@
       "dataPaths": [
         "ShrineOfBoethiahExpansion"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Shrine of Boethiah Expanded.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14656,7 +16785,12 @@
       "dataPaths": [
         "ShrineOfAzura"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ShrineOfAzura.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14690,7 +16824,12 @@
       "dataPaths": [
         "OAABFoyadaMamaea"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OAAB - Foyada Mamaea.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14724,7 +16863,12 @@
       "dataPaths": [
         "FindingTheErabenimsunAshlanderCamp"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AshlanderArch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14760,7 +16904,16 @@
         "OAABDwemerPavements/00 Core",
         "OAABDwemerPavements/01 Trackless Grazelands Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OAAB Dwemer Pavements.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Trackless Grazeland OAAB Dwemer Pavements Patch.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14794,7 +16947,16 @@
       "dataPaths": [
         "ConceptArtPalaceVivecCIty/00 - Core Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "CAP Dome.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Concept art palace.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14828,7 +16990,12 @@
       "dataPaths": [
         "ImmersiveGrottoEntrancesLMMCRMinesAndCavernsPatc"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "IGE.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14863,7 +17030,12 @@
       "dataPaths": [
         "ConceptArtsPlantations/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Concept_Arts_plantations.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14899,7 +17071,20 @@
         "SolstheimTombOfTheSnowPrince/001 Core - Interiors With Glow in the Dahrk",
         "SolstheimTombOfTheSnowPrince/001 Core - Interiors Without Glow in the Dahrk"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Solstheim Tomb of The Snow Prince.esm",
+          "mode": "normal"
+        },
+        {
+          "file": "GITD_WL_RR_Interiors.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "GITD_WL_RR_Interiors.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14934,7 +17119,16 @@
       "dataPaths": [
         "SheogoradGrovesOfTheNorth"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Gotn_Ryt_Full_Grass.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Sheogorad - Groves of the North.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -14968,7 +17162,12 @@
       "dataPaths": [
         "JusticeForKhartag"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Justice4Khartag.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15002,7 +17201,12 @@
       "dataPaths": [
         "RedMountainReborn/00 - Red Mountain Reborn"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RedMountainReborn.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15036,7 +17240,12 @@
       "dataPaths": [
         "CalderaMineExpandedSimplifiedAndBugfree/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "DD_Caldera_Expansion.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15070,7 +17279,12 @@
       "dataPaths": [
         "TheStoneWoodPassReworked/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Landscapes Stonewood Pass (RP Edit).esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15100,9 +17314,17 @@
         }
       ],
       "dataPaths": [
-        "MOMWPostProcessingPack/02 OMWFX-Shaders"
+        "MOMWPostProcessingPack/01 XE-Shaders",
+        "MOMWPostProcessingPack/02 OMWFX-Shaders",
+        "MOMWPostProcessingPack/03 ZesterersVolumetricClouds",
+        "MOMWPostProcessingPack/04 WareyaOpenMWShaders"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Cinematic Boken DoF.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15134,7 +17356,12 @@
       "dataPaths": [
         "DevilishAlcoholOverhaul"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Devilish Alcohol Overhaul.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15168,7 +17395,16 @@
       "dataPaths": [
         "BeautifulCitiesOfMorrowind/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "BCOM_pathgrid_reset.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Beautiful cities of Morrowind.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15237,7 +17473,12 @@
         "NordicDagonFel/00 Core",
         "NordicDagonFel/01 More Nordic Dagon Fel"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Nordic Dagon Fel.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15271,7 +17512,12 @@
       "dataPaths": [
         "NordicDagonFelNPCs"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Nordic Dagon Fel NPCs.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15305,7 +17551,12 @@
       "dataPaths": [
         "AldruhnunderSkar/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Under-Skar.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15337,10 +17588,29 @@
         }
       ],
       "dataPaths": [
-        "AesthesiaGroundcoverReworked/00 Core"
+        "AesthesiaGroundcoverReworked/00 Core",
+        "AesthesiaGroundcoverReworked/01 Textures - HD",
+        "AesthesiaGroundcoverReworked/02 Plugins - Vanilla Regions",
+        "AesthesiaGroundcoverReworked/02 Plugins - TR"
       ],
       "content": [],
-      "groundcover": [],
+      "groundcover": [
+        "AesAdGrass_AC.esp",
+        "AesAdGrass_AI.esp",
+        "AesAdGrass_AL.esp",
+        "AesAdGrass_BC.esp",
+        "AesAdGrass_WG.esp",
+        "AesGrass_GL.esp",
+        "AesGrass_SV.esp",
+        "AesAdGrass_TR_AC.esp",
+        "AesAdGrass_TR_AI.esp",
+        "AesAdGrass_TR_AL.esp",
+        "AesAdGrass_TR_BC.esp",
+        "AesAdGrass_TR_WG.esp",
+        "AesGrass_TR_GL.esp",
+        "AesGrass_TR_SV.esp",
+        "Rem_TR_AT.esp"
+      ],
       "bsaArchives": [],
       "tags": [],
       "provenance": {
@@ -15398,7 +17668,120 @@
         "BCOMPatches/80 Mamaea Awakened",
         "BCOMPatches/85 Logs on fire"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "abotBoats.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Apartments of Morrowind.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Ashlander Traders Remastered.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BCOM_abot_boats.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BCoM_logs_on_fire.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "BCoM_Magical_Missions_Recharged_Patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "BCOM_PfP_patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "BCoM_PfP_patch_01.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Concept_Arts_plantations.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "DartboardsExpanded.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Ebonheart_Underworks.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "GITD_Telvanni_Dormers.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Guild of Vampire Hunters.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "High Art.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Imperial Legion Expansion.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Mamaea Awakened.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "MasterIndexRedux.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Morrowind Anti-Cheese.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "OAAB - Foyada Mamaea.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Province_Cyrodiil_BCOM_patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "RedMountainReborn.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Redoran Patrols - Gnisis.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "ROHT_2_0_8.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Store Entrance Chimes - Alt Ver.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "TOTSP_abotBoats.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_BCOM_Patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Uvirith\u0027s Legacy_3.53.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Yet Another Guard Diversity - Regular.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15464,7 +17847,12 @@
       "dataPaths": [
         "DistantFixesLuaEdition"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "distant-fixes-lua-edition.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15523,7 +17911,12 @@
       "dataPaths": [
         "AdvancedCamera/AdvancedCamera"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AdvancedCamera.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15552,7 +17945,12 @@
       "dataPaths": [
         "TheAbeceanIsles"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "xOTM_01.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15584,7 +17982,16 @@
       "dataPaths": [
         "FairCareOpenMW/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FairCare.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "FairCare.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15618,7 +18025,12 @@
       "dataPaths": [
         "WeaponRefinementLua/weapon-refinement-lua"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "weapon-refinement-lua.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15649,7 +18061,24 @@
       "dataPaths": [
         "OpenMWFarming/Data_Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Farming.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "Farming-Activators.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "Farming-Global.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "Farming-Player.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15678,7 +18107,12 @@
       "dataPaths": [
         "LevelsAndLimits/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LevelsAndLimits.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15710,7 +18144,12 @@
       "dataPaths": [
         "HunterwindOpenMWOnly"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "hunterwind.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15744,7 +18183,12 @@
       "dataPaths": [
         "SolthasCombatPackOpenMWLua/Solthas Combat Pack"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SolCombatPack.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15778,7 +18222,12 @@
       "dataPaths": [
         "RobeOfMoonAndStar/Robe of moon and star Merged (Better Bodies ver.)"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "robe of moon and star.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15812,7 +18261,12 @@
       "dataPaths": [
         "DaggerfallDungeonMapOpenMWLua/Solthas Daggerfall Dungeon Map"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "solDaggerfallDungeonMap.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15844,7 +18298,12 @@
       "dataPaths": [
         "HarvestLights"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "harvest-lights.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15873,7 +18332,12 @@
       "dataPaths": [
         "OpenMWEnhancedInvisibility"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "enhanced-invisibility.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15903,7 +18367,12 @@
       "dataPaths": [
         "ScalableDwemerPuzzleBoxRandomizer"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ScalableDwemerPuzzleBoxRandomizer.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15932,7 +18401,12 @@
       "dataPaths": [
         "AnimatedLevitation"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "animated-levitation.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15961,7 +18435,12 @@
       "dataPaths": [
         "SkoomaesthesiaOpenMWPort"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Skoomaesthesia.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -15994,7 +18473,12 @@
       "dataPaths": [
         "SeaFortsOfMorrowind/Sea Forts of Morrowind"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sea Forts of Morrowind 1.0v.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16025,7 +18509,12 @@
       "dataPaths": [
         "3rdPersonAltAttacksReAnimationPlugin"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "third-person-alt-attacks.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16057,7 +18546,12 @@
       "dataPaths": [
         "TurnAroundOpenmwLua/Turn Around"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Turn Around.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16091,7 +18585,16 @@
       "dataPaths": [
         "FreshLootOpenMW/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "fresh-loot.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "fresh-loot.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16125,7 +18628,12 @@
       "dataPaths": [
         "ImperialMagickaRegenerationForOpenMW049"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Imperial Magicka Regen.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16159,7 +18667,12 @@
       "dataPaths": [
         "TalkingTrainsSpeechcraftopenmwLua/Talking Trains Speechcraft openmw lua"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Talking Trains Speechcraft.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16227,7 +18740,12 @@
       "dataPaths": [
         "AldRuhnOutskirtsAncestralRefuge"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Ald\u0027Ruhn Outskirts - Ancestral Refuge.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16261,7 +18779,12 @@
       "dataPaths": [
         "HarderBetterFasterStrongerOpenMW/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "HBFS.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16363,7 +18886,12 @@
       "dataPaths": [
         "DwemerLegacyReforgedArkngthunchSturdumz/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dwemer Legacy Reforged - Arkngthunch-Sturdumz.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16397,7 +18925,12 @@
       "dataPaths": [
         "SMSwordOfADeadHero/SM_Dae_sword/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_dae_hero.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16431,7 +18964,12 @@
       "dataPaths": [
         "LimitlessStorageForAllContainers"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Limitless_Storage_for_all_Containers.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16465,7 +19003,12 @@
       "dataPaths": [
         "AbbsMiscellaneousItemsRenamed"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AbbMiscellaneousItemsRenamed.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16499,7 +19042,16 @@
       "dataPaths": [
         "StoreIngredientsRingOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "StoreIngredients.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "StoreIngredients.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16533,7 +19085,12 @@
       "dataPaths": [
         "CorporealCarryableContainers/Corporeal-Carryable-Containers-master"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Corporeal-Carryable-Containers.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16568,7 +19125,16 @@
         "TheWakeOfHaninIbarDadOverhaul/00 Core",
         "TheWakeOfHaninIbarDadOverhaul/01 TR Patch"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "The Wake of Hanin.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "The Wake of Hanin - TR Goblet Fix.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16602,7 +19168,12 @@
       "dataPaths": [
         "KumarahazTheBanditLair/Kumarahaz - The Bandit Lair"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Kumarahaz Bandit Lair.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16633,7 +19204,12 @@
       "dataPaths": [
         "BetterMerchantsSkillsOpenMW/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "bms.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16663,7 +19239,12 @@
       "dataPaths": [
         "CameraNoiseOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Camera Noise.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16696,7 +19277,12 @@
       "dataPaths": [
         "AFFresh"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AFFresh.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16730,7 +19316,12 @@
       "dataPaths": [
         "AFFreshFullyVoiced/AFFresh_Fully_Voiced_Dialogue_OpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "AFFresh_fully_voiced_OpenMW_patch.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16764,7 +19355,12 @@
       "dataPaths": [
         "CustomSpellHotkeysForOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "customSpellBindings.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16798,7 +19394,12 @@
       "dataPaths": [
         "OblivionStyleLockpickingOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OblivionLockpicking.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16832,7 +19433,16 @@
       "dataPaths": [
         "PortableAutosorterOpenMW049"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "portable_autosorter.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "portable_autosorter.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16866,7 +19476,12 @@
       "dataPaths": [
         "DodgeOpenMW/Dodge"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dodge.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16897,7 +19512,12 @@
       "dataPaths": [
         "OpenMWLuaPhysics"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LuaPhysicsEngine.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16929,7 +19549,16 @@
       "dataPaths": [
         "Aetherwind"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Aetherwind.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Aetherwind.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16963,7 +19592,12 @@
       "dataPaths": [
         "AetherPiratesDiscovery"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Aether Pirate\u0027s Discovery.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -16997,7 +19631,20 @@
       "dataPaths": [
         "DevilishNeedsOpenMW049/Devilish Needs"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Devilish Needs Dialogue Addon for PT.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish Needs.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish Needs.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17029,7 +19676,12 @@
       "dataPaths": [
         "UIModes"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "UiModes.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17061,7 +19713,12 @@
       "dataPaths": [
         "OpenMWDynamicAmbientVisualEffects"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Dynamic Ambient Visual Effects.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17093,7 +19750,12 @@
       "dataPaths": [
         "RUN"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "RUN.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17154,7 +19816,16 @@
       "dataPaths": [
         "ShieldsUpOpenMW/Shields Up"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ShieldsUp.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "ShieldsUp.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17188,7 +19859,12 @@
       "dataPaths": [
         "OpenMWQuestMenu"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "questmenu.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17228,7 +19904,12 @@
         "S3maphoreOpenMWMusicManagementFromTheFuture/05 Secrets of the Crystal City",
         "S3maphoreOpenMWMusicManagementFromTheFuture/06 Songbook of the North"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "S3maphore.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17262,7 +19943,12 @@
       "dataPaths": [
         "PotionThrowerForOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "potion_thrower.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17296,7 +19982,12 @@
       "dataPaths": [
         "ZerkishHotkeysImprovedForOpenMW/ZerkishHotkeysImproved"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ZerkishHotkeysImproved.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17364,7 +20055,12 @@
       "dataPaths": [
         "OmnipresenceOpenmw/omwOmnipresence"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "yksuiOmnipresence.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17398,7 +20094,16 @@
       "dataPaths": [
         "BardcraftOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Bardcraft.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Bardcraft.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17432,7 +20137,12 @@
       "dataPaths": [
         "BossOverhaulDagothUr/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "BO_DagothUr_Core.esm",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17466,7 +20176,20 @@
       "dataPaths": [
         "BuildingUpUvirithsGraveV102025BigFixes/Building Up Uvirith\u0027s Grave - 2025 Bug Fixes"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Building Up Uvirith\u0027s Grave 1.0.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BUUG Alchemy- Bloodmoon.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BUUG Alchemy- Tribunal.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17500,7 +20223,12 @@
       "dataPaths": [
         "ZerkishAutoSaveForOpenMW/ZerkishAutoSave"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ZerkishAutoSave.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17568,7 +20296,12 @@
       "dataPaths": [
         "OpenMWFullBodyAwareness"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FBA-Alex_s_Better_Fitted_Armors.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17602,7 +20335,12 @@
       "dataPaths": [
         "SorryWereClosedNighttimeServiceRefusal"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sorry We\u0027re Closed.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17636,7 +20374,16 @@
       "dataPaths": [
         "LucidDisturbingDreams/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Lucid Disturbing Dreams.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "kd_ldd.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17670,7 +20417,12 @@
       "dataPaths": [
         "HitReactionsAnimatedOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "HitReactionsAnimated.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17738,7 +20490,12 @@
       "dataPaths": [
         "LuaPhysicsEngineOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LuaPhysicsEngine.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17772,7 +20529,12 @@
       "dataPaths": [
         "VoshondsMapKeyOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "mapkey.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17806,7 +20568,12 @@
       "dataPaths": [
         "OpenMWFortifyHealthFix/FortifyFix"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FortifyFix.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17840,7 +20607,12 @@
       "dataPaths": [
         "OpenMWFortifyNerf/FortifyNerf"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FortifyNerf.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -17976,7 +20748,12 @@
       "dataPaths": [
         "ThirtySixPlayableDiceGame/00 Core"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ThirtySix.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18010,7 +20787,12 @@
       "dataPaths": [
         "TorchHotkeyForOpenMW049/TorchHotkey"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TorchHotkey.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18044,7 +20826,12 @@
       "dataPaths": [
         "OpenMW049EasySpeechcraft/EasySpeechcraft"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "EasySpeechcraft.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18078,7 +20865,12 @@
       "dataPaths": [
         "OpenMW049FixMercantileExploit/fixMerc"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "fixMerc.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18112,7 +20904,12 @@
       "dataPaths": [
         "OpenMW049EasyHarvest/EasyHarvest"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "EasyHarvest.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18146,7 +20943,12 @@
       "dataPaths": [
         "PlaceStacks/placeStacks"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "placeStacks.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18180,7 +20982,12 @@
       "dataPaths": [
         "ZoomToSeeOpenMW049/ZoomToSee"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ZoomToSee.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18214,7 +21021,12 @@
       "dataPaths": [
         "PhotoModeForOpenMW049/Photo Mode"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PhotoMode.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18316,7 +21128,20 @@
       "dataPaths": [
         "OpenMW049Disenchanting/disenchanting"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "disenchanting.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "paper_capacity.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "disenchanting.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18347,7 +21172,16 @@
       "dataPaths": [
         "TheDarkProject"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TheDarkProject.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "thedarkproject.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18379,7 +21213,16 @@
       "dataPaths": [
         "BurglaryOverhaul/ErnBurglary-main"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ErnBurglary.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "ErnBurglary.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18413,7 +21256,16 @@
       "dataPaths": [
         "ActorsCanOvercomeObstaclesOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "actors_over_obstacles_spell.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "actors_over_obstacles.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18447,7 +21299,20 @@
       "dataPaths": [
         "OpenMWSimplyMining/SimplyMining"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SimplyMining.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "weightlessOres.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "SimplyMining.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18481,7 +21346,16 @@
       "dataPaths": [
         "TrulyConstantEffectsOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "TrulyConstantEffects.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "TrulyConstantEffects.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18515,7 +21389,12 @@
       "dataPaths": [
         "SmoothZoomOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "SmoothZoom.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18549,7 +21428,16 @@
       "dataPaths": [
         "RadiantTheftQuests/ErnRadiantTheft-main"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ErnRadiantTheft.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "ErnRadiantTheft.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18583,7 +21471,12 @@
       "dataPaths": [
         "OpenMWCraftingFramework/CraftingFramework"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "CraftingFramework.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18651,7 +21544,12 @@
       "dataPaths": [
         "PoisonWeaponsOpenMW/Poison Weapons/data_files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Poison Weapons.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18719,7 +21617,12 @@
       "dataPaths": [
         "SkyrimHomeOfTheNordsFullyVoiced"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Sky_Main_greeting.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18753,7 +21656,12 @@
       "dataPaths": [
         "DisableVanityCameraOpenMWEdition"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "vanitydelay1h.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18787,7 +21695,12 @@
       "dataPaths": [
         "ActorInteractionsOpenMW/ActorInteractions"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ActorInteractions.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18821,7 +21734,12 @@
       "dataPaths": [
         "HUDWeaponChargeForOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "HUDweaponCharge.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18855,7 +21773,12 @@
       "dataPaths": [
         "LoadoutsOpenMW/openmw-loadouts-0.6.0"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Loadouts.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18889,7 +21812,12 @@
       "dataPaths": [
         "OfBeadAndFeatherOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "OfBeadAndFeather.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18923,7 +21851,16 @@
       "dataPaths": [
         "StatsWindowExtenderOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "StatsWindow.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "StatsWindow.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18957,7 +21894,12 @@
       "dataPaths": [
         "Urnlings/Urnlings Vurt\u0027s MVR Medium-HD (0.96a)/Data Files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Urnlings.esp",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -18991,7 +21933,12 @@
       "dataPaths": [
         "QuickSelectUltimateOpenMWFullGamepadKeyboardMous/Quick Select Ultimate 1.6"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "QuickSelectUltimate.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19025,7 +21972,12 @@
       "dataPaths": [
         "DaedraUseBoundEquipmentForOpenMW"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Daedra Use Bound Equipment for OpenMW.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19059,7 +22011,16 @@
       "dataPaths": [
         "SoullessSummons"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Soulless Summons - Cutting Room Floor - Patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Soulless Summons.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19093,7 +22054,12 @@
       "dataPaths": [
         "SpellsBookmarksOpenMW/spellsBookmark"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "spellsBookmark.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19127,7 +22093,12 @@
       "dataPaths": [
         "SmartInterfaceMenuOpeningSIMOOpenMW/openmw-smart-interface-menu-opening/smartInterfaceMenuOpening"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "smartInterfaceMenuOpening.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19161,7 +22132,12 @@
       "dataPaths": [
         "ShowGoldAmountSGAOpenMW/openmw-show-gold-amount/showGoldAmount"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "showGoldAmount.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19195,7 +22171,16 @@
       "dataPaths": [
         "OpenMWBetterElementalShields/Better Elemental Shields"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "Better Elemental Shields.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "Better Elemental Shields.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19263,7 +22248,12 @@
       "dataPaths": [
         "OpenMWLeaveTheLightsOff/LeaveTheLightsOff"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "LeaveTheLightsOff.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19297,7 +22287,16 @@
       "dataPaths": [
         "OpenMWUntilHealedFix/UntilHealedFix"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "UntilHealedFix.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "UntilHealedFix.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19331,7 +22330,20 @@
       "dataPaths": [
         "OpenMWWorthlessSoulgems/worthless_soulgems"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "worthless_soulgems_crystal.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "worthless_soulgems_vanilla.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "worthless_soulgems.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19365,7 +22377,12 @@
       "dataPaths": [
         "OpenMWFittingSoulgems/fittingSoulgems"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "fittingSoulgems.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19399,7 +22416,12 @@
       "dataPaths": [
         "OpenMWPureLuaMultiMark/puremultimark"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "puremultimark.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19569,7 +22591,12 @@
       "dataPaths": [
         "SMDwemerArmorOfWastelands/sm_dmw_light/Data files"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "sm_dwem_light.ESP",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
