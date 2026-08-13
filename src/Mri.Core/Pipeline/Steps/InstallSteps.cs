@@ -53,7 +53,8 @@ public sealed class WriteUmoConfigStep(UmoConfigWriter writer, Func<InstallConte
     }
 }
 
-public sealed class RegisterModlistStep(UmoService umo) : IInstallStep
+public sealed class RegisterModlistStep(UmoService umo, EphemeralUrlResolver? urlResolver = null)
+    : IInstallStep
 {
     public string Id => "register-modlist";
     public string Label => "Register the modlist with the downloader";
@@ -69,18 +70,26 @@ public sealed class RegisterModlistStep(UmoService umo) : IInstallStep
 
     public bool Verify(InstallContext ctx)
     {
+        // The marker hash covers the PURE emitted list; the file on disk may
+        // additionally carry resolved ephemeral URLs (EphemeralUrlResolver),
+        // so its content is deliberately not compared byte-for-byte.
         if (!File.Exists(ctx.EmittedUmoListPath) || !File.Exists(RegisteredMarkerPath(ctx)))
             return false;
-        var currentHash = HashOf(EmitJson(ctx));
-        return File.ReadAllText(ctx.EmittedUmoListPath) == EmitJson(ctx) &&
-               File.ReadAllText(RegisteredMarkerPath(ctx)).Trim() == currentHash;
+        return File.ReadAllText(RegisteredMarkerPath(ctx)).Trim() == HashOf(EmitJson(ctx));
     }
 
     public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {
         var json = EmitJson(ctx);
+        var registered = json;
+        if (urlResolver is not null)
+        {
+            registered = await urlResolver.ResolveAsync(json, ct).ConfigureAwait(false);
+            if (!ReferenceEquals(registered, json) && registered != json)
+                progress.Report(new StepProgress("Resolved ephemeral download URLs."));
+        }
         Directory.CreateDirectory(ctx.ModlistDir);
-        AtomicFile.WriteAllText(ctx.EmittedUmoListPath, json);
+        AtomicFile.WriteAllText(ctx.EmittedUmoListPath, registered);
 
         progress.Report(new StepProgress("Registering modlist with umo…"));
         await umo.AddListAsync(ctx.EmittedUmoListPath, ctx.UmoListName, null, ct).ConfigureAwait(false);
@@ -295,6 +304,91 @@ public sealed class NavmeshStep(NavmeshService navmesh, Func<InstallContext, str
         await navmesh.GenerateAsync(exe, ctx.OpenMwPaths.ConfigDir,
             new Progress<OutputLine>(l => progress.Report(new StepProgress(l.Text))), ct)
             .ConfigureAwait(false);
+    }
+}
+
+/// <summary>
+/// Downloads the mods umo's direct handler cannot: bare plugin files (umo
+/// hard-rejects non-archives after download) and mediafire-hosted archives
+/// (its downloader receives an HTML interstitial). Files land directly in
+/// the mod's final dir BEFORE install-mods runs, so umo's own
+/// dir-already-exists check skips them cleanly (field-verified behavior).
+/// </summary>
+public sealed class PreFetchUnsupportedDownloadsStep(
+    HttpClient http,
+    EphemeralUrlResolver resolver,
+    ArchiveExtractor extractor,
+    Func<InstallContext, string?> sevenZipExe) : IInstallStep
+{
+    public string Id => "prefetch-direct";
+    public string Label => "Fetch downloads the downloader can't handle";
+
+    private static readonly string[] PluginExts = [".esp", ".esm", ".omwaddon", ".omwscripts"];
+
+    private static string? UrlPathExt(string url)
+    {
+        var path = url.Split('?')[0];
+        return Path.GetExtension(path).ToLowerInvariant() is { Length: > 0 } e ? e : null;
+    }
+
+    private static bool NeedsPreFetch(string url) =>
+        PluginExts.Contains(UrlPathExt(url)) ||
+        url.StartsWith("https://www.mediafire.com/file/", StringComparison.OrdinalIgnoreCase);
+
+    private static IEnumerable<(Modlist.ModEntry Mod, string Url, string Dir)> Targets(InstallContext ctx) =>
+        from mod in ctx.Modlist.Mods
+        let url = mod.Downloads.FirstOrDefault()?.DirectUrl
+        where url is not null && NeedsPreFetch(url)
+        let extractTo = mod.Downloads[0].ExtractTo ?? mod.Id
+        select (mod, url, Path.Combine(
+            ctx.ModsRootDir, ctx.Modlist.Name,
+            Modlist.ModlistCompiler.CategoryDir(mod.Category), extractTo));
+
+    public bool Verify(InstallContext ctx) => Targets(ctx).All(t =>
+        Directory.Exists(t.Dir) && Directory.EnumerateFileSystemEntries(t.Dir).Any());
+
+    public async Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
+    {
+        foreach (var (mod, url, dir) in Targets(ctx))
+        {
+            if (Directory.Exists(dir) && Directory.EnumerateFileSystemEntries(dir).Any())
+                continue;
+
+            var resolved = await resolver.ResolveUrlAsync(url, ct).ConfigureAwait(false);
+            var fileName = Uri.UnescapeDataString(
+                Path.GetFileName(resolved.Split('?')[0]).Replace("+", " "));
+            progress.Report(new StepProgress($"fetching {mod.Id}: {fileName}"));
+
+            var tmp = Path.Combine(ctx.DownloadCacheDir, "prefetch", fileName);
+            Directory.CreateDirectory(Path.GetDirectoryName(tmp)!);
+            await using (var src = await http.GetStreamAsync(resolved, ct).ConfigureAwait(false))
+            await using (var dst = File.Create(tmp))
+                await src.CopyToAsync(dst, ct).ConfigureAwait(false);
+
+            var ext = Path.GetExtension(fileName).ToLowerInvariant();
+            if (PluginExts.Contains(ext))
+            {
+                var magic = new byte[4];
+                await using (var check = File.OpenRead(tmp))
+                    _ = await check.ReadAsync(magic, ct).ConfigureAwait(false);
+                if (ext is not ".omwscripts" && "TES3"u8.ToArray() is var tes3 && !magic.SequenceEqual(tes3))
+                    throw new InvalidOperationException(
+                        $"{mod.Id}: downloaded '{fileName}' is not a TES3 plugin (got HTML error page?).");
+                Directory.CreateDirectory(dir);
+                File.Copy(tmp, Path.Combine(dir, fileName), overwrite: true);
+            }
+            else if (ext is ".zip")
+            {
+                extractor.ExtractZip(tmp, dir);
+            }
+            else
+            {
+                var sevenZip = sevenZipExe(ctx)
+                    ?? throw new InvalidOperationException("7z tool not available for pre-fetch extraction.");
+                await extractor.Extract7zAsync(sevenZip, tmp, dir, null, ct).ConfigureAwait(false);
+            }
+            progress.Report(new StepProgress($"installed {mod.Id} → {dir}"));
+        }
     }
 }
 

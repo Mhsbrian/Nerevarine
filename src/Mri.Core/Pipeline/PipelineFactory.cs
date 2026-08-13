@@ -34,7 +34,10 @@ public static class PipelineFactory
                 CacheDir = c.DownloadCacheDir,
                 Tes3cmdPath = locator.Tes3cmdExe ?? "",
             }),
-            new RegisterModlistStep(umo),
+            new RegisterModlistStep(umo, new EphemeralUrlResolver(http)),
+            new PreFetchUnsupportedDownloadsStep(
+                http, new EphemeralUrlResolver(http), new ArchiveExtractor(runner),
+                _ => locator.SevenZipExe),
             new InstallModsStep(umo),
             new InstallFixupsStep(fixupsSourceDir),
             new ImportIniStep(new IniImporterService(runner), _ => locator.IniImporterExe),

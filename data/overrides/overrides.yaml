@@ -61,31 +61,13 @@ rules:
   #    finds mirrors (candidates: Nexus re-uploads, Wayback snapshots). ──
   - match: { slug: traveling-merchants }
     skip: true
-    skipReason: "mw.modhistory.com is dead (connect timeout) — needs a mirror."
+    skipReason: "PERMANENTLY LOST (researched 2026-08-13): added to modhistory 2017-09, after Wayback's Nov-2016 file crawl — page archived, file never captured; author's earthlink host uncaptured; Nexus mirror 47529 author-hidden since 2021. Only a Tribunal patch for the obsolete 1.2beta survives."
 
-  - match: { slug: khajiit-head-replacer }
-    skip: true
-    skipReason: "mw.modhistory.com is dead (connect timeout) — needs a mirror."
 
-  - match: { slug: mesh-fix }
-    skip: true
-    skipReason: "mw.modhistory.com is dead (connect timeout) — needs a mirror."
 
-  - match: { slug: westly-s-unique-winged-twilight }
-    skip: true
-    skipReason: "fliggerty.com is dead (connect timeout) — needs a mirror."
 
-  - match: { slug: transmog-menu-openmw }
-    skip: true
-    skipReason: "s3ctors-s3cret-st4sh gitlab project is now private (403) — needs a mirror."
 
-  - match: { slug: luamics-openmw-mimic-spawner }
-    skip: true
-    skipReason: "s3ctors-s3cret-st4sh gitlab project is now private (403) — needs a mirror."
 
-  - match: { slug: openmw-chim-climbing }
-    skip: true
-    skipReason: "s3ctors-s3cret-st4sh gitlab project is now private (403) — needs a mirror."
 
   # ── Example prose-rule encodings (patterns for the M2 curation pass). ──
 
@@ -109,37 +91,16 @@ rules:
   #    ANYTHING until every mod's metadata sync succeeds, so these block all). ──
   - match: { slug: go-home-locking-doors }
     skip: true
-    skipReason: "Sub-page of the go-home gitlab project with no package of its own — umo sync permanently incomplete (field-verified). Fold into go-home or find artifact URL in M2."
+    skipReason: "COVERED by go-home: the main package ships go-home-locking-doors.omwscripts and we activate it (verified in cfg 2026-08-13). Row skipped only because it has no package of its own (umo sync-breaker)."
 
-  - match: { slug: omw-achievements }
-    skip: true
-    skipReason: "caz1que.gitlab.io page has no resolvable gitlab package — umo sync permanently incomplete (field-verified)."
 
   # ── Page-URL stragglers from full run 3 (the URL is a webpage, not a file;
   #    each needs a real artifact URL or mirror in M2). ──
-  - match: { slug: economy-fixes-v1-0-item-list-only }
-    skip: true
-    skipReason: "Wayback-archived modhistory PAGE, not a file — needs the snapshot's direct download URL."
 
-  - match: { slug: thief-experience-overhaul }
-    skip: true
-    skipReason: "Wayback-archived modhistory PAGE, not a file — needs the snapshot's direct download URL."
 
-  - match: { slug: simple-sleeping }
-    skip: true
-    skipReason: "Mediafire landing page — needs a direct mirror."
 
-  - match: { slug: balmora-underworld-bcom-esp }
-    skip: true
-    skipReason: "Dropbox link no longer serves the file (probed) — needs a fresh mirror."
 
-  - match: { slug: balmora-underworld-nav-point-fix }
-    skip: true
-    skipReason: "modding-openmw.com mod PAGE — needs the real artifact URL."
 
-  - match: { slug: tyddy-s-landscape-retexture }
-    skip: true
-    skipReason: "fullrest.ru file PAGE — needs the real artifact URL."
 
   - match: { slug: s3lightfixes }
     skip: true
@@ -472,6 +433,88 @@ rules:
   - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }
     skip: true
     skipReason: "partial overlay for a newer base version; shadows and breaks the working Lua Edition"
+
+  # ── Recovered-mod variant picks per the sheet's own comments. ──
+  # "Item List Only" — the archive ships GameStats + ItemLists; only the latter.
+  - match: { slug: economy-fixes-v1-0-item-list-only }
+    set:
+      content:
+        - { file: "vn_economy_ItemLists.esp", mode: "normal" }
+  # Comment names exactly these three (Stealth Enhancements deliberately absent).
+  - match: { slug: thief-experience-overhaul }
+    set:
+      content:
+        - { file: "Improved Lockpicking.esp", mode: "normal" }
+        - { file: "Improved Open Spell Balance-LD.esp", mode: "normal" }
+        - { file: "Improved Trap Settings (Tribunal).esp", mode: "normal" }
+  # Six overlapping option esps; Khajiit-ALL.ESP is the author's merged
+  # everything build (base+NPC+hairs+vampires). Comment's dds copy fix is
+  # encoded as actions (applied to the live tree 2026-08-13 as well).
+  - match: { slug: khajiit-head-replacer }
+    set:
+      content:
+        - { file: "Khajiit-ALL.ESP", mode: "normal" }
+    actions:
+      - { type: copy, src: "Textures/ash/khajiit replace/m/khj_m_01_g.dds", dst: "Textures/ash/khajiit replace/m/khj_m_01g.dds" }
+      - { type: copy, src: "Textures/ash/khajiit replace/m/khj_m_05_g.dds", dst: "Textures/ash/khajiit replace/m/khj_m_05g.dds" }
+
+  # ── WAYBACK RECOVERIES (research 2026-08-13): modhistory/fliggerty died,
+  #    but Wayback's Nov-2016 crawl captured their file.php?id=N endpoints
+  #    (id = trailing number of the download-X-N page URL). All URLs verified
+  #    200 with archive-preserved filenames matching the pages' listed sizes.
+  - match: { slug: khajiit-head-replacer }
+    set:
+      directUrl: "https://web.archive.org/web/20161109143004/http://mw.modhistory.com/file.php?id=15171"
+  - match: { slug: mesh-fix }
+    set:
+      directUrl: "https://web.archive.org/web/20161109211355/http://mw.modhistory.com/file.php?id=6088"
+  - match: { slug: westly-s-unique-winged-twilight }
+    set:
+      directUrl: "https://web.archive.org/web/20161103153727/http://download.fliggerty.com/file.php?id=743"
+  - match: { slug: economy-fixes-v1-0-item-list-only }
+    set:
+      directUrl: "https://web.archive.org/web/20161109153951/http://mw.modhistory.com/file.php?id=578"
+  - match: { slug: thief-experience-overhaul }
+    set:
+      directUrl: "https://web.archive.org/web/20161110014758/http://mw.modhistory.com/file.php?id=7250"
+
+  # ── MIRROR RECOVERIES (research pass 2026-08-13; every URL curl-verified,
+  #    200 + real Content-Length). s3ctor's st4sh moved from private GitLab to
+  #    the public DreamWeave-MP GitHub org (per-mod release zips, only the
+  #    "development" tag carries assets); OMW Achievements' GitHub v3.0.0
+  #    release supersedes the stale Nexus v1.1.1; the Balmora nav fix is
+  #    hosted by MOMW itself (sha256 f5cd81ab…); the "dead" Dropbox esp was a
+  #    liveness-prober false negative (Dropbox HEAD returns json content-type);
+  #    Tyddy's fullrest.ru URLs are stable since 2015 (MOMW: install HQ+UHQ);
+  #    mediafire landing pages resolve at install time (EphemeralUrlResolver).
+  - match: { slug: transmog-menu-openmw }
+    set:
+      directUrl: "https://github.com/DreamWeave-MP/S3ctors-S3cret-St4sh/releases/download/development/transmog_menu.zip"
+  - match: { slug: luamics-openmw-mimic-spawner }
+    set:
+      directUrl: "https://github.com/DreamWeave-MP/S3ctors-S3cret-St4sh/releases/download/development/luamics.zip"
+  - match: { slug: openmw-chim-climbing }
+    set:
+      directUrl: "https://github.com/DreamWeave-MP/S3ctors-S3cret-St4sh/releases/download/development/chim_climbing.zip"
+  - match: { slug: omw-achievements }
+    set:
+      directUrl: "https://github.com/caz1que/OMW-Achievements/releases/download/v3.0.0/omw-achievements-3.0.0.7z"
+  - match: { slug: balmora-underworld-nav-point-fix }
+    set:
+      directUrl: "https://modding-openmw.com/files/BalmoraUnderworldNavPointFix.zip"
+  - match: { slug: balmora-underworld-bcom-esp }
+    set:
+      directUrl: "https://www.dropbox.com/scl/fi/y5kc4k0a0yjtendh4pv7b/FLG-Balmora-s-Underworld-V1.1-bcom-patched-and-relocated.esp?rlkey=mugnrwz7yj3n32jk7l470grmu&st=7gll73xq&dl=1"
+  - match: { slug: tyddy-s-landscape-retexture }
+    set:
+      directUrl: "https://www.fullrest.ru/uploads/files/hq-textures_43301.7z"
+  - match: { slug: tyddy-s-landscape-retexture-uhq }
+    set:
+      extractTo: "TyddysLandscapeRetextureUHQ"
+      directUrl: "https://www.fullrest.ru/uploads/files/uhq-textures-use-with-hq_95710.7z"
+  - match: { slug: simple-sleeping }
+    set:
+      directUrl: "https://www.mediafire.com/file/g9yn63mz0y0qquv/Simple_Sleeping.7z/file"
 
   # MRI DEPENDENCY ADDITIONS (rows appended to the CSV, not from the sheet):
   # Mercy CAO via umo's github handler (plain repo URL, same shape as the 5

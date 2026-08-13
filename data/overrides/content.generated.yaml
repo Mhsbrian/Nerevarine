@@ -64,137 +64,6 @@ rules:
     set:
       content:
         - { file: "Tamriel_Data_Graveyard.ESP", mode: "normal" }
-  - match: { slug: "fmi-notalldunmer" }
-    set:
-      content:
-        - { file: "FMI_#NotAllDunmer.ESP", mode: "normal" }
-  - match: { slug: "so-you-re-the-nerevarine" }
-    set:
-      content:
-        - { file: "SYTN.ESP", mode: "normal" }
-  - match: { slug: "ldm-context-matters" }
-    set:
-      content:
-        - { file: "LDM - Context Matters 1.7.ESP", mode: "normal" }
-  - match: { slug: "free-the-slaves" }
-    set:
-      content:
-        - { file: "FreeTheSlaves!.esp", mode: "normal" }
-  - match: { slug: "fmi-service-refusal-and-contraband" }
-    set:
-      content:
-        - { file: "FMI_ServiceRefusal_Contraband.ESP", mode: "normal" }
-  - match: { slug: "greetings-for-no-lore" }
-    set:
-      content:
-        - { file: "Greetings for No Lore.esp", mode: "normal" }
-  - match: { slug: "great-service" }
-    set:
-      content:
-        - { file: "Great Service.ESP", mode: "normal" }
-  - match: { slug: "silent-assassins" }
-    set:
-      content:
-        - { file: "Silent Assassins.ESP", mode: "normal" }
-  - match: { slug: "tunnel-cough" }
-    set:
-      content:
-        - { file: "Tunnel Cough.ESP", mode: "normal" }
-  - match: { slug: "fmi-current-councilors" }
-    set:
-      content:
-        - { file: "FMI_Current_Councilors.ESP", mode: "normal" }
-  - match: { slug: "oath-to-saint-roris-instead" }
-    set:
-      content:
-        - { file: "Oath to Saint Roris Instead.ESP", mode: "normal" }
-  - match: { slug: "raym-s-vampire-rumors" }
-    set:
-      content:
-        - { file: "Raym's Vampire Rumors.esp", mode: "normal" }
-  - match: { slug: "djangos-dialogue" }
-    set:
-      content:
-        - { file: "Djangos Dialogue.ESP", mode: "normal" }
-  - match: { slug: "barilzar-voice" }
-    set:
-      content:
-        - { file: "barilzar_voice.esp", mode: "normal" }
-  - match: { slug: "dagoth-gares-voice" }
-    set:
-      content:
-        - { file: "Dagoth Gares_Voice_addon v1.1.esp", mode: "normal" }
-  - match: { slug: "dagoth-ur-voice" }
-    set:
-      content:
-        - { file: "Dagoth Ur Voice Addon.esp", mode: "normal" }
-  - match: { slug: "openmw-lua-helper-utility" }
-    set:
-      content:
-        - { file: "OpenMW_luahelper.esp", mode: "normal" }
-        - { file: "OpenMW_luahelper_dialog.esp", mode: "normal" }
-        - { file: "OpenMW_luahelper.omwscripts", mode: "normal" }
-  - match: { slug: "lua-helper-patch-for-purists" }
-    set:
-      content:
-        - { file: "OpenMW_luahelper.esp", mode: "normal" }
-        - { file: "OpenMW_luahelper_dialog.esp", mode: "normal" }
-        - { file: "OpenMW_luahelper.omwscripts", mode: "normal" }
-  - match: { slug: "lua-helper-tamriel-rebuilt" }
-    set:
-      content:
-        - { file: "OpenMW_luahelper.esp", mode: "normal" }
-        - { file: "OpenMW_luahelper_dialog.esp", mode: "normal" }
-        - { file: "OpenMW_luahelper.omwscripts", mode: "normal" }
-  - match: { slug: "openmw-voices-of-vvardenfell-patch" }
-    set:
-      content:
-        - { file: "VoV OpenMW.omwscripts", mode: "normal" }
-  - match: { slug: "voiced-vivec-and-yakety-yagrum" }
-    set:
-      content:
-        - { file: "VoicedVivec.ESP", mode: "normal" }
-        - { file: "YaketyYagrum.ESP", mode: "normal" }
-  - match: { slug: "voice-overhaul" }
-    set:
-      content:
-        - { file: "PR Voice Overhaul 0.13.esp", mode: "normal" }
-  - match: { slug: "dual-faction-membership-for-npcs" }
-    set:
-      content:
-        - { file: "Dual Faction Membership for NPCs.ESP", mode: "normal" }
-  - match: { slug: "quest-voice-greetings" }
-    set:
-      content:
-        - { file: "Quest Voice Greetings.ESP", mode: "normal" }
-  - match: { slug: "gares-last-gasp-new-ilunibi-version" }
-    set:
-      content:
-        - { file: "Gares Last Gasp.ESP", mode: "normal" }
-  - match: { slug: "idle-talk" }
-    set:
-      content:
-        - { file: "Idle Talk.ESP", mode: "normal" }
-  - match: { slug: "ultimate-creeper-party-house" }
-    set:
-      content:
-        - { file: "Ultimate Creeper Party House.ESP", mode: "normal" }
-  - match: { slug: "nordic-banter" }
-    set:
-      content:
-        - { file: "Nordic Banter.ESP", mode: "normal" }
-  - match: { slug: "sermons-and-preachers-vanilla-edit" }
-    set:
-      content:
-        - { file: "sermons_preachers_RandomTemplesOnly.ESP", mode: "normal" }
-  - match: { slug: "immersive-morrowind" }
-    set:
-      content:
-        - { file: "Immersive Morrowind.ESP", mode: "normal" }
-  - match: { slug: "friends-reunited" }
-    set:
-      content:
-        - { file: "Friends Reunited.ESP", mode: "normal" }
   - match: { slug: "wares-ultimate" }
     set:
       content:
@@ -221,10 +90,6 @@ rules:
     set:
       content:
         - { file: "Coherent Guards Reaction.esp", mode: "normal" }
-  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }
-    set:
-      content:
-        - { file: "protective_guards_for_omw.omwscripts", mode: "normal" }
   - match: { slug: "ncgdmw-lua-edition" }
     set:
       content:
@@ -278,6 +143,11 @@ rules:
     set:
       content:
         - { file: "Price Balance.ESP", mode: "normal" }
+  - match: { slug: "economy-fixes-v1-0-item-list-only" }
+    set:
+      content:
+        - { file: "vn_economy_GameStats.esp", mode: "normal" }
+        - { file: "vn_economy_ItemLists.esp", mode: "normal" }
   - match: { slug: "beware-the-sixth-house" }
     set:
       content:
@@ -326,22 +196,6 @@ rules:
       content:
         - { file: "NoWitnessNoBounty.omwaddon", mode: "normal" }
         - { file: "NoWitnessNoBounty.omwscripts", mode: "normal" }
-  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }
-    set:
-      content:
-        - { file: "Devilish_Vampire_Overhaul.esp", mode: "normal" }
-        - { file: "Devilish_Vampire_Overhaul.omwscripts", mode: "normal" }
-        - { file: "Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP", mode: "normal" }
-  - match: { slug: "devilish-guar-riding-openmw" }
-    set:
-      content:
-        - { file: "Devilish Guar Riding.ESP", mode: "normal" }
-        - { file: "Devilish Guar Riding.omwscripts", mode: "normal" }
-  - match: { slug: "devilish-horse-riding-openmw" }
-    set:
-      content:
-        - { file: "Devilish Horse Riding.esp", mode: "normal" }
-        - { file: "Devilish Horse Riding.omwscripts", mode: "normal" }
   - match: { slug: "another-pickpocketing-fix" }
     set:
       content:
@@ -350,6 +204,13 @@ rules:
     set:
       content:
         - { file: "CreaturesOpenDoors.esp", mode: "normal" }
+  - match: { slug: "thief-experience-overhaul" }
+    set:
+      content:
+        - { file: "Improved Lockpicking.esp", mode: "normal" }
+        - { file: "Improved Open Spell Balance-LD.esp", mode: "normal" }
+        - { file: "Improved Trap Settings (Tribunal).esp", mode: "normal" }
+        - { file: "Stealth Enhancements-LD 1.5b (Tribunal).esp", mode: "normal" }
   - match: { slug: "solthas-sneak-attack-buff-openmw" }
     set:
       content:
@@ -416,6 +277,10 @@ rules:
     set:
       content:
         - { file: "FatigueSpeedAndCarryWeightRebalance.omwaddon", mode: "normal" }
+  - match: { slug: "simple-sleeping" }
+    set:
+      content:
+        - { file: "Simple Sleeping.ESP", mode: "normal" }
   - match: { slug: "cooking-and-eating" }
     set:
       content:
@@ -524,10 +389,6 @@ rules:
     set:
       content:
         - { file: "LightHotkey.omwscripts", mode: "normal" }
-  - match: { slug: "m-aiq-on-the-mainland" }
-    set:
-      content:
-        - { file: "MaiqMainland.esp", mode: "normal" }
   - match: { slug: "riders" }
     set:
       content:
@@ -589,11 +450,6 @@ rules:
     set:
       content:
         - { file: "Shrines and Statues.esp", mode: "normal" }
-  - match: { slug: "repopulated-waters-rowing-npcs" }
-    set:
-      content:
-        - { file: "RepopulatedWaters.ESP", mode: "normal" }
-        - { file: "RepopulatedWaters_TR.ESP", mode: "normal" }
   - match: { slug: "apartments-of-morrowind" }
     set:
       content:
@@ -672,6 +528,10 @@ rules:
     set:
       content:
         - { file: "Impact Effects.omwscripts", mode: "normal" }
+  - match: { slug: "transmog-menu-openmw" }
+    set:
+      content:
+        - { file: "transmog.omwscripts", mode: "normal" }
   - match: { slug: "better-morrowind-armor" }
     set:
       content:
@@ -768,10 +628,6 @@ rules:
     set:
       content:
         - { file: "Better Robes.ESP", mode: "normal" }
-  - match: { slug: "better-robes-tamriel-rebuilt-patch" }
-    set:
-      content:
-        - { file: "Better Robes TR.esp", mode: "normal" }
   - match: { slug: "redoran-exquisite-rob" }
     set:
       content:
@@ -919,6 +775,15 @@ rules:
     set:
       content:
         - { file: "Better Bodies.esp", mode: "normal" }
+  - match: { slug: "khajiit-head-replacer" }
+    set:
+      content:
+        - { file: "Khajiit-ALL.ESP", mode: "normal" }
+        - { file: "Khajiit-BaseReplace.ESP", mode: "normal" }
+        - { file: "Khajiit-Hair.ESP", mode: "normal" }
+        - { file: "Khajiit-NPCPlayable.ESP", mode: "normal" }
+        - { file: "Khajiit-NPCReplace.ESP", mode: "normal" }
+        - { file: "Khajiit-VampiresPlayable.ESP", mode: "normal" }
   - match: { slug: "improved-argonians" }
     set:
       content:
@@ -953,6 +818,10 @@ rules:
     set:
       content:
         - { file: "Dwarven Spectres BB.ESP", mode: "normal" }
+  - match: { slug: "westly-s-unique-winged-twilight" }
+    set:
+      content:
+        - { file: "Westly_Presents_Unique_Winged_Twilights.esp", mode: "normal" }
   - match: { slug: "playable-almalexia-outfit" }
     set:
       content:
@@ -970,6 +839,30 @@ rules:
         - { file: "TR_Preview.ESP", mode: "normal" }
         - { file: "TR_Travels.ESP", mode: "normal" }
         - { file: "TR_Travels_Preview_and_Mainland.ESP", mode: "normal" }
+  - match: { slug: "better-robes-tamriel-rebuilt-patch" }
+    set:
+      content:
+        - { file: "Better Robes TR.esp", mode: "normal" }
+  - match: { slug: "repopulated-waters-rowing-npcs" }
+    set:
+      content:
+        - { file: "RepopulatedWaters.ESP", mode: "normal" }
+        - { file: "RepopulatedWaters_TR.ESP", mode: "normal" }
+  - match: { slug: "m-aiq-on-the-mainland" }
+    set:
+      content:
+        - { file: "MaiqMainland.esp", mode: "normal" }
+  - match: { slug: "devilish-guar-riding-openmw" }
+    set:
+      content:
+        - { file: "Devilish Guar Riding.ESP", mode: "normal" }
+        - { file: "Devilish Guar Riding.omwscripts", mode: "normal" }
+  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }
+    set:
+      content:
+        - { file: "Devilish_Vampire_Overhaul.esp", mode: "normal" }
+        - { file: "Devilish_Vampire_Overhaul.omwscripts", mode: "normal" }
+        - { file: "Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP", mode: "normal" }
   - match: { slug: "project-cyrodiil" }
     set:
       content:
@@ -984,6 +877,11 @@ rules:
       content:
         - { file: "Sky_Main.esm", mode: "normal" }
         - { file: "Sky_Main_Grass.esp", mode: "normal" }
+  - match: { slug: "devilish-horse-riding-openmw" }
+    set:
+      content:
+        - { file: "Devilish Horse Riding.esp", mode: "normal" }
+        - { file: "Devilish Horse Riding.omwscripts", mode: "normal" }
   - match: { slug: "wyrmhaven" }
     set:
       content:
@@ -1022,6 +920,14 @@ rules:
     set:
       content:
         - { file: "FLG - Balmora's Underworld V1.1.esp", mode: "normal" }
+  - match: { slug: "balmora-underworld-bcom-esp" }
+    set:
+      content:
+        - { file: "FLG-Balmora-s-Underworld-V1.1-bcom-patched-and-relocated.esp", mode: "normal" }
+  - match: { slug: "balmora-underworld-nav-point-fix" }
+    set:
+      content:
+        - { file: "BU_pgrd.esp", mode: "normal" }
   - match: { slug: "sotha-sil-expanded" }
     set:
       content:
@@ -1366,10 +1272,6 @@ rules:
     set:
       content:
         - { file: "FromWindIntoStone.ESP", mode: "normal" }
-  - match: { slug: "blackthorn-barrow" }
-    set:
-      content:
-        - { file: "Blackthorn Barrow.ESP", mode: "normal" }
   - match: { slug: "caldera-priory-and-the-depths-of-blood-and-bone" }
     set:
       content:
@@ -1420,6 +1322,10 @@ rules:
       content:
         - { file: "Solstheim Tomb of The Snow Prince.esm", mode: "normal" }
         - { file: "GITD_WL_RR_Interiors.esp", mode: "normal" }
+  - match: { slug: "blackthorn-barrow" }
+    set:
+      content:
+        - { file: "Blackthorn Barrow.ESP", mode: "normal" }
   - match: { slug: "sheogorad-groves-of-the-north" }
     set:
       content:
@@ -1572,6 +1478,10 @@ rules:
     set:
       content:
         - { file: "Sea Forts of Morrowind 1.0v.ESP", mode: "normal" }
+  - match: { slug: "luamics-openmw-mimic-spawner" }
+    set:
+      content:
+        - { file: "luamics.omwaddon", mode: "normal" }
   - match: { slug: "3rd-person-alt-attacks-reanimation-plugin" }
     set:
       content:
@@ -1643,6 +1553,14 @@ rules:
     set:
       content:
         - { file: "Camera Noise.omwscripts", mode: "normal" }
+  - match: { slug: "openmw-chim-climbing" }
+    set:
+      content:
+        - { file: "Chim_Climbing.omwscripts", mode: "normal" }
+  - match: { slug: "omw-achievements" }
+    set:
+      content:
+        - { file: "omw-achievements.omwscripts", mode: "normal" }
   - match: { slug: "affresh" }
     set:
       content:
@@ -1947,18 +1865,153 @@ rules:
     set:
       content:
         - { file: "sm_dwem_light.ESP", mode: "normal" }
-  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }   # master provided by a later mod
-    moveAfter: "tamriel-rebuilt"
-  - match: { slug: "devilish-guar-riding-openmw" }   # master provided by a later mod
-    moveAfter: "tamriel-rebuilt"
-  - match: { slug: "devilish-horse-riding-openmw" }   # master provided by a later mod
-    moveAfter: "skyrim-home-of-the-nords"
-  - match: { slug: "m-aiq-on-the-mainland" }   # master provided by a later mod
+  - match: { slug: "fmi-notalldunmer" }
+    set:
+      content:
+        - { file: "FMI_#NotAllDunmer.ESP", mode: "normal" }
+  - match: { slug: "so-you-re-the-nerevarine" }
+    set:
+      content:
+        - { file: "SYTN.ESP", mode: "normal" }
+  - match: { slug: "ldm-context-matters" }
+    set:
+      content:
+        - { file: "LDM - Context Matters 1.7.ESP", mode: "normal" }
+  - match: { slug: "free-the-slaves" }
+    set:
+      content:
+        - { file: "FreeTheSlaves!.esp", mode: "normal" }
+  - match: { slug: "fmi-service-refusal-and-contraband" }
+    set:
+      content:
+        - { file: "FMI_ServiceRefusal_Contraband.ESP", mode: "normal" }
+  - match: { slug: "greetings-for-no-lore" }
+    set:
+      content:
+        - { file: "Greetings for No Lore.esp", mode: "normal" }
+  - match: { slug: "great-service" }
+    set:
+      content:
+        - { file: "Great Service.ESP", mode: "normal" }
+  - match: { slug: "silent-assassins" }
+    set:
+      content:
+        - { file: "Silent Assassins.ESP", mode: "normal" }
+  - match: { slug: "tunnel-cough" }
+    set:
+      content:
+        - { file: "Tunnel Cough.ESP", mode: "normal" }
+  - match: { slug: "fmi-current-councilors" }
+    set:
+      content:
+        - { file: "FMI_Current_Councilors.ESP", mode: "normal" }
+  - match: { slug: "oath-to-saint-roris-instead" }
+    set:
+      content:
+        - { file: "Oath to Saint Roris Instead.ESP", mode: "normal" }
+  - match: { slug: "raym-s-vampire-rumors" }
+    set:
+      content:
+        - { file: "Raym's Vampire Rumors.esp", mode: "normal" }
+  - match: { slug: "djangos-dialogue" }
+    set:
+      content:
+        - { file: "Djangos Dialogue.ESP", mode: "normal" }
+  - match: { slug: "barilzar-voice" }
+    set:
+      content:
+        - { file: "barilzar_voice.esp", mode: "normal" }
+  - match: { slug: "dagoth-gares-voice" }
+    set:
+      content:
+        - { file: "Dagoth Gares_Voice_addon v1.1.esp", mode: "normal" }
+  - match: { slug: "dagoth-ur-voice" }
+    set:
+      content:
+        - { file: "Dagoth Ur Voice Addon.esp", mode: "normal" }
+  - match: { slug: "openmw-lua-helper-utility" }
+    set:
+      content:
+        - { file: "OpenMW_luahelper.esp", mode: "normal" }
+        - { file: "OpenMW_luahelper_dialog.esp", mode: "normal" }
+        - { file: "OpenMW_luahelper.omwscripts", mode: "normal" }
+  - match: { slug: "lua-helper-patch-for-purists" }
+    set:
+      content:
+        - { file: "OpenMW_luahelper.esp", mode: "normal" }
+        - { file: "OpenMW_luahelper_dialog.esp", mode: "normal" }
+        - { file: "OpenMW_luahelper.omwscripts", mode: "normal" }
+  - match: { slug: "lua-helper-tamriel-rebuilt" }
+    set:
+      content:
+        - { file: "OpenMW_luahelper.esp", mode: "normal" }
+        - { file: "OpenMW_luahelper_dialog.esp", mode: "normal" }
+        - { file: "OpenMW_luahelper.omwscripts", mode: "normal" }
+  - match: { slug: "openmw-voices-of-vvardenfell-patch" }
+    set:
+      content:
+        - { file: "VoV OpenMW.omwscripts", mode: "normal" }
+  - match: { slug: "voiced-vivec-and-yakety-yagrum" }
+    set:
+      content:
+        - { file: "VoicedVivec.ESP", mode: "normal" }
+        - { file: "YaketyYagrum.ESP", mode: "normal" }
+  - match: { slug: "voice-overhaul" }
+    set:
+      content:
+        - { file: "PR Voice Overhaul 0.13.esp", mode: "normal" }
+  - match: { slug: "dual-faction-membership-for-npcs" }
+    set:
+      content:
+        - { file: "Dual Faction Membership for NPCs.ESP", mode: "normal" }
+  - match: { slug: "quest-voice-greetings" }
+    set:
+      content:
+        - { file: "Quest Voice Greetings.ESP", mode: "normal" }
+  - match: { slug: "gares-last-gasp-new-ilunibi-version" }
+    set:
+      content:
+        - { file: "Gares Last Gasp.ESP", mode: "normal" }
+  - match: { slug: "idle-talk" }
+    set:
+      content:
+        - { file: "Idle Talk.ESP", mode: "normal" }
+  - match: { slug: "ultimate-creeper-party-house" }
+    set:
+      content:
+        - { file: "Ultimate Creeper Party House.ESP", mode: "normal" }
+  - match: { slug: "nordic-banter" }
+    set:
+      content:
+        - { file: "Nordic Banter.ESP", mode: "normal" }
+  - match: { slug: "sermons-and-preachers-vanilla-edit" }
+    set:
+      content:
+        - { file: "sermons_preachers_RandomTemplesOnly.ESP", mode: "normal" }
+  - match: { slug: "immersive-morrowind" }
+    set:
+      content:
+        - { file: "Immersive Morrowind.ESP", mode: "normal" }
+  - match: { slug: "friends-reunited" }
+    set:
+      content:
+        - { file: "Friends Reunited.ESP", mode: "normal" }
+  - match: { slug: "mercy-combat-ai-overhaul" }
+    set:
+      content:
+        - { file: "MercyCAO.omwscripts", mode: "normal" }
+  - match: { slug: "better-robes-tamriel-rebuilt-patch" }   # master provided by a later mod
     moveAfter: "tamriel-rebuilt"
   - match: { slug: "repopulated-waters-rowing-npcs" }   # master provided by a later mod
     moveAfter: "tamriel-rebuilt"
-  - match: { slug: "better-robes-tamriel-rebuilt-patch" }   # master provided by a later mod
+  - match: { slug: "m-aiq-on-the-mainland" }   # master provided by a later mod
     moveAfter: "tamriel-rebuilt"
+  - match: { slug: "devilish-guar-riding-openmw" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }   # master provided by a later mod
+    moveAfter: "tamriel-rebuilt"
+  - match: { slug: "devilish-horse-riding-openmw" }   # master provided by a later mod
+    moveAfter: "skyrim-home-of-the-nords"
   - match: { slug: "blackthorn-barrow" }   # master provided by a later mod
     moveAfter: "solstheim-tomb-of-the-snow-prince"
   # DROPPED roaring-arena: 'RoaringArena.ESP' needs missing master(s): Dr_Data.esm

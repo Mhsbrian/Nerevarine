@@ -183,7 +183,7 @@ Quicktrain,https://www.nexusmods.com/morrowind/mods/53771,,,
 HD Forge for OpenMW-Lua,https://modding-openmw.gitlab.io/hd-forge-for-openmw-lua/,,,
 Most Wanted Nerevarine,https://www.nexusmods.com/morrowind/mods/53717,,,
 OpenMW Impact Effects,https://www.nexusmods.com/morrowind/mods/55508,,,
-Transmog Menu (OpenMW),https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/transmog/,,,
+Transmog Menu (OpenMW),https://dreamweave-mp.github.io/S3ctors-S3cret-St4sh/transmog/,,,
 ARMOR / CLOTHING,,,,
 Better Morrowind Armor,https://www.nexusmods.com/morrowind/mods/42509,https://www.nexusmods.com/morrowind/mods/42509?tab=files&file_id=1000000539,0.5.2RC,Hi Rez Patch & Snow Armor Redux Patch
 Daggerlad,https://www.nexusmods.com/morrowind/mods/49065,https://www.nexusmods.com/morrowind/mods/49065?tab=files&file_id=1000022949,1.1,
@@ -523,7 +523,7 @@ Go Home! - Locking Doors,https://modding-openmw.gitlab.io/go-home/locking-doors/
 Animated Levitation,https://gitlab.com/fallchildren/openmw-animated-levitation,,,
 Skoomaesthesia OpenMW Port,https://gitlab.com/fallchildren/openmw-skoomaesthesia-port,,,https://www.nexusmods.com/morrowind/mods/49920
 Sea Forts of Morrowind,https://www.nexusmods.com/morrowind/mods/54700,,,
-Luamics - OpenMW Mimic Spawner,https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/luamics/,,,
+Luamics - OpenMW Mimic Spawner,https://dreamweave-mp.github.io/S3ctors-S3cret-St4sh/luamics/,,,
 3rd Person Alt Attacks (ReAnimation plugin),https://gitlab.com/fallchildren/openmw-third-person-alt-attacks,,,
 Turn Around- openmw lua,https://www.nexusmods.com/morrowind/mods/56011,,,
 Fresh Loot (OpenMW),https://www.nexusmods.com/morrowind/mods/56005,,,
@@ -545,8 +545,8 @@ Kumarahaz - The Bandit Lair,https://www.nexusmods.com/morrowind/mods/56192,,,
 Better Merchants Skills OpenMW,https://gitlab.com/modding-openmw/better-merchants-skills-openmw,,,
 Scalable Dwemer Puzzle Box Randomizer ,https://modding-openmw.gitlab.io/gonzos-scalable-dwemer-puzzle-box-randomizer/,,,
 Camera Noise (OpenMW),https://www.dropbox.com/scl/fi/4tplw3wp00pgkhofqzevu/Camera-Noise.7z?rlkey=12m0jg2qygizndmcycjzkwc4b&st=06sivj53&dl=0,,,Adds a natural camera noise effect. Customize by editing values in cameranoise.lua file. https://imgur.com/a/2AwQ3R3 Made by Epoch on OpenMW discord server.
-OPENMW - Chim Climbing,https://modding-openmw.gitlab.io/s3ctors-s3cret-st4sh/chim_climbing/,https://www.nexusmods.com/morrowind/mods/56296,,
-OMW Achievements,https://caz1que.gitlab.io/omw-achievements/,https://www.nexusmods.com/morrowind/mods/56298,,
+OPENMW - Chim Climbing,https://dreamweave-mp.github.io/S3ctors-S3cret-St4sh/chim_climbing/,https://www.nexusmods.com/morrowind/mods/56296,,
+OMW Achievements,https://modding-openmw.com/mods/omw-achievements/,https://www.nexusmods.com/morrowind/mods/56298,,
 AFFresh,https://www.nexusmods.com/morrowind/mods/53006,,,
 AFFresh - Fully Voiced,https://www.nexusmods.com/morrowind/mods/56331,,,
 Custom Spell Hotkeys for OpenMW,https://www.nexusmods.com/morrowind/mods/56350,,,
@@ -644,3 +644,4 @@ Crafting the Telvanni Magister Robes,https://www.nexusmods.com/morrowind/mods/57
 Dubious Miscellaneous Crafting Assemblage - for OpenMW Crafting Framework,https://www.nexusmods.com/morrowind/mods/57565,,,
 MRI DEPENDENCY ADDITIONS,,,,
 Mercy - Combat AI Overhaul,https://github.com/MaxYari/OpenMWMercyCAO,,,"MRI addition (not in the sheet): The Dark Project hard-requires Mercy gutils (log: module not found scripts.MaxYari.MercyCAO.scripts.gutils). umo github handler fetches default-branch HEAD (cb4e2e4 at time of addition, 2026-04-20)."
+Tyddy's Landscape Retexture UHQ,https://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files,,,"MRI addition: UHQ pack layered over HQ per modding-openmw.com guidance (use with HQ). Same fullrest source as the sheet's HQ row."

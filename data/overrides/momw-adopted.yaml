@@ -39,36 +39,11 @@ rules:
       dataPaths: ["TamrielDataHD/00 Data Files", "TamrielDataHD/01 Data Files - Normal Maps"]
   # content candidate "tamriel-data-hd" (momw:total-overhaul): Tamriel_Data.esm | Tamriel_Data.omwscripts
   # NOT ADOPTED "tamriel-data-normal-mapped" (momw:total-overhaul): missing on disk: TamrielDataNormalMapped/Mamaea Awakened Normal Mapped | TamrielDataNormalMapped/Morrowind Enhanced Textures Normal Mapped | TamrielDataNormalMapped/SolstheimTomboftheSnowPrinceGraphicalReplacers | TamrielDataNormalMapped/Atlas Textures Normal Mapped/03 Morrowind Enhanced Textures Atlas Normal Maps | TamrielDataNormalMapped/PherimComberryBushandIngredientReplacer | TamrielDataNormalMapped/PherimFireFernandFirePetal | TamrielDataNormalMapped/Strider Burial Normal Mapped | TamrielDataNormalMapped/ExcellentGrazalandsAcacia | TamrielDataNormalMapped/RemirosAscadianIslesTrees2 | TamrielDataNormalMapped/New Ilunibi Normal Mapped | TamrielDataNormalMapped/Know Thy Ancestors Normal Mapped | TamrielDataNormalMapped/FMGS - Unique Items Compilation Normal Mapped | TamrielDataNormalMapped/Salts | TamrielDataNormalMapped/HDForge | TamrielDataNormalMapped/AstrologiansGuild | TamrielDataNormalMapped/SecretsOfTheCrystalCity | TamrielDataNormalMapped/OAAB Grazelands Normal Mapped | TamrielDataNormalMapped/BlightedAnimalsRetextured | TamrielDataNormalMapped/UniqueCaveRats20HD | TamrielDataNormalMapped/Creatures_RP Normal Mapped | TamrielDataNormalMapped/WestlyPresentsUniqueWingedTwilightsNormalMapped | TamrielDataNormalMapped/Danae's Mods AIO Normal Mapped | TamrielDataNormalMapped/TelEurus | TamrielDataNormalMapped/TheWolverineHall | TamrielDataNormalMapped/BCOM | TamrielDataNormalMapped/TamrielRebuiltHallofJusticeOverhaulNormalMapped | TamrielDataNormalMapped/NecromArkitektoraHQ | TamrielDataNormalMapped/OAAB Tel Mora Normal Mapped | TamrielDataNormalMapped/The Corprusarium Experience Normal Mapped | TamrielDataNormalMapped/R-Zero's Throbbing Meat Normal Mapped | TamrielDataNormalMapped/TelvanniMagisterRobes | TamrielDataNormalMapped/RemirosVolendrungHD | TamrielDataNormalMapped/UmbraBlademaster | TamrielDataNormalMapped/TheSearchfortheWhiteWave | TamrielDataNormalMapped/UvirithsLegacy | TamrielDataNormalMapped/DunmerLanternsReplacer
-  - match: { slug: "fmi-notalldunmer" }   # momw:total-overhaul
-    set:
-      dataPaths: ["FMINotAllDunmer"]
-  # content candidate "fmi-notalldunmer" (momw:total-overhaul): FMI_#NotAllDunmer.ESP
-  - match: { slug: "ldm-context-matters" }   # momw:total-overhaul
-    set:
-      dataPaths: ["LDMContextMatters"]
-  # content candidate "ldm-context-matters" (momw:total-overhaul): LDM - Context Matters 1.7.ESP
-  - match: { slug: "fmi-service-refusal-and-contraband" }   # momw:total-overhaul
-    set:
-      dataPaths: ["FMIServiceRefusalAndContraband"]
-  # content candidate "fmi-service-refusal-and-contraband" (momw:total-overhaul): FMI_ServiceRefusal_Contraband.ESP
-  - match: { slug: "greetings-for-no-lore" }   # momw:total-overhaul
-    set:
-      dataPaths: ["GreetingsForNoLore"]
-  # content candidate "greetings-for-no-lore" (momw:total-overhaul): Greetings for No Lore.esp
-  # NOT ADOPTED "djangos-dialogue" (momw:total-overhaul): missing on disk: DjangosDialogue/Djangos Dialogue 1.44
-  - match: { slug: "voice-overhaul" }   # momw:total-overhaul
-    set:
-      dataPaths: ["VoiceOverhaul"]
-  # content candidate "voice-overhaul" (momw:total-overhaul): PR Voice Overhaul.esp
   - match: { slug: "wares-ultimate" }   # momw:total-overhaul
     set:
       dataPaths: ["WaresUltimate/00 Core", "WaresUltimate/02 Wares to vanilla lists", "WaresUltimate/03 TD to Wares", "WaresUltimate/04 OAAB to Wares", "WaresUltimate/06 Wares to Traders", "WaresUltimate/09 Wares to containers"]
   # content candidate "wares-ultimate" (momw:total-overhaul): Wares-base.esm | Wares_lists_OAAB.ESP | Wares_lists_TD.ESP | Wares_vanilla_random_lists.ESP | Wares_traders.ESP | Wares_containers.ESP
   # NOT ADOPTED "protective-guards-openmw" (momw:total-overhaul): missing on disk: ProtectiveGuardsOpenMW/Protective Guards for OpenMW
-  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }   # momw:total-overhaul
-    set:
-      dataPaths: ["ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW"]
-  # content candidate "protective-guards-factions-and-npcs-protections-openmw" (momw:total-overhaul): protective_guards_for_omw.omwscripts
   # NOT ADOPTED "attend-me" (momw:total-overhaul): missing on disk: AttendMe/AttendMe_1.9
   - match: { slug: "vanilla-friendly-creatures-and-undeads-expansion" }   # momw:total-overhaul
     set:
@@ -107,10 +82,6 @@ rules:
     set:
       dataPaths: ["NoWitnessNoBounty"]
   # content candidate "no-witness-no-bounty" (momw:total-overhaul): NoWitnessNoBounty.omwaddon | NoWitnessNoBounty.omwscripts
-  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }   # momw:total-overhaul
-    set:
-      dataPaths: ["DevilishVampireOverhaulTotalOverhaulEdition/Data Files"]
-  # content candidate "devilish-vampire-overhaul-total-overhaul-edition" (momw:total-overhaul): Devilish_Vampire_Overhaul.esp | Devilish_Vampire_Overhaul.omwscripts | Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP
   - match: { slug: "hidden-sea-loot" }   # momw:total-overhaul
     set:
       dataPaths: ["HiddenSeaLoot"]
@@ -140,10 +111,6 @@ rules:
     set:
       dataPaths: ["CorprusNatives"]
   # content candidate "corprus-natives" (momw:total-overhaul): MaiqMainland.esp
-  - match: { slug: "m-aiq-on-the-mainland" }   # momw:total-overhaul
-    set:
-      dataPaths: ["MAiqOnTheMainland"]
-  # content candidate "m-aiq-on-the-mainland" (momw:total-overhaul): MaiqMainland.esp
   # NOT ADOPTED "nine-holes" (momw:total-overhaul): missing on disk: Nineholes/00 Core | Nineholes/01 Ald-ruhn, The Rat In The Pot | Nineholes/04 Ebonheart, Six Fishes | Nineholes/05 Moonmoth Legion Fort | Nineholes/06 Pelagiad, Halfway Tavern | Nineholes/07 Sadrith Mora, Dirty Muriel's Cornerclub | Nineholes/08 Seyda Neen, Arrille's Tradehouse | Nineholes/09 (BCOM) Suran, Goldyn Belaram | Nineholes/10 Vivec, Elven Nations Cornerclub
   - match: { slug: "septim-gold-and-dwemer-dumacs" }   # momw:total-overhaul
     set:
@@ -198,7 +165,6 @@ rules:
     set:
       dataPaths: ["BetterRobes/Data Files"]
   # content candidate "better-robes" (momw:total-overhaul): Better Robes.ESP
-  # NOT ADOPTED "better-robes-tamriel-rebuilt-patch" (momw:total-overhaul): missing on disk: BetterRobesTamrielRebuiltPatch/Better Robes Updated TR Patch
   - match: { slug: "ebony-mail-replacer" }   # momw:total-overhaul
     set:
       dataPaths: ["EbonyMailReplacer"]
@@ -248,6 +214,9 @@ rules:
   - match: { slug: "store-entrance-chimes" }   # momw:total-overhaul
     set:
       dataPaths: ["StoreEntranceChimes"]
+  - match: { slug: "khajiit-head-replacer" }   # momw:total-overhaul
+    set:
+      dataPaths: ["KhajiitHeadReplacer"]
   - match: { slug: "weapon-sheathing" }   # momw:total-overhaul
     set:
       dataPaths: ["WeaponSheathing/Data Files"]
@@ -276,6 +245,15 @@ rules:
     set:
       dataPaths: ["TamrielRebuilt/00 Core", "TamrielRebuilt/01 Faction Integration"]
   # content candidate "tamriel-rebuilt" (momw:total-overhaul): TR_Mainland.esm | TR_Factions.esp | tamrielrebuilt.omwscripts
+  # NOT ADOPTED "better-robes-tamriel-rebuilt-patch" (momw:total-overhaul): missing on disk: BetterRobesTamrielRebuiltPatch/Better Robes Updated TR Patch
+  - match: { slug: "m-aiq-on-the-mainland" }   # momw:total-overhaul
+    set:
+      dataPaths: ["MAiqOnTheMainland"]
+  # content candidate "m-aiq-on-the-mainland" (momw:total-overhaul): MaiqMainland.esp
+  - match: { slug: "devilish-vampire-overhaul-total-overhaul-edition" }   # momw:total-overhaul
+    set:
+      dataPaths: ["DevilishVampireOverhaulTotalOverhaulEdition/Data Files"]
+  # content candidate "devilish-vampire-overhaul-total-overhaul-edition" (momw:total-overhaul): Devilish_Vampire_Overhaul.esp | Devilish_Vampire_Overhaul.omwscripts | Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP
   - match: { slug: "project-cyrodiil" }   # momw:total-overhaul
     set:
       dataPaths: ["ProjectCyrodiil/00 Core"]
@@ -514,7 +492,6 @@ rules:
     set:
       dataPaths: ["DrethosAncestralTomb"]
   # content candidate "drethos-ancestral-tomb" (momw:total-overhaul): Drethos_Ancestral_Tomb.ESP
-  # NOT ADOPTED "blackthorn-barrow" (momw:total-overhaul): missing on disk: BlackthornBarrow/00 Expansions Integrated Patch
   # NOT ADOPTED "caldera-priory-and-the-depths-of-blood-and-bone" (momw:total-overhaul): missing on disk: CalderaPrioryAndTheDepthsOfBloodAndBone/HD | CalderaPrioryAndTheDepthsOfBloodAndBone/normal_maps
   # NOT ADOPTED "telvanni-lighthouse-in-tel-vos" (momw:total-overhaul): missing on disk: TelvanniLighthouseInTelVos/00 - Main patch files
   - match: { slug: "oaab-foyada-mamaea" }   # momw:total-overhaul
@@ -532,6 +509,7 @@ rules:
     set:
       dataPaths: ["ConceptArtsPlantations/00 Core"]
   # NOT ADOPTED "solstheim-tomb-of-the-snow-prince" (momw:total-overhaul): missing on disk: SolstheimTombOfTheSnowPrince/010 Solstheim - HD Worldspace Graphical Replacer | SolstheimTombOfTheSnowPrince/011 Skyrim-Like Trees | SolstheimTombOfTheSnowPrince/012 Remiros' Groundcover for TOTSP
+  # NOT ADOPTED "blackthorn-barrow" (momw:total-overhaul): missing on disk: BlackthornBarrow/00 Expansions Integrated Patch
   - match: { slug: "justice-for-khartag" }   # momw:total-overhaul
     set:
       dataPaths: ["JusticeForKhartag"]
@@ -617,3 +595,24 @@ rules:
     set:
       dataPaths: ["DaedraUseBoundEquipmentForOpenMW"]
   # content candidate "daedra-use-bound-equipment-for-openmw" (momw:total-overhaul): Daedra Use Bound Equipment for OpenMW.omwscripts
+  - match: { slug: "fmi-notalldunmer" }   # momw:total-overhaul
+    set:
+      dataPaths: ["FMINotAllDunmer"]
+  # content candidate "fmi-notalldunmer" (momw:total-overhaul): FMI_#NotAllDunmer.ESP
+  - match: { slug: "ldm-context-matters" }   # momw:total-overhaul
+    set:
+      dataPaths: ["LDMContextMatters"]
+  # content candidate "ldm-context-matters" (momw:total-overhaul): LDM - Context Matters 1.7.ESP
+  - match: { slug: "fmi-service-refusal-and-contraband" }   # momw:total-overhaul
+    set:
+      dataPaths: ["FMIServiceRefusalAndContraband"]
+  # content candidate "fmi-service-refusal-and-contraband" (momw:total-overhaul): FMI_ServiceRefusal_Contraband.ESP
+  - match: { slug: "greetings-for-no-lore" }   # momw:total-overhaul
+    set:
+      dataPaths: ["GreetingsForNoLore"]
+  # content candidate "greetings-for-no-lore" (momw:total-overhaul): Greetings for No Lore.esp
+  # NOT ADOPTED "djangos-dialogue" (momw:total-overhaul): missing on disk: DjangosDialogue/Djangos Dialogue 1.44
+  - match: { slug: "voice-overhaul" }   # momw:total-overhaul
+    set:
+      dataPaths: ["VoiceOverhaul"]
+  # content candidate "voice-overhaul" (momw:total-overhaul): PR Voice Overhaul.esp

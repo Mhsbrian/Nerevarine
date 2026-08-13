@@ -78,8 +78,11 @@ public class RowParserTests
         var csvPath = FindRepoFile("data/modlist.source.csv");
         var rows = RowParser.Parse(File.ReadAllText(csvPath));
 
-        Assert.Equal(616, rows.Count(r => r.Kind == RowKind.Mod));
-        Assert.Equal(24, rows.Count(r => r.Kind == RowKind.CategoryHeader));
+        // 616 sheet rows + the MRI DEPENDENCY ADDITIONS section (Mercy CAO,
+        // Tyddy UHQ) appended by the mirror-recovery pass.
+        Assert.Equal(618, rows.Count(r => r.Kind == RowKind.Mod));
+        // 24 sheet categories + the appended MRI DEPENDENCY ADDITIONS section.
+        Assert.Equal(25, rows.Count(r => r.Kind == RowKind.CategoryHeader));
         Assert.Equal(563, rows.Count(r => r is { Kind: RowKind.Mod, Handler: "nexus" }));
         // Every mod row must end up with a unique slug.
         var slugs = rows.Where(r => r.Kind == RowKind.Mod).Select(r => r.Slug).ToList();

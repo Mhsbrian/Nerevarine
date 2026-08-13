@@ -38,46 +38,10 @@ rules:
   - match: { slug: "tamriel-data-graveyeard" }
     set:
       dataPaths: ["TamrielDataGraveyeard/00 Core"]
-  - match: { slug: "great-service" }
-    set:
-      dataPaths: ["GreatService/Great Service"]
-  - match: { slug: "tunnel-cough" }
-    set:
-      dataPaths: ["TunnelCough/Data Files"]
-  - match: { slug: "raym-s-vampire-rumors" }
-    set:
-      dataPaths: ["RaymsVampireRumors/Data Files"]
-  - match: { slug: "djangos-dialogue" }
-    set:
-      dataPaths: ["DjangosDialogue/Djangos Dialogue"]
   - match: { slug: "kezyma-s-voices-of-vvardenfell" }
     set:
       dataPaths: ["KezymasVoicesOfVvardenfell/00 Core"]
     # other candidates: KezymasVoicesOfVvardenfell/01 Patch for Purists | KezymasVoicesOfVvardenfell/11 FurbyZone's Skyrim Neloth | KezymasVoicesOfVvardenfell/12 FurbyZone's Almalexia
-  - match: { slug: "quest-voice-greetings" }
-    set:
-      dataPaths: ["QuestVoiceGreetings/Quest Voice Greetings 3.82"]
-  - match: { slug: "gares-last-gasp-new-ilunibi-version" }
-    set:
-      dataPaths: ["GaresLastGaspNewIlunibiVersion/Gares Last Gasp"]
-  - match: { slug: "idle-talk" }
-    set:
-      dataPaths: ["IdleTalk/Idle Talk"]
-  - match: { slug: "ultimate-creeper-party-house" }
-    set:
-      dataPaths: ["UltimateCreeperPartyHouse/Ultimate Creeper Party House"]
-  - match: { slug: "nordic-banter" }
-    set:
-      dataPaths: ["NordicBanter/Nordic Banter"]
-  - match: { slug: "sermons-and-preachers-vanilla-edit" }
-    set:
-      dataPaths: ["SermonsAndPreachersVanillaEdit/Sermons and Preachers (Vanilla edit)/Data Files"]
-  - match: { slug: "immersive-morrowind" }
-    set:
-      dataPaths: ["ImmersiveMorrowind/Immersive Morrowind 0.4"]
-  - match: { slug: "friends-reunited" }
-    set:
-      dataPaths: ["FriendsReunited/Friends Reunited"]
   - match: { slug: "wares-ultimate" }
     set:
       dataPaths: ["WaresUltimate/00 Core"]
@@ -116,6 +80,9 @@ rules:
   - match: { slug: "redoran-patrols-gnisis" }
     set:
       dataPaths: ["RedoranPatrolsGnisis/Redoran Patrols - Gnisis/Data Files"]
+  - match: { slug: "simple-sleeping" }
+    set:
+      dataPaths: ["SimpleSleeping/Simple Sleeping"]
   - match: { slug: "quickloot-openmw" }
     set:
       dataPaths: ["QuickLootOpenMW/QuickLoot"]
@@ -385,6 +352,9 @@ rules:
     set:
       dataPaths: ["BetterDwarvenSpectresMerAndMaidens/00 Core"]
     # other candidates: BetterDwarvenSpectresMerAndMaidens/01 Dwarven Spectres | BetterDwarvenSpectresMerAndMaidens/01 Dwemer Spectres
+  - match: { slug: "westly-s-unique-winged-twilight" }
+    set:
+      dataPaths: ["WestlysUniqueWingedTwilight/Data Files"]
   - match: { slug: "playable-almalexia-outfit" }
     set:
       dataPaths: ["PlayableAlmalexiaOutfit/00 Core"]
@@ -431,6 +401,9 @@ rules:
   - match: { slug: "balmora-underworld" }
     set:
       dataPaths: ["BalmoraUnderworld/Balmora Underworld V1.1"]
+  - match: { slug: "balmora-underworld-nav-point-fix" }
+    set:
+      dataPaths: ["BalmoraUnderworldNavPointFix/BalmoraUnderworldNavPointFix"]
   - match: { slug: "sotha-sil-expanded" }
     set:
       dataPaths: ["SothaSilExpanded/SothaSilExpanded2_0"]
@@ -594,6 +567,9 @@ rules:
     set:
       dataPaths: ["LogsOnFire/00 Core"]
     # other candidates: LogsOnFire/01 HD Textures | LogsOnFire/02 Apel's Fire Retexture Patch
+  - match: { slug: "tyddy-s-landscape-retexture" }
+    set:
+      dataPaths: ["TyddysLandscapeRetexture/HQ"]
   - match: { slug: "glow-in-the-dahrk" }
     set:
       dataPaths: ["GlowInTheDahrk/00 Core"]
@@ -967,3 +943,42 @@ rules:
     set:
       dataPaths: ["CraftingTheTelvanniMagisterRobes/Crafting_Telvanni/Magister_Robes"]
     # other candidates: CraftingTheTelvanniMagisterRobes/Crafting_Telvanni/Optional No_Rank
+  - match: { slug: "great-service" }
+    set:
+      dataPaths: ["GreatService/Great Service"]
+  - match: { slug: "tunnel-cough" }
+    set:
+      dataPaths: ["TunnelCough/Data Files"]
+  - match: { slug: "raym-s-vampire-rumors" }
+    set:
+      dataPaths: ["RaymsVampireRumors/Data Files"]
+  - match: { slug: "djangos-dialogue" }
+    set:
+      dataPaths: ["DjangosDialogue/Djangos Dialogue"]
+  - match: { slug: "quest-voice-greetings" }
+    set:
+      dataPaths: ["QuestVoiceGreetings/Quest Voice Greetings 3.82"]
+  - match: { slug: "gares-last-gasp-new-ilunibi-version" }
+    set:
+      dataPaths: ["GaresLastGaspNewIlunibiVersion/Gares Last Gasp"]
+  - match: { slug: "idle-talk" }
+    set:
+      dataPaths: ["IdleTalk/Idle Talk"]
+  - match: { slug: "ultimate-creeper-party-house" }
+    set:
+      dataPaths: ["UltimateCreeperPartyHouse/Ultimate Creeper Party House"]
+  - match: { slug: "nordic-banter" }
+    set:
+      dataPaths: ["NordicBanter/Nordic Banter"]
+  - match: { slug: "sermons-and-preachers-vanilla-edit" }
+    set:
+      dataPaths: ["SermonsAndPreachersVanillaEdit/Sermons and Preachers (Vanilla edit)/Data Files"]
+  - match: { slug: "immersive-morrowind" }
+    set:
+      dataPaths: ["ImmersiveMorrowind/Immersive Morrowind 0.4"]
+  - match: { slug: "friends-reunited" }
+    set:
+      dataPaths: ["FriendsReunited/Friends Reunited"]
+  - match: { slug: "tyddy-s-landscape-retexture-uhq" }
+    set:
+      dataPaths: ["TyddysLandscapeRetextureUHQ/UHQ (use with HQ)"]

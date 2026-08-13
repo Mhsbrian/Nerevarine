@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.7",
+  "listVersion": "2026.08.8",
   "name": "morrowind-remake",
-  "estimatedDownloadBytes": 20479638829,
-  "estimatedInstalledBytes": 61438916487,
+  "estimatedDownloadBytes": 20488298798,
+  "estimatedInstalledBytes": 61464896394,
   "mods": [
     {
       "id": "vanilla-textures-normal-mapped",
@@ -1528,6 +1528,42 @@
       }
     },
     {
+      "id": "economy-fixes-v1-0-item-list-only",
+      "name": "Economy Fixes v1.0 - Item List Only",
+      "category": "Balance",
+      "source": {
+        "handler": "direct",
+        "url": "https://web.archive.org/web/20161103134548/http://mw.modhistory.com/download-90-578",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Economy Fixes v1.0 - Item List Only",
+          "pinned": false,
+          "directUrl": "https://web.archive.org/web/20161109153951/http://mw.modhistory.com/file.php?id=578",
+          "sizeBytes": 0,
+          "extractTo": "EconomyFixesV10ItemListOnly",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "EconomyFixesV10ItemListOnly"
+      ],
+      "content": [
+        {
+          "file": "vn_economy_ItemLists.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Item List Only",
+      "provenance": {
+        "csvRow": 80
+      }
+    },
+    {
       "id": "beware-the-sixth-house",
       "name": "Beware the Sixth House",
       "category": "Balance",
@@ -2027,6 +2063,50 @@
         "csvRow": 95,
         "resolvedVersion": "1.0",
         "resolvedAt": "2026-08-11T10:29:32.7318075\u002B00:00"
+      }
+    },
+    {
+      "id": "thief-experience-overhaul",
+      "name": "Thief Experience Overhaul",
+      "category": "Balance",
+      "source": {
+        "handler": "direct",
+        "url": "https://web.archive.org/web/20161103135717/http://mw.modhistory.com/download-37-7250",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Thief Experience Overhaul",
+          "pinned": false,
+          "directUrl": "https://web.archive.org/web/20161110014758/http://mw.modhistory.com/file.php?id=7250",
+          "sizeBytes": 0,
+          "extractTo": "ThiefExperienceOverhaul",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "ThiefExperienceOverhaul"
+      ],
+      "content": [
+        {
+          "file": "Improved Lockpicking.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Improved Open Spell Balance-LD.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Improved Trap Settings (Tribunal).esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Improved Lockpicking.esp, Improved Open Spell Balance-LD.esp, Improved Trap Settings (Tribunal).esp",
+      "provenance": {
+        "csvRow": 96
       }
     },
     {
@@ -2581,6 +2661,42 @@
         "csvRow": 109,
         "resolvedVersion": "1.0",
         "resolvedAt": "2026-08-11T10:29:36.4953924\u002B00:00"
+      }
+    },
+    {
+      "id": "simple-sleeping",
+      "name": "Simple Sleeping",
+      "category": "Survival Mods",
+      "source": {
+        "handler": "direct",
+        "url": "https://www.mediafire.com/file/g9yn63mz0y0qquv/Simple_Sleeping.7z/file",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Simple Sleeping",
+          "pinned": false,
+          "directUrl": "https://www.mediafire.com/file/g9yn63mz0y0qquv/Simple_Sleeping.7z/file",
+          "sizeBytes": 0,
+          "extractTo": "SimpleSleeping",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "SimpleSleeping/Simple Sleeping"
+      ],
+      "content": [
+        {
+          "file": "Simple Sleeping.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Adds a portable bedroll you can buy at Seyda Neen. Sleeping anywhere for 6 or more hours grants you \u0022Well Rested\u0022 buff.(30 stamina for 12 hours).",
+      "provenance": {
+        "csvRow": 111
       }
     },
     {
@@ -5272,6 +5388,41 @@
         "csvRow": 185,
         "resolvedVersion": "1.08",
         "resolvedAt": "2026-08-11T10:30:01.6589472\u002B00:00"
+      }
+    },
+    {
+      "id": "transmog-menu-openmw",
+      "name": "Transmog Menu (OpenMW)",
+      "category": "Quality Of Life / Immersive",
+      "source": {
+        "handler": "direct",
+        "url": "https://dreamweave-mp.github.io/S3ctors-S3cret-St4sh/transmog/",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Transmog Menu (OpenMW)",
+          "pinned": false,
+          "directUrl": "https://github.com/DreamWeave-MP/S3ctors-S3cret-St4sh/releases/download/development/transmog_menu.zip",
+          "sizeBytes": 0,
+          "extractTo": "TransmogMenuOpenMW",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "TransmogMenuOpenMW"
+      ],
+      "content": [
+        {
+          "file": "transmog.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 186
       }
     },
     {
@@ -8098,6 +8249,60 @@
       }
     },
     {
+      "id": "khajiit-head-replacer",
+      "name": "Khajiit Head Replacer",
+      "category": "Player / Npc Models",
+      "author": "ashiraniir",
+      "source": {
+        "handler": "direct",
+        "url": "https://mw.modhistory.com/download-42-15171",
+        "nexusGame": "morrowind",
+        "nexusId": 43110
+      },
+      "downloads": [
+        {
+          "fileName": "Khajiit Head Pack - Whiskers Version-43110-1-0.7z",
+          "nexusFileId": 1000002546,
+          "pinned": true,
+          "directUrl": "https://web.archive.org/web/20161109143004/http://mw.modhistory.com/file.php?id=15171",
+          "sizeBytes": 2347505,
+          "extractTo": "KhajiitHeadReplacer",
+          "actions": [
+            {
+              "type": "copy",
+              "src": "Textures/ash/khajiit replace/m/khj_m_01_g.dds",
+              "dst": "Textures/ash/khajiit replace/m/khj_m_01g.dds",
+              "force": false
+            },
+            {
+              "type": "copy",
+              "src": "Textures/ash/khajiit replace/m/khj_m_05_g.dds",
+              "dst": "Textures/ash/khajiit replace/m/khj_m_05g.dds",
+              "force": false
+            }
+          ]
+        }
+      ],
+      "dataPaths": [
+        "KhajiitHeadReplacer"
+      ],
+      "content": [
+        {
+          "file": "Khajiit-ALL.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Go to textures/ash/khajiit replace/m, make copies of the files \u201Ckhj_m_01_g.dds\u201D and \u201Ckhj_m_05_g.dds\u201D. Rename the copies to \u201Ckhj_m_01g.dds\u201D and \u201Ckhj_m_05g.dds\u201D Whiskers version",
+      "provenance": {
+        "csvRow": 267,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:30:36.4244375\u002B00:00"
+      }
+    },
+    {
       "id": "improved-argonians",
       "name": "Improved Argonians",
       "category": "Player / Npc Models",
@@ -8769,6 +8974,41 @@
       }
     },
     {
+      "id": "westly-s-unique-winged-twilight",
+      "name": "Westly\u0027s Unique Winged Twilight",
+      "category": "Player / Npc Models",
+      "source": {
+        "handler": "direct",
+        "url": "http://www.fliggerty.com/phpBB3/viewtopic.php?f=129\u0026t=5456",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Westly\u0027s Unique Winged Twilight",
+          "pinned": false,
+          "directUrl": "https://web.archive.org/web/20161103153727/http://download.fliggerty.com/file.php?id=743",
+          "sizeBytes": 0,
+          "extractTo": "WestlysUniqueWingedTwilight",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "WestlysUniqueWingedTwilight/Data Files"
+      ],
+      "content": [
+        {
+          "file": "Westly_Presents_Unique_Winged_Twilights.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 287
+      }
+    },
+    {
       "id": "better-almalexia",
       "name": "Better Almalexia",
       "category": "Player / Npc Models",
@@ -8942,76 +9182,40 @@
       }
     },
     {
-      "id": "better-robes-tamriel-rebuilt-patch",
-      "name": "Better Robes - Tamriel Rebuilt Patch",
-      "category": "Armor / Clothing",
-      "author": "Atrayonis",
+      "id": "devilish-vampire-overhaul-total-overhaul-edition",
+      "name": "Devilish Vampire Overhaul (Total Overhaul Edition)",
+      "category": "Balance",
+      "author": "DetailDevil",
       "source": {
         "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/44875",
+        "url": "https://www.nexusmods.com/morrowind/mods/52969",
         "nexusGame": "morrowind",
-        "nexusId": 44875
+        "nexusId": 52969
       },
       "downloads": [
         {
-          "fileName": "Better Robes Tamriel Data Patch-44875-1-1-1569081815.7z",
-          "nexusFileId": 1000015821,
+          "fileName": "Devilish Vampire Overhaul (Total Overhaul Edition)-52969-2-6-1-1755645272.rar",
+          "nexusFileId": 1000056145,
           "pinned": true,
-          "sizeBytes": 594388,
-          "extractTo": "BetterRobesTamrielRebuiltPatch",
+          "sizeBytes": 33290,
+          "extractTo": "DevilishVampireOverhaulTotalOverhaulEdition",
           "actions": []
         }
       ],
       "dataPaths": [
-        "BetterRobesTamrielRebuiltPatch"
+        "DevilishVampireOverhaulTotalOverhaulEdition/Data Files"
       ],
       "content": [
         {
-          "file": "Better Robes TR.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "Solved the problem with pink robe texture by changing texture path (in Nifscope) in the file\u00A0tr_pb_robe_com_01.nif from\u00A0textures\\tr\\c\\tr_c_robe_com_05ufh.dds to\u00A0textures\\tr\\c\\tr_c_robe_com_05_uf.dds.",
-      "provenance": {
-        "csvRow": 215,
-        "resolvedVersion": "1.1",
-        "resolvedAt": "2026-08-11T10:30:15.0226778\u002B00:00"
-      }
-    },
-    {
-      "id": "repopulated-waters-rowing-npcs",
-      "name": "Repopulated Waters - Rowing NPCs",
-      "category": "Quality Of Life / Immersive",
-      "author": "GrumblingVomit",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53653",
-        "nexusGame": "morrowind",
-        "nexusId": 53653
-      },
-      "downloads": [
-        {
-          "fileName": "Repopulated Waters-53653-1-3-1706836942.zip",
-          "nexusFileId": 1000042488,
-          "pinned": true,
-          "sizeBytes": 1466266,
-          "extractTo": "RepopulatedWatersRowingNPCs",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "RepopulatedWatersRowingNPCs"
-      ],
-      "content": [
-        {
-          "file": "RepopulatedWaters.ESP",
+          "file": "Devilish_Vampire_Overhaul.esp",
           "mode": "normal"
         },
         {
-          "file": "RepopulatedWaters_TR.ESP",
+          "file": "Devilish_Vampire_Overhaul.omwscripts",
+          "mode": "normal"
+        },
+        {
+          "file": "Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP",
           "mode": "normal"
         }
       ],
@@ -9019,48 +9223,9 @@
       "bsaArchives": [],
       "tags": [],
       "provenance": {
-        "csvRow": 166,
-        "resolvedVersion": "1.3",
-        "resolvedAt": "2026-08-11T10:29:54.7604744\u002B00:00"
-      }
-    },
-    {
-      "id": "m-aiq-on-the-mainland",
-      "name": "M\u0027Aiq on the Mainland",
-      "category": "Quality Of Life / Immersive",
-      "author": "rot",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/45674",
-        "nexusGame": "morrowind",
-        "nexusId": 45674
-      },
-      "downloads": [
-        {
-          "fileName": "M\u0027Aiq on the Mainland-45674-1912-1577036387.zip",
-          "nexusFileId": 1000016605,
-          "pinned": true,
-          "sizeBytes": 11489,
-          "extractTo": "MAiqOnTheMainland",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "MAiqOnTheMainland"
-      ],
-      "content": [
-        {
-          "file": "MaiqMainland.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 145,
-        "resolvedVersion": "1912",
-        "resolvedAt": "2026-08-11T10:29:35.7557360\u002B00:00"
+        "csvRow": 91,
+        "resolvedVersion": "2.6.1",
+        "resolvedAt": "2026-08-11T10:29:31.2179374\u002B00:00"
       }
     },
     {
@@ -9107,40 +9272,32 @@
       }
     },
     {
-      "id": "devilish-vampire-overhaul-total-overhaul-edition",
-      "name": "Devilish Vampire Overhaul (Total Overhaul Edition)",
-      "category": "Balance",
-      "author": "DetailDevil",
+      "id": "m-aiq-on-the-mainland",
+      "name": "M\u0027Aiq on the Mainland",
+      "category": "Quality Of Life / Immersive",
+      "author": "rot",
       "source": {
         "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/52969",
+        "url": "https://www.nexusmods.com/morrowind/mods/45674",
         "nexusGame": "morrowind",
-        "nexusId": 52969
+        "nexusId": 45674
       },
       "downloads": [
         {
-          "fileName": "Devilish Vampire Overhaul (Total Overhaul Edition)-52969-2-6-1-1755645272.rar",
-          "nexusFileId": 1000056145,
+          "fileName": "M\u0027Aiq on the Mainland-45674-1912-1577036387.zip",
+          "nexusFileId": 1000016605,
           "pinned": true,
-          "sizeBytes": 33290,
-          "extractTo": "DevilishVampireOverhaulTotalOverhaulEdition",
+          "sizeBytes": 11489,
+          "extractTo": "MAiqOnTheMainland",
           "actions": []
         }
       ],
       "dataPaths": [
-        "DevilishVampireOverhaulTotalOverhaulEdition/Data Files"
+        "MAiqOnTheMainland"
       ],
       "content": [
         {
-          "file": "Devilish_Vampire_Overhaul.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Devilish_Vampire_Overhaul.omwscripts",
-          "mode": "normal"
-        },
-        {
-          "file": "Devilish_Vampire_Overhaul_TR_Dialogue_Patch.ESP",
+          "file": "MaiqMainland.esp",
           "mode": "normal"
         }
       ],
@@ -9148,9 +9305,92 @@
       "bsaArchives": [],
       "tags": [],
       "provenance": {
-        "csvRow": 91,
-        "resolvedVersion": "2.6.1",
-        "resolvedAt": "2026-08-11T10:29:31.2179374\u002B00:00"
+        "csvRow": 145,
+        "resolvedVersion": "1912",
+        "resolvedAt": "2026-08-11T10:29:35.7557360\u002B00:00"
+      }
+    },
+    {
+      "id": "repopulated-waters-rowing-npcs",
+      "name": "Repopulated Waters - Rowing NPCs",
+      "category": "Quality Of Life / Immersive",
+      "author": "GrumblingVomit",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53653",
+        "nexusGame": "morrowind",
+        "nexusId": 53653
+      },
+      "downloads": [
+        {
+          "fileName": "Repopulated Waters-53653-1-3-1706836942.zip",
+          "nexusFileId": 1000042488,
+          "pinned": true,
+          "sizeBytes": 1466266,
+          "extractTo": "RepopulatedWatersRowingNPCs",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "RepopulatedWatersRowingNPCs"
+      ],
+      "content": [
+        {
+          "file": "RepopulatedWaters.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "RepopulatedWaters_TR.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 166,
+        "resolvedVersion": "1.3",
+        "resolvedAt": "2026-08-11T10:29:54.7604744\u002B00:00"
+      }
+    },
+    {
+      "id": "better-robes-tamriel-rebuilt-patch",
+      "name": "Better Robes - Tamriel Rebuilt Patch",
+      "category": "Armor / Clothing",
+      "author": "Atrayonis",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/44875",
+        "nexusGame": "morrowind",
+        "nexusId": 44875
+      },
+      "downloads": [
+        {
+          "fileName": "Better Robes Tamriel Data Patch-44875-1-1-1569081815.7z",
+          "nexusFileId": 1000015821,
+          "pinned": true,
+          "sizeBytes": 594388,
+          "extractTo": "BetterRobesTamrielRebuiltPatch",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BetterRobesTamrielRebuiltPatch"
+      ],
+      "content": [
+        {
+          "file": "Better Robes TR.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "Solved the problem with pink robe texture by changing texture path (in Nifscope) in the file\u00A0tr_pb_robe_com_01.nif from\u00A0textures\\tr\\c\\tr_c_robe_com_05ufh.dds to\u00A0textures\\tr\\c\\tr_c_robe_com_05_uf.dds.",
+      "provenance": {
+        "csvRow": 215,
+        "resolvedVersion": "1.1",
+        "resolvedAt": "2026-08-11T10:30:15.0226778\u002B00:00"
       }
     },
     {
@@ -9818,6 +10058,76 @@
         "csvRow": 308,
         "resolvedVersion": "V1.1",
         "resolvedAt": "2026-08-11T10:30:54.4464940\u002B00:00"
+      }
+    },
+    {
+      "id": "balmora-underworld-bcom-esp",
+      "name": "Balmora Underworld BCOM esp",
+      "category": "Quest Mods",
+      "source": {
+        "handler": "direct",
+        "url": "https://www.dropbox.com/scl/fi/y5kc4k0a0yjtendh4pv7b/FLG-Balmora-s-Underworld-V1.1-bcom-patched-and-relocated.esp?rlkey=mugnrwz7yj3n32jk7l470grmu\u0026st=7gll73xq\u0026dl=0",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Balmora Underworld BCOM esp",
+          "pinned": false,
+          "directUrl": "https://www.dropbox.com/scl/fi/y5kc4k0a0yjtendh4pv7b/FLG-Balmora-s-Underworld-V1.1-bcom-patched-and-relocated.esp?rlkey=mugnrwz7yj3n32jk7l470grmu\u0026st=7gll73xq\u0026dl=1",
+          "sizeBytes": 0,
+          "extractTo": "BalmoraUnderworldBCOMEsp",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BalmoraUnderworldBCOMEsp"
+      ],
+      "content": [
+        {
+          "file": "FLG-Balmora-s-Underworld-V1.1-bcom-patched-and-relocated.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 309
+      }
+    },
+    {
+      "id": "balmora-underworld-nav-point-fix",
+      "name": "Balmora Underworld Nav Point Fix",
+      "category": "Quest Mods",
+      "source": {
+        "handler": "direct",
+        "url": "https://modding-openmw.com/mods/balmora-underworld-nav-point-fix/",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Balmora Underworld Nav Point Fix",
+          "pinned": false,
+          "directUrl": "https://modding-openmw.com/files/BalmoraUnderworldNavPointFix.zip",
+          "sizeBytes": 0,
+          "extractTo": "BalmoraUnderworldNavPointFix",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BalmoraUnderworldNavPointFix/BalmoraUnderworldNavPointFix"
+      ],
+      "content": [
+        {
+          "file": "BU_pgrd.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 310
       }
     },
     {
@@ -11149,6 +11459,41 @@
         "csvRow": 341,
         "resolvedVersion": "1.2",
         "resolvedAt": "2026-08-11T10:31:07.3909738\u002B00:00"
+      }
+    },
+    {
+      "id": "mesh-fix",
+      "name": "Mesh Fix",
+      "category": "Meshes \u0026 Textures",
+      "author": "Slartibartfast",
+      "source": {
+        "handler": "direct",
+        "url": "https://mw.modhistory.com/download-15-6088",
+        "nexusGame": "morrowind",
+        "nexusId": 42134
+      },
+      "downloads": [
+        {
+          "fileName": "Mesh Fix-42134-1-2.7z",
+          "nexusFileId": 90362,
+          "pinned": true,
+          "directUrl": "https://web.archive.org/web/20161109211355/http://mw.modhistory.com/file.php?id=6088",
+          "sizeBytes": 6147308,
+          "extractTo": "MeshFix",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "MeshFix"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 343,
+        "resolvedVersion": "1.2",
+        "resolvedAt": "2026-08-11T10:31:07.7587215\u002B00:00"
       }
     },
     {
@@ -13403,6 +13748,36 @@
         "csvRow": 406,
         "resolvedVersion": "1.1.1",
         "resolvedAt": "2026-08-11T10:31:36.8289838\u002B00:00"
+      }
+    },
+    {
+      "id": "tyddy-s-landscape-retexture",
+      "name": "Tyddy\u0027s Landscape Retexture",
+      "category": "Landscapes",
+      "source": {
+        "handler": "direct",
+        "url": "https://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Tyddy\u0027s Landscape Retexture",
+          "pinned": false,
+          "directUrl": "https://www.fullrest.ru/uploads/files/hq-textures_43301.7z",
+          "sizeBytes": 0,
+          "extractTo": "TyddysLandscapeRetexture",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "TyddysLandscapeRetexture/HQ"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 408
       }
     },
     {
@@ -17291,6 +17666,41 @@
       }
     },
     {
+      "id": "luamics-openmw-mimic-spawner",
+      "name": "Luamics - OpenMW Mimic Spawner",
+      "category": "New Mods",
+      "source": {
+        "handler": "direct",
+        "url": "https://dreamweave-mp.github.io/S3ctors-S3cret-St4sh/luamics/",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Luamics - OpenMW Mimic Spawner",
+          "pinned": false,
+          "directUrl": "https://github.com/DreamWeave-MP/S3ctors-S3cret-St4sh/releases/download/development/luamics.zip",
+          "sizeBytes": 0,
+          "extractTo": "LuamicsOpenMWMimicSpawner",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "LuamicsOpenMWMimicSpawner"
+      ],
+      "content": [
+        {
+          "file": "luamics.omwaddon",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 526
+      }
+    },
+    {
       "id": "3rd-person-alt-attacks-reanimation-plugin",
       "name": "3rd Person Alt Attacks (ReAnimation plugin)",
       "category": "New Mods",
@@ -18053,6 +18463,86 @@
       "notes": "Adds a natural camera noise effect. Customize by editing values in cameranoise.lua file. https://imgur.com/a/2AwQ3R3 Made by Epoch on OpenMW discord server.",
       "provenance": {
         "csvRow": 547
+      }
+    },
+    {
+      "id": "openmw-chim-climbing",
+      "name": "OPENMW - Chim Climbing",
+      "category": "New Mods",
+      "author": "S3ctorOMW",
+      "source": {
+        "handler": "direct",
+        "url": "https://dreamweave-mp.github.io/S3ctors-S3cret-St4sh/chim_climbing/",
+        "nexusGame": "morrowind",
+        "nexusId": 56296
+      },
+      "downloads": [
+        {
+          "fileName": "mAIN-56296-0-5-1743721763.7z",
+          "nexusFileId": 1000051685,
+          "pinned": true,
+          "directUrl": "https://github.com/DreamWeave-MP/S3ctors-S3cret-St4sh/releases/download/development/chim_climbing.zip",
+          "sizeBytes": 8108,
+          "extractTo": "OPENMWChimClimbing",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "OPENMWChimClimbing"
+      ],
+      "content": [
+        {
+          "file": "Chim_Climbing.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 548,
+        "resolvedVersion": "0.5",
+        "resolvedAt": "2026-08-11T10:32:24.7702837\u002B00:00"
+      }
+    },
+    {
+      "id": "omw-achievements",
+      "name": "OMW Achievements",
+      "category": "New Mods",
+      "author": "Skooma Lover",
+      "source": {
+        "handler": "direct",
+        "url": "https://modding-openmw.com/mods/omw-achievements/",
+        "nexusGame": "morrowind",
+        "nexusId": 56298
+      },
+      "downloads": [
+        {
+          "fileName": "OMW Achievements (v3.0.0)-56298-v3-0-0-1768515056.7z",
+          "nexusFileId": 1000060036,
+          "pinned": true,
+          "directUrl": "https://github.com/caz1que/OMW-Achievements/releases/download/v3.0.0/omw-achievements-3.0.0.7z",
+          "sizeBytes": 157048,
+          "extractTo": "OMWAchievements",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "OMWAchievements"
+      ],
+      "content": [
+        {
+          "file": "omw-achievements.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 549,
+        "resolvedVersion": "v3.0.0",
+        "resolvedAt": "2026-08-11T10:32:25.1201863\u002B00:00"
       }
     },
     {
@@ -22734,6 +23224,37 @@
       "notes": "MRI addition (not in the sheet): The Dark Project hard-requires Mercy gutils (log: module not found scripts.MaxYari.MercyCAO.scripts.gutils). umo github handler fetches default-branch HEAD (cb4e2e4 at time of addition, 2026-04-20).",
       "provenance": {
         "csvRow": 646
+      }
+    },
+    {
+      "id": "tyddy-s-landscape-retexture-uhq",
+      "name": "Tyddy\u0027s Landscape Retexture UHQ",
+      "category": "Mri Dependency Additions",
+      "source": {
+        "handler": "direct",
+        "url": "https://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Tyddy\u0027s Landscape Retexture UHQ",
+          "pinned": false,
+          "directUrl": "https://www.fullrest.ru/uploads/files/uhq-textures-use-with-hq_95710.7z",
+          "sizeBytes": 0,
+          "extractTo": "TyddysLandscapeRetextureUHQ",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "TyddysLandscapeRetextureUHQ/UHQ (use with HQ)"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: UHQ pack layered over HQ per modding-openmw.com guidance (use with HQ). Same fullrest source as the sheet\u0027s HQ row.",
+      "provenance": {
+        "csvRow": 647
       }
     }
   ]
