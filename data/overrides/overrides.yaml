@@ -473,6 +473,19 @@ rules:
     skip: true
     skipReason: "partial overlay for a newer base version; shadows and breaks the working Lua Edition"
 
+  # MRI DEPENDENCY ADDITIONS (rows appended to the CSV, not from the sheet):
+  # Mercy CAO via umo's github handler (plain repo URL, same shape as the 5
+  # working github mods — it fetches default-branch HEAD and strips the repo
+  # top folder, so files sit at the dir root). Provides
+  # scripts/MaxYari/MercyCAO/scripts/gutils.lua required by The Dark
+  # Project's drive.lua, and its own combat AI overhaul via omwscripts.
+  - match: { slug: "mercy-combat-ai-overhaul" }
+    set:
+      extractTo: "MercyCAO"
+      dataPaths: ["MercyCAO"]
+      content:
+        - { file: "MercyCAO.omwscripts", mode: "normal" }
+
   # RECORD FIXUP (not a rule — shipped via data/fixups + install-fixups step):
   # the-abecean-isles xOTM_01.ESP has two Greeting 5 INFOs with no speaker
   # filter (one gated only by Random100>50); any NPC anywhere falling through

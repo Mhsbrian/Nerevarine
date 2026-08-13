@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.6",
+  "listVersion": "2026.08.7",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20479638829,
   "estimatedInstalledBytes": 61438916487,
@@ -22699,6 +22699,41 @@
         "csvRow": 59,
         "resolvedVersion": "1.41",
         "resolvedAt": "2026-08-11T10:29:20.0331058\u002B00:00"
+      }
+    },
+    {
+      "id": "mercy-combat-ai-overhaul",
+      "name": "Mercy - Combat AI Overhaul",
+      "category": "Mri Dependency Additions",
+      "source": {
+        "handler": "github",
+        "url": "https://github.com/MaxYari/OpenMWMercyCAO",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Mercy - Combat AI Overhaul",
+          "pinned": false,
+          "sizeBytes": 0,
+          "extractTo": "MercyCAO",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "MercyCAO"
+      ],
+      "content": [
+        {
+          "file": "MercyCAO.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition (not in the sheet): The Dark Project hard-requires Mercy gutils (log: module not found scripts.MaxYari.MercyCAO.scripts.gutils). umo github handler fetches default-branch HEAD (cb4e2e4 at time of addition, 2026-04-20).",
+      "provenance": {
+        "csvRow": 646
       }
     }
   ]

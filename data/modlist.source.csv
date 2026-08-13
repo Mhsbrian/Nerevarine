@@ -642,3 +642,5 @@ SM Dwemer Armor of Wastelands,https://www.nexusmods.com/morrowind/mods/57517,,,
 SM Masque Clavicus Vile Replacer,https://www.nexusmods.com/morrowind/mods/56897,,,
 Crafting the Telvanni Magister Robes,https://www.nexusmods.com/morrowind/mods/57296,,,
 Dubious Miscellaneous Crafting Assemblage - for OpenMW Crafting Framework,https://www.nexusmods.com/morrowind/mods/57565,,,
+MRI DEPENDENCY ADDITIONS,,,,
+Mercy - Combat AI Overhaul,https://github.com/MaxYari/OpenMWMercyCAO,,,"MRI addition (not in the sheet): The Dark Project hard-requires Mercy gutils (log: module not found scripts.MaxYari.MercyCAO.scripts.gutils). umo github handler fetches default-branch HEAD (cb4e2e4 at time of addition, 2026-04-20)."
