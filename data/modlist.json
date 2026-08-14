@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.10",
+  "listVersion": "2026.08.11",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20531460775,
   "estimatedInstalledBytes": 61594382325,
@@ -20448,16 +20448,7 @@
       "dataPaths": [
         "TheDarkProject"
       ],
-      "content": [
-        {
-          "file": "TheDarkProject.omwaddon",
-          "mode": "normal"
-        },
-        {
-          "file": "thedarkproject.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
