@@ -265,6 +265,10 @@ internal static class Program
             OpenMwPaths = Mri.Core.OpenMw.OpenMwUserPaths.Detect(),
             State = stateStore.Load(),
             StateStore = stateStore,
+            MomwContentOrder = File.Exists("data/momw-content-order.txt")
+                ? File.ReadAllLines("data/momw-content-order.txt")
+                    .Where(l => l.Length > 0).ToList()
+                : [],
         };
 
         using var log = Mri.Core.Logging.InstallLog.CreateInDirectory(

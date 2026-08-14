@@ -9533,13 +9533,11 @@
         {
           "file": "Sky_Main.esm",
           "mode": "normal"
-        },
-        {
-          "file": "Sky_Main_Grass.esp",
-          "mode": "normal"
         }
       ],
-      "groundcover": [],
+      "groundcover": [
+        "Sky_Main_Grass.esp"
+      ],
       "bsaArchives": [],
       "tags": [],
       "provenance": {

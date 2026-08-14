@@ -24,6 +24,9 @@ public sealed class InstallContext
     public required InstallState State { get; init; }
     public required InstallStateStore StateStore { get; init; }
 
+    /// <summary>MOMW reference content order (empty = alignment disabled).</summary>
+    public IReadOnlyList<string> MomwContentOrder { get; init; } = [];
+
     // Derived layout — a single install dir owns everything.
     public string ModsRootDir => Path.Combine(InstallDir, "mods");
     public string ToolsDir => Path.Combine(InstallDir, "tools");
@@ -41,6 +44,7 @@ public sealed class InstallContext
     {
         IncludeDelta = includeDelta,
         SkippedModIds = State.SkippedMods.ToHashSet(),
+        MomwContentOrder = MomwContentOrder,
         FixupsContentFiles = Directory.Exists(FixupsDir)
             ? Directory.EnumerateFiles(FixupsDir)
                 .Select(Path.GetFileName)

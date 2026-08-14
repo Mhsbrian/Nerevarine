@@ -33,4 +33,12 @@ public sealed record LoadOrderOptions
     /// </summary>
     public string FixupsDataDir { get; init; } = "mri-fixups";
     public IReadOnlyList<string> FixupsContentFiles { get; init; } = [];
+
+    /// <summary>
+    /// MOMW's field-tested content order (data/momw-content-order.txt).
+    /// Plugins we share with it are permuted into its relative order within
+    /// the slots they already occupy; everything else keeps its position.
+    /// Empty disables the pass.
+    /// </summary>
+    public IReadOnlyList<string> MomwContentOrder { get; init; } = [];
 }

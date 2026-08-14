@@ -216,12 +216,42 @@ public static class ModlistCompiler
             return items.Where(seen.Add).ToList();
         }
 
+        var contentFiles = Dedupe(content);
+        if (options.MomwContentOrder.Count > 0)
+            contentFiles = AlignToReference(contentFiles, options.MomwContentOrder);
+
         return new LoadOrderPlan
         {
             DataDirs = dataDirs,
-            ContentFiles = Dedupe(content),
+            ContentFiles = contentFiles,
             GroundcoverFiles = Dedupe(groundcover),
             FallbackArchives = Dedupe(archives),
         };
+    }
+
+    /// <summary>
+    /// Field-tested pairwise ordering adoption: plugins that also appear in
+    /// the reference list are permuted into the reference's relative order,
+    /// but only within the slots those plugins already occupy — plugins the
+    /// reference doesn't know keep their exact positions (so the fixups and
+    /// delta-merged tail, and every sheet-only mod, are untouched).
+    /// </summary>
+    private static IReadOnlyList<string> AlignToReference(
+        IReadOnlyList<string> content, IReadOnlyList<string> reference)
+    {
+        var refIndex = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+        for (var i = 0; i < reference.Count; i++)
+            refIndex.TryAdd(reference[i], i);
+
+        var slots = new List<int>();
+        for (var i = 0; i < content.Count; i++)
+            if (refIndex.ContainsKey(content[i]))
+                slots.Add(i);
+
+        var sorted = slots.Select(i => content[i]).OrderBy(f => refIndex[f]).ToList();
+        var result = content.ToList();
+        for (var k = 0; k < slots.Count; k++)
+            result[slots[k]] = sorted[k];
+        return result;
     }
 }

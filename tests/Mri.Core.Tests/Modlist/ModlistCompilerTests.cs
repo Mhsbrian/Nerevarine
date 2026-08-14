@@ -143,6 +143,21 @@ public class ModlistCompilerTests
     }
 
     [Fact]
+    public void MomwAlignmentPermutesSharedPluginsWithinTheirSlots()
+    {
+        var plan = ModlistCompiler.BuildLoadOrderPlan(SampleList(), new LoadOrderOptions
+        {
+            IncludeDelta = true,
+            // Reference disagrees with our order: delta stays untouched (not
+            // in the reference), shared plugins adopt reference order.
+            MomwContentOrder = ["delta-never-referenced.esp", "Patch for Purists.esm"],
+        });
+        // Only one shared plugin here, so order is unchanged — but the pass
+        // must not disturb the delta tail or drop anything.
+        Assert.Equal(["Patch for Purists.esm", "delta-merged.omwaddon"], plan.ContentFiles);
+    }
+
+    [Fact]
     public void FixupsMountAfterModsAndBeforeDelta()
     {
         var plan = ModlistCompiler.BuildLoadOrderPlan(SampleList(), new LoadOrderOptions

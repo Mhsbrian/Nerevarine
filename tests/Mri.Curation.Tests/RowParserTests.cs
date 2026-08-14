@@ -79,11 +79,13 @@ public class RowParserTests
         var rows = RowParser.Parse(File.ReadAllText(csvPath));
 
         // 616 sheet rows + the MRI DEPENDENCY ADDITIONS section (Mercy CAO,
-        // Tyddy UHQ) appended by the mirror-recovery pass.
-        Assert.Equal(618, rows.Count(r => r.Kind == RowKind.Mod));
+        // Tyddy UHQ, and the 8 key-batch dependency/successor rows).
+        Assert.Equal(626, rows.Count(r => r.Kind == RowKind.Mod));
         // 24 sheet categories + the appended MRI DEPENDENCY ADDITIONS section.
         Assert.Equal(25, rows.Count(r => r.Kind == RowKind.CategoryHeader));
-        Assert.Equal(563, rows.Count(r => r is { Kind: RowKind.Mod, Handler: "nexus" }));
+        // 563 sheet nexus rows + 8 nexus additions + Khajiit's row moved to
+        // its live Nexus mirror (sheet column C).
+        Assert.Equal(572, rows.Count(r => r is { Kind: RowKind.Mod, Handler: "nexus" }));
         // Every mod row must end up with a unique slug.
         var slugs = rows.Where(r => r.Kind == RowKind.Mod).Select(r => r.Slug).ToList();
         Assert.Equal(slugs.Count, slugs.Distinct().Count());
