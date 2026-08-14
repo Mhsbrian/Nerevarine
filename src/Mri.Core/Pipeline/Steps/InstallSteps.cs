@@ -403,18 +403,43 @@ public sealed class InstallFixupsStep(string? fixupsSourceDir) : IInstallStep
     public string Id => "install-fixups";
     public string Label => "Install record-repair plugins";
 
+    private const string PatchesFileName = "script-patches.json";
+
     private IReadOnlyList<string> SourceFiles =>
         fixupsSourceDir is not null && Directory.Exists(fixupsSourceDir)
             ? Directory.EnumerateFiles(fixupsSourceDir)
+                .Where(f => !Path.GetFileName(f).Equals(PatchesFileName, StringComparison.OrdinalIgnoreCase))
                 .OrderBy(f => f, StringComparer.OrdinalIgnoreCase)
                 .ToList()
             : [];
 
-    public bool Verify(InstallContext ctx) => SourceFiles.All(src =>
+    public sealed record ScriptPatch(string File, string Find, string Replace);
+
+    private IReadOnlyList<ScriptPatch> Patches()
     {
-        var dest = Path.Combine(ctx.FixupsDir, Path.GetFileName(src));
-        return File.Exists(dest) && new FileInfo(dest).Length == new FileInfo(src).Length;
-    });
+        var path = fixupsSourceDir is null ? null : Path.Combine(fixupsSourceDir, PatchesFileName);
+        if (path is null || !File.Exists(path))
+            return [];
+        return System.Text.Json.JsonSerializer.Deserialize<List<ScriptPatch>>(
+            File.ReadAllText(path),
+            new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? [];
+    }
+
+    /// <summary>Applied when the replacement text is present; mod re-extraction
+    /// reverts the file, fails this check and triggers a clean re-apply.</summary>
+    private static bool PatchApplied(InstallContext ctx, ScriptPatch p)
+    {
+        var target = Path.Combine(ctx.ModsRootDir, p.File);
+        return File.Exists(target) && File.ReadAllText(target).Contains(p.Replace, StringComparison.Ordinal);
+    }
+
+    public bool Verify(InstallContext ctx) =>
+        SourceFiles.All(src =>
+        {
+            var dest = Path.Combine(ctx.FixupsDir, Path.GetFileName(src));
+            return File.Exists(dest) && new FileInfo(dest).Length == new FileInfo(src).Length;
+        })
+        && Patches().All(p => PatchApplied(ctx, p));
 
     public Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct)
     {
@@ -423,6 +448,24 @@ public sealed class InstallFixupsStep(string? fixupsSourceDir) : IInstallStep
         {
             File.Copy(src, Path.Combine(ctx.FixupsDir, Path.GetFileName(src)), overwrite: true);
             progress.Report(new StepProgress($"fixup installed: {Path.GetFileName(src)}"));
+        }
+
+        foreach (var p in Patches())
+        {
+            if (PatchApplied(ctx, p))
+                continue;
+            var target = Path.Combine(ctx.ModsRootDir, p.File);
+            if (!File.Exists(target))
+                throw new InvalidOperationException(
+                    $"script patch target missing: {p.File} (mod layout changed?)");
+            var text = File.ReadAllText(target);
+            var at = text.IndexOf(p.Find, StringComparison.Ordinal);
+            if (at < 0)
+                throw new InvalidOperationException(
+                    $"script patch anchor not found in {p.File} (mod updated? re-verify the patch)");
+            AtomicFile.WriteAllText(
+                target, text[..at] + p.Replace + text[(at + p.Find.Length)..]);
+            progress.Report(new StepProgress($"script patched: {p.File}"));
         }
         return Task.CompletedTask;
     }

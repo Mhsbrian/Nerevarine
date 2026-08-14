@@ -80,7 +80,7 @@ public class RowParserTests
 
         // 616 sheet rows + the MRI DEPENDENCY ADDITIONS section (Mercy CAO,
         // Tyddy UHQ, and the 8 key-batch dependency/successor rows).
-        Assert.Equal(626, rows.Count(r => r.Kind == RowKind.Mod));
+        Assert.Equal(627, rows.Count(r => r.Kind == RowKind.Mod));
         // 24 sheet categories + the appended MRI DEPENDENCY ADDITIONS section.
         Assert.Equal(25, rows.Count(r => r.Kind == RowKind.CategoryHeader));
         // 563 sheet nexus rows + 8 nexus additions + Khajiit's row moved to

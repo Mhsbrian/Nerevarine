@@ -1,0 +1,13 @@
+[
+  {
+    "comment": "The Dark Project (upstream dead 2024-04): I.AI.getActivePackage() returns nil for actors with no active AI package; both helpers deref it unguarded, crashing twice per frame per NPC (~98k errors/session, visibly interrupting NPC movement). Guard added; find anchors on the enclosing function name so each patch applies exactly once.",
+    "file": "morrowind-remake/NewMods/TheDarkProject/scripts/thedarkproject/lib/common.lua",
+    "find": "is_following = function()\n        local pkg = I.AI.getActivePackage()\n",
+    "replace": "is_following = function()\n        local pkg = I.AI.getActivePackage()\n        if not pkg then return false end -- MRI fixup: upstream nil-deref\n"
+  },
+  {
+    "file": "morrowind-remake/NewMods/TheDarkProject/scripts/thedarkproject/lib/common.lua",
+    "find": "in_combat = function(with)\n        local pkg = I.AI.getActivePackage()\n",
+    "replace": "in_combat = function(with)\n        local pkg = I.AI.getActivePackage()\n        if not pkg then return false end -- MRI fixup: upstream nil-deref\n"
+  }
+]

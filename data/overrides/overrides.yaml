@@ -488,6 +488,18 @@ rules:
         - { file: "Sky_Main.esm", mode: "normal" }
       groundcover: ["Sky_Main_Grass.esp"]
 
+  # Mercy CAO's behavior-tree library: repo root holds lib/ but the require
+  # path is scripts/behaviourtreelua2e/lib/..., so a rename action (verified:
+  # umo RenameAction = shutil.move + parent mkdir, works on dirs) relocates
+  # it after extraction. Pure library — nothing to activate.
+  - match: { slug: "behaviour-tree-lua-2e" }
+    set:
+      extractTo: "BehaviourTreeLua2e"
+      dataPaths: ["BehaviourTreeLua2e"]
+      content: []
+    actions:
+      - { type: rename, src: "BehaviourTreeLua2e/lib", dst: "BehaviourTreeLua2e/scripts/behaviourtreelua2e/lib" }
+
   # ── MIRROR RECOVERIES (research pass 2026-08-13; every URL curl-verified,
   #    200 + real Content-Length). s3ctor's st4sh moved from private GitLab to
   #    the public DreamWeave-MP GitHub org (per-mod release zips, only the

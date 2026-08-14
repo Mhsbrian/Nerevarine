@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.9",
+  "listVersion": "2026.08.10",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20531460775,
   "estimatedInstalledBytes": 61594382325,
@@ -23658,6 +23658,43 @@
         "csvRow": 655,
         "resolvedVersion": "1.1",
         "resolvedAt": "2026-08-11T10:30:42.2666858\u002B00:00"
+      }
+    },
+    {
+      "id": "behaviour-tree-lua-2e",
+      "name": "Behaviour Tree Lua 2e",
+      "category": "Mri Dependency Additions",
+      "source": {
+        "handler": "github",
+        "url": "https://github.com/MaxYari/behaviourtreelua2e",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Behaviour Tree Lua 2e",
+          "pinned": false,
+          "sizeBytes": 0,
+          "extractTo": "BehaviourTreeLua2e",
+          "actions": [
+            {
+              "type": "rename",
+              "src": "BehaviourTreeLua2e/lib",
+              "dst": "BehaviourTreeLua2e/scripts/behaviourtreelua2e/lib",
+              "force": false
+            }
+          ]
+        }
+      ],
+      "dataPaths": [
+        "BehaviourTreeLua2e"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: Lua behavior-tree library required by Mercy CAO (log: module not found scripts.behaviourtreelua2e.lib.behaviour_tree). The author vendors it in his Nexus zip but not the GitHub repo.",
+      "provenance": {
+        "csvRow": 656
       }
     }
   ]

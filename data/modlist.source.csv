@@ -653,3 +653,4 @@ Alex's Better Fitted Female Armors,https://www.nexusmods.com/morrowind/mods/5018
 Descriptive Icon Pack,https://www.nexusmods.com/morrowind/mods/57491,,,"MRI addition: live successor merging the deleted Descriptive Potion Icons (57278) and Scroll Icons (57260) rows."
 Lava-Mold-Mud Caverns Revamp PBR for OpenMW,https://www.nexusmods.com/morrowind/mods/52305,,,"MRI addition: OpenMW-PBR successor to the hidden Lava - Mold - Mud Caverns row (50191)."
 Spells Reforged,https://www.nexusmods.com/morrowind/mods/52263,,,"MRI addition: live combined successor to the hidden Spells Reforged - Shields row (50905)."
+Behaviour Tree Lua 2e,https://github.com/MaxYari/behaviourtreelua2e,,,"MRI addition: Lua behavior-tree library required by Mercy CAO (log: module not found scripts.behaviourtreelua2e.lib.behaviour_tree). The author vendors it in his Nexus zip but not the GitHub repo."
