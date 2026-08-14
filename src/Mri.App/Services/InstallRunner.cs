@@ -50,6 +50,7 @@ public sealed class InstallRunner(WizardState state)
             State = stateStore.Load(),
             StateStore = stateStore,
             AppVersion = AppVersion,
+            MomwContentOrder = state.Data.MomwContentOrder,
         };
 
         log.Info("app", $"game: '{game.Path}' (source {game.Source}, " +
@@ -69,7 +70,8 @@ public sealed class InstallRunner(WizardState state)
             new LoggingProcessRunner(new ProcessRunner(), log),
             state.Data.SettingsTemplate,
             state.Data.ShadersTemplate,
-            log);
+            log,
+            fixupsSourceDir: AppData.MaterializeFixups(state.InstallDir));
     }
 
     public string SaveDiagnostics() =>
