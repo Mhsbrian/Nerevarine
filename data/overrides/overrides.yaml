@@ -216,9 +216,6 @@ rules:
         dst: "UpdatedPluginlessNoGlow/Textures/magicitem"
 
   # Downloaded archive only contains the non-OpenMW variant.
-  - match: { slug: balmora-a-modern-font-replacer }
-    skip: true
-    skipReason: "Archive holds the non-OpenMW variant only — pin the OpenMW file in M2."
 
   # Project Atlas: atlased MESHES ship in 00*, their TEXTURES in "01 Textures -
   # Vanilla" (field bug: pink map objects, textures/atl/* not found — includes
@@ -316,11 +313,8 @@ rules:
         - { file: "go-home.omwscripts", mode: "normal" }
         - { file: "go-home-locking-doors.omwscripts", mode: "normal" }
 
-  # Bardcraft requires "Skill Framework", which the source sheet never listed.
-  # Deactivated (files stay installed) until the framework is added in M3.
-  - match: { slug: bardcraft-openmw }
-    set:
-      content: []
+  # Bardcraft's Skill Framework dependency now ships as an MRI addition
+  # (2026-08-13); activation reverts to the disk scan.
 
 # ---------------------------------------------------------------------------
 # Dialogue category loads LAST (field bug 2026-08-11): the sheet places
@@ -400,9 +394,6 @@ rules:
   # the sheet never listed — its global.lua refuses to start ("Missing assets
   # from HD Forge!"). Deactivated pending a decision to add the base mod (M3),
   # same policy as bardcraft-openmw's missing Skill Framework.
-  - match: { slug: "hd-forge-for-openmw-lua" }
-    set:
-      content: []
 
   # KNOWN COSMETIC: ShieldsUpOpenMW ships l10n/ShieldsUp/en.yaml wrapped in a
   # markdown ```yaml fence (upstream packaging bug) — OpenMW logs a yaml-cpp
@@ -413,16 +404,10 @@ rules:
   # listed — activating it re-points female guard armor at absent meshes
   # (field: yellow error markers on guards). Deactivated pending an M3
   # decision on adding the base mod / re-picking the FBA main file.
-  - match: { slug: "openmw-full-body-awareness" }
-    set:
-      content: []
 
   # zerkish-hotkeys-improved requires the unlisted ZModUtils library
   # (log: "module not found: scripts.ZModUtils.Utility.Items"); nothing on
   # disk ships it. Same missing-dependency policy as bardcraft-openmw.
-  - match: { slug: "zerkish-hotkeys-improved-for-openmw" }
-    set:
-      content: []
 
   # protective-guards-factions-and-npcs-protections-openmw is a partial
   # overlay (2 lua files, no modInfo.lua) targeting a NEWER base than our
@@ -430,9 +415,6 @@ rules:
   # working base via VFS (later data dir wins) and then fail requiring
   # modInfo. Skipped entirely so the base mod works; M3: re-pin base+overlay
   # to matching versions.
-  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }
-    skip: true
-    skipReason: "partial overlay for a newer base version; shadows and breaks the working Lua Edition"
 
   # ── Recovered-mod variant picks per the sheet's own comments. ──
   # "Item List Only" — the archive ships GameStats + ItemLists; only the latter.
@@ -447,24 +429,15 @@ rules:
         - { file: "Improved Lockpicking.esp", mode: "normal" }
         - { file: "Improved Open Spell Balance-LD.esp", mode: "normal" }
         - { file: "Improved Trap Settings (Tribunal).esp", mode: "normal" }
-  # Six overlapping option esps; Khajiit-ALL.ESP is the author's merged
-  # everything build (base+NPC+hairs+vampires). Comment's dds copy fix is
-  # encoded as actions (applied to the live tree 2026-08-13 as well).
-  - match: { slug: khajiit-head-replacer }
-    set:
-      content:
-        - { file: "Khajiit-ALL.ESP", mode: "normal" }
-    actions:
-      - { type: copy, src: "Textures/ash/khajiit replace/m/khj_m_01_g.dds", dst: "Textures/ash/khajiit replace/m/khj_m_01g.dds" }
-      - { type: copy, src: "Textures/ash/khajiit replace/m/khj_m_05_g.dds", dst: "Textures/ash/khajiit replace/m/khj_m_05g.dds" }
+  # Khajiit row: the sheet's own file pin (column C, file 1000002546) is the
+  # PLUGINLESS "Whiskers Version" — vanilla-path meshes/textures, no esps.
+  # The comment's dds-copy instructions belong to the non-whiskers variant
+  # and do not apply; no actions, nothing to activate.
 
   # ── WAYBACK RECOVERIES (research 2026-08-13): modhistory/fliggerty died,
   #    but Wayback's Nov-2016 crawl captured their file.php?id=N endpoints
   #    (id = trailing number of the download-X-N page URL). All URLs verified
   #    200 with archive-preserved filenames matching the pages' listed sizes.
-  - match: { slug: khajiit-head-replacer }
-    set:
-      directUrl: "https://web.archive.org/web/20161109143004/http://mw.modhistory.com/file.php?id=15171"
   - match: { slug: mesh-fix }
     set:
       directUrl: "https://web.archive.org/web/20161109211355/http://mw.modhistory.com/file.php?id=6088"
@@ -477,6 +450,32 @@ rules:
   - match: { slug: thief-experience-overhaul }
     set:
       directUrl: "https://web.archive.org/web/20161110014758/http://mw.modhistory.com/file.php?id=7250"
+
+  # Protective Guards: the sheet's column-C pin is the ARCHIVED Lua Edition
+  # 0.17; the factions overlay row (v1.6) targets the modern base. Pin the
+  # MAIN "Protective Guards - OpenMW" 0.18 file explicitly (list from the
+  # 2026-08-13 resolve).
+  - match: { slug: protective-guards-openmw }
+    set:
+      nexusFileId: 1000040988
+      fileName: "Protective Guards - OpenMW-46992-0-18-1699969680.7z"
+      dataPaths: ["ProtectiveGuardsOpenMW/Protective Guards for OpenMW"]
+
+  # HD Forge base: the lua companion probes sound\fx\Bellows1.wav, shipped
+  # only in the bellows-with-sound folder (we mount its assets; its legacy
+  # esp stays inactive — the lua companion replaces it). Glowing Ash texture
+  # included (richest). content pinned empty so the legacy esp never
+  # auto-activates.
+  - match: { slug: hd-forge }
+    set:
+      dataPaths: ["HDForge/Data Files", "HDForge/Optional Animated Bellows with Sound [English Version]", "HDForge/Optional Texture for Glowing Ash"]
+      content: []
+
+  # Bardcraft consumes the I.SkillFramework INTERFACE — providers must load
+  # before consumers in content order (additions sit at the list end, so
+  # Bardcraft must move after the framework).
+  - match: { slug: bardcraft-openmw }
+    moveAfter: "skill-framework-openmw"
 
   # ── MIRROR RECOVERIES (research pass 2026-08-13; every URL curl-verified,
   #    200 + real Content-Length). s3ctor's st4sh moved from private GitLab to

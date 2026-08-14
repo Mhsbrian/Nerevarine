@@ -205,6 +205,9 @@ public static partial class ModlistEmitter
         if (set.Id is not null) draft.Id = set.Id;
         if (set.Name is not null) draft.Name = set.Name;
         if (set.ExtractTo is not null) draft.ExtractTo = set.ExtractTo;
+        // A stale sheet pin can carry an outdated archive name; umo verifies
+        // downloads against file_name, so a nexusFileId re-pin needs this too.
+        if (set.FileName is not null) draft.FileName = set.FileName;
         if (set.DirectUrl is not null)
         {
             draft.DirectUrl = set.DirectUrl;

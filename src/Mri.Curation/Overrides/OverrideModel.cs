@@ -61,6 +61,7 @@ public sealed class SetSpec
     public string? Id { get; set; }
     public string? Name { get; set; }
     public string? ExtractTo { get; set; }
+    public string? FileName { get; set; }
     public string? DirectUrl { get; set; }
     public long? NexusFileId { get; set; }
     public List<string>? DataPaths { get; set; }

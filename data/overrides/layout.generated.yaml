@@ -52,7 +52,7 @@ rules:
     # other candidates: FriendsAndFoes/01 Vvardenfell addon | FriendsAndFoes/02 Mainland addon | FriendsAndFoes/03 Prim & Proper addon | FriendsAndFoes/04 Ahead of the Classes addon | FriendsAndFoes/05 No Towns addon | FriendsAndFoes/06 No Hostiles addon
   - match: { slug: "protective-guards-openmw" }
     set:
-      dataPaths: ["ProtectiveGuardsOpenMW/Protective Guards for OpenMW - Lua Edition"]
+      dataPaths: ["ProtectiveGuardsOpenMW/Protective Guards for OpenMW"]
   - match: { slug: "ncgdmw-lua-edition" }
     set:
       dataPaths: ["NCGDMWLuaEdition/00 Core"]
@@ -903,6 +903,7 @@ rules:
   - match: { slug: "spells-bookmarks-openmw" }
     set:
       dataPaths: ["SpellsBookmarksOpenMW/spellsBookmark"]
+  # NEEDS CHOICE "balmora-a-modern-font-replacer": BalmoraAModernFontReplacer/Balmora - Modern Font Replacer - non OpenMW Version/Data Files | BalmoraAModernFontReplacer/__MACOSX/Balmora - Modern Font Replacer - non OpenMW Version/Data Files
   - match: { slug: "smart-interface-menu-opening-simo-open-mw" }
     set:
       dataPaths: ["SmartInterfaceMenuOpeningSIMOOpenMW/openmw-smart-interface-menu-opening/smartInterfaceMenuOpening"]
@@ -982,3 +983,23 @@ rules:
   - match: { slug: "tyddy-s-landscape-retexture-uhq" }
     set:
       dataPaths: ["TyddysLandscapeRetextureUHQ/UHQ (use with HQ)"]
+  - match: { slug: "zerkish-modutils-openmw" }
+    set:
+      dataPaths: ["ZerkishModUtilsOpenMW/ZModUtils"]
+  - match: { slug: "hd-forge" }
+    set:
+      dataPaths: ["HDForge/Data Files"]
+    # other candidates: HDForge/Distant Land Forge Mesh | HDForge/Optional Animated Bellows | HDForge/Optional Animated Bellows with Sound [English Version] | HDForge/Optional Animierter Blasebalg mit Sound [Deutsche Version | HDForge/Optional Texture for Glowing Ash
+  - match: { slug: "hd-forge-bloodmoon-update" }
+    set:
+      dataPaths: ["HDForgeBloodmoonUpdate/Data Files"]
+    # other candidates: HDForgeBloodmoonUpdate/Distant Land Forge Mesh | HDForgeBloodmoonUpdate/Optional Animated Bellows | HDForgeBloodmoonUpdate/Optional Animated Bellows with Sound [English Version] | HDForgeBloodmoonUpdate/Optional Animierter Blasebalg mit Sound [Deutsche Version | HDForgeBloodmoonUpdate/Optional Texture for Glowing Ash
+  - match: { slug: "alex-s-better-fitted-female-armors" }
+    set:
+      dataPaths: ["AlexsBetterFittedFemaleArmors/data files"]
+  - match: { slug: "descriptive-icon-pack" }
+    set:
+      dataPaths: ["DescriptiveIconPack/256_Descriptive_Icon_Pack"]
+  - match: { slug: "lava-mold-mud-caverns-revamp-pbr-for-openmw-2" }
+    set:
+      dataPaths: ["LavaMoldMudCavernsRevampPBRForOpenMW2/Lava Mold Mud Caverns Revamp PBR"]

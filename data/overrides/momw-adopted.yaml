@@ -43,7 +43,13 @@ rules:
     set:
       dataPaths: ["WaresUltimate/00 Core", "WaresUltimate/02 Wares to vanilla lists", "WaresUltimate/03 TD to Wares", "WaresUltimate/04 OAAB to Wares", "WaresUltimate/06 Wares to Traders", "WaresUltimate/09 Wares to containers"]
   # content candidate "wares-ultimate" (momw:total-overhaul): Wares-base.esm | Wares_lists_OAAB.ESP | Wares_lists_TD.ESP | Wares_vanilla_random_lists.ESP | Wares_traders.ESP | Wares_containers.ESP
-  # NOT ADOPTED "protective-guards-openmw" (momw:total-overhaul): missing on disk: ProtectiveGuardsOpenMW/Protective Guards for OpenMW
+  - match: { slug: "protective-guards-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ProtectiveGuardsOpenMW/Protective Guards for OpenMW"]
+  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }   # momw:total-overhaul
+    set:
+      dataPaths: ["ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW"]
+  # content candidate "protective-guards-factions-and-npcs-protections-openmw" (momw:total-overhaul): protective_guards_for_omw.omwscripts
   # NOT ADOPTED "attend-me" (momw:total-overhaul): missing on disk: AttendMe/AttendMe_1.9
   - match: { slug: "vanilla-friendly-creatures-and-undeads-expansion" }   # momw:total-overhaul
     set:
@@ -616,3 +622,6 @@ rules:
     set:
       dataPaths: ["VoiceOverhaul"]
   # content candidate "voice-overhaul" (momw:total-overhaul): PR Voice Overhaul.esp
+  # NOT ADOPTED "hd-forge" (momw:total-overhaul): missing on disk: HDForge/Improved Meshes only | HDForge/Optional HD Bloodmoon Coals Texture
+  # NOT ADOPTED "hd-forge-bloodmoon-update" (momw:total-overhaul): missing on disk: HDForgeBloodmoonUpdate/Improved Meshes only | HDForgeBloodmoonUpdate/Optional HD Bloodmoon Coals Texture
+  # NOT ADOPTED "spells-reforged-2" (momw:total-overhaul): missing on disk: SpellsReforged2/SR_1 | SpellsReforged2/SR_3

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.8",
+  "listVersion": "2026.08.9",
   "name": "morrowind-remake",
-  "estimatedDownloadBytes": 20488298798,
-  "estimatedInstalledBytes": 61464896394,
+  "estimatedDownloadBytes": 20531460775,
+  "estimatedInstalledBytes": 61594382325,
   "mods": [
     {
       "id": "vanilla-textures-normal-mapped",
@@ -933,8 +933,8 @@
       },
       "downloads": [
         {
-          "fileName": "Protective Guards for OpenMW - Lua Edition-46992-0-17-1663095163.7z",
-          "nexusFileId": 1000033076,
+          "fileName": "Protective Guards - OpenMW-46992-0-18-1699969680.7z",
+          "nexusFileId": 1000040988,
           "pinned": true,
           "sizeBytes": 9667,
           "extractTo": "ProtectiveGuardsOpenMW",
@@ -942,7 +942,7 @@
         }
       ],
       "dataPaths": [
-        "ProtectiveGuardsOpenMW/Protective Guards for OpenMW - Lua Edition"
+        "ProtectiveGuardsOpenMW/Protective Guards for OpenMW"
       ],
       "content": [
         {
@@ -960,7 +960,7 @@
       "provenance": {
         "csvRow": 64,
         "resolvedVersion": "0.17",
-        "resolvedAt": "2026-08-11T10:29:21.9228700\u002B00:00"
+        "resolvedAt": "2026-08-13T11:51:14.3843937\u002B00:00"
       }
     },
     {
@@ -1001,6 +1001,45 @@
         "csvRow": 65,
         "resolvedVersion": "1.1",
         "resolvedAt": "2026-08-11T10:29:22.3882507\u002B00:00"
+      }
+    },
+    {
+      "id": "protective-guards-factions-and-npcs-protections-openmw",
+      "name": "Protective Guards - Factions and NPCs Protections (OpenMW)",
+      "category": "Balance",
+      "author": "kuyondo and lelimule",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/54858",
+        "nexusGame": "morrowind",
+        "nexusId": 54858
+      },
+      "downloads": [
+        {
+          "fileName": "Protective Guards - Factions and NPCs Protections-54858-1-6-1772627968.zip",
+          "nexusFileId": 1000061283,
+          "pinned": true,
+          "sizeBytes": 5645,
+          "extractTo": "ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "ProtectiveGuardsFactionsAndNPCsProtectionsOpenMW"
+      ],
+      "content": [
+        {
+          "file": "protective_guards_for_omw.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 66,
+        "resolvedVersion": "1.6",
+        "resolvedAt": "2026-08-13T11:51:14.7579982\u002B00:00"
       }
     },
     {
@@ -5304,7 +5343,16 @@
       "dataPaths": [
         "HDForgeForOpenMWLua"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "PherimAnimatedBellowsSounds.omwaddon",
+          "mode": "normal"
+        },
+        {
+          "file": "HD Forge.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -8254,8 +8302,8 @@
       "category": "Player / Npc Models",
       "author": "ashiraniir",
       "source": {
-        "handler": "direct",
-        "url": "https://mw.modhistory.com/download-42-15171",
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/43110",
         "nexusGame": "morrowind",
         "nexusId": 43110
       },
@@ -8264,34 +8312,15 @@
           "fileName": "Khajiit Head Pack - Whiskers Version-43110-1-0.7z",
           "nexusFileId": 1000002546,
           "pinned": true,
-          "directUrl": "https://web.archive.org/web/20161109143004/http://mw.modhistory.com/file.php?id=15171",
           "sizeBytes": 2347505,
           "extractTo": "KhajiitHeadReplacer",
-          "actions": [
-            {
-              "type": "copy",
-              "src": "Textures/ash/khajiit replace/m/khj_m_01_g.dds",
-              "dst": "Textures/ash/khajiit replace/m/khj_m_01g.dds",
-              "force": false
-            },
-            {
-              "type": "copy",
-              "src": "Textures/ash/khajiit replace/m/khj_m_05_g.dds",
-              "dst": "Textures/ash/khajiit replace/m/khj_m_05g.dds",
-              "force": false
-            }
-          ]
+          "actions": []
         }
       ],
       "dataPaths": [
         "KhajiitHeadReplacer"
       ],
-      "content": [
-        {
-          "file": "Khajiit-ALL.ESP",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19274,7 +19303,12 @@
       "dataPaths": [
         "ZerkishHotkeysImprovedForOpenMW/ZerkishHotkeysImproved"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "ZerkishHotkeysImproved.omwscripts",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -19355,40 +19389,6 @@
         "csvRow": 570,
         "resolvedVersion": "1.1",
         "resolvedAt": "2026-08-11T10:32:32.2391040\u002B00:00"
-      }
-    },
-    {
-      "id": "bardcraft-openmw",
-      "name": "Bardcraft (OpenMW)",
-      "category": "New Mods",
-      "author": "Ralts",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/56814",
-        "nexusGame": "morrowind",
-        "nexusId": 56814
-      },
-      "downloads": [
-        {
-          "fileName": "Bardcraft-56814-1-3-3-1767941418.7z",
-          "nexusFileId": 1000059850,
-          "pinned": true,
-          "sizeBytes": 89646478,
-          "extractTo": "BardcraftOpenMW",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "BardcraftOpenMW"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 571,
-        "resolvedVersion": "1.3.3",
-        "resolvedAt": "2026-08-11T10:32:32.6502657\u002B00:00"
       }
     },
     {
@@ -19574,7 +19574,12 @@
       "dataPaths": [
         "OpenMWFullBodyAwareness"
       ],
-      "content": [],
+      "content": [
+        {
+          "file": "FBA-Alex_s_Better_Fitted_Armors.omwaddon",
+          "mode": "normal"
+        }
+      ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -21340,6 +21345,40 @@
         "csvRow": 624,
         "resolvedVersion": "0.5.0",
         "resolvedAt": "2026-08-11T10:32:55.2856342\u002B00:00"
+      }
+    },
+    {
+      "id": "balmora-a-modern-font-replacer",
+      "name": "Balmora - A Modern Font Replacer",
+      "category": "New Mods",
+      "author": "thenasty",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/57343",
+        "nexusGame": "morrowind",
+        "nexusId": 57343
+      },
+      "downloads": [
+        {
+          "fileName": "Balmora - Font Replacer - non OpenMW Version-57343-1-0b-1755992031.zip",
+          "nexusFileId": 1000056304,
+          "pinned": true,
+          "sizeBytes": 594916,
+          "extractTo": "BalmoraAModernFontReplacer",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BalmoraAModernFontReplacer"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 625,
+        "resolvedVersion": "1.0b",
+        "resolvedAt": "2026-08-11T10:32:55.6891786\u002B00:00"
       }
     },
     {
@@ -23255,6 +23294,372 @@
       "notes": "MRI addition: UHQ pack layered over HQ per modding-openmw.com guidance (use with HQ). Same fullrest source as the sheet\u0027s HQ row.",
       "provenance": {
         "csvRow": 647
+      }
+    },
+    {
+      "id": "skill-framework-openmw",
+      "name": "Skill Framework (OpenMW)",
+      "category": "Mri Dependency Additions",
+      "author": "Ralts",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/57765",
+        "nexusGame": "morrowind",
+        "nexusId": 57765
+      },
+      "downloads": [
+        {
+          "fileName": "Skill Framework-57765-1-1-2-1778257077.7z",
+          "nexusFileId": 1000063805,
+          "pinned": true,
+          "sizeBytes": 15752,
+          "extractTo": "SkillFrameworkOpenMW",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "SkillFrameworkOpenMW"
+      ],
+      "content": [
+        {
+          "file": "SkillFramework.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: unlisted dependency of Bardcraft (by Ralts).",
+      "provenance": {
+        "csvRow": 648,
+        "resolvedVersion": "1.1.2",
+        "resolvedAt": "2026-08-13T11:51:15.0731444\u002B00:00"
+      }
+    },
+    {
+      "id": "bardcraft-openmw",
+      "name": "Bardcraft (OpenMW)",
+      "category": "New Mods",
+      "author": "Ralts",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/56814",
+        "nexusGame": "morrowind",
+        "nexusId": 56814
+      },
+      "downloads": [
+        {
+          "fileName": "Bardcraft-56814-1-3-3-1767941418.7z",
+          "nexusFileId": 1000059850,
+          "pinned": true,
+          "sizeBytes": 89646478,
+          "extractTo": "BardcraftOpenMW",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BardcraftOpenMW"
+      ],
+      "content": [
+        {
+          "file": "Bardcraft.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Bardcraft.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 571,
+        "resolvedVersion": "1.3.3",
+        "resolvedAt": "2026-08-11T10:32:32.6502657\u002B00:00"
+      }
+    },
+    {
+      "id": "zerkish-modutils-openmw",
+      "name": "Zerkish ModUtils (OpenMW)",
+      "category": "Mri Dependency Additions",
+      "author": "Zerkish",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/56795",
+        "nexusGame": "morrowind",
+        "nexusId": 56795
+      },
+      "downloads": [
+        {
+          "fileName": "ZModUtils-56795-a0-1-1-1748596142.zip",
+          "nexusFileId": 1000053834,
+          "pinned": true,
+          "sizeBytes": 18705,
+          "extractTo": "ZerkishModUtilsOpenMW",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "ZerkishModUtilsOpenMW/ZModUtils"
+      ],
+      "content": [
+        {
+          "file": "ZModUtils.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: unlisted dependency of Zerkish Hotkeys Improved.",
+      "provenance": {
+        "csvRow": 649,
+        "resolvedVersion": "a0.1.1",
+        "resolvedAt": "2026-08-13T11:51:15.4359076\u002B00:00"
+      }
+    },
+    {
+      "id": "hd-forge",
+      "name": "HD Forge",
+      "category": "Mri Dependency Additions",
+      "author": "Pherim",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/46738",
+        "nexusGame": "morrowind",
+        "nexusId": 46738
+      },
+      "downloads": [
+        {
+          "fileName": "HD Forge-46738-1-3-1690187195.7z",
+          "nexusFileId": 1000039316,
+          "pinned": true,
+          "sizeBytes": 5785433,
+          "extractTo": "HDForge",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "HDForge/Data Files",
+        "HDForge/Optional Animated Bellows with Sound [English Version]",
+        "HDForge/Optional Texture for Glowing Ash"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: base assets required by HD Forge for OpenMW-Lua (Pherim).",
+      "provenance": {
+        "csvRow": 650,
+        "resolvedVersion": "1.3",
+        "resolvedAt": "2026-08-13T11:51:15.8176439\u002B00:00"
+      }
+    },
+    {
+      "id": "hd-forge-bloodmoon-update",
+      "name": "HD Forge Bloodmoon Update",
+      "category": "Mri Dependency Additions",
+      "author": "Pherim",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/46738",
+        "nexusGame": "morrowind",
+        "nexusId": 46738
+      },
+      "downloads": [
+        {
+          "fileName": "HD Forge-46738-1-3-1690187195.7z",
+          "nexusFileId": 1000039316,
+          "pinned": true,
+          "sizeBytes": 5785433,
+          "extractTo": "HDForgeBloodmoonUpdate",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "HDForgeBloodmoonUpdate/Data Files"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: HD Bloodmoon Forge update file from the same page.",
+      "provenance": {
+        "csvRow": 651,
+        "resolvedVersion": "1.3",
+        "resolvedAt": "2026-08-13T11:51:15.8176439\u002B00:00"
+      }
+    },
+    {
+      "id": "alex-s-better-fitted-female-armors",
+      "name": "Alex\u0027s Better Fitted Female Armors",
+      "category": "Mri Dependency Additions",
+      "author": "AngryKarakuri",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/50187",
+        "nexusGame": "morrowind",
+        "nexusId": 50187
+      },
+      "downloads": [
+        {
+          "fileName": "Alex\u0027s Better Fitted Female Armors v.1.3-50187-1-3-1690573091.rar",
+          "nexusFileId": 1000039420,
+          "pinned": true,
+          "sizeBytes": 705509,
+          "extractTo": "AlexsBetterFittedFemaleArmors",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "AlexsBetterFittedFemaleArmors/data files"
+      ],
+      "content": [
+        {
+          "file": "Alex\u0027s Better Fitted Female Armors.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: base mod for the OpenMW Full Body Awareness addon (meshes/abffa).",
+      "provenance": {
+        "csvRow": 652,
+        "resolvedVersion": "1.3",
+        "resolvedAt": "2026-08-13T11:51:16.1909737\u002B00:00"
+      }
+    },
+    {
+      "id": "descriptive-icon-pack",
+      "name": "Descriptive Icon Pack",
+      "category": "Mri Dependency Additions",
+      "author": "Tinumbra1",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/57491",
+        "nexusGame": "morrowind",
+        "nexusId": 57491
+      },
+      "downloads": [
+        {
+          "fileName": "256x256-57491-1-1-1765822151.zip",
+          "nexusFileId": 1000059252,
+          "pinned": true,
+          "sizeBytes": 11909366,
+          "extractTo": "DescriptiveIconPack",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "DescriptiveIconPack/256_Descriptive_Icon_Pack"
+      ],
+      "content": [
+        {
+          "file": "Descriptive_Potion_Icons.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Descriptive_Potion_Icons_NamesUnchanged.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Descriptive_Scroll_Icons.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "RUS_Descriptive_Potion_Icons_NamesUnchanged.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "RUS_Descriptive_Scroll_Icons.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: live successor merging the deleted Descriptive Potion Icons (57278) and Scroll Icons (57260) rows.",
+      "provenance": {
+        "csvRow": 653,
+        "resolvedVersion": "1.1",
+        "resolvedAt": "2026-08-13T11:51:16.5563563\u002B00:00"
+      }
+    },
+    {
+      "id": "lava-mold-mud-caverns-revamp-pbr-for-openmw-2",
+      "name": "Lava-Mold-Mud Caverns Revamp PBR for OpenMW",
+      "category": "Mri Dependency Additions",
+      "author": "puppies_on_acid",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/52305",
+        "nexusGame": "morrowind",
+        "nexusId": 52305
+      },
+      "downloads": [
+        {
+          "fileName": "Lava-Mold-Mud Cavern Revamp PBR-52305-1-0-1675660080.7z",
+          "nexusFileId": 1000035221,
+          "pinned": true,
+          "sizeBytes": 16837100,
+          "extractTo": "LavaMoldMudCavernsRevampPBRForOpenMW2",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "LavaMoldMudCavernsRevampPBRForOpenMW2/Lava Mold Mud Caverns Revamp PBR"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: OpenMW-PBR successor to the hidden Lava - Mold - Mud Caverns row (50191).",
+      "provenance": {
+        "csvRow": 654,
+        "resolvedVersion": "1.0",
+        "resolvedAt": "2026-08-11T10:31:19.5601753\u002B00:00"
+      }
+    },
+    {
+      "id": "spells-reforged-2",
+      "name": "Spells Reforged",
+      "category": "Mri Dependency Additions",
+      "author": "Kurpulio Greatness7",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/52263",
+        "nexusGame": "morrowind",
+        "nexusId": 52263
+      },
+      "downloads": [
+        {
+          "fileName": "SR_5_DamageHealth-52263-1-1-1688247301.rar",
+          "nexusFileId": 1000038837,
+          "pinned": true,
+          "sizeBytes": 1504118,
+          "extractTo": "SpellsReforged2",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "SpellsReforged2"
+      ],
+      "content": [
+        {
+          "file": "SR_5_DamageHealth.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "notes": "MRI addition: live combined successor to the hidden Spells Reforged - Shields row (50905).",
+      "provenance": {
+        "csvRow": 655,
+        "resolvedVersion": "1.1",
+        "resolvedAt": "2026-08-11T10:30:42.2666858\u002B00:00"
       }
     }
   ]

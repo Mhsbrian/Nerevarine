@@ -264,7 +264,7 @@ Store Entrance Chimes,https://www.nexusmods.com/morrowind/mods/44586,https://www
 Maxar's Dynamic Footsteps (OpenMW),https://www.nexusmods.com/morrowind/mods/55364,,,"Check OpenMW Discord server for the fix ""Maxar Footsteps Fixed"" Alternative: https://gitlab.com/fallchildren/openmw-footsteps"
 PLAYER / NPC MODELS,,,,
 Better Bodies (Manual),https://www.nexusmods.com/morrowind/mods/3880,https://www.nexusmods.com/morrowind/mods/3880?tab=files&file_id=1000002608,2.2,TR patch: https://www.dropbox.com/scl/fi/z75v7fyh4nj7ttii6xava/Better_Robes_-_Updated_Updated_Tamriel_Rebuilt_Patch.zip?rlkey=n0jhjk6p1nmfmtc9u40mnijjb&st=c40w5hx0&dl=0  BB color tweak: https://www.dropbox.com/scl/fi/9cscw90bkzvekcxipfvxr/Color_Tweaked_Westlys_BB_Textures.7z?rlkey=xq4zrvve7o5am4i6l3vi8lcwl&st=mevn2v7m&dl=0
-Khajiit Head Replacer,https://mw.modhistory.com/download-42-15171,https://www.nexusmods.com/morrowind/mods/43110?tab=files&file_id=1000002546,-,"Go to textures/ash/khajiit replace/m, make copies of the files “khj_m_01_g.dds” and “khj_m_05_g.dds”. Rename the copies to “khj_m_01g.dds” and “khj_m_05g.dds” Whiskers version"
+Khajiit Head Replacer,https://www.nexusmods.com/morrowind/mods/43110,https://www.nexusmods.com/morrowind/mods/43110?tab=files&file_id=1000002546,-,"Go to textures/ash/khajiit replace/m, make copies of the files “khj_m_01_g.dds” and “khj_m_05_g.dds”. Rename the copies to “khj_m_01g.dds” and “khj_m_05g.dds” Whiskers version"
 Improved Argonians,https://www.nexusmods.com/morrowind/mods/45918,https://www.nexusmods.com/morrowind/mods/45918?tab=files&file_id=1000023560,1.5,Incompatible with Better Heads
 Westly's Pluginless Head Replacer,https://www.nexusmods.com/morrowind/mods/50152,https://www.nexusmods.com/morrowind/mods/50152?tab=files&file_id=1000026442,1.0,
 WPHP - Fix,https://www.nexusmods.com/morrowind/mods/47547,https://www.nexusmods.com/morrowind/mods/47547?tab=files&file_id=1000017470,1.1.2,
@@ -645,3 +645,11 @@ Dubious Miscellaneous Crafting Assemblage - for OpenMW Crafting Framework,https:
 MRI DEPENDENCY ADDITIONS,,,,
 Mercy - Combat AI Overhaul,https://github.com/MaxYari/OpenMWMercyCAO,,,"MRI addition (not in the sheet): The Dark Project hard-requires Mercy gutils (log: module not found scripts.MaxYari.MercyCAO.scripts.gutils). umo github handler fetches default-branch HEAD (cb4e2e4 at time of addition, 2026-04-20)."
 Tyddy's Landscape Retexture UHQ,https://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files,,,"MRI addition: UHQ pack layered over HQ per modding-openmw.com guidance (use with HQ). Same fullrest source as the sheet's HQ row."
+Skill Framework (OpenMW),https://www.nexusmods.com/morrowind/mods/57765,,,"MRI addition: unlisted dependency of Bardcraft (by Ralts)."
+Zerkish ModUtils (OpenMW),https://www.nexusmods.com/morrowind/mods/56795,,,"MRI addition: unlisted dependency of Zerkish Hotkeys Improved."
+HD Forge,https://www.nexusmods.com/morrowind/mods/46738,,,"MRI addition: base assets required by HD Forge for OpenMW-Lua (Pherim)."
+HD Forge Bloodmoon Update,https://www.nexusmods.com/morrowind/mods/46738,,,"MRI addition: HD Bloodmoon Forge update file from the same page."
+Alex's Better Fitted Female Armors,https://www.nexusmods.com/morrowind/mods/50187,,,"MRI addition: base mod for the OpenMW Full Body Awareness addon (meshes/abffa)."
+Descriptive Icon Pack,https://www.nexusmods.com/morrowind/mods/57491,,,"MRI addition: live successor merging the deleted Descriptive Potion Icons (57278) and Scroll Icons (57260) rows."
+Lava-Mold-Mud Caverns Revamp PBR for OpenMW,https://www.nexusmods.com/morrowind/mods/52305,,,"MRI addition: OpenMW-PBR successor to the hidden Lava - Mold - Mud Caverns row (50191)."
+Spells Reforged,https://www.nexusmods.com/morrowind/mods/52263,,,"MRI addition: live combined successor to the hidden Spells Reforged - Shields row (50905)."

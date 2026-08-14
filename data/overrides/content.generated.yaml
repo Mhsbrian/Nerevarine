@@ -90,6 +90,10 @@ rules:
     set:
       content:
         - { file: "Coherent Guards Reaction.esp", mode: "normal" }
+  - match: { slug: "protective-guards-factions-and-npcs-protections-openmw" }
+    set:
+      content:
+        - { file: "protective_guards_for_omw.omwscripts", mode: "normal" }
   - match: { slug: "ncgdmw-lua-edition" }
     set:
       content:
@@ -775,15 +779,6 @@ rules:
     set:
       content:
         - { file: "Better Bodies.esp", mode: "normal" }
-  - match: { slug: "khajiit-head-replacer" }
-    set:
-      content:
-        - { file: "Khajiit-ALL.ESP", mode: "normal" }
-        - { file: "Khajiit-BaseReplace.ESP", mode: "normal" }
-        - { file: "Khajiit-Hair.ESP", mode: "normal" }
-        - { file: "Khajiit-NPCPlayable.ESP", mode: "normal" }
-        - { file: "Khajiit-NPCReplace.ESP", mode: "normal" }
-        - { file: "Khajiit-VampiresPlayable.ESP", mode: "normal" }
   - match: { slug: "improved-argonians" }
     set:
       content:
@@ -2000,6 +1995,30 @@ rules:
     set:
       content:
         - { file: "MercyCAO.omwscripts", mode: "normal" }
+  - match: { slug: "skill-framework-openmw" }
+    set:
+      content:
+        - { file: "SkillFramework.omwscripts", mode: "normal" }
+  - match: { slug: "zerkish-modutils-openmw" }
+    set:
+      content:
+        - { file: "ZModUtils.omwscripts", mode: "normal" }
+  - match: { slug: "alex-s-better-fitted-female-armors" }
+    set:
+      content:
+        - { file: "Alex's Better Fitted Female Armors.ESP", mode: "normal" }
+  - match: { slug: "descriptive-icon-pack" }
+    set:
+      content:
+        - { file: "Descriptive_Potion_Icons.ESP", mode: "normal" }
+        - { file: "Descriptive_Potion_Icons_NamesUnchanged.ESP", mode: "normal" }
+        - { file: "Descriptive_Scroll_Icons.ESP", mode: "normal" }
+        - { file: "RUS_Descriptive_Potion_Icons_NamesUnchanged.ESP", mode: "normal" }
+        - { file: "RUS_Descriptive_Scroll_Icons.ESP", mode: "normal" }
+  - match: { slug: "spells-reforged-2" }
+    set:
+      content:
+        - { file: "SR_5_DamageHealth.ESP", mode: "normal" }
   - match: { slug: "better-robes-tamriel-rebuilt-patch" }   # master provided by a later mod
     moveAfter: "tamriel-rebuilt"
   - match: { slug: "repopulated-waters-rowing-npcs" }   # master provided by a later mod
