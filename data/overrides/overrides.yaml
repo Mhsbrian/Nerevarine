@@ -554,12 +554,16 @@ rules:
   # top folder, so files sit at the dir root). Provides
   # scripts/MaxYari/MercyCAO/scripts/gutils.lua required by The Dark
   # Project's drive.lua, and its own combat AI overhaul via omwscripts.
+  # PARKED (2026-08-14): Mercy is a self-described BETA that attaches
+  # improvedai to EVERY NPC; prime suspect for repetitive NPC movement once
+  # TDP was ruled out (A/B: it first ran in the same session the complaint
+  # began). Files + behaviour-tree library stay installed; it was only added
+  # as TDP's dependency and TDP is parked too.
   - match: { slug: "mercy-combat-ai-overhaul" }
     set:
       extractTo: "MercyCAO"
       dataPaths: ["MercyCAO"]
-      content:
-        - { file: "MercyCAO.omwscripts", mode: "normal" }
+      content: []
 
   # RECORD FIXUP (not a rule — shipped via data/fixups + install-fixups step):
   # the-abecean-isles xOTM_01.ESP has two Greeting 5 INFOs with no speaker

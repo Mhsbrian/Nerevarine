@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.11",
+  "listVersion": "2026.08.12",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20531460775,
   "estimatedInstalledBytes": 61594382325,
@@ -23240,12 +23240,7 @@
       "dataPaths": [
         "MercyCAO"
       ],
-      "content": [
-        {
-          "file": "MercyCAO.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
