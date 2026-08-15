@@ -635,7 +635,6 @@ Unofficial TR Spells.omwscripts
 bcomxpfp.omwaddon
 PFP x Cutting Room Floor.omwaddon
 Tamriel_Data.omwscripts
-SSQN.omwscripts
 dayspassedfix.omwaddon
 SolCombatPack.omwscripts
 friendly-autosave.omwscripts

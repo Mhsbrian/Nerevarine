@@ -524,6 +524,43 @@ rules:
     set:
       content: []
 
+  # ── ORDER-AUDIT FIXES (tools/order-audit.py, 2026-08-15). ──
+  # (1) NEEDS TO OVERWRITE must actually load last: the momw alignment pass
+  # moved BCOM.ESP to its (late) momw slot, past the bcom-patches bundle
+  # whose YAGD-Regular patch then lost all 118 shared records to BCOM
+  # (momw uses the Full Cephalopod variant, so ours was ungoverned). The
+  # whole category now chains after the final sheet mod.
+  - match: { slug: "bcom-patches" }
+    moveAfter: "behaviour-tree-lua-2e"
+  - match: { slug: "animated-morrowind-openmw-weapon-sheathing-patch" }
+    moveAfter: "bcom-patches"
+  - match: { slug: "distant-fixes-lua-edition" }
+    moveAfter: "animated-morrowind-openmw-weapon-sheathing-patch"
+  - match: { slug: "indoril-helm-override" }
+    moveAfter: "distant-fixes-lua-edition"
+  - match: { slug: "advancedcamera" }
+    moveAfter: "indoril-helm-override"
+  # (2) Lua interface providers must precede consumers (engine resolves
+  # interfaces only from earlier-loaded scripts — the Bardcraft lesson).
+  # Skill Framework is a pure library: placing it early fixes SimplyMining
+  # AND CraftingFramework without disturbing CraftingFramework's own
+  # dependents (bardcraft's existing moveAfter follows it here).
+  # (anchored after StatsWindow: SF's guarded I.StatsWindow integration
+  # shows custom skills in the stats UI only if StatsWindow loads first)
+  - match: { slug: "skill-framework-openmw" }
+    moveAfter: "openmw-quest-menu"
+  # (3) YAGD-Regular esp is listed by BOTH the standalone mod and
+  # bcom-patches; content dedupe keeps the FIRST slot, pinning the patched
+  # esp early where BCOM overrode its 118 records. The standalone yields
+  # the content line; bcom-patches (category-late) provides position, the
+  # VFS provides the patched file. (MOMW places their YAGD variant after
+  # BCOM too — reference line 513 vs 412.)
+  - match: { slug: "yet-another-guard-diversity-regular" }
+    set:
+      content: []
+  - match: { slug: "openmw-quest-menu" }
+    moveAfter: "openmw-skyrim-style-quest-notifications"
+
   # ── MIRROR RECOVERIES (research pass 2026-08-13; every URL curl-verified,
   #    200 + real Content-Length). s3ctor's st4sh moved from private GitLab to
   #    the public DreamWeave-MP GitHub org (per-mod release zips, only the

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.13",
+  "listVersion": "2026.08.14",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20531460775,
   "estimatedInstalledBytes": 61594382325,
@@ -4803,12 +4803,7 @@
       "dataPaths": [
         "YetAnotherGuardDiversityRegular"
       ],
-      "content": [
-        {
-          "file": "Yet Another Guard Diversity - Regular.ESP",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -4937,6 +4932,45 @@
         "csvRow": 171,
         "resolvedVersion": "1.38",
         "resolvedAt": "2026-08-11T10:29:57.3078384\u002B00:00"
+      }
+    },
+    {
+      "id": "openmw-quest-menu",
+      "name": "OpenMW Quest Menu",
+      "category": "New Mods",
+      "author": "Roschl",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/56273",
+        "nexusGame": "morrowind",
+        "nexusId": 56273
+      },
+      "downloads": [
+        {
+          "fileName": "OpenMW Quest Menu-56273-1-3-0-1749568737.zip",
+          "nexusFileId": 1000054300,
+          "pinned": true,
+          "sizeBytes": 11756,
+          "extractTo": "OpenMWQuestMenu",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "OpenMWQuestMenu"
+      ],
+      "content": [
+        {
+          "file": "questmenu.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 565,
+        "resolvedVersion": "1.3.0",
+        "resolvedAt": "2026-08-11T10:32:29.9871569\u002B00:00"
       }
     },
     {
@@ -16863,311 +16897,6 @@
       }
     },
     {
-      "id": "bcom-patches",
-      "name": "BCOM Patches",
-      "category": "Needs To Overwrite",
-      "author": "RandomPal and the Morrowind Modding Community",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/49231",
-        "nexusGame": "morrowind",
-        "nexusId": 49231
-      },
-      "downloads": [
-        {
-          "fileName": "Beautiful Cities of Morrowind - Patches-49231-3-3-0-1776625601.7z",
-          "nexusFileId": 1000062829,
-          "pinned": true,
-          "sizeBytes": 11082655,
-          "extractTo": "BCOMPatches",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "BCOMPatches/01 Patch for Purists",
-        "BCOMPatches/02 Red Mountain Reborn",
-        "BCOMPatches/03 OAAB Foyada Mamaea",
-        "BCOMPatches/07 Rise of House Telvanni 2.0",
-        "BCOMPatches/09 Magical Missions",
-        "BCOMPatches/10 Concept Art Plantations",
-        "BCOMPatches/11 Imperial Legion Expansion",
-        "BCOMPatches/14 Master Index Redux",
-        "BCOMPatches/17 GITD Telvanni Dormers",
-        "BCOMPatches/18 Abots Boats - activate both esp",
-        "BCOMPatches/19 Abot\u0027s boats patch for Tomb of the Snow Prince",
-        "BCOMPatches/22 Tamriel Rebuilt patch",
-        "BCOMPatches/25 Province Cyrodiil Patch",
-        "BCOMPatches/27 Ebonheart Underworks",
-        "BCOMPatches/29 Yet Another Guard Diversity - Regular",
-        "BCOMPatches/30 Morrowind Anticheese",
-        "BCOMPatches/32 Apartments of Morrowind",
-        "BCOMPatches/39 Ashlander Traders Remastered",
-        "BCOMPatches/43 Uvirith Legacy Patch",
-        "BCOMPatches/55 Guild of Vampire hunters",
-        "BCOMPatches/56 Dartboards expanded",
-        "BCOMPatches/59 Redoran Patrols",
-        "BCOMPatches/73 Store Entrance Chimes",
-        "BCOMPatches/76 High Art",
-        "BCOMPatches/80 Mamaea Awakened",
-        "BCOMPatches/85 Logs on fire"
-      ],
-      "content": [
-        {
-          "file": "abotBoats.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Apartments of Morrowind.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Ashlander Traders Remastered.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "BCOM_abot_boats.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "BCoM_logs_on_fire.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "BCoM_Magical_Missions_Recharged_Patch.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "BCOM_PfP_patch.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "BCoM_PfP_patch_01.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Concept_Arts_plantations.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "DartboardsExpanded.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Ebonheart_Underworks.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "GITD_Telvanni_Dormers.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Guild of Vampire Hunters.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "High Art.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Imperial Legion Expansion.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Mamaea Awakened.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "MasterIndexRedux.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Morrowind Anti-Cheese.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "OAAB - Foyada Mamaea.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Province_Cyrodiil_BCOM_patch.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "RedMountainReborn.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "Redoran Patrols - Gnisis.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "ROHT_2_0_8.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Store Entrance Chimes - Alt Ver.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "TOTSP_abotBoats.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "TR_BCOM_Patch.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Uvirith\u0027s Legacy_3.53.ESP",
-          "mode": "normal"
-        },
-        {
-          "file": "Yet Another Guard Diversity - Regular.ESP",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 498,
-        "resolvedVersion": "3.3.0",
-        "resolvedAt": "2026-08-11T10:32:10.6389214\u002B00:00"
-      }
-    },
-    {
-      "id": "animated-morrowind-openmw-weapon-sheathing-patch",
-      "name": "Animated Morrowind OpenMW Weapon Sheathing patch",
-      "category": "Needs To Overwrite",
-      "author": "Katya Karrel",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/53479",
-        "nexusGame": "morrowind",
-        "nexusId": 53479
-      },
-      "downloads": [
-        {
-          "fileName": "Morrowind_OpenMW_Weapon Sheathing patch-53479-1-3-1780745480.rar",
-          "nexusFileId": 1000065342,
-          "pinned": true,
-          "sizeBytes": 273755,
-          "extractTo": "AnimatedMorrowindOpenMWWeaponSheathingPatch",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "AnimatedMorrowindOpenMWWeaponSheathingPatch"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 499,
-        "resolvedVersion": "1.3",
-        "resolvedAt": "2026-08-11T10:32:13.5080828\u002B00:00"
-      }
-    },
-    {
-      "id": "distant-fixes-lua-edition",
-      "name": "Distant Fixes Lua Edition",
-      "category": "Needs To Overwrite",
-      "source": {
-        "handler": "direct",
-        "url": "https://modding-openmw.gitlab.io/distant-fixes-lua-edition/",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Distant Fixes Lua Edition",
-          "pinned": false,
-          "directUrl": "https://modding-openmw.gitlab.io/distant-fixes-lua-edition/",
-          "sizeBytes": 0,
-          "extractTo": "DistantFixesLuaEdition",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "DistantFixesLuaEdition"
-      ],
-      "content": [
-        {
-          "file": "distant-fixes-lua-edition.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 500
-      }
-    },
-    {
-      "id": "indoril-helm-override",
-      "name": "Indoril Helm Override",
-      "category": "Needs To Overwrite",
-      "source": {
-        "handler": "direct",
-        "url": "https://www.dropbox.com/scl/fi/h5nu7usgqtacyed3bgw3e/Indoril-Helm-Override.7z?rlkey=zg5dnfmc5tpaxlu5izdc1hnky\u0026st=679so34o\u0026dl=0",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "Indoril Helm Override",
-          "pinned": false,
-          "directUrl": "https://www.dropbox.com/scl/fi/h5nu7usgqtacyed3bgw3e/Indoril-Helm-Override.7z?rlkey=zg5dnfmc5tpaxlu5izdc1hnky\u0026st=679so34o\u0026dl=1",
-          "sizeBytes": 0,
-          "extractTo": "IndorilHelmOverride",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "IndorilHelmOverride"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 502
-      }
-    },
-    {
-      "id": "advancedcamera",
-      "name": "AdvancedCamera",
-      "category": "Needs To Overwrite",
-      "source": {
-        "handler": "github",
-        "url": "https://gitlab.com/ptmikheev/openmw-lua-examples#advanced-camera",
-        "nexusGame": "morrowind"
-      },
-      "downloads": [
-        {
-          "fileName": "AdvancedCamera",
-          "pinned": false,
-          "sizeBytes": 0,
-          "extractTo": "AdvancedCamera",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "AdvancedCamera/AdvancedCamera"
-      ],
-      "content": [
-        {
-          "file": "AdvancedCamera.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 503
-      }
-    },
-    {
       "id": "the-abecean-isles",
       "name": "The Abecean Isles",
       "category": "New Mods",
@@ -19189,42 +18918,43 @@
       }
     },
     {
-      "id": "openmw-quest-menu",
-      "name": "OpenMW Quest Menu",
-      "category": "New Mods",
-      "author": "Roschl",
+      "id": "skill-framework-openmw",
+      "name": "Skill Framework (OpenMW)",
+      "category": "Mri Dependency Additions",
+      "author": "Ralts",
       "source": {
         "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/56273",
+        "url": "https://www.nexusmods.com/morrowind/mods/57765",
         "nexusGame": "morrowind",
-        "nexusId": 56273
+        "nexusId": 57765
       },
       "downloads": [
         {
-          "fileName": "OpenMW Quest Menu-56273-1-3-0-1749568737.zip",
-          "nexusFileId": 1000054300,
+          "fileName": "Skill Framework-57765-1-1-2-1778257077.7z",
+          "nexusFileId": 1000063805,
           "pinned": true,
-          "sizeBytes": 11756,
-          "extractTo": "OpenMWQuestMenu",
+          "sizeBytes": 15752,
+          "extractTo": "SkillFrameworkOpenMW",
           "actions": []
         }
       ],
       "dataPaths": [
-        "OpenMWQuestMenu"
+        "SkillFrameworkOpenMW"
       ],
       "content": [
         {
-          "file": "questmenu.omwscripts",
+          "file": "SkillFramework.omwscripts",
           "mode": "normal"
         }
       ],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
+      "notes": "MRI addition: unlisted dependency of Bardcraft (by Ralts).",
       "provenance": {
-        "csvRow": 565,
-        "resolvedVersion": "1.3.0",
-        "resolvedAt": "2026-08-11T10:32:29.9871569\u002B00:00"
+        "csvRow": 648,
+        "resolvedVersion": "1.1.2",
+        "resolvedAt": "2026-08-13T11:51:15.0731444\u002B00:00"
       }
     },
     {
@@ -23276,46 +23006,6 @@
       }
     },
     {
-      "id": "skill-framework-openmw",
-      "name": "Skill Framework (OpenMW)",
-      "category": "Mri Dependency Additions",
-      "author": "Ralts",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/57765",
-        "nexusGame": "morrowind",
-        "nexusId": 57765
-      },
-      "downloads": [
-        {
-          "fileName": "Skill Framework-57765-1-1-2-1778257077.7z",
-          "nexusFileId": 1000063805,
-          "pinned": true,
-          "sizeBytes": 15752,
-          "extractTo": "SkillFrameworkOpenMW",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "SkillFrameworkOpenMW"
-      ],
-      "content": [
-        {
-          "file": "SkillFramework.omwscripts",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "notes": "MRI addition: unlisted dependency of Bardcraft (by Ralts).",
-      "provenance": {
-        "csvRow": 648,
-        "resolvedVersion": "1.1.2",
-        "resolvedAt": "2026-08-13T11:51:15.0731444\u002B00:00"
-      }
-    },
-    {
       "id": "bardcraft-openmw",
       "name": "Bardcraft (OpenMW)",
       "category": "New Mods",
@@ -23676,6 +23366,311 @@
       "notes": "MRI addition: Lua behavior-tree library required by Mercy CAO (log: module not found scripts.behaviourtreelua2e.lib.behaviour_tree). The author vendors it in his Nexus zip but not the GitHub repo.",
       "provenance": {
         "csvRow": 656
+      }
+    },
+    {
+      "id": "bcom-patches",
+      "name": "BCOM Patches",
+      "category": "Needs To Overwrite",
+      "author": "RandomPal and the Morrowind Modding Community",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/49231",
+        "nexusGame": "morrowind",
+        "nexusId": 49231
+      },
+      "downloads": [
+        {
+          "fileName": "Beautiful Cities of Morrowind - Patches-49231-3-3-0-1776625601.7z",
+          "nexusFileId": 1000062829,
+          "pinned": true,
+          "sizeBytes": 11082655,
+          "extractTo": "BCOMPatches",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "BCOMPatches/01 Patch for Purists",
+        "BCOMPatches/02 Red Mountain Reborn",
+        "BCOMPatches/03 OAAB Foyada Mamaea",
+        "BCOMPatches/07 Rise of House Telvanni 2.0",
+        "BCOMPatches/09 Magical Missions",
+        "BCOMPatches/10 Concept Art Plantations",
+        "BCOMPatches/11 Imperial Legion Expansion",
+        "BCOMPatches/14 Master Index Redux",
+        "BCOMPatches/17 GITD Telvanni Dormers",
+        "BCOMPatches/18 Abots Boats - activate both esp",
+        "BCOMPatches/19 Abot\u0027s boats patch for Tomb of the Snow Prince",
+        "BCOMPatches/22 Tamriel Rebuilt patch",
+        "BCOMPatches/25 Province Cyrodiil Patch",
+        "BCOMPatches/27 Ebonheart Underworks",
+        "BCOMPatches/29 Yet Another Guard Diversity - Regular",
+        "BCOMPatches/30 Morrowind Anticheese",
+        "BCOMPatches/32 Apartments of Morrowind",
+        "BCOMPatches/39 Ashlander Traders Remastered",
+        "BCOMPatches/43 Uvirith Legacy Patch",
+        "BCOMPatches/55 Guild of Vampire hunters",
+        "BCOMPatches/56 Dartboards expanded",
+        "BCOMPatches/59 Redoran Patrols",
+        "BCOMPatches/73 Store Entrance Chimes",
+        "BCOMPatches/76 High Art",
+        "BCOMPatches/80 Mamaea Awakened",
+        "BCOMPatches/85 Logs on fire"
+      ],
+      "content": [
+        {
+          "file": "abotBoats.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Apartments of Morrowind.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Ashlander Traders Remastered.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BCOM_abot_boats.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "BCoM_logs_on_fire.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "BCoM_Magical_Missions_Recharged_Patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "BCOM_PfP_patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "BCoM_PfP_patch_01.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Concept_Arts_plantations.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "DartboardsExpanded.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Ebonheart_Underworks.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "GITD_Telvanni_Dormers.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Guild of Vampire Hunters.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "High Art.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Imperial Legion Expansion.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Mamaea Awakened.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "MasterIndexRedux.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Morrowind Anti-Cheese.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "OAAB - Foyada Mamaea.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Province_Cyrodiil_BCOM_patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "RedMountainReborn.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "Redoran Patrols - Gnisis.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "ROHT_2_0_8.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Store Entrance Chimes - Alt Ver.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "TOTSP_abotBoats.esp",
+          "mode": "normal"
+        },
+        {
+          "file": "TR_BCOM_Patch.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Uvirith\u0027s Legacy_3.53.ESP",
+          "mode": "normal"
+        },
+        {
+          "file": "Yet Another Guard Diversity - Regular.ESP",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 498,
+        "resolvedVersion": "3.3.0",
+        "resolvedAt": "2026-08-11T10:32:10.6389214\u002B00:00"
+      }
+    },
+    {
+      "id": "animated-morrowind-openmw-weapon-sheathing-patch",
+      "name": "Animated Morrowind OpenMW Weapon Sheathing patch",
+      "category": "Needs To Overwrite",
+      "author": "Katya Karrel",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/53479",
+        "nexusGame": "morrowind",
+        "nexusId": 53479
+      },
+      "downloads": [
+        {
+          "fileName": "Morrowind_OpenMW_Weapon Sheathing patch-53479-1-3-1780745480.rar",
+          "nexusFileId": 1000065342,
+          "pinned": true,
+          "sizeBytes": 273755,
+          "extractTo": "AnimatedMorrowindOpenMWWeaponSheathingPatch",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "AnimatedMorrowindOpenMWWeaponSheathingPatch"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 499,
+        "resolvedVersion": "1.3",
+        "resolvedAt": "2026-08-11T10:32:13.5080828\u002B00:00"
+      }
+    },
+    {
+      "id": "distant-fixes-lua-edition",
+      "name": "Distant Fixes Lua Edition",
+      "category": "Needs To Overwrite",
+      "source": {
+        "handler": "direct",
+        "url": "https://modding-openmw.gitlab.io/distant-fixes-lua-edition/",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Distant Fixes Lua Edition",
+          "pinned": false,
+          "directUrl": "https://modding-openmw.gitlab.io/distant-fixes-lua-edition/",
+          "sizeBytes": 0,
+          "extractTo": "DistantFixesLuaEdition",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "DistantFixesLuaEdition"
+      ],
+      "content": [
+        {
+          "file": "distant-fixes-lua-edition.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 500
+      }
+    },
+    {
+      "id": "indoril-helm-override",
+      "name": "Indoril Helm Override",
+      "category": "Needs To Overwrite",
+      "source": {
+        "handler": "direct",
+        "url": "https://www.dropbox.com/scl/fi/h5nu7usgqtacyed3bgw3e/Indoril-Helm-Override.7z?rlkey=zg5dnfmc5tpaxlu5izdc1hnky\u0026st=679so34o\u0026dl=0",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "Indoril Helm Override",
+          "pinned": false,
+          "directUrl": "https://www.dropbox.com/scl/fi/h5nu7usgqtacyed3bgw3e/Indoril-Helm-Override.7z?rlkey=zg5dnfmc5tpaxlu5izdc1hnky\u0026st=679so34o\u0026dl=1",
+          "sizeBytes": 0,
+          "extractTo": "IndorilHelmOverride",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "IndorilHelmOverride"
+      ],
+      "content": [],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 502
+      }
+    },
+    {
+      "id": "advancedcamera",
+      "name": "AdvancedCamera",
+      "category": "Needs To Overwrite",
+      "source": {
+        "handler": "github",
+        "url": "https://gitlab.com/ptmikheev/openmw-lua-examples#advanced-camera",
+        "nexusGame": "morrowind"
+      },
+      "downloads": [
+        {
+          "fileName": "AdvancedCamera",
+          "pinned": false,
+          "sizeBytes": 0,
+          "extractTo": "AdvancedCamera",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "AdvancedCamera/AdvancedCamera"
+      ],
+      "content": [
+        {
+          "file": "AdvancedCamera.omwscripts",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 503
       }
     }
   ]
