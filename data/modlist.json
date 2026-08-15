@@ -17785,12 +17785,7 @@
       "dataPaths": [
         "TurnAroundOpenmwLua/Turn Around"
       ],
-      "content": [
-        {
-          "file": "Turn Around.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],

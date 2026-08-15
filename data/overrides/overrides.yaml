@@ -510,6 +510,16 @@ rules:
     set:
       content: []
 
+  # turn-around-openmw-lua pauses actor AI and THE WHOLE GAME around
+  # dialogue/activation (its own log: "No activation pause is pausing your
+  # game", script dialoguepausefornoactivatation.lua) with raw debug counter
+  # spam — WIP-quality pause management. Field-linked (2026-08-15) to NPCs
+  # freezing in body movement after conversations and shopkeeper lockups on
+  # dialogue exit. Deactivated; assets stay installed.
+  - match: { slug: "turn-around-openmw-lua" }
+    set:
+      content: []
+
   # ── MIRROR RECOVERIES (research pass 2026-08-13; every URL curl-verified,
   #    200 + real Content-Length). s3ctor's st4sh moved from private GitLab to
   #    the public DreamWeave-MP GitHub org (per-mod release zips, only the
