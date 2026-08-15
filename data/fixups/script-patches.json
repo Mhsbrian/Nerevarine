@@ -21,5 +21,11 @@
   "file": "morrowind-remake/QualityOfLifeImmersive/SMEUsefulWidgetsActorInfoHealthBarHitChanceOpenM/SMEUsefulWidgetsActorInfoHealthBarHitChanceEdited/Scripts/sme_hitchance.lua",
   "find": "        local weaponType = types.Weapon.record(types.Actor.getEquipment(self, types.Actor.EQUIPMENT_SLOT.CarriedRight)).type",
   "replace": "        local carriedRight = types.Actor.getEquipment(self, types.Actor.EQUIPMENT_SLOT.CarriedRight) -- MRI fixup: nil-deref\n        if not carriedRight or not types.Weapon.objectIsInstance(carriedRight) then return end\n        local weaponType = types.Weapon.record(carriedRight).type"
+ },
+ {
+  "comment": "OpenMW Dynamic Actors: when a dialogue starts with no other qualifying NPC within 2000 units, nearbyActors is built without .n and onUpdate dies every frame on a nil for-limit (\"'for' limit must be a number\", 3820 errors in the 2026-08-15 12:22 session). Initialize n = 0.",
+  "file": "morrowind-remake/QualityOfLifeImmersive/OpenMWDynamicActors/scripts/DynamicActors/global.lua",
+  "find": "nearbyActors = { wander = settings:get(\"unpause_wanderai\") }",
+  "replace": "nearbyActors = { wander = settings:get(\"unpause_wanderai\"), n = 0 } -- MRI fixup: nil for-limit"
  }
 ]
