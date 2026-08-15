@@ -14,7 +14,7 @@ public sealed class AppData
     public required IReadOnlyList<string> MomwContentOrder { get; init; }
 
     private static readonly string[] FixupResources =
-        ["MRI_AbeceanGreetingFix.esp", "script-patches.json"];
+        ["MRI_AbeceanGreetingFix.esp", "MRI_ChargenVanillaScripts.esp", "script-patches.json"];
 
     public static AppData LoadEmbedded() => new()
     {

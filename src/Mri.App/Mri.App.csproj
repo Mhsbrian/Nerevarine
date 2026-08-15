@@ -29,6 +29,7 @@
     <EmbeddedResource Include="..\..\data\templates\shaders.template.yaml" Link="Data\shaders.template.yaml" />
     <EmbeddedResource Include="..\..\data\momw-content-order.txt" Link="Data\momw-content-order.txt" />
     <EmbeddedResource Include="..\..\data\fixups\MRI_AbeceanGreetingFix.esp" Link="Data\fixups\MRI_AbeceanGreetingFix.esp" />
+    <EmbeddedResource Include="..\..\data\fixups\MRI_ChargenVanillaScripts.esp" Link="Data\fixups\MRI_ChargenVanillaScripts.esp" />
     <EmbeddedResource Include="..\..\data\fixups\script-patches.json" Link="Data\fixups\script-patches.json" />
   </ItemGroup>
 
