@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.12",
+  "listVersion": "2026.08.13",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20531460775,
   "estimatedInstalledBytes": 61594382325,
@@ -740,6 +740,45 @@
         "csvRow": 24,
         "resolvedVersion": "1.0",
         "resolvedAt": "2026-08-11T10:28:10.5039532\u002B00:00"
+      }
+    },
+    {
+      "id": "greetings-for-no-lore",
+      "name": "Greetings for No Lore",
+      "category": "Dialogue",
+      "author": "Caeris",
+      "source": {
+        "handler": "nexus",
+        "url": "https://www.nexusmods.com/morrowind/mods/46063",
+        "nexusGame": "morrowind",
+        "nexusId": 46063
+      },
+      "downloads": [
+        {
+          "fileName": "Greetings for No Lore-46063-2-0-1577323496.7z",
+          "nexusFileId": 1000016661,
+          "pinned": true,
+          "sizeBytes": 3420,
+          "extractTo": "GreetingsForNoLore",
+          "actions": []
+        }
+      ],
+      "dataPaths": [
+        "GreetingsForNoLore"
+      ],
+      "content": [
+        {
+          "file": "Greetings for No Lore.esp",
+          "mode": "normal"
+        }
+      ],
+      "groundcover": [],
+      "bsaArchives": [],
+      "tags": [],
+      "provenance": {
+        "csvRow": 31,
+        "resolvedVersion": "2.0",
+        "resolvedAt": "2026-08-11T10:28:12.5513213\u002B00:00"
       }
     },
     {
@@ -22163,45 +22202,6 @@
         "csvRow": 30,
         "resolvedVersion": "1.9.3",
         "resolvedAt": "2026-08-11T10:28:12.1052531\u002B00:00"
-      }
-    },
-    {
-      "id": "greetings-for-no-lore",
-      "name": "Greetings for No Lore",
-      "category": "Dialogue",
-      "author": "Caeris",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/46063",
-        "nexusGame": "morrowind",
-        "nexusId": 46063
-      },
-      "downloads": [
-        {
-          "fileName": "Greetings for No Lore-46063-2-0-1577323496.7z",
-          "nexusFileId": 1000016661,
-          "pinned": true,
-          "sizeBytes": 3420,
-          "extractTo": "GreetingsForNoLore",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "GreetingsForNoLore"
-      ],
-      "content": [
-        {
-          "file": "Greetings for No Lore.esp",
-          "mode": "normal"
-        }
-      ],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 31,
-        "resolvedVersion": "2.0",
-        "resolvedAt": "2026-08-11T10:28:12.5513213\u002B00:00"
       }
     },
     {

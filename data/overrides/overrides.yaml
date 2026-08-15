@@ -339,10 +339,14 @@ rules:
     moveAfter: "ldm-context-matters"
   - match: { slug: "fmi-service-refusal-and-contraband" }
     moveAfter: "free-the-slaves"
-  - match: { slug: "greetings-for-no-lore" }
-    moveAfter: "fmi-service-refusal-and-contraband"
+  # greetings-for-no-lore is EXEMPT from the late dialogue block (2026-08-15):
+  # its 74 greeting entries deliberately carry no NoLore/chargen guards, so
+  # loading late hoists them above the scripted chargen greetings and breaks
+  # the census-office intro (Socucius mute, no class/sign selection). At its
+  # sheet position its entries sink below vanilla's — the author's intended
+  # geometry. The Abecean riddle stays fixed by the record fixup, not order.
   - match: { slug: "great-service" }
-    moveAfter: "greetings-for-no-lore"
+    moveAfter: "fmi-service-refusal-and-contraband"
   - match: { slug: "silent-assassins" }
     moveAfter: "great-service"
   - match: { slug: "tunnel-cough" }
