@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.15",
+  "listVersion": "2026.08.16",
   "name": "morrowind-remake",
-  "estimatedDownloadBytes": 20531460775,
-  "estimatedInstalledBytes": 61594382325,
+  "estimatedDownloadBytes": 20531454445,
+  "estimatedInstalledBytes": 61594363335,
   "mods": [
     {
       "id": "vanilla-textures-normal-mapped",
@@ -64,11 +64,10 @@
       "dataPaths": [
         "OfficialPluginsUnofficialPatch/00 adamantium armor",
         "OfficialPluginsUnofficialPatch/01 area effect arrows",
-        "OfficialPluginsUnofficialPatch/02 bitter coast sounds",
         "OfficialPluginsUnofficialPatch/03 entertainers",
         "OfficialPluginsUnofficialPatch/04 helm of tohan",
         "OfficialPluginsUnofficialPatch/05 lefemm armor",
-        "OfficialPluginsUnofficialPatch/06 master index"
+        "OfficialPluginsUnofficialPatch/07 siege at firemoth"
       ],
       "content": [
         {
@@ -77,10 +76,6 @@
         },
         {
           "file": "AreaEffectArrows.esp",
-          "mode": "normal"
-        },
-        {
-          "file": "bcsounds.esp",
           "mode": "normal"
         },
         {
@@ -96,7 +91,7 @@
           "mode": "normal"
         },
         {
-          "file": "master_index.esp",
+          "file": "Siege at Firemoth.esp",
           "mode": "normal"
         }
       ],
@@ -21523,74 +21518,6 @@
         "csvRow": 637,
         "resolvedVersion": "1.3",
         "resolvedAt": "2026-08-11T10:32:59.7912882\u002B00:00"
-      }
-    },
-    {
-      "id": "openmw-crafting-framework-crafting-materials",
-      "name": "(OpenMW) Crafting Framework - Crafting Materials",
-      "category": "New Mods",
-      "author": "Onkija and Dubiousnpc",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/57687",
-        "nexusGame": "morrowind",
-        "nexusId": 57687
-      },
-      "downloads": [
-        {
-          "fileName": "OpenMWCraftingFramework_CraftingMaterials.zip-57687-0-1-1761385452.zip",
-          "nexusFileId": 1000057921,
-          "pinned": true,
-          "sizeBytes": 1490,
-          "extractTo": "OpenMWCraftingFrameworkCraftingMaterials",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OpenMWCraftingFrameworkCraftingMaterials"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 638,
-        "resolvedVersion": "0.1",
-        "resolvedAt": "2026-08-11T10:33:00.2008278\u002B00:00"
-      }
-    },
-    {
-      "id": "openmw-crafting-framework-nordic-and-stalhrim",
-      "name": "(OpenMW) Crafting Framework - Nordic And Stalhrim",
-      "category": "New Mods",
-      "author": "Onkija",
-      "source": {
-        "handler": "nexus",
-        "url": "https://www.nexusmods.com/morrowind/mods/57681",
-        "nexusGame": "morrowind",
-        "nexusId": 57681
-      },
-      "downloads": [
-        {
-          "fileName": "OpenMWCraftingFramework_NordicAndStalhrim.zip-57681-1-1-1761386456.zip",
-          "nexusFileId": 1000057922,
-          "pinned": true,
-          "sizeBytes": 4840,
-          "extractTo": "OpenMWCraftingFrameworkNordicAndStalhrim",
-          "actions": []
-        }
-      ],
-      "dataPaths": [
-        "OpenMWCraftingFrameworkNordicAndStalhrim"
-      ],
-      "content": [],
-      "groundcover": [],
-      "bsaArchives": [],
-      "tags": [],
-      "provenance": {
-        "csvRow": 639,
-        "resolvedVersion": "1.1",
-        "resolvedAt": "2026-08-11T10:33:00.6108107\u002B00:00"
       }
     },
     {

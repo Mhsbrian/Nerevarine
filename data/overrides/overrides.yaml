@@ -524,6 +524,38 @@ rules:
     set:
       content: []
 
+  # ── NEW-GAME LOG TRIAGE 2026-08-16 ──
+  # Siege at Firemoth: the sheet ships two dependents (Pikas Better
+  # Followers, Naturalized script fix) but momw's official-plugins folder
+  # picks stop at 06 (their list omits Firemoth), leaving the base esp
+  # unmounted — its cell references ("bc mushroom 64", TR_FM_*, bonecave)
+  # error on every cell load, new game included. Mount 07 + activate.
+  # ALSO: the sheet's "Delete bcsounds.esp, maser_inex.esp" is honored now —
+  # bcsounds targets renamed "bc mushroom NN" refs that later cell edits
+  # orphan (18 errors/boot, field-vindicated 2026-08-16), and BCOM's Master
+  # Index Redux (folder 14) replaces master_index.esp.
+  - match: { slug: "official-plugins-unofficial-patch" }
+    set:
+      dataPaths: ["OfficialPluginsUnofficialPatch/00 adamantium armor", "OfficialPluginsUnofficialPatch/01 area effect arrows", "OfficialPluginsUnofficialPatch/03 entertainers", "OfficialPluginsUnofficialPatch/04 helm of tohan", "OfficialPluginsUnofficialPatch/05 lefemm armor", "OfficialPluginsUnofficialPatch/07 siege at firemoth"]
+      content:
+        - { file: "adamantiumarmor.esp", mode: "normal" }
+        - { file: "AreaEffectArrows.esp", mode: "normal" }
+        - { file: "entertainers.esp", mode: "normal" }
+        - { file: "EBQ_Artifact.esp", mode: "normal" }
+        - { file: "LeFemmArmor.esp", mode: "normal" }
+        - { file: "Siege at Firemoth.esp", mode: "normal" }
+
+  # Crafting recipe packs authored for a newer CraftingFramework than ours
+  # (reference runtime categoryMapping/materialMapping our version lacks);
+  # they fail to register entirely, so parking loses nothing functional.
+  # RE-ENABLE after the framework updates in the next key batch.
+  - match: { slug: "openmw-crafting-framework-crafting-materials" }
+    skip: true
+    skipReason: "Recipe pack for a newer CraftingFramework (needs runtime categoryMapping); pure-data mod so it must be unmounted, not deactivated. Re-add with the framework update."
+  - match: { slug: "openmw-crafting-framework-nordic-and-stalhrim" }
+    skip: true
+    skipReason: "Recipe pack for a newer CraftingFramework (needs runtime materialMapping); pure-data mod so it must be unmounted, not deactivated. Re-add with the framework update."
+
   # ── ARMOR REVIEW 2026-08-16: the FBA addon + Alex's Better Fitted Female
   # Armors (both MRI additions, loading last) carry VANILLA male branches in
   # all 42 armor records they touch, reverting Better Morrowind Armor's male
