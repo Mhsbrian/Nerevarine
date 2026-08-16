@@ -22,7 +22,13 @@ public sealed class DeltaPluginService(IProcessRunner runner)
         var result = await runner.RunAsync(new ProcessSpec
         {
             Exe = deltaPluginExe,
-            Args = ["merge", outputOmwaddonPath],
+            // Cell/Dialogue/DialogueInfo are excluded: merge semantics for
+            // those types are the subtlest (dialogue INFO chains, cell ref
+            // lists) and the field-stable reference build (Kezyma's, 5k+
+            // installs) ships delta output built with exactly these skips.
+            // Our own dialogue-order incidents argue the same way.
+            Args = ["merge", "--skip", "Cell", "--skip", "Dialogue", "--skip", "DialogueInfo",
+                    outputOmwaddonPath],
             WorkingDir = openMwConfigDir,
             Env = new Dictionary<string, string> { ["OPENMW_CONFIG"] = openMwConfigDir },
             Timeout = TimeSpan.FromMinutes(30),
