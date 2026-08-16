@@ -6,7 +6,7 @@
         x:DataType="vm:LauncherViewModel"
         Title="Nerevarine"
         Icon="/Assets/nerevarine.png"
-        Width="820" Height="640" MinWidth="740" MinHeight="580"
+        Width="860" Height="780" MinWidth="760" MinHeight="640"
         WindowStartupLocation="CenterScreen"
         FontFamily="Georgia, 'Times New Roman', 'Liberation Serif', serif">
 
@@ -116,7 +116,7 @@
           </StackPanel>
 
           <!-- Body -->
-          <StackPanel Margin="0,22,0,18" Spacing="14">
+          <Grid Margin="0,20,0,14" RowDefinitions="Auto,Auto,Auto,Auto,*">
 
             <Border IsVisible="{Binding UpdateAvailable}" Background="#EFE3BC"
                     BorderBrush="#7A2E1D" BorderThickness="1" CornerRadius="3" Padding="14,10">
@@ -132,10 +132,10 @@
               </DockPanel>
             </Border>
 
-            <TextBlock Classes="ink" Text="The Manner of its Telling" FontSize="17"
-                       FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="1" Margin="0,0,0,10" Classes="ink" Text="The Manner of its Telling"
+                       FontSize="17" FontWeight="Bold" HorizontalAlignment="Center"/>
 
-            <Grid ColumnDefinitions="*,12,*,12,*">
+            <Grid Grid.Row="2" Margin="0,0,0,12" ColumnDefinitions="*,12,*,12,*">
               <Button Grid.Column="0" Classes="tier"
                       Classes.selected="{Binding Tier, Converter={x:Static vm:Converters.IsTier}, ConverterParameter={x:Static omw:QualityTier.Apprentice}}"
                       Command="{Binding SelectTierCommand}"
@@ -180,7 +180,7 @@
               <TextBlock Classes="ink" Text="✦  Divine the fitting choice for this machine" FontSize="12"/>
             </Button>
 
-            <Grid ColumnDefinitions="*,14,*" MinHeight="190">
+            <Grid Grid.Row="4" ColumnDefinitions="*,14,*" MinHeight="120">
 
               <Border Grid.Column="0" Classes="codex">
                 <DockPanel>
@@ -234,7 +234,7 @@
 
             </Grid>
 
-          </StackPanel>
+          </Grid>
         </DockPanel>
       </Border>
     </Border>

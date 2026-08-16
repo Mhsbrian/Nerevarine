@@ -137,13 +137,20 @@ public static class EntryPointInstaller
                 Name=Nerevarine
                 Comment=Morrowind, remastered
                 Exec="{target}"
-                Icon={Path.Combine(Path.GetDirectoryName(target)!, "nerevarine.png")}
+                Icon=nerevarine
+                StartupWMClass=Nerevarine
                 Terminal=false
                 Categories=Game;
                 """;
-            var apps = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "applications");
+            var share = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            // Themed icon: docks/taskbars resolve by name via hicolor; the
+            // StartupWMClass line binds running windows to this entry.
+            var iconDir = Path.Combine(share, "icons", "hicolor", "256x256", "apps");
+            Directory.CreateDirectory(iconDir);
+            var iconSrc = Path.Combine(Path.GetDirectoryName(target)!, "nerevarine.png");
+            if (File.Exists(iconSrc))
+                File.Copy(iconSrc, Path.Combine(iconDir, "nerevarine.png"), overwrite: true);
+            var apps = Path.Combine(share, "applications");
             Directory.CreateDirectory(apps);
             File.WriteAllText(Path.Combine(apps, "nerevarine.desktop"), entry);
         }
