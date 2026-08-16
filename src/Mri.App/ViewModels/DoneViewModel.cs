@@ -28,9 +28,32 @@ public sealed partial class DoneViewModel(WizardState state) : PageViewModel
     public override bool CanGoNext => false;
     public override bool CanGoBack => false;
 
+    public override void OnActivated() => RegisterEntryPoint();
+
     public string Message =>
-        "Morrowind Remake is installed. Launch OpenMW and start a new game — the first start " +
-        "takes a little longer while shaders compile.";
+        "Nerevarine is installed. The Nerevarine launcher is now the front door: it sets your " +
+        "quality tier and starts the game. The first start takes a little longer while shaders compile.";
+
+    [ObservableProperty]
+    private string? _entryPointMessage;
+
+    /// <summary>Installs the launcher as the game's entry point (exe copy +
+    /// desktop entry) and records the install for future launcher startups.</summary>
+    public void RegisterEntryPoint()
+    {
+        try
+        {
+            var target = EntryPointInstaller.Install(state.InstallDir);
+            var launcher = LauncherState.Load();
+            launcher.InstallDir = state.InstallDir;
+            launcher.Save();
+            EntryPointMessage = $"Launcher installed: {target} (desktop entry “Nerevarine” created).";
+        }
+        catch (Exception e)
+        {
+            EntryPointMessage = $"Could not install the launcher entry point: {e.Message}";
+        }
+    }
 
     public bool CanLaunch => OperatingSystem.IsWindows() && FindOpenMw() is not null;
 

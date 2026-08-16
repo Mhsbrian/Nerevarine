@@ -16,12 +16,35 @@ public class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            var window = new ShellWindow();
-            var filePicker = new StorageFilePickerService(() => TopLevel.GetTopLevel(window));
-            window.DataContext = new WizardViewModel(AppData.LoadEmbedded(), filePicker);
-            desktop.MainWindow = window;
+            var state = LauncherState.Load();
+            desktop.MainWindow = LauncherState.IsPlayableInstall(state.InstallDir)
+                ? BuildLauncher(desktop, state)
+                : BuildWizard(desktop);
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+
+    private static Window BuildLauncher(IClassicDesktopStyleApplicationLifetime desktop, LauncherState state)
+    {
+        var window = new LauncherWindow();
+        var vm = new LauncherViewModel(state, AppData.LoadEmbedded());
+        vm.ReinstallRequested += () =>
+        {
+            var wizard = BuildWizard(desktop);
+            desktop.MainWindow = wizard;
+            wizard.Show();
+            window.Close();
+        };
+        window.DataContext = vm;
+        return window;
+    }
+
+    private static Window BuildWizard(IClassicDesktopStyleApplicationLifetime desktop)
+    {
+        var window = new ShellWindow();
+        var filePicker = new StorageFilePickerService(() => TopLevel.GetTopLevel(window));
+        window.DataContext = new WizardViewModel(AppData.LoadEmbedded(), filePicker);
+        return window;
     }
 }

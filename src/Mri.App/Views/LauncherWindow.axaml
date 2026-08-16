@@ -1,0 +1,160 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Mri.App.ViewModels"
+        xmlns:omw="using:Mri.Core.OpenMw"
+        x:Class="Mri.App.Views.LauncherWindow"
+        x:DataType="vm:LauncherViewModel"
+        Title="Nerevarine"
+        Width="820" Height="640" MinWidth="740" MinHeight="580"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Georgia, 'Times New Roman', 'Liberation Serif', serif">
+
+  <Window.Styles>
+    <Style Selector="Button.tier">
+      <Setter Property="Background" Value="#E9DCB4"/>
+      <Setter Property="BorderBrush" Value="#8A6D3B"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="3"/>
+      <Setter Property="Padding" Value="14,10"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+    <Style Selector="Button.tier:pointerover /template/ ContentPresenter">
+      <Setter Property="Background" Value="#F0E4C0"/>
+    </Style>
+    <Style Selector="Button.tier.selected">
+      <Setter Property="Background" Value="#7A2E1D"/>
+      <Setter Property="BorderBrush" Value="#5A2115"/>
+    </Style>
+    <Style Selector="TextBlock.ink">
+      <Setter Property="Foreground" Value="#2E2013"/>
+    </Style>
+  </Window.Styles>
+
+  <!-- Parchment ground -->
+  <Border>
+    <Border.Background>
+      <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+        <GradientStop Offset="0" Color="#E8D9AC"/>
+        <GradientStop Offset="0.5" Color="#E0CF9E"/>
+        <GradientStop Offset="1" Color="#D3BF8A"/>
+      </LinearGradientBrush>
+    </Border.Background>
+
+    <!-- Scroll frame: double rule -->
+    <Border Margin="14" BorderBrush="#8A6D3B" BorderThickness="2" CornerRadius="2">
+      <Border Margin="4" BorderBrush="#B39B62" BorderThickness="1" Padding="28,20">
+
+        <DockPanel>
+
+          <!-- Masthead -->
+          <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Spacing="2">
+            <TextBlock Classes="ink" Text="N E R E V A R I N E"
+                       FontSize="34" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="— ❖ —" Foreground="#8A6D3B" FontSize="14" HorizontalAlignment="Center"/>
+            <TextBlock Classes="ink" FontStyle="Italic" FontSize="13" HorizontalAlignment="Center"
+                       Text="{Binding ModCount, StringFormat='Vvardenfell, rebuilt from {0} works of the community'}"/>
+          </StackPanel>
+
+          <!-- Foot: play + status -->
+          <StackPanel DockPanel.Dock="Bottom" Spacing="8">
+            <Button Command="{Binding PlayCommand}" IsEnabled="{Binding !Busy}"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                    Background="#7A2E1D" BorderBrush="#5A2115" BorderThickness="2"
+                    CornerRadius="3" Padding="0,14">
+              <TextBlock Text="BEGIN" Foreground="#F0E4C0" FontSize="22"
+                         FontWeight="Bold" LetterSpacing="6"/>
+            </Button>
+            <DockPanel>
+              <TextBlock DockPanel.Dock="Left" Classes="ink" FontSize="11" Opacity="0.75"
+                         Text="{Binding ListVersion, StringFormat='Canon {0}'}"/>
+              <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="14">
+                <Button Command="{Binding OpenModsFolderCommand}" Background="Transparent"
+                        BorderThickness="0" Padding="0">
+                  <TextBlock Classes="ink" Text="Open mods folder" FontSize="11"
+                             TextDecorations="Underline" Opacity="0.75"/>
+                </Button>
+                <Button Command="{Binding ReinstallCommand}" Background="Transparent"
+                        BorderThickness="0" Padding="0">
+                  <TextBlock Classes="ink" Text="Verify / reinstall" FontSize="11"
+                             TextDecorations="Underline" Opacity="0.75"/>
+                </Button>
+              </StackPanel>
+              <TextBlock Classes="ink" FontStyle="Italic" FontSize="12"
+                         HorizontalAlignment="Center" Text="{Binding StatusLine}"/>
+            </DockPanel>
+          </StackPanel>
+
+          <!-- Body -->
+          <StackPanel Margin="0,22,0,18" Spacing="14">
+
+            <TextBlock Classes="ink" Text="The Manner of its Telling" FontSize="17"
+                       FontWeight="Bold" HorizontalAlignment="Center"/>
+
+            <Grid ColumnDefinitions="*,12,*,12,*">
+              <Button Grid.Column="0" Classes="tier"
+                      Classes.selected="{Binding Tier, Converter={x:Static vm:Converters.IsTier}, ConverterParameter={x:Static omw:QualityTier.Apprentice}}"
+                      Command="{Binding SelectTierCommand}"
+                      CommandParameter="{x:Static omw:QualityTier.Apprentice}">
+                <StackPanel Spacing="4">
+                  <TextBlock Text="APPRENTICE" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"
+                             Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Apprentice}}"/>
+                  <TextBlock Text="For humble machines. Clear skies, short horizons, a steady hand."
+                             FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Opacity="0.85"
+                             Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Apprentice}}"/>
+                </StackPanel>
+              </Button>
+              <Button Grid.Column="2" Classes="tier"
+                      Classes.selected="{Binding Tier, Converter={x:Static vm:Converters.IsTier}, ConverterParameter={x:Static omw:QualityTier.Adept}}"
+                      Command="{Binding SelectTierCommand}"
+                      CommandParameter="{x:Static omw:QualityTier.Adept}">
+                <StackPanel Spacing="4">
+                  <TextBlock Text="ADEPT" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"
+                             Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Adept}}"/>
+                  <TextBlock Text="The measured path. Shadow and shore in balance."
+                             FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Opacity="0.85"
+                             Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Adept}}"/>
+                </StackPanel>
+              </Button>
+              <Button Grid.Column="4" Classes="tier"
+                      Classes.selected="{Binding Tier, Converter={x:Static vm:Converters.IsTier}, ConverterParameter={x:Static omw:QualityTier.Master}}"
+                      Command="{Binding SelectTierCommand}"
+                      CommandParameter="{x:Static omw:QualityTier.Master}">
+                <StackPanel Spacing="4">
+                  <TextBlock Text="MASTER" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"
+                             Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Master}}"/>
+                  <TextBlock Text="Everything, as the curators intended. Distant isles, deep shadow."
+                             FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Opacity="0.85"
+                             Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Master}}"/>
+                </StackPanel>
+              </Button>
+            </Grid>
+
+            <Button Command="{Binding AutoDetectCommand}" HorizontalAlignment="Center"
+                    Background="Transparent" BorderBrush="#8A6D3B" BorderThickness="1"
+                    CornerRadius="3" Padding="16,6">
+              <TextBlock Classes="ink" Text="✦  Divine the fitting choice for this machine" FontSize="12"/>
+            </Button>
+
+            <Expander Header="The particulars of this choice" FontSize="12"
+                      Foreground="#2E2013" Background="Transparent">
+              <ScrollViewer MaxHeight="150">
+                <ItemsControl ItemsSource="{Binding ActiveSettings}" Margin="8,4">
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:QualitySettingRow">
+                      <DockPanel Margin="0,1">
+                        <TextBlock DockPanel.Dock="Right" Classes="ink" Text="{Binding Value}"
+                                   FontSize="11" FontWeight="Bold"/>
+                        <TextBlock Classes="ink" Text="{Binding Name}" FontSize="11" Opacity="0.8"/>
+                      </DockPanel>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+              </ScrollViewer>
+            </Expander>
+
+          </StackPanel>
+        </DockPanel>
+      </Border>
+    </Border>
+  </Border>
+</Window>

@@ -3,7 +3,7 @@
         xmlns:vm="using:Mri.App.ViewModels"
         x:Class="Mri.App.Views.ShellWindow"
         x:DataType="vm:WizardViewModel"
-        Title="Morrowind Remake Installer"
+        Title="Nerevarine — Installer"
         Width="960" Height="640"
         MinWidth="820" MinHeight="560"
         WindowStartupLocation="CenterScreen">
@@ -14,7 +14,7 @@
     <Border Grid.Column="0" Background="#1a1c22">
       <DockPanel Margin="0,24">
         <TextBlock DockPanel.Dock="Top" Margin="20,0,20,24"
-                   Text="MORROWIND&#x0a;REMAKE" FontSize="20" FontWeight="Bold"
+                   Text="NEREVARINE" FontSize="20" FontWeight="Bold"
                    Foreground="#d9c58c" LineHeight="26"/>
         <ItemsControl ItemsSource="{Binding Pages}">
           <ItemsControl.ItemTemplate>
