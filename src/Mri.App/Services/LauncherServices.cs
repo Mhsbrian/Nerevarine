@@ -87,6 +87,7 @@ public static class EntryPointInstaller
             OperatingSystem.IsWindows() ? "Nerevarine.exe" : "Nerevarine");
         if (!string.Equals(Path.GetFullPath(self), Path.GetFullPath(target), StringComparison.OrdinalIgnoreCase))
             File.Copy(self, target, overwrite: true);
+        WriteIconBeside(target);
         if (!OperatingSystem.IsWindows())
             File.SetUnixFileMode(target,
                 UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute |
@@ -94,6 +95,18 @@ public static class EntryPointInstaller
                 UnixFileMode.OtherRead | UnixFileMode.OtherExecute);
         CreateDesktopEntry(target);
         return target;
+    }
+
+    private static void WriteIconBeside(string target)
+    {
+        try
+        {
+            var uri = new Uri("avares://Nerevarine/Assets/nerevarine.png");
+            using var stream = Avalonia.Platform.AssetLoader.Open(uri);
+            using var file = File.Create(Path.Combine(Path.GetDirectoryName(target)!, "nerevarine.png"));
+            stream.CopyTo(file);
+        }
+        catch { /* icon is cosmetic; never block the install on it */ }
     }
 
     private static void CreateDesktopEntry(string target)
@@ -106,6 +119,7 @@ public static class EntryPointInstaller
                 $"$s=(New-Object -ComObject WScript.Shell).CreateShortcut('{lnk}');" +
                 $"$s.TargetPath='{target}';" +
                 $"$s.WorkingDirectory='{Path.GetDirectoryName(target)}';" +
+                $"$s.IconLocation='{target},0';" +
                 "$s.Description='Nerevarine — Morrowind, remastered';$s.Save()";
             Process.Start(new ProcessStartInfo
             {
@@ -123,6 +137,7 @@ public static class EntryPointInstaller
                 Name=Nerevarine
                 Comment=Morrowind, remastered
                 Exec="{target}"
+                Icon={Path.Combine(Path.GetDirectoryName(target)!, "nerevarine.png")}
                 Terminal=false
                 Categories=Game;
                 """;

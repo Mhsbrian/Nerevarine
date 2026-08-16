@@ -18,6 +18,11 @@ public static class Converters
         new FuncValueConverter<Mri.Core.OpenMw.QualityTier, object?, bool>(
             (tier, param) => param is Mri.Core.OpenMw.QualityTier p && tier == p);
 
+    /// <summary>Codex panel title for the active tier's settings ledger.</summary>
+    public static readonly IValueConverter TierLedgerTitle =
+        new FuncValueConverter<Mri.Core.OpenMw.QualityTier, string>(tier =>
+            $"THE {LauncherViewModel.TierName(tier).ToUpperInvariant()}'S PARTICULARS");
+
     /// <summary>Ink color that flips to parchment when the tier card is selected.</summary>
     public static readonly IValueConverter TierInk =
         new FuncValueConverter<Mri.Core.OpenMw.QualityTier, object?, IBrush>(
