@@ -19,6 +19,7 @@ public sealed partial class LauncherViewModel : ObservableObject
     [ObservableProperty] private bool _busy;
 
     public ObservableCollection<QualitySettingRow> ActiveSettings { get; } = [];
+    public ObservableCollection<EngineFlagRow> EngineFlags { get; } = [];
 
     /// <summary>Raised when the user asks to re-run the installer wizard.</summary>
     public event Action? ReinstallRequested;
@@ -31,6 +32,16 @@ public sealed partial class LauncherViewModel : ObservableObject
         ModCount = data.Modlist.Mods.Count;
         _tier = state.Tier ?? QualityTier.Master;
         RefreshSettingRows();
+        LoadEngineFlags();
+    }
+
+    private void LoadEngineFlags()
+    {
+        string cfg;
+        try { cfg = File.ReadAllText(GameLauncher.SettingsCfgPath()); }
+        catch { cfg = ""; }
+        foreach (var flag in ModEngineFlags.All)
+            EngineFlags.Add(new EngineFlagRow(flag, ModEngineFlags.Read(cfg, flag)));
     }
 
     partial void OnTierChanged(QualityTier value) => RefreshSettingRows();
@@ -59,6 +70,11 @@ public sealed partial class LauncherViewModel : ObservableObject
         {
             Busy = true;
             QualityPresets.ApplyToFile(GameLauncher.SettingsCfgPath(), Tier);
+            var path = GameLauncher.SettingsCfgPath();
+            var cfg = File.Exists(path) ? File.ReadAllText(path) : "";
+            foreach (var row in EngineFlags)
+                cfg = ModEngineFlags.Write(cfg, row.Flag, row.IsOn);
+            Mri.Core.IO.AtomicFile.WriteAllText(path, cfg);
             _state.Tier = Tier;
             _state.Save();
             GameLauncher.Play(InstallDir);
@@ -103,3 +119,13 @@ public sealed partial class LauncherViewModel : ObservableObject
 }
 
 public sealed record QualitySettingRow(string Name, string Value);
+
+public sealed partial class EngineFlagRow(EngineFlag flag, bool isOn) : ObservableObject
+{
+    public EngineFlag Flag { get; } = flag;
+    public string Label => Flag.Label;
+    public string RequiredBy => Flag.RequiredBy;
+
+    [ObservableProperty]
+    private bool _isOn = isOn;
+}

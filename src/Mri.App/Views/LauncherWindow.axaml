@@ -135,6 +135,27 @@
               <TextBlock Classes="ink" Text="✦  Divine the fitting choice for this machine" FontSize="12"/>
             </Button>
 
+            <Expander Header="Mechanisms the mods rely upon" FontSize="12"
+                      Foreground="#2E2013" Background="Transparent">
+              <ScrollViewer MaxHeight="160">
+                <ItemsControl ItemsSource="{Binding EngineFlags}" Margin="8,4">
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:EngineFlagRow">
+                      <DockPanel Margin="0,3">
+                        <CheckBox DockPanel.Dock="Left" IsChecked="{Binding IsOn, Mode=TwoWay}"
+                                  VerticalAlignment="Top"/>
+                        <StackPanel Margin="6,0,0,0">
+                          <TextBlock Classes="ink" Text="{Binding Label}" FontSize="12"/>
+                          <TextBlock Classes="ink" Text="{Binding RequiredBy}" FontSize="10"
+                                     FontStyle="Italic" Opacity="0.65" TextWrapping="Wrap"/>
+                        </StackPanel>
+                      </DockPanel>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+              </ScrollViewer>
+            </Expander>
+
             <Expander Header="The particulars of this choice" FontSize="12"
                       Foreground="#2E2013" Background="Transparent">
               <ScrollViewer MaxHeight="150">
