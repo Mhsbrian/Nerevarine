@@ -87,6 +87,20 @@
           <!-- Body -->
           <StackPanel Margin="0,22,0,18" Spacing="14">
 
+            <Border IsVisible="{Binding UpdateAvailable}" Background="#EFE3BC"
+                    BorderBrush="#7A2E1D" BorderThickness="1" CornerRadius="3" Padding="14,10">
+              <DockPanel>
+                <Button DockPanel.Dock="Right" Command="{Binding ApplyUpdateCommand}"
+                        IsEnabled="{Binding !Busy}" Background="#7A2E1D" BorderThickness="0"
+                        CornerRadius="3" Padding="14,7" VerticalAlignment="Center">
+                  <TextBlock Text="Apply the update" Foreground="#F0E4C0" FontSize="12" FontWeight="Bold"/>
+                </Button>
+                <TextBlock Classes="ink" Text="{Binding UpdateBanner}" FontSize="12"
+                           FontStyle="Italic" TextWrapping="Wrap" VerticalAlignment="Center"
+                           Margin="0,0,12,0"/>
+              </DockPanel>
+            </Border>
+
             <TextBlock Classes="ink" Text="The Manner of its Telling" FontSize="17"
                        FontWeight="Bold" HorizontalAlignment="Center"/>
 
