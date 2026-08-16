@@ -78,6 +78,42 @@ public static class QualityPresets
         ],
     };
 
+    /// <summary>What each tier means in player terms — one row per visible
+    /// aspect of the game, no engine vocabulary.</summary>
+    public static IReadOnlyList<(string Aspect, string Meaning)> Describe(QualityTier tier) => tier switch
+    {
+        QualityTier.Master =>
+        [
+            ("View distance", "Sweeping — about 10 cells of visible land"),
+            ("Shadows", "Full and sharp — people, objects and terrain all cast them"),
+            ("Lighting", "Up to 32 light sources at once, per-pixel"),
+            ("Water", "Real reflections and underwater refraction"),
+            ("Grass", "Full density, visible far into the distance"),
+            ("Townsfolk & travellers", "Active far around you"),
+            ("Visual effects", "The complete shader suite (ambient shadow, god rays, HDR…)"),
+        ],
+        QualityTier.Adept =>
+        [
+            ("View distance", "Long — about 6 cells of visible land"),
+            ("Shadows", "Standard — people and interiors, softer detail"),
+            ("Lighting", "Up to 16 light sources at once, per-pixel"),
+            ("Water", "Reflections on, slightly simplified"),
+            ("Grass", "Slightly thinner, medium range"),
+            ("Townsfolk & travellers", "Active at standard range"),
+            ("Visual effects", "The complete shader suite"),
+        ],
+        _ =>
+        [
+            ("View distance", "Short — about 3 cells; fog closes in sooner"),
+            ("Shadows", "Off — the biggest single speed gain"),
+            ("Lighting", "Up to 8 light sources, classic lighting"),
+            ("Water", "Simple water, no reflections"),
+            ("Grass", "Sparse and close-range"),
+            ("Townsfolk & travellers", "Active only nearby"),
+            ("Visual effects", "Off"),
+        ],
+    };
+
     /// <summary>Applies a tier to an existing settings.cfg text, returning the new text.</summary>
     public static string Apply(string settingsCfg, QualityTier tier)
     {

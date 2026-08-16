@@ -21,7 +21,7 @@ public static class Converters
     /// <summary>Codex panel title for the active tier's settings ledger.</summary>
     public static readonly IValueConverter TierLedgerTitle =
         new FuncValueConverter<Mri.Core.OpenMw.QualityTier, string>(tier =>
-            $"THE {LauncherViewModel.TierName(tier).ToUpperInvariant()}'S PARTICULARS");
+            $"WHAT THE {LauncherViewModel.TierName(tier).ToUpperInvariant()} SEES");
 
     /// <summary>Ink color that flips to parchment when the tier card is selected.</summary>
     public static readonly IValueConverter TierInk =

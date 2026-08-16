@@ -143,7 +143,7 @@
                 <StackPanel Spacing="4">
                   <TextBlock Text="APPRENTICE" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"
                              Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Apprentice}}"/>
-                  <TextBlock Text="For humble machines. Clear skies, short horizons, a steady hand."
+                  <TextBlock Text="Runs fast on older PCs: no shadows, short view range, simple water."
                              FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Opacity="0.85"
                              Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Apprentice}}"/>
                 </StackPanel>
@@ -155,7 +155,7 @@
                 <StackPanel Spacing="4">
                   <TextBlock Text="ADEPT" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"
                              Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Adept}}"/>
-                  <TextBlock Text="The measured path. Shadow and shore in balance."
+                  <TextBlock Text="Balanced for typical PCs: long views, standard shadows, all effects."
                              FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Opacity="0.85"
                              Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Adept}}"/>
                 </StackPanel>
@@ -167,18 +167,22 @@
                 <StackPanel Spacing="4">
                   <TextBlock Text="MASTER" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"
                              Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Master}}"/>
-                  <TextBlock Text="Everything, as the curators intended. Distant isles, deep shadow."
+                  <TextBlock Text="Everything at maximum for strong PCs: farthest views, full shadows, dense grass."
                              FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Opacity="0.85"
                              Foreground="{Binding Tier, Converter={x:Static vm:Converters.TierInk}, ConverterParameter={x:Static omw:QualityTier.Master}}"/>
                 </StackPanel>
               </Button>
             </Grid>
 
-            <Button Command="{Binding AutoDetectCommand}" HorizontalAlignment="Center"
-                    Background="Transparent" BorderBrush="#8A6D3B" BorderThickness="1"
-                    CornerRadius="3" Padding="16,6">
-              <TextBlock Classes="ink" Text="✦  Divine the fitting choice for this machine" FontSize="12"/>
-            </Button>
+            <StackPanel Grid.Row="3" Margin="0,0,0,12" Spacing="6">
+              <TextBlock Classes="ink" FontSize="11" FontStyle="Italic" Opacity="0.7" HorizontalAlignment="Center"
+                         Text="Your choice rewrites the game's video settings each time you press BEGIN — nothing else is touched."/>
+              <Button Command="{Binding AutoDetectCommand}" HorizontalAlignment="Center"
+                      Background="Transparent" BorderBrush="#8A6D3B" BorderThickness="1"
+                      CornerRadius="3" Padding="16,6">
+                <TextBlock Classes="ink" Text="✦  Let the launcher pick for this machine" FontSize="12"/>
+              </Button>
+            </StackPanel>
 
             <Grid Grid.Row="4" ColumnDefinitions="*,14,*" MinHeight="120">
 
@@ -220,9 +224,10 @@
                         <DataTemplate x:DataType="vm:QualitySettingRow">
                           <Border BorderBrush="#D9C99B" BorderThickness="0,0,0,1" Padding="0,3">
                             <DockPanel>
-                              <TextBlock DockPanel.Dock="Right" Classes="ink" Text="{Binding Value}"
-                                         FontSize="11" FontWeight="Bold"/>
-                              <TextBlock Text="{Binding Name}" FontSize="11" Foreground="#6B573B"/>
+                              <TextBlock DockPanel.Dock="Left" Classes="ink" Text="{Binding Name}"
+                                         FontSize="11" FontWeight="Bold" Width="150"/>
+                              <TextBlock Text="{Binding Value}" FontSize="11" Foreground="#6B573B"
+                                         TextWrapping="Wrap"/>
                             </DockPanel>
                           </Border>
                         </DataTemplate>

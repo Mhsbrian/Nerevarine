@@ -130,8 +130,8 @@ public sealed partial class LauncherViewModel : ObservableObject
     private void RefreshSettingRows()
     {
         ActiveSettings.Clear();
-        foreach (var (section, key, val) in QualityPresets.Overrides(Tier))
-            ActiveSettings.Add(new QualitySettingRow($"{section} · {key}", val));
+        foreach (var (aspect, meaning) in QualityPresets.Describe(Tier))
+            ActiveSettings.Add(new QualitySettingRow(aspect, meaning));
     }
 
     [RelayCommand]
