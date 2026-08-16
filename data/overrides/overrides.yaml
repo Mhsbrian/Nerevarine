@@ -532,6 +532,15 @@ rules:
     set:
       content: []
 
+  # Balmora Underworld: the sheet's BCOM esp row is a REPLACEMENT for the
+  # base esp ("patched and relocated"), not an addition — both active since
+  # the 2026-08-13 recovery doubled every placed NPC/object in the sewer
+  # (field report: duplicated people, present the whole time). Base mod
+  # stays mounted for its assets; its esp yields to the BCOM edition.
+  - match: { slug: "balmora-underworld" }
+    set:
+      content: []
+
   # ── NEW-GAME LOG TRIAGE 2026-08-16 ──
   # Siege at Firemoth: the sheet ships two dependents (Pikas Better
   # Followers, Naturalized script fix) but momw's official-plugins folder

@@ -10139,12 +10139,7 @@
       "dataPaths": [
         "BalmoraUnderworld/Balmora Underworld V1.1"
       ],
-      "content": [
-        {
-          "file": "FLG - Balmora\u0027s Underworld V1.1.esp",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
