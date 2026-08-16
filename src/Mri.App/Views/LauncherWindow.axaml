@@ -110,8 +110,26 @@
                              TextDecorations="Underline" Opacity="0.75"/>
                 </Button>
               </StackPanel>
-              <TextBlock Classes="ink" FontStyle="Italic" FontSize="12"
-                         HorizontalAlignment="Center" Text="{Binding StatusLine}"/>
+              <Border HorizontalAlignment="Center" CornerRadius="3" Padding="10,3"
+                      BorderThickness="1" VerticalAlignment="Center"
+                      Background="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertChromeBg}}"
+                      BorderBrush="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertChromeBorder}}"
+                      IsVisible="{Binding StatusLine, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
+                <StackPanel Orientation="Horizontal" Spacing="7" VerticalAlignment="Center">
+                  <TextBlock Text="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertGlyph}}"
+                             FontSize="12" VerticalAlignment="Center"
+                             Foreground="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertInk}}"/>
+                  <TextBlock FontStyle="Italic" FontSize="12" TextWrapping="Wrap" MaxWidth="420"
+                             VerticalAlignment="Center" Text="{Binding StatusLine}"
+                             Foreground="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertInk}}"/>
+                  <Button Command="{Binding DismissAlertCommand}" Background="Transparent"
+                          BorderThickness="0" Padding="2,0" VerticalAlignment="Center"
+                          IsVisible="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertHasChrome}}">
+                    <TextBlock Text="✕" FontSize="10" Opacity="0.6"
+                               Foreground="{Binding StatusSeverity, Converter={x:Static vm:Converters.AlertInk}}"/>
+                  </Button>
+                </StackPanel>
+              </Border>
             </DockPanel>
           </StackPanel>
 

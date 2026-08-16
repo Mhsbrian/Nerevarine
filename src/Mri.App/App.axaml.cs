@@ -29,6 +29,7 @@ public class App : Application
     {
         var window = new LauncherWindow();
         var vm = new LauncherViewModel(state, AppData.LoadEmbedded());
+        vm.IsWindowActive = () => window.IsActive;
         vm.ReinstallRequested += () =>
         {
             var wizard = BuildWizard(desktop);

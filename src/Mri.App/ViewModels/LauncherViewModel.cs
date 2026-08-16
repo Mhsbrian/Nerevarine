@@ -17,7 +17,21 @@ public sealed partial class LauncherViewModel : ObservableObject
 
     [ObservableProperty] private QualityTier _tier;
     [ObservableProperty] private string _statusLine = "";
+    [ObservableProperty] private AlertSeverity _statusSeverity = AlertSeverity.Quiet;
     [ObservableProperty] private bool _busy;
+
+    /// <summary>Window-focus probe, wired by the shell; notifications fire
+    /// only when the user is likely elsewhere.</summary>
+    public Func<bool>? IsWindowActive { get; set; }
+
+    private void Say(AlertSeverity severity, string text)
+    {
+        StatusSeverity = severity;
+        StatusLine = text;
+    }
+
+    [RelayCommand]
+    private void DismissAlert() => Say(AlertSeverity.Quiet, "");
     [ObservableProperty] private bool _updateAvailable;
     [ObservableProperty] private string _updateBanner = "";
 
@@ -74,11 +88,11 @@ public sealed partial class LauncherViewModel : ObservableObject
         var gamePath = _gamePath;
         if (gamePath is null || !GameValidator.Validate(gamePath).IsValid)
         {
-            StatusLine = "The game folder moved — use Verify / reinstall to point at it again.";
+            Say(AlertSeverity.Warning, "The game folder moved — use Verify / reinstall to point at it again.");
             return;
         }
         Busy = true;
-        StatusLine = "Amending the canon…";
+        Say(AlertSeverity.Quiet, "Amending the canon…");
         try
         {
             var wizard = new WizardState
@@ -92,25 +106,31 @@ public sealed partial class LauncherViewModel : ObservableObject
             using var log = runner.CreateLog();
             var engine = runner.BuildEngine(log, out var ctx);
             var progress = new Progress<Mri.Core.Pipeline.EngineProgress>(p =>
-                StatusLine = $"{p.StepLabel}…");
+                Say(AlertSeverity.Quiet, $"{p.StepLabel}…"));
             var result = await Task.Run(() => engine.RunAsync(ctx, progress));
             if (result.Success)
             {
                 UpdateAvailable = false;
-                StatusLine = "The canon is current. Vvardenfell awaits.";
+                Say(AlertSeverity.Success, "The canon is current. Vvardenfell awaits.");
+                if (IsWindowActive?.Invoke() != true)
+                    Notifier.Notify("Nerevarine", "The update is complete — ready to play.");
             }
             else
             {
-                StatusLine = result.FailedStepId == "install-mods"
+                var msg = result.FailedStepId == "install-mods"
                     ? "New mods need your Nexus sign-in — use Verify / reinstall below."
                     : $"Update stopped at '{result.FailedStepId}': {result.Error?.Message ?? "see the log in the install folder"}";
+                Say(AlertSeverity.Error, msg);
+                if (IsWindowActive?.Invoke() != true)
+                    Notifier.Notify("Nerevarine", "The update needs your attention.");
             }
         }
         catch (Exception e)
         {
-            StatusLine = e.Message.Contains("failed to download", StringComparison.OrdinalIgnoreCase)
-                ? "New mods need your Nexus sign-in — use Verify / reinstall below."
-                : $"Update failed: {e.Message}";
+            Say(AlertSeverity.Error,
+                e.Message.Contains("failed to download", StringComparison.OrdinalIgnoreCase)
+                    ? "New mods need your Nexus sign-in — use Verify / reinstall below."
+                    : $"Update failed: {e.Message}");
         }
         finally
         {
@@ -143,7 +163,7 @@ public sealed partial class LauncherViewModel : ObservableObject
     private void AutoDetect()
     {
         Tier = QualityPresets.Detect();
-        StatusLine = $"The stars favor {TierName(Tier)}.";
+        Say(AlertSeverity.Success, $"The stars favor {TierName(Tier)} — chosen for this machine.");
     }
 
     [RelayCommand]
@@ -161,11 +181,15 @@ public sealed partial class LauncherViewModel : ObservableObject
             _state.Tier = Tier;
             _state.Save();
             GameLauncher.Play(InstallDir);
-            StatusLine = "Vvardenfell awaits.";
+            Say(AlertSeverity.Quiet, "Vvardenfell awaits.");
         }
         catch (Exception e)
         {
-            StatusLine = $"Failed to launch: {e.Message}";
+            Say(e.Message.Contains("already running", StringComparison.OrdinalIgnoreCase)
+                    ? AlertSeverity.Warning : AlertSeverity.Error,
+                e.Message.Contains("already running", StringComparison.OrdinalIgnoreCase)
+                    ? "Morrowind is already running — one world at a time."
+                    : $"Failed to launch: {e.Message}");
         }
         finally
         {
@@ -186,7 +210,7 @@ public sealed partial class LauncherViewModel : ObservableObject
         }
         catch (Exception e)
         {
-            StatusLine = $"Could not open folder: {e.Message}";
+            Say(AlertSeverity.Error, $"Could not open folder: {e.Message}");
         }
     }
 
