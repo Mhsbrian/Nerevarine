@@ -17402,12 +17402,7 @@
       "dataPaths": [
         "SkoomaesthesiaOpenMWPort"
       ],
-      "content": [
-        {
-          "file": "Skoomaesthesia.omwscripts",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],

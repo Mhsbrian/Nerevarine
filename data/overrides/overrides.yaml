@@ -524,6 +524,14 @@ rules:
     set:
       content: []
 
+  # Skoomaesthesia gitlab snapshot is INCOMPLETE by design — its .gitignore
+  # excludes shaders/, Textures/, Sound/, Music/, l10n/ (log: "Failed
+  # loading shader 'skoomaesthesia'", missing l10n). No gitlab releases
+  # exist. Parked until a complete package is sourced (next key batch).
+  - match: { slug: "skoomaesthesia-openmw-port" }
+    set:
+      content: []
+
   # ── NEW-GAME LOG TRIAGE 2026-08-16 ──
   # Siege at Firemoth: the sheet ships two dependents (Pikas Better
   # Followers, Naturalized script fix) but momw's official-plugins folder
