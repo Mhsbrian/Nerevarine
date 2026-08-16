@@ -27,8 +27,15 @@ public sealed partial class WizardState : ObservableObject
         !string.IsNullOrWhiteSpace(InstallDir) &&
         NexusUser is { IsPremium: true };
 
-    private static string DefaultInstallDir() =>
-        OperatingSystem.IsWindows()
+    private static string DefaultInstallDir()
+    {
+        // A prior install (any version) wins: re-entering the wizard is an
+        // UPDATE of that install unless the user picks elsewhere.
+        var remembered = Services.LauncherState.Load().InstallDir;
+        if (!string.IsNullOrWhiteSpace(remembered) && Directory.Exists(remembered))
+            return remembered;
+        return OperatingSystem.IsWindows()
             ? @"C:\MorrowindRemake"
             : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "MorrowindRemake");
+    }
 }
