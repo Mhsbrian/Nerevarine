@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "listVersion": "2026.08.14",
+  "listVersion": "2026.08.15",
   "name": "morrowind-remake",
   "estimatedDownloadBytes": 20531460775,
   "estimatedInstalledBytes": 61594382325,
@@ -19336,12 +19336,7 @@
       "dataPaths": [
         "OpenMWFullBodyAwareness"
       ],
-      "content": [
-        {
-          "file": "FBA-Alex_s_Better_Fitted_Armors.omwaddon",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],
@@ -23184,12 +23179,7 @@
       "dataPaths": [
         "AlexsBetterFittedFemaleArmors/data files"
       ],
-      "content": [
-        {
-          "file": "Alex\u0027s Better Fitted Female Armors.ESP",
-          "mode": "normal"
-        }
-      ],
+      "content": [],
       "groundcover": [],
       "bsaArchives": [],
       "tags": [],

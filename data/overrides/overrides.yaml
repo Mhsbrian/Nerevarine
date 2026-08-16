@@ -524,6 +524,19 @@ rules:
     set:
       content: []
 
+  # ── ARMOR REVIEW 2026-08-16: the FBA addon + Alex's Better Fitted Female
+  # Armors (both MRI additions, loading last) carry VANILLA male branches in
+  # all 42 armor records they touch, reverting Better Morrowind Armor's male
+  # meshes via last-wins (proven by full-provider trace of
+  # dragonscale_cuirass). BMA ships its own fitted female variants, so the
+  # additions are net-negative; parked. Their assets stay on disk.
+  - match: { slug: "openmw-full-body-awareness" }
+    set:
+      content: []
+  - match: { slug: "alex-s-better-fitted-female-armors" }
+    set:
+      content: []
+
   # ── ORDER-AUDIT FIXES (tools/order-audit.py, 2026-08-15). ──
   # (1) NEEDS TO OVERWRITE must actually load last: the momw alignment pass
   # moved BCOM.ESP to its (late) momw slot, past the bcom-patches bundle
