@@ -125,6 +125,7 @@ public static class QualityPresets
 
     public static void ApplyToFile(string settingsCfgPath, QualityTier tier)
     {
+        Directory.CreateDirectory(Path.GetDirectoryName(settingsCfgPath)!);
         var text = File.Exists(settingsCfgPath) ? File.ReadAllText(settingsCfgPath) : "";
         AtomicFile.WriteAllText(settingsCfgPath, Apply(text, tier));
     }

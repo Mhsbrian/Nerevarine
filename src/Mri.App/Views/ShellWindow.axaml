@@ -4,6 +4,7 @@
         x:Class="Mri.App.Views.ShellWindow"
         x:DataType="vm:WizardViewModel"
         Title="Nerevarine — Installer"
+        Icon="/Assets/nerevarine.png"
         Width="960" Height="640"
         MinWidth="820" MinHeight="560"
         WindowStartupLocation="CenterScreen">

@@ -12,6 +12,8 @@
       <Button Content="Open install folder" Command="{Binding OpenInstallFolderCommand}"/>
       <Button Content="Save diagnostics zip" Command="{Binding SaveDiagnosticsCommand}"/>
     </StackPanel>
+    <TextBlock Text="{Binding EntryPointMessage}" FontSize="12" Foreground="#d9c58c" TextWrapping="Wrap"
+               IsVisible="{Binding EntryPointMessage, Converter={x:Static ObjectConverters.IsNotNull}}"/>
     <TextBlock Text="{Binding DiagnosticsMessage}" FontSize="12" Foreground="#9ed49e" TextWrapping="Wrap"
                IsVisible="{Binding DiagnosticsMessage, Converter={x:Static ObjectConverters.IsNotNull}}"/>
   </StackPanel>

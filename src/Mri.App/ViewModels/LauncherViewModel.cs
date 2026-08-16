@@ -101,7 +101,9 @@ public sealed partial class LauncherViewModel : ObservableObject
             }
             else
             {
-                StatusLine = "New mods need your Nexus sign-in — use Verify / reinstall below.";
+                StatusLine = result.FailedStepId == "install-mods"
+                    ? "New mods need your Nexus sign-in — use Verify / reinstall below."
+                    : $"Update stopped at '{result.FailedStepId}': {result.Error?.Message ?? "see the log in the install folder"}";
             }
         }
         catch (Exception e)

@@ -52,8 +52,13 @@ public static class GameLauncher
         return Directory.EnumerateFiles(tools, name, SearchOption.AllDirectories).FirstOrDefault();
     }
 
+    public static bool IsGameRunning() =>
+        Process.GetProcessesByName("openmw").Length > 0;
+
     public static void Play(string installDir)
     {
+        if (IsGameRunning())
+            throw new InvalidOperationException("Morrowind is already running.");
         var exe = FindOpenMw(installDir)
             ?? throw new InvalidOperationException("OpenMW binary not found under the install directory.");
         Process.Start(new ProcessStartInfo
