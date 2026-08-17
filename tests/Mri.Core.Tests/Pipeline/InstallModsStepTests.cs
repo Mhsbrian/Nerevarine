@@ -138,6 +138,59 @@ public sealed class InstallModsStepTests : IDisposable
     }
 
     [Fact]
+    public async Task NexusWallWithNonNexusProgressIsStillTheDownloaderFailing()
+    {
+        // The real field shape: the ~30 github/gitlab/direct mods sail
+        // through a Nexus wall, so progress is never zero. That must not
+        // demote a 401 wall to a 500-row per-mod list.
+        var modlist = MakeModlist(40);
+        var ctx = MakeContext(modlist);
+        var runner = new SimulatedUmoRunner(
+            Enumerable.Repeat(
+                $"{Esc}[31m- error received - skipping: Status Code 401 - b'auth'{Esc}[0m", 28).ToList(),
+            exitCode: 1, beforeExit: () =>
+            {
+                foreach (var mod in modlist.Mods.Take(12))
+                    MaterializeModDir(ctx, mod);
+            });
+
+        var ex = await Assert.ThrowsAsync<DownloaderFailedException>(() => RunStep(ctx, runner));
+
+        Assert.Contains("Nexus rejected the sign-in", ex.Message);
+        Assert.Contains("12 mods made it", ex.Message);
+        Assert.Equal(28, ex.PendingCount);
+    }
+
+    [Fact]
+    public async Task DiskFullIsNamedAsTheSharedWall()
+    {
+        var ctx = MakeContext(MakeModlist(30));
+        var runner = new SimulatedUmoRunner(
+            Enumerable.Repeat(
+                $"{Esc}[31m- error received - skipping: [Errno 28] No space left on device{Esc}[0m", 30).ToList(),
+            exitCode: 1);
+
+        var ex = await Assert.ThrowsAsync<DownloaderFailedException>(() => RunStep(ctx, runner));
+
+        Assert.Contains("disk filled up", ex.Message);
+    }
+
+    [Fact]
+    public async Task CleanExitWithMassMissingIsReportedAsOurBugNotTheirMods()
+    {
+        // umo says success, prints no errors, yet nothing is where the
+        // verifier looks: a layout-expectation mismatch — an installer bug
+        // that must ask for diagnostics, never render 500 failure rows.
+        var ctx = MakeContext(MakeModlist(30));
+        var runner = new SimulatedUmoRunner([], exitCode: 0);
+
+        var ex = await Assert.ThrowsAsync<DownloaderFailedException>(() => RunStep(ctx, runner));
+
+        Assert.Contains("bug on our side", ex.Message);
+        Assert.Contains("diagnostics", ex.Message);
+    }
+
+    [Fact]
     public async Task EverythingArrivedDespiteNonZeroExitIsAPlainProcessError()
     {
         var modlist = MakeModlist(3);

@@ -165,14 +165,18 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
             return;
         }
 
-        // Zero progress across many mods with one shared root cause is the
-        // DOWNLOADER failing, not N mods. Field-hit: a single 401 once
-        // surfaced as "586 mods failed" with a skip-them-all button.
+        // A wall, not N mods: the MAJORITY of the pending set failed. "Some
+        // progress" must never veto this — the ~30 non-Nexus mods (github,
+        // gitlab, direct) sail straight through a Nexus wall, so a dead key
+        // or a full disk still shows progress. Field-hit twice: a single
+        // 401 surfaced as "586 mods failed" with a skip-them-all button.
+        // Small runs stay per-mod — a short list beats a verdict.
         var dominant = DominantError(result.ErrorLines);
-        if (missing.Count == pendingBefore && pendingBefore >= 5
-            && (dominant is not null || !result.Process.Success))
+        var majorityFailed = missing.Count * 2 >= pendingBefore;
+        if (pendingBefore >= 5 && majorityFailed
+            && (missing.Count == pendingBefore || missing.Count >= 25))
             throw new DownloaderFailedException(
-                ExplainSystemic(dominant, result.Process.ExitCode, missing.Count),
+                ExplainSystemic(dominant, result.Process, pendingBefore - missing.Count, missing.Count),
                 dominant, missing.Count);
 
         throw new ModsFailedException(missing
@@ -189,26 +193,39 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
         return top.Count() * 5 >= errorLines.Count * 4 ? top.Key : null;
     }
 
-    private static string ExplainSystemic(string? dominant, int exitCode, int pending) => dominant switch
+    private static string ExplainSystemic(string? dominant, IO.ProcessResult process, int arrived, int missing)
     {
-        { } d when d.Contains("401") =>
-            $"Nexus rejected the sign-in (401), so nothing was downloaded — {pending} mods are waiting. " +
-            "The API key is wrong, expired, or was rotated: re-enter it and retry. Nothing needs skipping.",
-        { } d when d.Contains("429") =>
-            $"Nexus is rate-limiting this account (429), so nothing was downloaded — {pending} mods are waiting. " +
-            "Wait a few minutes and retry. Nothing needs skipping.",
-        { } d when d.Contains("connect", StringComparison.OrdinalIgnoreCase)
-                   || d.Contains("resolve", StringComparison.OrdinalIgnoreCase)
-                   || d.Contains("timed out", StringComparison.OrdinalIgnoreCase) =>
-            $"The network connection is down, so nothing was downloaded — {pending} mods are waiting. " +
-            $"Check connectivity and retry. Nothing needs skipping. ({d})",
-        { } d =>
-            $"Every download hit the same wall, so nothing arrived — {pending} mods are waiting. " +
-            $"The shared cause: {d} Fix that and retry. Nothing needs skipping.",
-        _ =>
-            $"The downloader stopped before anything arrived (exit code {exitCode}) — {pending} mods are waiting. " +
-            "See the log below for the cause, then retry. Nothing needs skipping.",
-    };
+        var tally = arrived > 0
+            ? $"{arrived} mods made it; {missing} are waiting, and nothing already downloaded is ever re-fetched."
+            : $"{missing} mods are waiting, and nothing already downloaded is ever re-fetched.";
+        return dominant switch
+        {
+            { } d when d.Contains("401") =>
+                $"Nexus rejected the sign-in (401). {tally} The API key is wrong, expired, or was " +
+                "rotated — re-enter it and retry. Nothing needs skipping.",
+            { } d when d.Contains("429") =>
+                $"Nexus is rate-limiting this account (429). {tally} Wait a few minutes and retry. " +
+                "Nothing needs skipping.",
+            { } d when d.Contains("no space left", StringComparison.OrdinalIgnoreCase)
+                       || d.Contains("disk full", StringComparison.OrdinalIgnoreCase) =>
+                $"The disk filled up. {tally} The install needs room for the download cache AND the " +
+                "extracted mods (~85 GB total) — free space, then retry. Nothing needs skipping.",
+            { } d when d.Contains("connect", StringComparison.OrdinalIgnoreCase)
+                       || d.Contains("resolve", StringComparison.OrdinalIgnoreCase)
+                       || d.Contains("timed out", StringComparison.OrdinalIgnoreCase) =>
+                $"The network connection dropped. {tally} Check connectivity and retry. " +
+                $"Nothing needs skipping. ({d})",
+            { } d =>
+                $"Every failure shares one cause: {d} {tally} Fix that, then retry. Nothing needs skipping.",
+            null when !process.Success =>
+                $"The downloader died partway (exit code {process.ExitCode}). {tally} See the log " +
+                "below for its last words, then retry. Nothing needs skipping.",
+            _ =>
+                $"The downloader finished without reporting errors, yet {missing} mod folders are not " +
+                "where the installer expects them — that is a bug on our side, not in your setup. " +
+                "Save the diagnostics zip below and send it in. Retrying is safe; nothing needs skipping.",
+        };
+    }
 }
 
 public sealed class ImportIniStep(IniImporterService importer, Func<InstallContext, string?> iniImporterExe)

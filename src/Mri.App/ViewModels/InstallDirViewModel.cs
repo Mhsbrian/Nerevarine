@@ -36,12 +36,22 @@ public sealed partial class InstallDirViewModel(WizardState state, IFilePickerSe
                 if (!probe.Exists)
                     return "";
                 var free = new DriveInfo(probe.FullName).AvailableFreeSpace;
-                var needed = Math.Max(state.Data.Modlist.EstimatedInstalledBytes, 30L * 1024 * 1024 * 1024);
+                // The install dir holds the archive cache AND the extracted
+                // mods AND the tools, all at once (field-measured 64 GB; the
+                // old installed-only estimate passed boxes that later hit
+                // "No space left on device" halfway through extraction).
+                var needed = Math.Max(
+                    state.Data.Modlist.EstimatedDownloadBytes
+                        + state.Data.Modlist.EstimatedInstalledBytes
+                        + 5L * 1024 * 1024 * 1024,
+                    70L * 1024 * 1024 * 1024);
                 var freeGb = free / (1024.0 * 1024 * 1024);
                 var neededGb = needed / (1024.0 * 1024 * 1024);
                 return free < needed
-                    ? $"✗ Only {freeGb:F0} GB free — around {neededGb:F0} GB is needed."
-                    : $"✓ {freeGb:F0} GB free (≈{neededGb:F0} GB needed).";
+                    ? $"✗ Only {freeGb:F0} GB free — this install needs about {neededGb:F0} GB " +
+                      "(downloaded archives + extracted mods + tools live here together). " +
+                      "It WILL run out partway. Pick a roomier drive."
+                    : $"✓ {freeGb:F0} GB free (≈{neededGb:F0} GB needed for archives + mods + tools).";
             }
             catch (Exception e) when (e is IOException or ArgumentException or UnauthorizedAccessException)
             {

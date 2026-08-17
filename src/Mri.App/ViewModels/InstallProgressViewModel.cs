@@ -111,9 +111,9 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
             }
             else if (result.Error is DownloaderFailedException downloaderDown)
             {
-                // Systemic — one root cause, zero arrivals. Skipping mods
-                // would be catastrophic and is deliberately not offered.
-                Headline = "The downloads could not run.";
+                // Systemic — one wall, most of the list missing. Skipping
+                // mods would be catastrophic and is deliberately not offered.
+                Headline = "The downloads hit a wall.";
                 FailureMessage = downloaderDown.Message;
             }
             else if (result.Error is ModsFailedException modsFailed)
