@@ -9,6 +9,12 @@ public enum UmoEventKind
     Extract,
     ModCompleted,
     ModFailed,
+
+    /// <summary>Red line that names no mod: the "- error …" detail under a
+    /// failure header, or a run-wide error ("Status Code 401 …" for every
+    /// download). Consumers attach it to the preceding ModFailed, and tally
+    /// them to tell one systemic outage from N individual failures.</summary>
+    ErrorDetail,
     Progress,
 }
 
@@ -54,6 +60,27 @@ public static partial class UmoProgressParser
 
     public static string StripAnsi(string line) => AnsiRegex().Replace(line, "");
 
+    /// <summary>
+    /// Reduces an ErrorDetail line to its cause so identical roots compare
+    /// equal ("- error received - skipping: Status Code 401 - …" repeated 500
+    /// times must tally as ONE dominant cause, not 500 strings).
+    /// </summary>
+    public static string NormalizeError(string detail)
+    {
+        var t = detail.Trim();
+        if (t.StartsWith("- ", StringComparison.Ordinal))
+            t = t[2..].TrimStart();
+        foreach (var prefix in (string[])["error received - skipping:", "error:"])
+        {
+            if (t.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+            {
+                t = t[prefix.Length..].TrimStart();
+                break;
+            }
+        }
+        return t.Length > 160 ? t[..160] : t;
+    }
+
     public static UmoEvent Parse(string rawLine)
     {
         var isRed = rawLine.Contains("\x1b[31m", StringComparison.Ordinal);
@@ -67,7 +94,7 @@ public static partial class UmoProgressParser
             if (FailureHeaderRegex().Match(line) is { Success: true } header)
                 return new UmoEvent(UmoEventKind.ModFailed, line, header.Groups["name"].Value.Trim());
             // Red detail lines ("- error …") carry no mod name; the header did.
-            return new UmoEvent(UmoEventKind.Info, line);
+            return new UmoEvent(UmoEventKind.ErrorDetail, line);
         }
 
         if (SyncingRegex().Match(line) is { Success: true } syncing)

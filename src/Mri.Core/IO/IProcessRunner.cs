@@ -36,3 +36,14 @@ public interface IProcessRunner
         IProgress<OutputLine>? onLine = null,
         CancellationToken ct = default);
 }
+
+/// <summary>
+/// IProgress that invokes its handler on the reporting thread. Progress&lt;T&gt;
+/// posts asynchronously, so a child process's final lines — exactly where umo
+/// prints its failure summary — can land AFTER the caller has already
+/// snapshotted results. Parsers that feed decisions (not just UI) need this.
+/// </summary>
+public sealed class SyncProgress<T>(Action<T> handler) : IProgress<T>
+{
+    public void Report(T value) => handler(value);
+}

@@ -12,16 +12,33 @@
             IsVisible="{Binding FailureMessage, Converter={x:Static ObjectConverters.IsNotNull}}">
       <StackPanel Spacing="8">
         <TextBlock Text="{Binding FailureMessage}" TextWrapping="Wrap" FontSize="13"/>
-        <ItemsControl ItemsSource="{Binding FailedMods}" MaxHeight="90">
-          <ItemsControl.ItemTemplate>
-            <DataTemplate x:DataType="x:String">
-              <TextBlock Text="{Binding}" FontSize="12" Foreground="#e0a5a5"/>
-            </DataTemplate>
-          </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <Border Background="#241b1b" CornerRadius="4" Padding="4"
+                IsVisible="{Binding HasFailedMods}">
+          <ScrollViewer MaxHeight="150">
+            <ItemsControl ItemsSource="{Binding FailedMods}">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:FailedModRow">
+                  <Grid ColumnDefinitions="Auto,*" Margin="2,3">
+                    <CheckBox Grid.Column="0" IsChecked="{Binding Skip}" Padding="0"
+                              VerticalAlignment="Top" MinWidth="0" Margin="4,0,8,0"
+                              ToolTip.Tip="Tick to leave this mod out and continue without it"/>
+                    <StackPanel Grid.Column="1" Spacing="1">
+                      <TextBlock Text="{Binding Name}" FontSize="12" Foreground="#e0a5a5"
+                                 TextWrapping="Wrap"/>
+                      <TextBlock Text="{Binding Reason}" FontSize="11" Foreground="#96788a"
+                                 TextWrapping="Wrap" IsVisible="{Binding HasReason}"/>
+                    </StackPanel>
+                  </Grid>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </ScrollViewer>
+        </Border>
         <StackPanel Orientation="Horizontal" Spacing="10">
-          <Button Content="Retry" Command="{Binding RetryCommand}"/>
-          <Button Content="Skip failed mods and continue" Command="{Binding SkipFailedAndContinueCommand}"
+          <Button Content="Retry missing downloads" Command="{Binding RetryCommand}"/>
+          <Button Content="{Binding SkipButtonLabel}" Command="{Binding SkipTickedAndContinueCommand}"
+                  IsVisible="{Binding HasFailedMods}"/>
+          <Button Content="Tick all" Command="{Binding TickAllCommand}" FontSize="12"
                   IsVisible="{Binding HasFailedMods}"/>
           <Button Content="Save diagnostics zip" Command="{Binding SaveDiagnosticsCommand}"/>
         </StackPanel>

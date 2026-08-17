@@ -117,9 +117,18 @@ public sealed partial class LauncherViewModel : ObservableObject
             }
             else
             {
-                var msg = result.FailedStepId == "install-mods"
-                    ? "New mods need your Nexus sign-in — use Verify / reinstall below."
-                    : $"Update stopped at '{result.FailedStepId}': {result.Error?.Message ?? "see the log in the install folder"}";
+                var msg = result.Error switch
+                {
+                    // The launcher has no key field; point the auth case at
+                    // the one place that can take a fresh key.
+                    Mri.Core.Pipeline.DownloaderFailedException df =>
+                        df.DominantError?.Contains("401") == true
+                            ? $"{df.Message} Verify / reinstall below can take a fresh key."
+                            : df.Message,
+                    Mri.Core.Pipeline.ModsFailedException mf =>
+                        $"{mf.Failures.Count} new mod(s) couldn't be fetched — Verify / reinstall below can retry or skip them.",
+                    _ => $"Update stopped at '{result.FailedStepId}': {result.Error?.Message ?? "see the log in the install folder"}",
+                };
                 Say(AlertSeverity.Error, msg);
                 if (IsWindowActive?.Invoke() != true)
                     Notifier.Notify("Nerevarine", "The update needs your attention.");
@@ -127,10 +136,7 @@ public sealed partial class LauncherViewModel : ObservableObject
         }
         catch (Exception e)
         {
-            Say(AlertSeverity.Error,
-                e.Message.Contains("failed to download", StringComparison.OrdinalIgnoreCase)
-                    ? "New mods need your Nexus sign-in — use Verify / reinstall below."
-                    : $"Update failed: {e.Message}");
+            Say(AlertSeverity.Error, $"Update failed: {e.Message}");
         }
         finally
         {

@@ -5,6 +5,8 @@ namespace Mri.Core.Umo;
 public sealed record UmoInstallResult(
     ProcessResult Process,
     IReadOnlyList<string> FailedMods,
+    IReadOnlyDictionary<string, string> FailureReasons,
+    IReadOnlyList<string> ErrorLines,
     int? LastCurrent,
     int? LastTotal);
 
@@ -72,18 +74,39 @@ public sealed class UmoService(
         CancellationToken ct = default)
     {
         var failed = new List<string>();
+        var reasons = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        var errorLines = new List<string>();
+        string? lastFailedMod = null;
         int? lastCurrent = null, lastTotal = null;
+        var gate = new object();
 
-        var lineProgress = new Progress<OutputLine>(line =>
+        // SyncProgress, deliberately: umo prints its failure summary as the
+        // very last lines before exit, and Progress<T>'s async posting would
+        // let RunAsync return before those reports land.
+        var lineProgress = new SyncProgress<OutputLine>(line =>
         {
             var evt = UmoProgressParser.Parse(line.Text);
-            if (evt is { Kind: UmoEventKind.ModFailed, ModName: { } name })
+            lock (gate)
             {
-                lock (failed)
+                if (evt is { Kind: UmoEventKind.ModFailed, ModName: { } name })
+                {
                     failed.Add(name);
+                    lastFailedMod = name;
+                    // "No mod file found for …" is header and reason in one line.
+                    if (evt.RawLine.StartsWith("No mod file found", StringComparison.OrdinalIgnoreCase))
+                        reasons.TryAdd(name, UmoProgressParser.NormalizeError(evt.RawLine));
+                }
+                else if (evt.Kind == UmoEventKind.ErrorDetail
+                         && UmoProgressParser.NormalizeError(evt.RawLine) is { Length: > 0 } detail)
+                {
+                    if (errorLines.Count < 2000)
+                        errorLines.Add(detail);
+                    if (lastFailedMod is { } mod)
+                        reasons.TryAdd(mod, detail);
+                }
+                if (evt.Current is not null)
+                    (lastCurrent, lastTotal) = (evt.Current, evt.Total);
             }
-            if (evt.Current is not null)
-                (lastCurrent, lastTotal) = (evt.Current, evt.Total);
             onEvent?.Report(evt);
         });
 
@@ -98,17 +121,16 @@ public sealed class UmoService(
             Env = BaseEnv,
         }, lineProgress, ct).ConfigureAwait(false);
 
-        List<string> failedSnapshot;
-        lock (failed)
-            failedSnapshot = failed.ToList();
-
-        return new UmoInstallResult(result, failedSnapshot, lastCurrent, lastTotal);
+        lock (gate)
+            return new UmoInstallResult(
+                result, failed.ToList(), new Dictionary<string, string>(reasons, StringComparer.OrdinalIgnoreCase),
+                errorLines.ToList(), lastCurrent, lastTotal);
     }
 
     public async Task<string?> GetVersionAsync(CancellationToken ct = default)
     {
         var lines = new List<string>();
-        var progress = new Progress<OutputLine>(l =>
+        var progress = new SyncProgress<OutputLine>(l =>
         {
             lock (lines)
                 lines.Add(l.Text);
@@ -127,8 +149,6 @@ public sealed class UmoService(
             if (!result.Success)
                 return null;
 
-            // Progress<T> posts asynchronously; give reports a moment to land.
-            await Task.Delay(100, ct).ConfigureAwait(false);
             lock (lines)
                 return lines.FirstOrDefault()?.Trim();
         }

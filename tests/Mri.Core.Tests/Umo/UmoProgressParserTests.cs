@@ -28,13 +28,25 @@ public class UmoProgressParserTests
     }
 
     [Fact]
-    public void RedDetailLineIsInfoNotAFailureName()
+    public void RedDetailLineIsErrorDetailNotAFailureName()
     {
         // The old parser harvested this junk as a "mod name".
         var evt = UmoProgressParser.Parse(
             $"{Esc}[31m- error received - skipping: RetryError[<Future at 0x1b317ec4ef0 state=finished raised error>]{Esc}[0m");
-        Assert.Equal(UmoEventKind.Info, evt.Kind);
+        Assert.Equal(UmoEventKind.ErrorDetail, evt.Kind);
         Assert.Null(evt.ModName);
+    }
+
+    [Fact]
+    public void NormalizeErrorStripsThePreambleSoIdenticalRootsCompareEqual()
+    {
+        // 500 of these must tally as ONE dominant cause.
+        var a = UmoProgressParser.NormalizeError(
+            "- error received - skipping: Status Code 401 - b'{\"message\":\"Please provide an authentication method\"}'");
+        var b = UmoProgressParser.NormalizeError(
+            "  - error received - skipping: Status Code 401 - b'{\"message\":\"Please provide an authentication method\"}'");
+        Assert.Equal(a, b);
+        Assert.StartsWith("Status Code 401", a);
     }
 
     [Fact]
@@ -70,7 +82,8 @@ public class UmoProgressParserTests
     public void AdminRefusalIsRedButNotAModFailure()
     {
         var evt = UmoProgressParser.Parse($"{Esc}[31mDon't run umo with admin rights!{Esc}[0m");
-        Assert.Equal(UmoEventKind.Info, evt.Kind);
+        Assert.Equal(UmoEventKind.ErrorDetail, evt.Kind);
+        Assert.Null(evt.ModName);
     }
 
     [Fact]

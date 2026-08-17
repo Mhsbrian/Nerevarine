@@ -32,13 +32,33 @@ public interface IInstallStep
     Task RunAsync(InstallContext ctx, IProgress<StepProgress> progress, CancellationToken ct);
 }
 
+/// <summary>One mod that did not arrive, with umo's stated cause when it gave one.</summary>
+public sealed record FailedMod(string Name, string? Reason);
+
 /// <summary>
-/// Raised by the mod-download step when some mods failed and the user hasn't
-/// skipped them; the UI turns this into a Retry / Skip-and-continue choice.
+/// Raised by the mod-download step when SPECIFIC mods failed while the rest
+/// arrived; the UI turns this into per-mod retry/skip choices.
 /// </summary>
-public sealed class ModsFailedException(IReadOnlyList<string> failedMods)
-    : Exception($"{failedMods.Count} mod(s) failed to download/install: {string.Join(", ", failedMods.Take(5))}" +
-                (failedMods.Count > 5 ? ", …" : ""))
+public sealed class ModsFailedException(IReadOnlyList<FailedMod> failures)
+    : Exception($"{failures.Count} mod(s) failed to download/install: " +
+                string.Join(", ", failures.Take(5).Select(f => f.Name)) +
+                (failures.Count > 5 ? ", …" : ""))
 {
-    public IReadOnlyList<string> FailedMods { get; } = failedMods;
+    public IReadOnlyList<FailedMod> Failures { get; } = failures;
+}
+
+/// <summary>
+/// Raised when the downloader itself hit a wall — zero mods arrived and one
+/// root cause (bad Nexus key, rate limit, dead network) explains every error.
+/// This is a fix-and-retry situation, never a per-mod one: the UI must show
+/// the cause and must NOT offer to skip the entire modlist over it.
+/// </summary>
+public sealed class DownloaderFailedException(string userMessage, string? dominantError, int pendingCount)
+    : Exception(userMessage)
+{
+    /// <summary>The normalized error line shared by (nearly) every failure, if one dominated.</summary>
+    public string? DominantError { get; } = dominantError;
+
+    /// <summary>How many mods were waiting to download when the run stalled.</summary>
+    public int PendingCount { get; } = pendingCount;
 }

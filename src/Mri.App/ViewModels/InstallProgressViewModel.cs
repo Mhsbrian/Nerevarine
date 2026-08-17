@@ -21,6 +21,7 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(CanGoBack))]
     [NotifyCanExecuteChangedFor(nameof(CancelCommand))]
+    [NotifyCanExecuteChangedFor(nameof(SkipTickedAndContinueCommand))]
     private bool _isRunning;
 
     [ObservableProperty]
@@ -35,13 +36,41 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
     [ObservableProperty]
     private string? _diagnosticsMessage;
 
-    [ObservableProperty]
-    private IReadOnlyList<string> _failedMods = [];
+    public ObservableCollection<FailedModRow> FailedMods { get; } = [];
 
     public bool HasFailedMods => FailedMods.Count > 0;
 
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(SkipButtonLabel))]
+    [NotifyCanExecuteChangedFor(nameof(SkipTickedAndContinueCommand))]
+    private int _tickedCount;
+
+    public string SkipButtonLabel => TickedCount > 0
+        ? $"Skip the {TickedCount} ticked and continue"
+        : "Skip ticked mods and continue";
+
     private CancellationTokenSource? _cts;
     private InstallContext? _lastContext;
+
+    private void SetFailedMods(IEnumerable<FailedModRow> rows)
+    {
+        foreach (var old in FailedMods)
+            old.PropertyChanged -= OnRowChanged;
+        FailedMods.Clear();
+        foreach (var row in rows)
+        {
+            row.PropertyChanged += OnRowChanged;
+            FailedMods.Add(row);
+        }
+        TickedCount = 0;
+        OnPropertyChanged(nameof(HasFailedMods));
+    }
+
+    private void OnRowChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(FailedModRow.Skip))
+            TickedCount = FailedMods.Count(r => r.Skip);
+    }
 
     public override void OnActivated()
     {
@@ -54,8 +83,7 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
         IsRunning = true;
         FailureMessage = null;
         DiagnosticsMessage = null;
-        FailedMods = [];
-        OnPropertyChanged(nameof(HasFailedMods));
+        SetFailedMods([]);
         Headline = "Preparing…";
         _cts = new CancellationTokenSource();
 
@@ -81,14 +109,22 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
                 Headline = "Installation complete!";
                 onFinished();
             }
+            else if (result.Error is DownloaderFailedException downloaderDown)
+            {
+                // Systemic — one root cause, zero arrivals. Skipping mods
+                // would be catastrophic and is deliberately not offered.
+                Headline = "The downloads could not run.";
+                FailureMessage = downloaderDown.Message;
+            }
             else if (result.Error is ModsFailedException modsFailed)
             {
-                Headline = "Some mods failed to download.";
-                FailedMods = modsFailed.FailedMods;
-                OnPropertyChanged(nameof(HasFailedMods));
+                Headline = modsFailed.Failures.Count == 1
+                    ? "One mod failed to download."
+                    : $"{modsFailed.Failures.Count} mods failed to download.";
+                SetFailedMods(modsFailed.Failures.Select(f => new FailedModRow(f.Name, f.Reason)));
                 FailureMessage =
-                    $"{modsFailed.FailedMods.Count} mod(s) could not be downloaded. Retry, or skip " +
-                    "them and continue (skipped mods are left out of the final configuration).";
+                    "Everything else is safely on disk — Retry fetches only what is missing. " +
+                    "Or tick the mods to leave out and continue without them.";
             }
             else
             {
@@ -146,6 +182,14 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
     private Task Retry() => RunAsync();
 
     [RelayCommand]
+    private void TickAll()
+    {
+        var target = FailedMods.Any(r => !r.Skip);
+        foreach (var row in FailedMods)
+            row.Skip = target;
+    }
+
+    [RelayCommand]
     private void SaveDiagnostics()
     {
         try
@@ -159,22 +203,38 @@ public sealed partial class InstallProgressViewModel(WizardState state, Action o
         }
     }
 
-    [RelayCommand]
-    private Task SkipFailedAndContinue()
+    private bool CanSkipTicked() => TickedCount > 0 && !IsRunning;
+
+    /// <summary>Skips ONLY the ticked mods; the rest are retried by the
+    /// re-run (already-arrived mods are never re-downloaded).</summary>
+    [RelayCommand(CanExecute = nameof(CanSkipTicked))]
+    private Task SkipTickedAndContinue()
     {
         if (_lastContext is { } ctx)
         {
-            foreach (var failed in FailedMods)
+            foreach (var row in FailedMods.Where(r => r.Skip))
             {
                 var mod = state.Data.Modlist.Mods.FirstOrDefault(
-                    m => m.Name == failed || m.Id == failed);
-                ctx.State.SkippedMods.Add(mod?.Id ?? failed);
+                    m => m.Name == row.Name || m.Id == row.Name);
+                ctx.State.SkippedMods.Add(mod?.Id ?? row.Name);
             }
             ctx.State.SkippedMods = ctx.State.SkippedMods.Distinct().ToList();
             ctx.SaveState();
         }
         return RunAsync();
     }
+}
+
+/// <summary>A failed download the user can individually retry (default) or
+/// tick to leave out of the install entirely.</summary>
+public sealed partial class FailedModRow(string name, string? reason) : ObservableObject
+{
+    public string Name { get; } = name;
+    public string? Reason { get; } = reason;
+    public bool HasReason => !string.IsNullOrEmpty(Reason);
+
+    [ObservableProperty]
+    private bool _skip;
 }
 
 public sealed partial class StepViewModel(string id, string label) : ObservableObject

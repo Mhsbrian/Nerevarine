@@ -125,7 +125,10 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
     {
         Directory.CreateDirectory(ctx.ModsRootDir);
 
-        var total = ctx.Modlist.Mods.Count;
+        // Mod dirs only ever get CREATED during the run, so the after-run
+        // pending set is a subset of this one: equal counts = zero progress.
+        var pendingBefore = PendingMods(ctx).Count();
+
         var result = await umo.InstallAsync(
             ctx.UmoListName,
             ctx.NexusPremium,
@@ -146,20 +149,66 @@ public sealed class InstallModsStep(UmoService umo) : IInstallStep
             }),
             ct).ConfigureAwait(false);
 
-        // Disk truth is the authority on what failed: any non-skipped mod
-        // whose data dir never appeared. Parser events feed the live UI, but
+        // Disk truth is the authority on WHAT failed: any non-skipped mod
+        // whose data dir never appeared. Parser events supply the WHY, but
         // umo's prose must never decide the failure list (it once produced a
         // state file full of mod-description fragments).
-        var missing = PendingMods(ctx).Select(m => m.Name).Distinct().ToList();
-        ctx.State.FailedMods = missing;
+        var missing = PendingMods(ctx).DistinctBy(m => m.Name).ToList();
+        ctx.State.FailedMods = missing.Select(m => m.Name).ToList();
         ctx.SaveState();
 
-        if (!result.Process.Success && missing.Count == 0)
-            throw new InvalidOperationException(
-                $"umo install exited with code {result.Process.ExitCode}.");
-        if (missing.Count > 0)
-            throw new ModsFailedException(missing);
+        if (missing.Count == 0)
+        {
+            if (!result.Process.Success)
+                throw new InvalidOperationException(
+                    $"umo install exited with code {result.Process.ExitCode}.");
+            return;
+        }
+
+        // Zero progress across many mods with one shared root cause is the
+        // DOWNLOADER failing, not N mods. Field-hit: a single 401 once
+        // surfaced as "586 mods failed" with a skip-them-all button.
+        var dominant = DominantError(result.ErrorLines);
+        if (missing.Count == pendingBefore && pendingBefore >= 5
+            && (dominant is not null || !result.Process.Success))
+            throw new DownloaderFailedException(
+                ExplainSystemic(dominant, result.Process.ExitCode, missing.Count),
+                dominant, missing.Count);
+
+        throw new ModsFailedException(missing
+            .Select(m => new FailedMod(m.Name, result.FailureReasons.GetValueOrDefault(m.Name)))
+            .ToList());
     }
+
+    /// <summary>The error line behind ≥80% of all reported errors, if any.</summary>
+    private static string? DominantError(IReadOnlyList<string> errorLines)
+    {
+        if (errorLines.Count < 3)
+            return null;
+        var top = errorLines.GroupBy(e => e).MaxBy(g => g.Count())!;
+        return top.Count() * 5 >= errorLines.Count * 4 ? top.Key : null;
+    }
+
+    private static string ExplainSystemic(string? dominant, int exitCode, int pending) => dominant switch
+    {
+        { } d when d.Contains("401") =>
+            $"Nexus rejected the sign-in (401), so nothing was downloaded — {pending} mods are waiting. " +
+            "The API key is wrong, expired, or was rotated: re-enter it and retry. Nothing needs skipping.",
+        { } d when d.Contains("429") =>
+            $"Nexus is rate-limiting this account (429), so nothing was downloaded — {pending} mods are waiting. " +
+            "Wait a few minutes and retry. Nothing needs skipping.",
+        { } d when d.Contains("connect", StringComparison.OrdinalIgnoreCase)
+                   || d.Contains("resolve", StringComparison.OrdinalIgnoreCase)
+                   || d.Contains("timed out", StringComparison.OrdinalIgnoreCase) =>
+            $"The network connection is down, so nothing was downloaded — {pending} mods are waiting. " +
+            $"Check connectivity and retry. Nothing needs skipping. ({d})",
+        { } d =>
+            $"Every download hit the same wall, so nothing arrived — {pending} mods are waiting. " +
+            $"The shared cause: {d} Fix that and retry. Nothing needs skipping.",
+        _ =>
+            $"The downloader stopped before anything arrived (exit code {exitCode}) — {pending} mods are waiting. " +
+            "See the log below for the cause, then retry. Nothing needs skipping.",
+    };
 }
 
 public sealed class ImportIniStep(IniImporterService importer, Func<InstallContext, string?> iniImporterExe)
