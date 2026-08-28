@@ -1,0 +1,59 @@
+name: Release
+
+# Tag a commit `v*` (e.g. v2026.08.16) to build and publish release binaries
+# for every supported installer platform.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Test
+        run: dotnet test --configuration Release
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish win-x64
+        run: >
+          dotnet publish src/Mri.App -c Release -r win-x64
+          -p:PublishSingleFile=true -p:SelfContained=true
+          -p:EnableCompressionInSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -o artifacts/win-x64
+      - name: Publish linux-x64
+        run: >
+          dotnet publish src/Mri.App -c Release -r linux-x64
+          -p:PublishSingleFile=true -p:SelfContained=true
+          -p:EnableCompressionInSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -o artifacts/linux-x64
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp artifacts/win-x64/Nerevarine.exe dist/Nerevarine-${GITHUB_REF_NAME}-win-x64.exe
+          cp artifacts/linux-x64/Nerevarine dist/Nerevarine-${GITHUB_REF_NAME}-linux-x64
+          cd dist && sha256sum * > SHA256SUMS.txt
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME"
+          --title "Nerevarine $GITHUB_REF_NAME"
+          --generate-notes
+          dist/*

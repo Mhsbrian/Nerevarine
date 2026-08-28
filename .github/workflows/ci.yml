@@ -23,20 +23,26 @@ jobs:
 
   publish:
     needs: build-test
-    runs-on: windows-latest
+    strategy:
+      matrix:
+        rid: [win-x64, linux-x64]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-      - name: Publish single-file win-x64
+      - name: Publish single-file ${{ matrix.rid }}
         run: >
-          dotnet publish src/Mri.App -c Release -r win-x64
+          dotnet publish src/Mri.App -c Release -r ${{ matrix.rid }}
           -p:PublishSingleFile=true -p:SelfContained=true
           -p:EnableCompressionInSingleFile=true
           -p:IncludeNativeLibrariesForSelfExtract=true
-          -o artifacts/win-x64
+          -o artifacts/${{ matrix.rid }}
       - uses: actions/upload-artifact@v4
         with:
-          name: MorrowindRemakeInstaller-win-x64
-          path: artifacts/win-x64/MorrowindRemakeInstaller.exe
+          name: Nerevarine-${{ matrix.rid }}
+          path: |
+            artifacts/${{ matrix.rid }}/Nerevarine
+            artifacts/${{ matrix.rid }}/Nerevarine.exe
+          if-no-files-found: error
