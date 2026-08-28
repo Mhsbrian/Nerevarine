@@ -124,7 +124,11 @@ public class SteamLocatorTests : IDisposable
     [Fact]
     public void LinuxSteamRootsCoverNativeSymlinkAndFlatpakHomes()
     {
-        var roots = SteamLocator.LinuxSteamRoots("/home/brian");
+        // Path.Combine uses the host separator; normalize so the well-known
+        // Linux locations can be asserted literally on any build OS.
+        var roots = SteamLocator.LinuxSteamRoots("/home/brian")
+            .Select(r => r.Replace('\\', '/'))
+            .ToList();
 
         Assert.Contains("/home/brian/.local/share/Steam", roots);
         Assert.Contains("/home/brian/.steam/steam", roots);

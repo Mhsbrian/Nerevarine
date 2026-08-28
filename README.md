@@ -20,8 +20,7 @@ pre-optimized world. A recent full install completed in **35 minutes** with **0 
 
 ## What you get
 
-- **599 mods** from the [“Morrowind in 2025” modlist](https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTWfHcdX5HXdpZj9R9KOcRYo0V80aGIAVd8tbrqTzC-J4R7ZeBdMslgdDlBGdTmvyF874qqaVY8V9VN/pubhtml),
-  machine-curated and conflict-resolved: HD assets and normal maps everywhere, Tamriel Rebuilt
+- **599 mods**, curated and conflict-resolved: HD assets and normal maps everywhere, Tamriel Rebuilt
   and major quest mods, overhauled cities, dungeons and lighting, voiced dialogue, grass,
   post-processing shaders, and modern gameplay/QoL Lua.
 - **OpenMW 0.51** installed and configured automatically — load order, groundcover,
@@ -51,7 +50,7 @@ pre-optimized world. A recent full install completed in **35 minutes** with **0 
 ## How it works
 
 ```
-spreadsheet ──► curation pipeline ──► canonical modlist.json (order = load order)
+curated source list ──► curation pipeline ──► canonical modlist.json (order = load order)
                                               │
                      ┌────────────────────────┴──────────────────────┐
                      ▼                                               ▼
@@ -60,7 +59,7 @@ spreadsheet ──► curation pipeline ──► canonical modlist.json (order 
    tools → downloads → fixups → ini import → cfg → settings → delta merge → navmesh → validate
 ```
 
-- A **curation pipeline** compiles the source spreadsheet plus a layered rule set (variant
+- A **curation pipeline** compiles the curated source list in `data/` plus a layered rule set (variant
   picks, load-order constraints, dependency additions, script repairs) into one canonical
   `data/modlist.json`. Array order *is* load order; CI re-verifies it on every change.
 - The installer is a **verifier-driven step pipeline**: every step proves completion against
@@ -97,8 +96,8 @@ This project is MIT-licensed **installer code only**. It downloads mods from the
 sources at install time and redistributes **no game assets and no mod content**. You need your
 own legitimate copy of Morrowind GOTY.
 
-Full credit to the mod authors whose work makes the setup what it is, to the author of the
-“Morrowind in 2025” modlist, to the [OpenMW](https://openmw.org) team, and to the
+Full credit to the mod authors whose work makes the setup what it is, to the
+[OpenMW](https://openmw.org) team, and to the
 [Modding-OpenMW](https://modding-openmw.com) community for umo, the tools pack and their
 field-tested load-order data. Architectural patterns were studied from
 [Kezyma/Morrowind-Remastered](https://github.com/Kezyma/Morrowind-Remastered); no code was
